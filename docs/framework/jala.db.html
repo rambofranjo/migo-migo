@@ -1,0 +1,2961 @@
+<html>
+<head>
+<title>
+db - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Database.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the jala.db package.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.db.Server"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">db.Server</span>(<span class="signature">baseDir, port, createOnDemand, makePublic, useSsl</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a new Server instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            baseDir
+                        </td>
+                        <td>
+                            The directory where the database files
+are located or should be stored
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            port
+                        </td>
+                        <td>
+                            The port to listen on (defaults to 9001)
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            createOnDemand
+                        </td>
+                        <td>
+                            If true this server will create non-existing
+databases on-the-fly, if false it only accepts connections to already
+existing databases in the given base directory
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            makePublic
+                        </td>
+                        <td>
+                            If true this database is reachable from outside,
+if false it's only reachable from localhost
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            useSsl
+                        </td>
+                        <td>
+                            If true SSL will be used to encrypt the connection
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.getDirectory">getDirectory</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.getPort">getPort</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.start">start</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.stop">stop</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.isRunning">isRunning</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.useSsl">useSsl</a>(bool)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.createOnDemand">createOnDemand</a>(bool)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.isPublic">isPublic</a>(bool)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.getUrl">getUrl</a>(name, props)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.getProperties">getProperties</a>(name, username, password, props)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.Server.getConnection">getConnection</a>(name, username, password, props)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">db.RamDatabase</span>(<span class="signature">name, username, password</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a newly created RamDatabase instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the database. If not given a private
+un-named database is created, that can only be accessed through this instance
+of jala.db.RamDatabase
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            username
+                        </td>
+                        <td>
+                            Optional username (defaults to "sa"). This username
+is used when creating the database, so the same should be used when
+creating subsequent instances of jala.db.RamDatabase pointing to a named
+database.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            password
+                        </td>
+                        <td>
+                            Optional password (defaults to "").
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.getName">getName</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.getUsername">getUsername</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.getPassword">getPassword</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.getUrl">getUrl</a>(props)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.getProperties">getProperties</a>(props)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.getConnection">getConnection</a>(An)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.shutdown">shutdown</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.dropTable">dropTable</a>(tableName)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.tableExists">tableExists</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.copyTables">copyTables</a>(database, tables)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.runScript">runScript</a>(file, props, charset, continueOnError)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.RamDatabase.dump">dump</a>(file, props)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">db.FileDatabase</span>(<span class="signature">name, directory, username, password</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a newly created instance of FileDatabase.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the database. This name is used as
+prefix for all database files
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            directory
+                        </td>
+                        <td>
+                            The directory where the database files
+should be stored in.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            username
+                        </td>
+                        <td>
+                            Optional username (defaults to "sa"). This username
+is used when creating the database, so the same should be used when
+creating subsequent instances of jala.db.FileDatabase pointing to the
+same database
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            password
+                        </td>
+                        <td>
+                            Optional password (defaults to "").
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.FileDatabase.getName">getName</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.FileDatabase.getDirectory">getDirectory</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.FileDatabase.getUsername">getUsername</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.FileDatabase.getPassword">getPassword</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.FileDatabase.remove">remove</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.FileDatabase.backup">backup</a>(file)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.db.FileDatabase.restore">restore</a>(backupFile)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.db"></a>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">db</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Namespace declaration</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.getDirectory"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">getDirectory</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the directory used by this server instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The directory where the databases used by this
+server are located in
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.getPort"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">getPort</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the port this server listens on</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The port this server listens on
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.start"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">start</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Starts the database server.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True in case the server started successfully, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.stop"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">stop</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stops the database server.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if stopping the server was successful, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.isRunning"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">isRunning</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the database server is running.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the database server is running
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.useSsl"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">useSsl</span>(<span class="signature">bool</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Toggles the use of Ssl encryption within this server. This should be set
+before starting the server.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            If true SSL encryption will be used, false
+otherwise. If no argument is given, this method returns the
+current setting.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The current setting if no argument is given, or void
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.createOnDemand"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">createOnDemand</span>(<span class="signature">bool</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If called with boolean true as argument, this server creates databases
+on-the-fly, otherwise it only accepts connections to already existing
+databases. This should be set before starting the server.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            If true this server creates non-existing databases
+on demand, if false it only allows connections to existing databases.
+If no argument is given, this method returns the current setting.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The current setting if no argument is given, or void
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.isPublic"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">isPublic</span>(<span class="signature">bool</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If called with boolean true as argument, this server accepts connections
+from outside localhost. This should be set before starting the server.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            If true this server accepts connections from outside
+localhost. If no argument is given, this method returns the current setting.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The current setting if no argument is given, or void
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.getUrl"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">getUrl</span>(<span class="signature">name, props</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the JDBC Url to use for connections to a given database.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            An optional name of a database running
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            Optional connection properties to add
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The JDBC Url to use for connecting to a database
+within this sever
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.getProperties"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">getProperties</span>(<span class="signature">name, username, password, props</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a properties object containing the connection properties
+of the database with the given name.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the database
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            username
+                        </td>
+                        <td>
+                            Optional username to use for this connection
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            password
+                        </td>
+                        <td>
+                            Optional password to use for this connection
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            An optional parameter object containing
+connection properties to add to the connection Url.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A properties object containing the connection properties
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.Server.getConnection"></a>
+                    
+                    
+                        <i><a href="#jala.db.Server" class="type">jala.db.Server</a>.
+                        <span class="symbolname">getConnection</span>(<span class="signature">name, username, password, props</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a connection to a database within this server.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the database running
+within this server
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            username
+                        </td>
+                        <td>
+                            Optional username to use for this connection
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            password
+                        </td>
+                        <td>
+                            Optional password to use for this connection
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            An optional parameter object
+containing connection properties to add to the connection Url.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A connection to the specified database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.DataType.getType"></a>
+                    
+                    
+                        <i><a href="#jala.db.DataType" class="type">jala.db.DataType</a>.
+                        <span class="symbolname">getType</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the sql type code number as defined in java.sql.Types</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The sql type code number of this data type
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.DataType.getTypeName"></a>
+                    
+                    
+                        <i><a href="#jala.db.DataType" class="type">jala.db.DataType</a>.
+                        <span class="symbolname">getTypeName</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the type name of this data type, which can be
+used in sql queries.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The type name of this data type
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.DataType.getParams"></a>
+                    
+                    
+                        <i><a href="#jala.db.DataType" class="type">jala.db.DataType</a>.
+                        <span class="symbolname">getParams</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the creation parameter string of this data type</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The creation parameter string of this data type
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.DataType.needsQuotes"></a>
+                    
+                    
+                        <i><a href="#jala.db.DataType" class="type">jala.db.DataType</a>.
+                        <span class="symbolname">needsQuotes</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if values for this data type should be surrounded
+by (single) quotes.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if values for this data type should be surrounded
+by quotes, false if not
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.getName"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">getName</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the name of the database</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The name of the database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.getUsername"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">getUsername</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the username of this database</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The username of this database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.getPassword"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">getPassword</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the password of this database</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The password of this database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.getUrl"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">getUrl</span>(<span class="signature">props</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the JDBC Url to connect to this database</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            Optional connection properties to add
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The JDBC url to use for connecting to this database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.getProperties"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">getProperties</span>(<span class="signature">props</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a properties object containing the connection properties
+for this database.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            An optional parameter object containing
+connection properties to add to the connection Url.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A properties object containing the connection properties
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.getConnection"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">getConnection</span>(<span class="signature">An</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a connection to this database</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            An
+                        </td>
+                        <td>
+                            optional parameter object containing connection
+properties to add to the connection Url.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A connection to this database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.shutdown"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">shutdown</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stops this in-process database by issueing a "SHUTDOWN" sql command.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.dropTable"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">dropTable</span>(<span class="signature">tableName</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Drops the table with the given name</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            tableName
+                        </td>
+                        <td>
+                            The name of the table
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the table was successfully dropped, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.tableExists"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">tableExists</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the table exists already in the database</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the table
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the table exists, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.copyTables"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">copyTables</span>(<span class="signature">database, tables</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Copies all tables in the database passed as argument into this embedded database.
+If any of the tables already exists in this database, they will be removed before
+re-created. Please mind that this method ignores any indexes in the source database,
+but respects the primary key settings.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Database
+                        </td>
+                        <td>
+                            database
+                        </td>
+                        <td>
+                            The database to copy the tables from
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            tables
+                        </td>
+                        <td>
+                            An optional array containing the names of the tables to copy.
+If not given all tables are copied
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.runScript"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">runScript</span>(<span class="signature">file, props, charset, continueOnError</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Runs the script file passed as argument in the context of this database.
+Use this method to eg. create and/or populate a database.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            file
+                        </td>
+                        <td>
+                            The script file to run
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            Optional object containing connection properties
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            charset
+                        </td>
+                        <td>
+                            Optional character set to use (defaults to "UTF-8")
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            continueOnError
+                        </td>
+                        <td>
+                            Optional flag indicating whether to continue
+on error or not (defaults to false)
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True in case the script was executed successfully, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.RamDatabase.dump"></a>
+                    
+                    
+                        <i><a href="#jala.db.RamDatabase" class="type">jala.db.RamDatabase</a>.
+                        <span class="symbolname">dump</span>(<span class="signature">file, props</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Dumps the database schema and data into a file</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            file
+                        </td>
+                        <td>
+                            The file where the database dump will be
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            Optional object containing connection properties
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True in case the database was successfully dumped, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase.getName"></a>
+                    
+                    
+                        <i><a href="#jala.db.FileDatabase" class="type">jala.db.FileDatabase</a>.
+                        <span class="symbolname">getName</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the name of the database. This name is used as prefix
+for all files of this database in the specified directory</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The name of the database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase.getDirectory"></a>
+                    
+                    
+                        <i><a href="#jala.db.FileDatabase" class="type">jala.db.FileDatabase</a>.
+                        <span class="symbolname">getDirectory</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the directory where the database files are stored.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The directory where this database is stored.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase.getUsername"></a>
+                    
+                    
+                        <i><a href="#jala.db.FileDatabase" class="type">jala.db.FileDatabase</a>.
+                        <span class="symbolname">getUsername</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the username of this database</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The username of this database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase.getPassword"></a>
+                    
+                    
+                        <i><a href="#jala.db.FileDatabase" class="type">jala.db.FileDatabase</a>.
+                        <span class="symbolname">getPassword</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the password of this database</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The password of this database
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase.remove"></a>
+                    
+                    
+                        <i><a href="#jala.db.FileDatabase" class="type">jala.db.FileDatabase</a>.
+                        <span class="symbolname">remove</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Deletes all files of this database on disk. Note that this also
+closes the database before removing it.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True in case the database was removed successfully, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase.backup"></a>
+                    
+                    
+                        <i><a href="#jala.db.FileDatabase" class="type">jala.db.FileDatabase</a>.
+                        <span class="symbolname">backup</span>(<span class="signature">file</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a backup of this database, using the file passed as argument. The
+result will be a zipped file containing the database files</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            file
+                        </td>
+                        <td>
+                            The file to write the backup to
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the database backup was created successfully, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.db.FileDatabase.restore"></a>
+                    
+                    
+                        <i><a href="#jala.db.FileDatabase" class="type">jala.db.FileDatabase</a>.
+                        <span class="symbolname">restore</span>(<span class="signature">backupFile</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Restores this database using a backup on disk.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            backupFile
+                        </td>
+                        <td>
+                            The backup file to use for restore
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the database was successfully restored, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:06 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

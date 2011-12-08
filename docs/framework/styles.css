@@ -1,0 +1,263 @@
+
+
+body {
+    background-color: #fff; 
+    margin-top: 0px; 
+    margin-left: 0px; 
+}
+
+a {text-decoration: none;}
+a:link {color: #00f;}
+a:visited {color: #00b;}
+a:active {color: #f66;}
+a:hover {color: #c33;}
+
+pre {
+    background: #ffe;
+    line-height:150%;
+    padding: 8px;
+}
+
+h3 {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 16px; 
+    margin-left: 15px;
+}
+
+ul {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    color: #333;
+    // margin-left: 40px;
+}
+
+.home {
+    width: 850px;
+    heigth: 92px;
+}
+.tools {
+    float:left;
+    margin-left: 15px;
+    width: 222px;
+}
+.intro {
+    float:left;
+    margin-left: 27px;
+    margin-right: 27px;
+    width: 222px;
+}
+.website {
+    float:left;
+    width: 222px;
+}
+.pageintrobox {
+    float:left;
+    margin-left: 15px;
+    width: 195px;
+}
+
+.frame {
+    width: 850px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+.lead {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 16px; 
+    color: #666;
+    margin-top: 20px;
+    margin-right: 45px;
+    margin-left: 125px;
+    margin-bottom: 25px;
+}
+.columnheight {
+    height: 300px;
+}
+.contentbox {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+    float:left;
+    spacing: 10px;
+    margin-left: 20px;
+    margin-right: 0px;
+    width: 600px;
+}
+.contentmargin {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tools, .tools b.rtop b, .tools b.rbottom b,
+.pagetools, .pagetools b.rtop b, .pagetools b.rbottom b 
+    {background: #bf7}
+    
+.intro, .intro b.rtop b, .intro b.rbottom b,
+.pageintrobox, .pageintrobox b.rtop b, .pageintrobox b.rbottom b 
+    {background: #fd6}
+    
+.website, .website b.rtop b, .website b.rbottom b,
+.pagewebsite, .pagewebsite b.rtop b, .pagewebsite b.rbottom b 
+    {background: #7cf}
+    
+.contentbox, .contentbox b.rtop b, .contentbox b.rbottom b 
+    {background: #eee}
+
+b.rtop, b.rbottom{display:block;background: #fff}
+b.rtop b, b.rbottom b{display:block;height: 1px;
+    overflow: hidden;}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.r4{margin: 0 1px;height: 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+
+
+ul
+{
+    list-style-type: none;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.content { }
+.docs { }
+.signature { font-weight: normal; }
+.code {
+    font: 11px monaco,monospace;
+    padding: 4px;
+    margin-left: 18px;
+    border: 1px dashed #ccc;
+}
+
+.itemTitle
+{
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+}
+
+.item { }
+
+.sectionHead
+{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #C0C1DE;
+    color: #fff;
+    margin-top: 18px;
+    padding: 2px 4px 2px 4px;
+}
+
+.section
+{
+    padding: 8px;
+    border: 1px #8A92BC solid;
+    margin: 4px;
+}
+
+.detailHead
+{
+    border-bottom: 1px #8FB685 dotted;
+    font-size: 12px;
+    font-weight: bold;
+    color: #798E73;
+    margin-top: 18px;
+}
+
+.desc { padding: 8px; }
+
+.fileHead
+{
+    background-image: url(file.gif);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.overview .itemTitle
+{
+    background-image: url(overview.gif);
+    background-repeat: no-repeat;
+    background-position: 0px 17px;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.constructor .itemTitle
+{
+    background-image: url(constructor.gif);
+    background-repeat: no-repeat;
+    background-position: 0px 17px;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.function .itemTitle
+{
+    background-image: url(function.gif);
+    background-repeat: no-repeat;
+    background-position: 0px 17px;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.object .itemTitle
+{
+    background-image: url(object.gif);
+    background-repeat: no-repeat;
+    background-position: 0px 17px;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.type
+{
+    font-style: italic;
+    color: #999;
+    font-weight: normal;
+}
+
+.itemTitle a.type { font-weight: bold; }
+
+.finePrint
+{
+    color: #878787;
+    font-family: verdana;
+    font-size: 10px;
+    text-align: right;
+}
+
+.see
+{
+    color: #878787;
+    font-size: 11px;
+    margin-left: 18px;
+}
+
+.symbolname
+{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.params td 
+{
+    padding-right: 10px; 
+    vertical-align: top;
+}
+
+.deprecated
+{
+    color: #666;
+    font-weight: normal;
+}
+
+.deprecated del
+{
+    color: #000;
+}

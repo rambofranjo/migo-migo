@@ -1,0 +1,5581 @@
+<html>
+<head>
+<title>
+Search - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Search.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the helma.Search class
+<br /><br />
+To use this optional module, its repository needs to be added to the 
+application, for example by calling app.addRepository('modules/helma/Search.js')</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new instance of helma.Search. This merely
+checks if the Apache Lucene library is in the application
+classpath.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.getDirectory">getDirectory</a>(dir, create)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.getRAMDirectory">getRAMDirectory</a>(dir)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.createIndex">createIndex</a>(dir, analyzer)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.QueryFilter"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.QueryFilter</span>(<span class="signature">q</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new QueryFilter instance. This class
+wraps a lucene QueryFilter.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.Query
+                        </td>
+                        <td>
+                            q
+                        </td>
+                        <td>
+                            The query object to use as
+the basis for the QueryFilter instance.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.QueryFilter.getFilter">getFilter</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.Index</span>(<span class="signature">directory, analyzer</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Search.Index</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            org.apache.lucene.store.Directory
+                        </td>
+                        <td>
+                            directory
+                        </td>
+                        <td>
+                            The directory
+where the Lucene index is located at.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            org.apache.lucene.analysis.Analyzer
+                        </td>
+                        <td>
+                            analyzer
+                        </td>
+                        <td>
+                            The analyzer
+to use when modifying the index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.getWriter">getWriter</a>(create, autoCommit)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.getReader">getReader</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.getDirectory">getDirectory</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.getAnalyzer">getAnalyzer</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.getSearcher">getSearcher</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.addIndexes">addIndexes</a>(dir)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.create">create</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.size">size</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.count">count</a>(fieldName, fieldValue)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.optimize">optimize</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.getFieldNames">getFieldNames</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.isLocked">isLocked</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.unlock">unlock</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.close">close</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.addDocument">addDocument</a>(doc)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.addDocuments">addDocuments</a>(docs)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.removeDocument">removeDocument</a>(fieldName, fieldValue)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.removeDocuments">removeDocuments</a>(fieldName, values)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Index.updateDocument">updateDocument</a>(docObj, fieldName)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.Searcher"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.Searcher</span>(<span class="signature">index</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Search.Seacher</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.Index
+                        </td>
+                        <td>
+                            index
+                        </td>
+                        <td>
+                            The index to search in.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Searcher.getSearcher">getSearcher</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Searcher.search">search</a>(query, filter)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Searcher.sortBy">sortBy</a>(fieldName, type)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Searcher.close">close</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">helma.Search.HitCollection</span> <a href="#helma.Search.Searcher.hits">hits</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">java.util.Vector</span> <a href="#helma.Search.Searcher.sortFields">sortFields</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.HitCollection"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.HitCollection</span>(<span class="signature">hits</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Search.HitCollection</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            org.lucene.search.Hits
+                        </td>
+                        <td>
+                            hits
+                        </td>
+                        <td>
+                            The hit collection returned
+by lucene.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.HitCollection.get">get</a>(idx)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.HitCollection.size">size</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.HitCollection.length">length</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.HitCollection.forEach">forEach</a>(fun, context)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.Query"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.Query</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Search.Query</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Query.getQuery">getQuery</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Query.getBoost">getBoost</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Query.setBoost">setBoost</a>(fact)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.TermQuery"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.TermQuery</span>(<span class="signature">field, str</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Search.TermQuery</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The value of the field
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">org.apache.lucene.search.TermQuery</span> <a href="#helma.Search.TermQuery.query">query</a></li>
+                    </ul>
+                
+                
+                
+                
+                    <div class="detailHead">inherits</div>
+                    
+                        <div>getQuery(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>getBoost(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>setBoost(<span class="signature">fact</span>) from helma.Search.Query</div>
+                    
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.BooleanQuery"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.BooleanQuery</span>(<span class="signature">String, String</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Search.BooleanQuery</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            query string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.BooleanQuery.addTerm">addTerm</a>(field, str, clause, analyzer)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.BooleanQuery.addQuery">addQuery</a>(q, clause)</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">org.apache.lucene.search.BooleanQuery</span> <a href="#helma.Search.BooleanQuery.query">query</a></li>
+                    </ul>
+                
+                
+                
+                
+                    <div class="detailHead">inherits</div>
+                    
+                        <div>getQuery(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>getBoost(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>setBoost(<span class="signature">fact</span>) from helma.Search.Query</div>
+                    
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.PhraseQuery"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.PhraseQuery</span>(<span class="signature">field, str</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Search.PhraseQuery instance that wraps
+a Lucene Phrase Query object.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The phrase query string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.PhraseQuery.addTerm">addTerm</a>(field, str)</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">org.apache.lucene.search.PhraseQuery</span> <a href="#helma.Search.PhraseQuery.query">query</a></li>
+                    </ul>
+                
+                
+                
+                
+                    <div class="detailHead">inherits</div>
+                    
+                        <div>getQuery(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>getBoost(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>setBoost(<span class="signature">fact</span>) from helma.Search.Query</div>
+                    
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.RangeQuery"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.RangeQuery</span>(<span class="signature">field, from, to, inclusive</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Search.RangeQuery instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            from
+                        </td>
+                        <td>
+                            The minimum value to match (can be null)
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            to
+                        </td>
+                        <td>
+                            The maximum value to match (can be null)
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            inclusive
+                        </td>
+                        <td>
+                            If true the given min/max values are included
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">org.apache.lucene.search.RangeQuery</span> <a href="#helma.Search.RangeQuery.query">query</a></li>
+                    </ul>
+                
+                
+                
+                
+                    <div class="detailHead">inherits</div>
+                    
+                        <div>getQuery(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>getBoost(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>setBoost(<span class="signature">fact</span>) from helma.Search.Query</div>
+                    
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.FuzzyQuery"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.FuzzyQuery</span>(<span class="signature">field, str</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Search.FuzzyQuery instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The query string to match
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">org.apache.lucene.search.FuzzyQuery</span> <a href="#helma.Search.FuzzyQuery.query">query</a></li>
+                    </ul>
+                
+                
+                
+                
+                    <div class="detailHead">inherits</div>
+                    
+                        <div>getQuery(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>getBoost(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>setBoost(<span class="signature">fact</span>) from helma.Search.Query</div>
+                    
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.PrefixQuery"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.PrefixQuery</span>(<span class="signature">field, str</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Search.PrefixQuery instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The query string to match
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">org.apache.lucene.search.PrefixQuery</span> <a href="#helma.Search.PrefixQuery.query">query</a></li>
+                    </ul>
+                
+                
+                
+                
+                    <div class="detailHead">inherits</div>
+                    
+                        <div>getQuery(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>getBoost(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>setBoost(<span class="signature">fact</span>) from helma.Search.Query</div>
+                    
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.WildcardQuery"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.WildcardQuery</span>(<span class="signature">field, str</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Search.WildcardQuery instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The query string to match
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">org.apache.lucene.search.WildcardQuery</span> <a href="#helma.Search.WildcardQuery.query">query</a></li>
+                    </ul>
+                
+                
+                
+                
+                    <div class="detailHead">inherits</div>
+                    
+                        <div>getQuery(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>getBoost(<span class="signature"></span>) from helma.Search.Query</div>
+                    
+                        <div>setBoost(<span class="signature">fact</span>) from helma.Search.Query</div>
+                    
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.Document</span>(<span class="signature">document</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Search.Document.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            org.apache.lucene.document.Document
+                        </td>
+                        <td>
+                            document
+                        </td>
+                        <td>
+                            Optional Lucene Document object
+that should be wrapped by this Document instance.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.getDocument">getDocument</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.addField">addField</a>(name, value, options)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.getField">getField</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.getFields">getFields</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.removeField">removeField</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.getBoost">getBoost</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.setBoost">setBoost</a>(boost)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Search.Document.Field</span>(<span class="signature">name, value, options</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new Field instance</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            The value of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            options
+                        </td>
+                        <td>
+                            Optional object containing the following properties
+(each of them is optional too):
+<ul>
+<li><code>store</code> (String) Defines whether and how the value is stored
+in the field. Accepted values are "no", "yes" and "compress" (defaults to "yes")</li>
+<li><code>index</code> (String) Defines whether and how the value is indexed
+in the field. Accepted values are "no", "tokenized", "unTokenized" and
+"noNorms" (defaults to "tokenized")</li>
+<li><code>termVector</code> (String) Defines if and how the fiels should have
+term vectors. Accepted values are "no", "yes", "withOffsets", "withPositions"
+and "withPositionsAndOffsets" (defaults to "no")</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.getField">getField</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.getBoost">getBoost</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.setBoost">setBoost</a>(boost)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.isIndexed">isIndexed</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.isCompressed">isCompressed</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.isStored">isStored</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.isTokenized">isTokenized</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Search.Document.Field.isTermVectorStored">isTermVectorStored</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#helma.Search.Document.Field.name">name</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#helma.Search.Document.Field.value">value</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#helma.Search.Document.Field.dateValue">dateValue</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.Searcher.hits"></a>
+                    
+                    <span class="type">helma.Search.HitCollection</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.Searcher" class="type">helma.Search.Searcher</a>.
+                        <span class="symbolname">hits</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The search results.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.Searcher.sortFields"></a>
+                    
+                    <span class="type">java.util.Vector</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.Searcher" class="type">helma.Search.Searcher</a>.
+                        <span class="symbolname">sortFields</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">A vector with SortField instances, if any have been defined.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Search.Searcher.html#helma.Search.Searcher.sortBy">helma.Search.Searcher.sortBy</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.TermQuery.query"></a>
+                    
+                    <span class="type">org.apache.lucene.search.TermQuery</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.TermQuery" class="type">helma.Search.TermQuery</a>.
+                        <span class="symbolname">query</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the wrapped TermQuery instance</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.BooleanQuery.query"></a>
+                    
+                    <span class="type">org.apache.lucene.search.BooleanQuery</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.BooleanQuery" class="type">helma.Search.BooleanQuery</a>.
+                        <span class="symbolname">query</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the wrapped BooleanQuery instance</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.PhraseQuery.query"></a>
+                    
+                    <span class="type">org.apache.lucene.search.PhraseQuery</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.PhraseQuery" class="type">helma.Search.PhraseQuery</a>.
+                        <span class="symbolname">query</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the wrapped PhraseQuery instance</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.RangeQuery.query"></a>
+                    
+                    <span class="type">org.apache.lucene.search.RangeQuery</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.RangeQuery" class="type">helma.Search.RangeQuery</a>.
+                        <span class="symbolname">query</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the wrapped RangeQuery instance</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.FuzzyQuery.query"></a>
+                    
+                    <span class="type">org.apache.lucene.search.FuzzyQuery</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.FuzzyQuery" class="type">helma.Search.FuzzyQuery</a>.
+                        <span class="symbolname">query</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the wrapped FuzzyQuery instance</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.PrefixQuery.query"></a>
+                    
+                    <span class="type">org.apache.lucene.search.PrefixQuery</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.PrefixQuery" class="type">helma.Search.PrefixQuery</a>.
+                        <span class="symbolname">query</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the wrapped PrefixQuery instance</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.WildcardQuery.query"></a>
+                    
+                    <span class="type">org.apache.lucene.search.WildcardQuery</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.WildcardQuery" class="type">helma.Search.WildcardQuery</a>.
+                        <span class="symbolname">query</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the wrapped WildcardQuery instance</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.name"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">name</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the name of the field</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.value"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">value</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the string value of the field</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.dateValue"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">dateValue</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the value of the field converted into a date object.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.getAnalyzer"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>.
+                        <span class="symbolname">Search.getAnalyzer</span>(<span class="signature">key</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a new Analyzer instance depending on the key
+passed as argument. Currently supported arguments are
+"br" (BrazilianAnalyzer), "cn" (ChineseAnalyzer), "cz" (CzechAnalyzer),
+"nl" (DutchAnalyzer), "fr" (FrenchAnalyzer), "de" (GermanAnalyzer),
+"el" (GreekAnalyzer), "keyword" (KeywordAnalyzer), "ru" (RussianAnalyzer),
+"simple" (SimpleAnalyzer), "snowball" (SnowballAnalyzer), "stop" (StopAnalyzer)
+"whitespace" (WhitespaceAnalyzer). If no argument is given, a StandardAnalyzer
+is returned.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            The key identifying the analyzer
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A newly created Analyzer instance
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.QueryFilter.getFilter"></a>
+                    
+                    
+                        <i><a href="#helma.Search.QueryFilter" class="type">helma.Search.QueryFilter</a>.
+                        <span class="symbolname">getFilter</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped filter instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.getDirectory"></a>
+                    
+                    
+                        <i><a href="#helma.Search" class="type">helma.Search</a>.
+                        <span class="symbolname">getDirectory</span>(<span class="signature">dir, create</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an instance of org.apache.lucene.store.FSDirectory. If
+no index is present in the given directory, it is created on the fly.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            File, helma.File, java.io.File, String
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            The directory
+where the index is located or should be created at.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            create
+                        </td>
+                        <td>
+                            If true the index will be created, removing
+any existing index in the same directory
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The index directory.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.getRAMDirectory"></a>
+                    
+                    
+                        <i><a href="#helma.Search" class="type">helma.Search</a>.
+                        <span class="symbolname">getRAMDirectory</span>(<span class="signature">dir</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a RAM directory object.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            File, helma.File, java.io.File, String
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            Optional directory
+containing a Lucene index from which this RAM directory should be created.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A RAM directory instance.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.createIndex"></a>
+                    
+                    
+                        <i><a href="#helma.Search" class="type">helma.Search</a>.
+                        <span class="symbolname">createIndex</span>(<span class="signature">dir, analyzer</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new Lucene index in the directory passed as
+argument, using an optional analyzer, and returns an instance
+of helma.Search.Index. Any already existing index in this
+directory will be preserved.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            org.apache.lucene.store.Directory
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            The directory
+where the index should be stored. This can be either a
+FSDirectory or a RAMDirectory instance.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            org.apache.lucene.analysis.Analyzer
+                        </td>
+                        <td>
+                            analyzer
+                        </td>
+                        <td>
+                            The analyzer to
+use for the index. If not specified a StandardAnalyzer will be used.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The index instance.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.getWriter"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">getWriter</span>(<span class="signature">create, autoCommit</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an IndexWriter instance that can be used to add documents to
+the underlying index or to perform various other modifying operations.
+If the index is currently locked this method will try for the next
+two seconds to create the IndexWriter, otherwise it will
+throw an error.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            create
+                        </td>
+                        <td>
+                            True to create the index (overwriting an
+existing index), false to append to an existing index. Defaults to false
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            autoCommit
+                        </td>
+                        <td>
+                            Enables or disables auto commit (defaults to
+false)
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An IndexWriter instance.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.getReader"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">getReader</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an IndexReader instance. Due to locking issues an
+IndexModifier should be used for deleting documents.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An IndexReader instance
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.getDirectory"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">getDirectory</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the directory the underlying Lucene index is located at.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The directory of this index
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.getAnalyzer"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">getAnalyzer</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the analyzer used within this index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The analyzer used within this index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.getSearcher"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">getSearcher</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a searcher for querying this index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A searcher useable for querying the index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.addIndexes"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">addIndexes</span>(<span class="signature">dir</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Merges the indexes passed as argument into this one.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            org.apache.lucene.store.Directory
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            At least one
+index director to add to this index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.create"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">create</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new index. This will delete any existing index
+files in the directory of this index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if creating the index was successful, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.size"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">size</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the number of documents in this index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of documents in this index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.count"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">count</span>(<span class="signature">fieldName, fieldValue</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the number of documents with the given field name and value.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            fieldName
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            fieldValue
+                        </td>
+                        <td>
+                            The value of the field
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of documents
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.optimize"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">optimize</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Optimizes the underlying index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.getFieldNames"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">getFieldNames</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an array containing all field names in this index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An array with the field names in this index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.isLocked"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">isLocked</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Checks if the index is locked.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the underlying index is locked,
+false otherwise.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.unlock"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">unlock</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Unlocks the index. Use this with caution, as it removes
+any active locks in the Lucene index, which might lead
+to index corruption.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.close"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">close</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Closes the underlying index directory for future operations.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.addDocument"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">addDocument</span>(<span class="signature">doc</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a document to the index.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.Document
+                        </td>
+                        <td>
+                            doc
+                        </td>
+                        <td>
+                            The document to add to the index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.addDocuments"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">addDocuments</span>(<span class="signature">docs</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds all documents in the passed collection to this index.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            java.util.Hashtable, java.util.Vector, Array
+                        </td>
+                        <td>
+                            docs
+                        </td>
+                        <td>
+                            The documents to add to the index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.removeDocument"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">removeDocument</span>(<span class="signature">fieldName, fieldValue</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Remove all documents from the index whose field-value
+with the given name matches the passed value argument.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            fieldName
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            fieldValue
+                        </td>
+                        <td>
+                            The value of the field.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.removeDocuments"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">removeDocuments</span>(<span class="signature">fieldName, values</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes all documents whose field with the given name matches
+the values passed as argument.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            fieldName
+                        </td>
+                        <td>
+                            The name of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            java.util.Hashtable, java.util.Vector, Array
+                        </td>
+                        <td>
+                            values
+                        </td>
+                        <td>
+                            The values that define the documents that should be removed from
+the index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Index.updateDocument"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Index" class="type">helma.Search.Index</a>.
+                        <span class="symbolname">updateDocument</span>(<span class="signature">docObj, fieldName</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Updates the index with the document passed as argument. In contrast
+to addDocument() this removes any existing objects whose fieldName
+matches the one of the document object. Eg. if the document object
+has a field "Id" with the value "123", all document objects whose
+fieldName "Id" matches "123" will be removed from the index before.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.Document
+                        </td>
+                        <td>
+                            docObj
+                        </td>
+                        <td>
+                            Document object to add to index.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            fieldName
+                        </td>
+                        <td>
+                            The name of the identifier field.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Searcher.getSearcher"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Searcher" class="type">helma.Search.Searcher</a>.
+                        <span class="symbolname">getSearcher</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped IndexSearcher instance.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Searcher.search"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Searcher" class="type">helma.Search.Searcher</a>.
+                        <span class="symbolname">search</span>(<span class="signature">query, filter</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Searches an index using the query passed as argument.
+The resulting collection of hits is stored in the property "hits"
+of this Searcher instance. Don't forget to close the searcher
+when finished processing its hits.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.Query
+                        </td>
+                        <td>
+                            query
+                        </td>
+                        <td>
+                            The query to use for searching
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.QueryFilter
+                        </td>
+                        <td>
+                            filter
+                        </td>
+                        <td>
+                            An optional query filter
+for filtering the results.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of hits.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Searcher.sortBy"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Searcher" class="type">helma.Search.Searcher</a>.
+                        <span class="symbolname">sortBy</span>(<span class="signature">fieldName, type</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets a field as result sorting field. This method can be called
+with a different number of arguments:
+sortBy(fieldName)
+sortBy(fieldName, type)
+sortBy(fieldName, reverse)
+sortBy(fieldName, type, reverse)</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            fieldName
+                        </td>
+                        <td>
+                            The name of the field in the index by which
+the search result should be ordered.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            type
+                        </td>
+                        <td>
+                            The type of the field defined by argument fieldName.
+Valid arguments are "string", "float", "int", "score", "doc", "auto", "custom".
+Default is "auto". See http://lucene.apache.org/java/docs/api/org/apache/lucene/search/SortField.html
+for an explanation.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Searcher.close"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Searcher" class="type">helma.Search.Searcher</a>.
+                        <span class="symbolname">close</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Closes the wrapped IndexSearcher instance.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.HitCollection.get"></a>
+                    
+                    
+                        <i><a href="#helma.Search.HitCollection" class="type">helma.Search.HitCollection</a>.
+                        <span class="symbolname">get</span>(<span class="signature">idx</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Silently converts the hit at the given index position into
+an instance of helma.Search.Document.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            idx
+                        </td>
+                        <td>
+                            The index position of the hit
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The document object at the given index position
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.HitCollection.size"></a>
+                    
+                    
+                        <i><a href="#helma.Search.HitCollection" class="type">helma.Search.HitCollection</a>.
+                        <span class="symbolname">size</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the number of hits in this collection.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of hits.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.HitCollection.length"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#helma.Search.HitCollection" class="type">helma.Search.HitCollection</a>.
+                        <span class="symbolname">length</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated </span>
+                </div>
+                
+                
+                    <div class="desc">Returns the number of hits in this collection.
+This method is deprecated, use {@link #size} instead.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of hits.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Search.HitCollection.html#helma.Search.HitCollection.size">helma.Search.HitCollection.size</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.HitCollection.forEach"></a>
+                    
+                    
+                        <i><a href="#helma.Search.HitCollection" class="type">helma.Search.HitCollection</a>.
+                        <span class="symbolname">forEach</span>(<span class="signature">fun, context</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Executes a provided function once per hit.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Function
+                        </td>
+                        <td>
+                            fun
+                        </td>
+                        <td>
+                            Function to execute for each element
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            context
+                        </td>
+                        <td>
+                            Object to use as "this" when executing callback.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="https://developer.mozilla.org/En/Core_JavaScript_1.5_Reference/Objects/Array/ForEach">https://developer.mozilla.org/En/Core_JavaScript_1.5_Reference/Objects/Array/ForEach</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Query.getQuery"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Query" class="type">helma.Search.Query</a>.
+                        <span class="symbolname">getQuery</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped Lucene Query object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The wrapped query object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Query.getBoost"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Query" class="type">helma.Search.Query</a>.
+                        <span class="symbolname">getBoost</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the boost factor of this query.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Query.setBoost"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Query" class="type">helma.Search.Query</a>.
+                        <span class="symbolname">setBoost</span>(<span class="signature">fact</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the boost factor of this query clause to
+the given number. Documents matching this query
+will have their score multiplied with the given
+factor</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            fact
+                        </td>
+                        <td>
+                            The factor to multiply the score
+of matching documents with.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.BooleanQuery.addTerm"></a>
+                    
+                    
+                        <i><a href="#helma.Search.BooleanQuery" class="type">helma.Search.BooleanQuery</a>.
+                        <span class="symbolname">addTerm</span>(<span class="signature">field, str, clause, analyzer</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a term to the wrapped query object. This method can be called
+with two, three or four arguments, eg.:
+<pre>addTerm("fieldname", "querystring")
+addTerm("fieldname", "querystring", "and")
+addTerm("fieldname", "querystring", helma.Search.getAnalyzer("de"))
+addTerm("fieldname", "querystring", "not", helma.Search.getAnalyzer("simple"))</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String, Array
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            Either a String or an Array containing Strings
+that determine the index field(s) to match
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            Query string to match
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            clause
+                        </td>
+                        <td>
+                            Boolean clause ("or", "not" or "and", default is "and")
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            org.apache.lucene.analysis.Analyzer
+                        </td>
+                        <td>
+                            analyzer
+                        </td>
+                        <td>
+                            An analyzer to use
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.BooleanQuery.addQuery"></a>
+                    
+                    
+                        <i><a href="#helma.Search.BooleanQuery" class="type">helma.Search.BooleanQuery</a>.
+                        <span class="symbolname">addQuery</span>(<span class="signature">q, clause</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds an additional query clause to this query.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.Query
+                        </td>
+                        <td>
+                            q
+                        </td>
+                        <td>
+                            The query to add
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            clause
+                        </td>
+                        <td>
+                            Boolean clause ("or", "not", or "and", default is "and")
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.PhraseQuery.addTerm"></a>
+                    
+                    
+                        <i><a href="#helma.Search.PhraseQuery" class="type">helma.Search.PhraseQuery</a>.
+                        <span class="symbolname">addTerm</span>(<span class="signature">field, str</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">add a term to the end of the phrase query</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            field
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.getDocument"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document" class="type">helma.Search.Document</a>.
+                        <span class="symbolname">getDocument</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped Lucene Document object</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The wrapped Document object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.addField"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document" class="type">helma.Search.Document</a>.
+                        <span class="symbolname">addField</span>(<span class="signature">name, value, options</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a field to this document.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String, helma.Search.Document.Field
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the field, or
+an instance of {@link helma.Search.Document.Field}, in which case the other
+arguments are ignored.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            The value of the field
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            options
+                        </td>
+                        <td>
+                            Optional object containing the following properties
+(each of them is optional too):
+<ul>
+<li><code>store</code> (String) Defines whether and how the value is stored
+in the field. Accepted values are "no", "yes" and "compress" (defaults to "yes")</li>
+<li><code>index</code> (String) Defines whether and how the value is indexed
+in the field. Accepted values are "no", "tokenized", "unTokenized" and
+"noNorms" (defaults to "tokenized")</li>
+<li><code>termVector</code> (String) Defines if and how the fiels should have
+term vectors. Accepted values are "no", "yes", "withOffsets", "withPositions"
+and "withPositionsAndOffsets" (defaults to "no")</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.getField"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document" class="type">helma.Search.Document</a>.
+                        <span class="symbolname">getField</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a single document field.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the field in this document object.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The field with the given name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.getFields"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document" class="type">helma.Search.Document</a>.
+                        <span class="symbolname">getFields</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the fields of a document object. If a name is passed as argument,
+this method returns only the fields with the given name</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            Optional name of the fields to return
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An array containing all fields in this document object.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.removeField"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document" class="type">helma.Search.Document</a>.
+                        <span class="symbolname">removeField</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes all fields with the given name from this document</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the field(s) to remove
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.getBoost"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document" class="type">helma.Search.Document</a>.
+                        <span class="symbolname">getBoost</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the boost factor of a document.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The boost factor of a document
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.setBoost"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document" class="type">helma.Search.Document</a>.
+                        <span class="symbolname">setBoost</span>(<span class="signature">boost</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the boost factor of a document.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            boost
+                        </td>
+                        <td>
+                            The boost factor of the document
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.getField"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">getField</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped field instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The wrapped field
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.valueToString"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>.
+                        <span class="symbolname">Search.Document.Field.valueToString</span>(<span class="signature">value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Converts the value passed as argument to the appropriate string value. For
+null values this method returns an empty string.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            The value to convert into a string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The value converted into a string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.getBoost"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">getBoost</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the boost factor of this field.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The boost factor of this field
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.setBoost"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">setBoost</span>(<span class="signature">boost</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the boost factor of this field.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            boost
+                        </td>
+                        <td>
+                            The boost factor of this field
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.isIndexed"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">isIndexed</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if this field is indexed</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this field's value is indexed, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.isCompressed"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">isCompressed</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if this field's value is stored in compressed form in the index</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this field's value is compressed, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.isStored"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">isStored</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if this field's value is stored in the index</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this field's value is stored, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.isTokenized"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">isTokenized</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if this field's value is tokenized</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this field's value is tokenized, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Search.Document.Field.isTermVectorStored"></a>
+                    
+                    
+                        <i><a href="#helma.Search.Document.Field" class="type">helma.Search.Document.Field</a>.
+                        <span class="symbolname">isTermVectorStored</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if this field's term vector is stored in the index</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this field's term vector is stored, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

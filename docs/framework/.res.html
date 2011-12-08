@@ -1,0 +1,3237 @@
+<html>
+<head>
+<title>
+res - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: res.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Default properties and methods of the res object.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res"></a>
+                    
+                    <span class="type">ResponseBean</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">res</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This object is automatically instantiated as the res property 
+of the global object (or global.res) and there is no constructor 
+to instantiate further instances.
+<br /><br />
+The res object is a host object representing the response 
+for the request that is currently handled by the scripting 
+environment.
+<br /><br />
+For further details also see the JavaDocs for 
+Packages.helma.framework.ResponseBean. Since that class is a 
+JavaBean all of its get- and set-methods are also directly 
+available as properties of this object.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://adele.helma.org/download/helma/apidocs/api/helma/framework/ResponseBean.html">Packages.helma.framework.ResponseBean</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.cache"></a>
+                    
+                    <span class="type">Boolean</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">cache</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Specifies on a per-response base whether to allow client-side caching of the response or not.
+<br /><br />
+The default value is set to true but can be changed 
+globally by passing caching = false to the initial 
+Helma java call.
+<br /><br />
+Please refer to the section about servlet 
+properties for more details.
+<br /><br />
+Example:
+<pre>res.cache = true</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.charset"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">charset</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the character encoding of the output.
+<br /><br />
+Sets Helma's character encoding according to the 
+<a href=http://java.sun.com/products/jdk/1.2/docs/guide/internat/encoding.doc.html">
+list of supported encodings</a>.
+By default, Helma uses ISO-8859-1 (western) encoding. It is also possible to 
+set the encoding server or application wide using the charset 
+property in a properties file.
+<br /><br />
+Be careful when setting the charset of a document containing 
+a FORM. The browser returns the user-input encoded in the 
+same way as the document. So if you set for instance the 
+charest to UTF-8 (and don't set it in the app.properties or 
+server.properties) you'll get scrambled input because Helma 
+assumes the input is encoded in the standard encoding 
+(default is ISO-8859-1). So you have to convert the returned 
+strings from UTF8 to ISO-8859-1 (e.g. var string = 
+new java.lang.String(new java.lang.String((req.data.input ? 
+req.data.input : "")).getBytes("ISO-8859-1"), "UTF-8");).
+<br /><br />
+Example:
+<pre>res.charset = "UTF8";
+res.write("&Auml; &Ouml; &Uuml; &auml; &ouml; &uuml; &szlig;");
+// this is displayed if the brower's encoding is set to "Western"
+&Atilde; &bdquo; &Atilde; &ndash; &Atilde; &oelig; &Atilde; &curren; &Atilde; &para; &Atilde; &frac14; &Atilde; &Yuml;</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.contentType"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">contentType</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the content type of the HTTP response.
+<br /><br />
+The default value is "text/html".
+<br /><br />
+Example:
+<pre>res.contentType='text/plain';
+res.contentType='application/xhtml+xml';</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.data"></a>
+                    
+                    <span class="type">Object</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">data</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Object providing space for custom output data.
+<br /><br />
+This object can be used to attach any property propertyName 
+onto it to make it available in a skin via the response macro.
+<br /><br />
+Example:
+<pre>File root/main.skin:
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;% response.title %&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;% response.body %&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&nbsp;
+File root/main.hac:
+res.data.title = "Test";
+res.data.body = "Hello, World!";
+root.renderSkin("main");
+&nbsp;
+<i>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Hello, World!
+&lt;/body&gt;
+&lt;/html&gt;</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.error"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">error</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Property containing an internal Helma error message.
+<br /><br />
+This property contains a string describing an error if one should 
+have occured. If no error was detected, res.error contains null.
+<br /><br />
+A good place for this function is a custom error page to display errors in a pretty layout.
+<br /><br />
+Example:
+<pre>res.write(res.error);
+<i>Runtime error Syntax error detected near line 1, column 24, after in string starting 
+with: 'function main_action (arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) {'...</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.exception">res.exception</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.javaStack">res.javaStack</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.scriptStack">res.scriptStack</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.etag"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">etag</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get or set the HTTP ETag for this response.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.exception"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">exception</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get the uncaught exception for the response, if any</div>
+                
+                
+                
+                <div class="type">since: 1.7</div>
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.error">res.error</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.javaStack">res.javaStack</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.scriptStack">res.scriptStack</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.handlers"></a>
+                    
+                    <span class="type">Object</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">handlers</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The res.handlers object is a container in the response object used to register 
+macro handlers for the current request/response.
+<br /><br />
+Adding an object to res.handlers will make its macro functions and/or 
+properties available as macros for skins.
+<br /><br />
+By default, res.handlers contains the objects in the request path, registered by 
+their prototype names. For instance, res.handlers.root will always be 
+a reference to the app's root object.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.javaStack"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">javaStack</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get the Java stack trace of an uncaught exception, if any</div>
+                
+                
+                
+                <div class="type">since: 1.7</div>
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.error">res.error</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.exception">res.exception</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.scriptStack">res.scriptStack</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.lastModified"></a>
+                    
+                    <span class="type">Date</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">lastModified</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the date the resource was retrieved by the remote client.
+<br /><br />
+By setting this property the remote client is told that the 
+served resource has been modified at the given time. You then 
+can check if the resource has changed given that the client 
+includes this date in future requests for this resource.
+<br /><br />
+Example:
+<pre>//in this example this.modificationDate is a property storing
+//the time of the last changes to the current object
+res.lastModified = this.modificationDate;</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.message"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">message</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Buffers a string for output.
+<br /><br />
+When this property is set its value can be retrieved either by 
+res.message from within an action or a JavaScript file or by 
+the response macro from within a skin file.
+<br /><br />
+Additionally, it will survive an HTTP redirect which can be necessary 
+to display warnings or error messages to the user. The property's 
+value will be reset to null not later than a redirected response was output.
+<br /><br />
+Note: Please be aware that both res.message and res.data.message corresponds 
+to the response.message macro. However, res.message has higher priority if both 
+values should be set.
+<br /><br />
+Example:
+<pre>File main.skin:
+&lt;% response.message %>
+&nbsp;
+File main.hac:
+res.message = "Hello, World!";
+res.data.message = "Test";
+this.renderSkin("main");
+&nbsp;
+<i>Hello, World!</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.meta"></a>
+                    
+                    <span class="type">Object</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">meta</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Object providing space for general purpose per request meta information.
+<br /><br />
+This object can be used to attach any property propertyName onto 
+it to make it available within the scope a request.
+<br /><br />
+Example:
+<pre>Inside an onRequest handler function:
+&nbsp;&nbsp;res.meta.permissions = this.doSomething();
+&nbsp;
+Inside an action such as delete.hac:
+if(res.meta.permissions | 7)
+&nbsp;&nbsp;this.remove();</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.realm"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">realm</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the realm for a HTTP-authentication challenge
+<br /><br />
+This defines the realm for a HTTP-authentication challenge. 
+The realm is the name of a protected space. A server can have 
+several realms, but resources within one realm should share 
+the same authorisation - a valid authorisation should be valid 
+as well for requesting another resource within the same realm.
+<br /><br />
+Example:
+<pre>res.status = 401;
+res.realm = "Helma protected area";</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.scriptStack"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">scriptStack</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get the Javascript stack trace of an uncought exception, if any</div>
+                
+                
+                
+                <div class="type">since: 1.7</div>
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.error">res.error</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.exception">res.exception</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.javaStack">res.javaStack</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.servletResponse"></a>
+                    
+                    <span class="type">HttpServletResponse</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">servletResponse</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Provides direct access to the servlet response header, a
+Java object of the class Packages.javax.servlet.http.HttpServletResponse
+<br /><br />
+Example:
+<pre>res.servletResponse.setHeader( "Content-Disposition", 
+&nbsp;&nbsp;( this.mimetype.startsWith( "image/" )? "" : "attachment;" ) +  
+&nbsp;&nbsp;"filename=\"" + this.name + "\"" );</pre></div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://google.com/search?q=javax.servlet.http.HttpServletResponse">Packages.javax.servlet.http.HttpServletResponse</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.skinpath"></a>
+                    
+                    <span class="type">Array</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">skinpath</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The res.skinpath can be set to an array that tells Helma where to 
+look for skinsets for the current request/response.
+<br /><br />
+The elements of the array should be either HopObjects, 
+which will be interpreted as database-resident skinsets, or strings, 
+which will be interpreted as directory paths leading to file based 
+skin sets.
+<br /><br />
+If hobj is a HopObject element in the res.skinpath array, then a skin 
+for prototype proto named sname is expected to reside in a string 
+property in hobj.proto.sname.skin.
+<br /><br />
+If path is a string, then the same skin will be looked up in a file 
+called path/proto/sname.skin.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res.status"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">status</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Read/write property containing the response's HTTP-status code.
+<br /><br />
+This property defines the status code of the HTTP response.
+Like any HTTP-Server Helma can send the client software additional information 
+describing the response. For a list of all codes and their meaning see RFC 2616.
+One of the common usages is to deny access and ask for authentication by responding 
+with status code 401. The client software usually responds by asking the user 
+for username and password.
+The default value is 200 which is the code for "OK".
+<br /><br />
+Example:
+<pre>res.status = 401;
+//make sure to set res.realm as well when asking for http authentication
+res.realm = "Helma protected area";</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.abort"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">abort</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Aborts the current transaction by throwing an Error</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.stop">res.stop</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.rollback">res.rollback</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.addHeader"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">addHeader</span>(<span class="signature">name, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Proxy to res.servletResponse.addHeader()</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the header name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            as String, the header value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.servletResponse">res.servletResponse</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.addDateHeader">res.addDateHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.setHeader">res.setHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.setDateHeader">res.setDateHeader</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.addDateHeader"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">addDateHeader</span>(<span class="signature">name, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Proxy to res.servletResponse.addDateHeader()</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the header name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Date
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            as Date, the header value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.servletResponse">res.servletResponse</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.addHeader">res.addHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.setHeader">res.setHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.setDateHeader">res.setDateHeader</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.commit"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">commit</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Commits the current transaction, writing all changed objects to the database, and starts a new transaction.
+<br /><br />
+Usually, Helma automatically wraps each request into a 
+database transaction. Use res.commit() if you have to 
+modify a huge ammount of HopObjects within one request and 
+want to partition the transaction into several smaller ones.
+<br /><br />
+Example:
+<pre>for (var i in collection1)
+&nbsp;&nbsp;collection1.get(i).counter += 1;
+// commit changes to elements of collection1 to db
+res.commit();
+for (var i in collection2)
+&nbsp;&nbsp;collection2.get(i).counter -= 1;
+// changes to elements of collection2 are committed 
+// automatically when the request terminates</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.rollback">res.rollback</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.debug"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">debug</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Append any value to the output of the current page. 
+<br /><br />
+All values written with res.debug() will appear as separate 
+items at the bottom of the page. This assumes that the 
+content type of the current request is text/html. Since items 
+are simply appended to the full page, res.debug() will most likely break 
+the well-fomedness of your page, but it is usually displayed properly.
+<br /><br />
+Transforms the passed argument to a string (only if necessary) and 
+appends the result to the response debug buffer.
+<br /><br />
+Example:
+<pre>var now = new Date();
+res.debug("current time: " + now);
+&nbsp;
+<i>current time: Tue May 20 18:59:02 CEST 2003</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.dependsOn"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">dependsOn</span>(<span class="signature">what</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Add an item to this response's dependencies. 
+<br /><br />
+If no dependency has changed between requests, 
+an HTTP not-modified response will be generated.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            what
+                        </td>
+                        <td>
+                            as string, an item this response depends on
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.digest"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">digest</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Digest this response's dependencies to conditionally create 
+a HTTP not-modified response.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.encode"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">encode</span>(<span class="signature">textToEncode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string as smooth HTML to the output buffer.
+<br /><br />
+Encodes a string by replacing linebreaks with &lt;br /&gt; tags 
+and diacritical characters as well as HTML tags with their 
+equivalent HTML entities and immediately outputs it.
+<br /><br />
+Example:
+<pre>res.encode("&lt;b&gt;Bananer v&auml;xer\n minsann inte p&aring; tr&auml;d.&lt;/b&gt;");
+<i>&amp;lt;b&amp;gt;Bananer v&amp;auml;xer
+&amp;lt;br /&amp;gt; &amp;lt;br&amp;gt; minsann inte p&amp;aring; tr&amp;auml;d.&amp;lt;/b&amp;gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            textToEncode
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.encodeForm">res.encodeForm</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.encodeXml">res.encodeXml</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.encodeForm"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">encodeForm</span>(<span class="signature">textToEncode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string to the output buffer, leaving linebreaks untouched.
+<br /><br />
+Performs the following string manipulations:
+<ul>
+<li>Unlike encode, leaves linebreaks untouched. 
+    This is what you usually want to do for encoding form 
+    content (esp. with text input values).</li>
+<li>All special characters (i.e. non ASCII) are being 
+    replaced with their equivalent HTML entity.</li>
+<li>Existing markup tags are being encoded.</li>
+</ul>
+<br /><br />
+Example:
+<pre>var str = res.encodeForm("&lt;b&gt;Bananer v&auml;xer\n minsann inte p&aring; tr&auml;d.&lt;/b&gt;");
+&nbsp;
+<i>&amp;lt;b&amp;gt;Bananer v&amp;auml;xer
+minsann inte p&amp;aring; tr&amp;auml;d.&amp;lt;/b&amp;gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            textToEncode
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.encode">res.encode</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.encodeXml">res.encodeXml</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.encodeXml"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">encodeXml</span>(<span class="signature">textToEncode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string to the output buffer, replacing some characters with their equivalent XML entities.
+<br /><br />
+This function substitutes the characters '<', '>', '&', as well as single and double quotes with 
+their predefined XML 1.0 entities. Additionally, some characters that are illegal in 
+XML documents are silently dropped.
+<br /><br />
+encodeXml() is usually used to encode text for safe inclusion in parsed character data sections 
+of XML documents.
+<br /><br />
+Example:
+<pre>res.encodeXml("&lt;title&gt;Sm&oslash;rebr&amp;oslash;d&lt;/title&gt;");
+<i>&amp;lt;title&amp;gt;Sm&oslash;rebr&amp;amp;oslash;d&amp;lt;/title&amp;gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            textToEncode
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.encode">res.encode</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.encodeForm">res.encodeForm</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.format"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">format</span>(<span class="signature">textToFormat</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string as smooth HTML to the output buffer.
+<br /><br />
+This function outputs a string after substituting special characters 
+in a string with their equivalent HTML entities but keeping markup tags 
+as is and also tries to avoid <br /> tags where ever possible (e.g. in table structures).
+<br /><br />
+Example:
+<pre>res.format("&lt;table&gt;\n&lt;tr&gt;&lt;td&gt;Bananer v&auml;xer\n minsann 
+inte p&aring; tr&auml;d.&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;");
+<i>&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;Bananer v&amp;auml;xer
+&lt;br /&gt;
+minsann inte p&amp;aring; tr&amp;auml;d.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            textToFormat
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.encode">res.encode</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.forward"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">forward</span>(<span class="signature">path</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Serves a static file from the application's protectedStatic directory.
+<br /><br />
+Used to serve static files from the application's 
+protectedStatic directory. This "protected" static 
+directory needs to be set by defining an 
+appname.protectedStatic property in the apps.properties 
+file. The contents of that directory are not made 
+directly accessible through the web, only through the 
+use of this res.forward() method.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            path
+                        </td>
+                        <td>
+                            as String, relative to this app's protectedStatic directory
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.getBuffer"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">getBuffer</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Provides access to the contents of the current repsonse buffer.
+<br /><br />
+Useful for example when parsing/modifying the response after
+the request has been handled but before the response is returned.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObjectExtensions.html#HopObject.onResponse">HopObject.prototype.onResponse</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.pop"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">pop</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Pops a string buffer from the response object and returns its string value.
+<br /><br />
+This function "pops" a string buffer from the response object. 
+The returned string contains all output written to the response 
+since the last call of res.push().
+<br /><br />
+Note that more than one string buffers can be pushed on the 
+response object, and output always goes to the last one.
+<br /><br />
+Example:
+<pre>res.push();
+res.write("foo");
+res.encode('.');
+res.write("bar");
+var str = res.pop()
+// str is "foo.bar"</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.push">res.push</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.pushBuffer">res.pushBuffer</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.popBuffer">res.popBuffer</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.popBuffer"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">popBuffer</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Pops the current response buffer without converting it to a string.
+<br /><br />
+This function "pops" the current StringBuffer from the 
+response object and returns it as a Java StringBuffer object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            StringBuffer
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.pop">res.pop</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.pushBuffer">res.pushBuffer</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.push">res.push</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.push"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">push</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Pushes a new string buffer on the response object.
+<br /><br />
+This function "pushes" a fresh string buffer on the response 
+object to which all response output will be redirected 
+until res.pop() is called to retrieve the generated string.
+<br /><br />
+Note that more than one string buffers can be pushed on the 
+response object, and output always goes to the last one.
+<br /><br />
+Example:
+<pre>res.push();
+res.write("foo");
+res.encode('.');
+res.write("bar");
+var str = res.pop();
+// str is "foo.bar"</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.pop">res.pop</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.pushBuffer">res.pushBuffer</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.popBuffer">res.popBuffer</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.pushBuffer"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">pushBuffer</span>(<span class="signature">strBuffer</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Pushes a Java StringBuffer object on the reponse object.
+<br /><br />
+This function "pushes" the provided StringBuffer to the 
+response object. All further writes will be redirected 
+to this buffer.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            StringBuffer
+                        </td>
+                        <td>
+                            strBuffer
+                        </td>
+                        <td>
+                            as StringBuffer Java object, the StringBuffer to be pushed to the reponse object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.pop">res.pop</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.push">res.push</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.popBuffer">res.popBuffer</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.redirect"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">redirect</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sends an HTTP redirect message to the client.
+<br /><br />
+Note: JavaScript code following this command will be ignored.
+<br /><br />
+Example:
+<pre>res.redirect(this.href());</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.reset"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">reset</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Resets the current output buffer.
+<br /><br />
+Example:
+<pre>res.write("Test");
+// changing my mind (e.g. an error occured)
+res.reset();
+res.write("Hello, World!");
+&nbsp;
+<i>Hello, World!</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.resetBuffer"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">resetBuffer</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Resets the response buffer, clearing all content 
+previously written to it.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.rollback"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">rollback</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Rollback the current transaction and start a new one.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">exceptions</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Exception thrown if rollback fails
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.commit">res.commit</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.abort">res.abort</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.stop">res.stop</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.setCookie"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">setCookie</span>(<span class="signature">key, value, days, path, domain</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets a cookie to be sent to the client machine.
+<br /><br />
+All arguments after nameString and valueString are optional.
+<br /><br />
+daysNumber specifies the number of days until the cookie expires.
+If set to 0, the cookie will be deleted immediately.
+If the argument is not specified or set to a negative value, the cookie 
+will be discarded is at the end of the browser session.
+<br /><br />
+pathString specifies the path on which to set the cookie (defaults to /)
+<br /><br />
+domainString specifies the domain on which to set the cookie (defaults to unset)
+<br /><br />
+Example:
+<pre>res.setCookie("username", "michi");
+res.setCookie("password", "strenggeheim", 10, "/mypath", ".mydomain.org");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            days
+                        </td>
+                        <td>
+                            as Number
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            path
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            domain
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.setHeader"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">setHeader</span>(<span class="signature">name, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Proxy to res.servletResponse.setHeader()</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the header name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            as String, the header value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.servletResponse">res.servletResponse</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.addHeader">res.addHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.addDateHeader">res.addDateHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.setDateHeader">res.setDateHeader</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.setDateHeader"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">setDateHeader</span>(<span class="signature">name, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Proxy to res.servletResponse.setDateHeader()</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the header name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Date
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            as Date, the header value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.servletResponse">res.servletResponse</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.addHeader">res.addHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.addDateHeader">res.addDateHeader</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.setHeader">res.setHeader</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.stop"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">stop</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stops the execution of the request and sends the content of the reponse buffer.
+<br /><br />
+Note that this method is intended for use in the context of an 
+onRequest handler and not for use inside of actions, which would 
+likely lead to bad coding practices.
+<br /><br />
+Example:
+<pre>function onRequest() {
+&nbsp;&nbsp;if (fooIsCached()) {
+&nbsp;&nbsp;&nbsp;&nbsp;res.write(fooFromCache());
+&nbsp;&nbsp;&nbsp;&nbsp;res.stop();
+&nbsp;&nbsp;}
+}</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.abort">res.abort</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.rollback">res.rollback</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.write"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">write</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string to the output buffer.
+<br /><br />
+Transforms the passed argument to a string (only if necessary) 
+and appends the result to the response string buffer. Throws an error 
+if no argument or an undefined argument is passed.
+<br /><br />
+Example:
+<pre>var now = new Date();
+res.write("current time: " + now);
+&nbsp;
+<i>current time: Thu Feb 15 23:34:29 GMT+01:00 2001</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.writeBinary"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">writeBinary</span>(<span class="signature">data</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes binary data to the output buffer.
+<br /><br />
+This function takes one argument, which must be a 
+Java byte array. Useful when handling binary data 
+retrieved via http file upload.
+<br /><br />
+Example:
+<pre>var upload = req.data.fileUpload;
+res.writeBinary(upload.getContent());</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Packages.java.ByteArray
+                        </td>
+                        <td>
+                            data
+                        </td>
+                        <td>
+                            as Packages.java.ByteArray
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.writeln"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">writeln</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string to the output buffer, adding a linebreak.
+<br /><br />
+Transforms the passed argument to a string 
+(only if necessary) and appends the result together 
+with a trailing linebreak to the response string 
+buffer. Throws an error if no argument or an undefined 
+argument is passed.
+<br /><br />
+Example:
+<pre>var now = new Date();
+res.writeln("current time:");
+res.writeln(now);
+&nbsp;
+<i>current time:<br />
+Thu Feb 15 23:34:29 GMT+01:00 2001</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="res.unsetCookie"></a>
+                    
+                    
+                        <i><a href="#res" class="type">res</a>.
+                        <span class="symbolname">unsetCookie</span>(<span class="signature">key</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Unset a previously set HTTP cookie, causing it to be 
+discarded by the HTTP client immediately.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            as String, the name of the cookie to be discarded
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:04 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

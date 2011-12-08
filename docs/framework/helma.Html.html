@@ -1,0 +1,4123 @@
+<html>
+<head>
+<title>
+Html - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Html.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the helma.Html
+and helma.Html.Tablewriter classes.
+<br /><br />
+To use this optional module, its repository needs to be added to the 
+application, for example by calling app.addRepository('modules/helma/Html.js')</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Html"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Html</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Html</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.openTag">openTag</a>(name, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.openTagAsString">openTagAsString</a>(name, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.closeTag">closeTag</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.closeTagAsString">closeTagAsString</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.tag">tag</a>(name, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.tagAsString">tagAsString</a>(name, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.element">element</a>(name, str, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.elementAsString">elementAsString</a>(name, str, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.link">link</a>(attr, text)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.linkAsString">linkAsString</a>(attr, text)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.hidden">hidden</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.hiddenAsString">hiddenAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.input">input</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.inputAsString">inputAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.textArea">textArea</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.textAreaAsString">textAreaAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.checkBox">checkBox</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.checkBoxAsString">checkBoxAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.radioButton">radioButton</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.radioButtonAsString">radioButtonAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.submit">submit</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.submitAsString">submitAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.button">button</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.buttonAsString">buttonAsString</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.dropDown">dropDown</a>(param, options, selectedValue, firstOption)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.dropDownAsString">dropDownAsString</a>(param, options, selectedValue, firstOption)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.map">map</a>(name, param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.mapAsString">mapAsString</a>(name, areas)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.table">table</a>(headers, data, param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.tableAsString">tableAsString</a>(headers, data, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.openLink">openLink</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.openLinkAsString">openLinkAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.closeLink">closeLink</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.closeLinkAsString">closeLinkAsString</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.color">color</a>(c)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.colorAsString">colorAsString</a>(c)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.form">form</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.formAsString">formAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.password">password</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.passwordAsString">passwordAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.file">file</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.fileAsString">fileAsString</a>(attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.activateUrls">activateUrls</a>(str)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Html.TableWriter"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Html.TableWriter</span>(<span class="signature">numberOfColumns, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new TableWriter instance</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            numberOfColumns
+                        </td>
+                        <td>
+                            The number of columns in the table
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing attributes to use when
+rendering the single table elements. For a description see {@link #table}.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.TableWriter.write">write</a>(text, attr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Html.TableWriter.close">close</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">Boolean</span> <a href="#helma.Html.TableWriter.writeHeader">writeHeader</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Boolean</span> <a href="#helma.Html.TableWriter.writeString">writeString</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Html.TableWriter.writeHeader"></a>
+                    
+                    <span class="type">Boolean</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Html.TableWriter" class="type">helma.Html.TableWriter</a>.
+                        <span class="symbolname">writeHeader</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If set to true the first row of the table data is rendered
+using <code>&lt;th&gt;</code> tags (defaults to false).</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Html.TableWriter.writeString"></a>
+                    
+                    <span class="type">Boolean</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Html.TableWriter" class="type">helma.Html.TableWriter</a>.
+                        <span class="symbolname">writeString</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If set to true the TableWriter returns the rendered table
+as string, otherwise the table is written directly to response,
+which is the default.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.renderMarkupPart"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>.
+                        <span class="symbolname">Html.renderMarkupPart</span>(<span class="signature">name, start, end, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Static helper method that renders an arbitrary markup part.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The element's name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            start
+                        </td>
+                        <td>
+                            Prefix of each rendered element
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            end
+                        </td>
+                        <td>
+                            Suffix of each rendered element
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            Optional element attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.isSelected"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>.
+                        <span class="symbolname">Html.isSelected</span>(<span class="signature">value, selectedValue</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Static helper method used in helma.Html.checkBox
+and helma.Html.dropDown to check if a current value
+matches against one or more selected values passed
+as argument</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            The current value to check
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String, Array
+                        </td>
+                        <td>
+                            selectedValue
+                        </td>
+                        <td>
+                            Either a single
+value to check against the current value, or an array
+containing values.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True in case the value is among the selected
+values, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.openTag"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">openTag</span>(<span class="signature">name, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders the opening tag of an arbitrary x/html tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The tag name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An optional object containing element attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.openTagAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">openTagAsString</span>(<span class="signature">name, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the opening tag of an arbitrary x/html tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The tag name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An optional object containing element attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered x/html opening tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.openTag">helma.Html.openTag</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.closeTag"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">closeTag</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders the closing tag of an arbitrary x/html tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The tag name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.closeTagAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">closeTagAsString</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the closing tag of an arbitray x/html element</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The tag name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered closing tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.closeTag">helma.Html.closeTag</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.tag"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">tag</span>(<span class="signature">name, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an empty arbitrary x/html tag ("contentless tag")</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The tag name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An optional object containing tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.tagAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">tagAsString</span>(<span class="signature">name, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an empty arbitrary x/html tag ("contentless tag")</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The tag name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An optional object containing tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered element
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.tag">helma.Html.tag</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.element"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">element</span>(<span class="signature">name, str, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an arbitrary x/html element</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The element name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The content of the element
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An optional object containing element attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.elementAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">elementAsString</span>(<span class="signature">name, str, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Return an arbitrary x/html element</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The element name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The content of the element
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An optional object containing element attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered element
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.element">helma.Html.element</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.link"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">link</span>(<span class="signature">attr, text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html link tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the link attributes
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            The text to appear as link
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.linkAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">linkAsString</span>(<span class="signature">attr, text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html link tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the link attributes
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            The text to appear as link
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered link tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.link">helma.Html.link</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.hidden"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">hidden</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html input tag of type "hidden"</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.hiddenAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">hiddenAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html input tag of type "hidden"</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered input element
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.hidden">helma.Html.hidden</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.input"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">input</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html text input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.inputAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">inputAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html text input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered text input tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.input">helma.Html.input</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.textArea"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">textArea</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html textarea tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.textAreaAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">textAreaAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html textarea tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered textarea tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.textArea">helma.Html.textArea</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.checkBox"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">checkBox</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html checkbox input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.checkBoxAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">checkBoxAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html checkbox input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered checkbox tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.checkBox">helma.Html.checkBox</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.radioButton"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">radioButton</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html radiobutton input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.radioButtonAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">radioButtonAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html radio input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered element
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.radioButton">helma.Html.radioButton</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.submit"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">submit</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html submit input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.submitAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">submitAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html submit input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered submit input tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.submit">helma.Html.submit</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.button"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">button</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html button input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.buttonAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">buttonAsString</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html button input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered button input tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.button">helma.Html.button</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.dropDown"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">dropDown</span>(<span class="signature">param, options, selectedValue, firstOption</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders a x/html drop down select box</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            options
+                        </td>
+                        <td>
+                            Either an array of strings, an array with 
+several <code>{value: v, display: d}</code> objects, or a collection 
+of <code>["value", "display"]</code> arrays in an array
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            selectedValue
+                        </td>
+                        <td>
+                            The value to pre-select
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            firstOption
+                        </td>
+                        <td>
+                            An optional first option to display in the
+select box (this option will always have no value)
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.dropDownAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">dropDownAsString</span>(<span class="signature">param, options, selectedValue, firstOption</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html drop down select box</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            options
+                        </td>
+                        <td>
+                            Either an array of strings, an array with 
+several <code>{value: v, display: d}</code> objects, or a collection 
+of <code>["value", "display"]</code> arrays in an array
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            selectedValue
+                        </td>
+                        <td>
+                            The value to pre-select
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            firstOption
+                        </td>
+                        <td>
+                            An optional first option to display in the
+select box (this option will always have no value)
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered drop down select box
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.dropDown">helma.Html.dropDown</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.map"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">map</span>(<span class="signature">name, param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an image map based on an array containing the map parameters.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the image map
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An array containing objects, where each of them
+ contains the attributes for a single image map entry
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.mapAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">mapAsString</span>(<span class="signature">name, areas</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered image map based on an array containing the map parameters.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the image map
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            areas
+                        </td>
+                        <td>
+                            An array containing objects, where each of them
+ contains the attributes for a single image map entry
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered image map
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.map">helma.Html.map</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.table"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">table</span>(<span class="signature">headers, data, param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders a complete x/html table.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            headers
+                        </td>
+                        <td>
+                            An array containing table headers
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            data
+                        </td>
+                        <td>
+                            A two-dimensional array containing the table data
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            An object containing the following properties:
+<ul>
+<li><code>table</code>: Attributes to render within the opening <code>&lt;table&gt;</code> tag</li>
+<li><code>tr</code>: Attributes to render within each <code>&lt;tr&gt;</code> tag</li>
+<li><code>td</code>: Attributes to render within each <code>&lt;td&gt;</code> tag</li>
+<li><code>th</code>: Attributes to render within each <code>&lt;th&gt;</code> tag</li>
+<li><code>trHead</code>: Attributes to render within each <code>&lt;tr&gt;</code> tag
+ in the header area of the table</li>
+<li><code>trEven</code>: Attributes to render within each even <code>&lt;tr&gt;</code> tag</li>
+<li><code>trOdd</code>: Attributes to render within each odd <code>&lt;tr&gt;</code> tag</li>
+<li><code>tdEven</code>: Attributes to render within each even <code>&lt;td&gt;</code> tag</li>
+<li><code>tdOdd</code>: Attributes to render within each odd <code>&lt;td&gt;</code> tag</li>
+<li><code>thEven</code>: Attributes to render within each even <code>&lt;th&gt;</code> tag</li>
+<li><code>thOdd</code>: Attributes to render within each odd <code>&lt;th&gt;</code> tag</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.tableAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">tableAsString</span>(<span class="signature">headers, data, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html table</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            headers
+                        </td>
+                        <td>
+                            An array containing table headers
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            data
+                        </td>
+                        <td>
+                            A two-dimensional array containing the table data
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            For a description see {@link #table}
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered table
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.table">helma.Html.table</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.openLink"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">openLink</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html opening link tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.openLinkAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">openLinkAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an x/html opening link tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered open link tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.openTag">helma.Html.openTag</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.closeLink"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">closeLink</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html closing link tag</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.closeLinkAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">closeLinkAsString</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html closing link tag</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Rhe rendered closing link tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.closeLink">helma.Html.closeLink</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.color"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">color</span>(<span class="signature">c</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated </span>
+                </div>
+                
+                
+                    <div class="desc">Renders a color definition string. If the string passed as
+argument contains only hex characters it will be prefixed with a
+hash sign if necessary, otherwise this method assumes that the
+value is a named color (eg. "yellow").</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            c
+                        </td>
+                        <td>
+                            The color definintion
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.colorAsString"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">colorAsString</span>(<span class="signature">c</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated </span>
+                </div>
+                
+                
+                    <div class="desc">Returns a color definition.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            c
+                        </td>
+                        <td>
+                            The color definintion
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered color definition
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.color">helma.Html.color</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.form"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">form</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html opening form tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.formAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">formAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an x/html opening form tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered opening form tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.form">helma.Html.form</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.password"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">password</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html password input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.passwordAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">passwordAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html password input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered password input tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.password">helma.Html.password</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.file"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">file</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders an x/html file input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.fileAsString"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">fileAsString</span>(<span class="signature">attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered x/html file input tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An object containing the tag attributes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered file input tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html.file">helma.Html.file</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.activateUrls"></a>
+                    
+                    
+                        <i><a href="#helma.Html" class="type">helma.Html</a>.
+                        <span class="symbolname">activateUrls</span>(<span class="signature">str</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Parses the string passed as argument and converts any
+URL in it into a link tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            The string wherein URLs should be
+converted into link tags
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The string containing URLs converted into link tags
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.TableWriter.write"></a>
+                    
+                    
+                        <i><a href="#helma.Html.TableWriter" class="type">helma.Html.TableWriter</a>.
+                        <span class="symbolname">write</span>(<span class="signature">text, attr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a single table cell to response.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            The content of the table cess
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            attr
+                        </td>
+                        <td>
+                            An optional object containig attributes
+to render for this table cell
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Html.TableWriter.close"></a>
+                    
+                    
+                        <i><a href="#helma.Html.TableWriter" class="type">helma.Html.TableWriter</a>.
+                        <span class="symbolname">close</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Closes all open table tags. If {@link #writeString} is set to
+true, this method returns the rendered table.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered table, if {@link #writeString} is set to
+true, otherwise void.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

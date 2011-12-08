@@ -1,0 +1,3305 @@
+<html>
+<head>
+<title>
+HopObject - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: HopObject.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Default properties and methods of  
+the HopObject prototype.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="HopObject"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">HopObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructor for HopObject objects, providing the 
+building blocks of the Helma framework.
+<br /><br />
+Extends the standard JavaScript object with 
+Helma-specific properties and functions. The HopObject is
+the basic building block of a Helma application. The 
+website root object as well as custom types defined by 
+the application inherit from the HopObject prototype.
+<br /><br />
+HopObjects can be given special Helma specific 
+properties, such as "collections" that can be configured 
+to map to relational databases, and will make such data 
+available when rendering "skins".
+<br /><br />
+HopObjects can be in transient state or are persistently 
+mapped on a database. HopObjects that are directly or 
+indirectly attached to the application's root object are 
+automatically persisted using the built-in XML database, if 
+they are not otherwise mapped to a relational database. 
+see JavaDocs for helma.scripting.rhino.HopObject</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.add">add</a>(subnode)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.addAt">addAt</a>(position, subnode)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.clearCache">clearCache</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.contains">contains</a>(obj)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.count">count</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.get">get</a>(id)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.getById">getById</a>(id, proto)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.getChildElement">getChildElement</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.getOrderedView">getOrderedView</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.getResource">getResource</a>(resourceName)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.getResources">getResources</a>(resourceName)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.href">href</a>(action)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.invalidate">invalidate</a>(childId)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.indexOf">indexOf</a>(obj)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.isPersistent">isPersistent</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.isTransient">isTransient</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.list">list</a>(startIndex, length)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.persist">persist</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.prefetchChildren">prefetchChildren</a>(startIndex, length)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.remove">remove</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.removeChild">removeChild</a>(child)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.renderSkin">renderSkin</a>(skin, params)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.renderSkinAsString">renderSkinAsString</a>(skin, params)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.size">size</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.update">update</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.onCodeUpdate">onCodeUpdate</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.onInit">onInit</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.onPersist">onPersist</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.onUnhandledMacro">onUnhandledMacro</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.onRequest">onRequest</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#HopObject.onResponse">onResponse</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">Date</span> <a href="#HopObject.__created__">__created__</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Number</span> <a href="#HopObject._id">_id</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Date</span> <a href="#HopObject.__lastModified__">__lastModified__</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#HopObject._name">_name</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">HopObject</span> <a href="#HopObject._parent">_parent</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#HopObject._prototype">_prototype</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Object</span> <a href="#HopObject.cache">cache</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://adele.helma.org/download/helma/apidocs/api/helma/scripting/rhino/HopObject.html">Packages.helma.scripting.rhino.HopObject</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="HopObject.__created__"></a>
+                    
+                    <span class="type">Date</span>
+                    
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">__created__</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The creation date of the HopObject.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="HopObject._id"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">_id</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The unique id of the HopObject.
+This property is read-only</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="HopObject.__lastModified__"></a>
+                    
+                    <span class="type">Date</span>
+                    
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">__lastModified__</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The date when the HopObject was last modified.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="HopObject._name"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">_name</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The accessname of the HopObject.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="HopObject._parent"></a>
+                    
+                    <span class="type">HopObject</span>
+                    
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">_parent</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The parent collection containing this HopObject.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="HopObject._prototype"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">_prototype</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The name of the prototype from which this HopObject is inheriting.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="HopObject.cache"></a>
+                    
+                    <span class="type">Object</span>
+                    
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">cache</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Cache object providing space for arbitrary run-time data.
+<br /><br />
+Each HopObject contains a cache object to store temporary 
+properties (strings, numbers, objects etc.), a transient 
+HopObject, which can be used for caching purposes.
+<br /><br />
+These properties can be accessed in any thread until the 
+application is restarted or the HopObject is invalidated, 
+either manually using the invalidate method, or when the 
+clearCache method is being called, or whenever Helma is updating 
+the HopObject's data from a remote database.
+<br /><br />
+There is no way to make the cache object persistent.
+<br /><br />
+Example:
+<pre>var obj = root.get(0);
+obj.cache.message = "This is a temporary message."</pre></div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.clearCache">HopObject.clearCache</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.add"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">add</span>(<span class="signature">subnode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Attaches a HopObject as an additional subnode.
+<br /><br />
+Adds a HopObject as new subnode to another HopObject.
+The new subnode is added after the last subnode already 
+contained in the parent HopObject. 
+<br /><br />
+If the subnode is already attached, it is moved to the 
+last index position.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            HopObject
+                        </td>
+                        <td>
+                            subnode
+                        </td>
+                        <td>
+                            as HopObject to add to this node.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the addition or move was successful.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.addAt">HopObject.addAt</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.addAt"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">addAt</span>(<span class="signature">position, subnode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Attaches an additional subnode at the given index.
+<br /><br />
+Adds a HopObject to a collection at a certain position, 
+and shifts the index of all succeeding objects in that 
+collection by one. Index positions start with 0. Any 
+out of range moves will move the subnode to the last
+index position.
+<br /><br />
+Just makes sense for HopObjects, that are not mapped on 
+a relational DB, since the sort order of the collection 
+would otherwise be defined by type.properties, resp. by 
+the database itself. Returns true in case of success.
+
+If the subnode is already attached, it will be moved to
+the specified index position.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            position
+                        </td>
+                        <td>
+                            as Number, the index position where the subnode is to be inserted.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            HopObject
+                        </td>
+                        <td>
+                            subnode
+                        </td>
+                        <td>
+                            as HopObject to add to this node.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the addition or move was successful.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.add">HopObject.add</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.clearCache"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">clearCache</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Clears this HopObject's cache property.
+<br /><br />
+Removes all information stored in the cache object. 
+Doing this by just calling 'obj.cache = null' is not 
+possible, since the property itself can not be set.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.cache">HopObject.cache</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.contains"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">contains</span>(<span class="signature">obj</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated use indexOf instead</span>
+                </div>
+                
+                
+                    <div class="desc">Determines if a HopObject contains a certain subnode.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            HopObject
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            as HopObject, the node to look for
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Number of the index position or -1
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.indexOf">HopObject.indexOf</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.count"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">count</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get the number of subnodes attached to this HopObject.
+<br /><br />
+Example:
+<pre>res.write(root.count());
+<i>5</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Number of subnodes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.size">HopObject.size</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.get"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">get</span>(<span class="signature">id</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Retrieves a persisted HopObject that is a subnode or 
+a mapped property of this HopObject. 
+<br /><br />
+If the argument is a number, this method returns the subnode 
+of this HopObject at the corresponding index position.
+<br /><br />
+If the argument is a string and matches a property name 
+mapped in this prototype's type.properties file to a 
+mountpoint, object, or collection, this function returns 
+the corresponding HopObject.
+<br /><br />
+If the string argument produces no such match, the
+behavior depends on whether this HopObject's _children have 
+an accessname defined in the prototype's type.properties. 
+<br /><br />
+If an accessname is defined, this function first attempts 
+to return the subnode with the corresponding name. 
+Otherwise, or if that attempt fails, a string argument will 
+result in a null return unless the string argument is 
+numeric, in which case this function will return the child 
+with an _id matching the numeric value of the argument. 
+However, retrieving a HopObject based on its _id value is 
+better achieved using the getById() HopObject method.
+<br /><br />
+Example:
+<pre>root.get(0);
+HopObject author
+root.get(1);
+<i>HopObject story</i>
+&nbsp;
+root.get("date");
+Wed Oct 18 02:01:41 GMT+01:00 1971
+root.get("title");
+<i>The Nudist On The Late Shift</i></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            as String or Number
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject the subnode with the specified id or name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.getById">HopObject.getById</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.getById"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">getById</span>(<span class="signature">id, proto</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Retrieves the specified HopObject.
+<br /><br />
+If called on a HopObject instance, this getById() 
+retrieves a child object by ID. If called on a HopObject 
+constructor, it retrieves the persisted HopObject of 
+that prototype and with the specified ID.
+<br /><br />
+Fetches a HopObject of a certain prototype through 
+its ID and its prototype name. The prototype name can 
+either be passed as a second argument, or alternatively 
+the function can also be called on the prototype itself 
+with a single argument (e.g. Story.getById(123)).
+<br /><br />
+In case of multiple prototypes being mapped on the 
+same table (which is for instance the case with 
+inherited prototypes) Helma will not check whether 
+the prototype of the fetched object actually matches 
+the specified prototype.
+<br /><br />
+Note, that this refers to the static method 'getById', 
+not to be mixed up with the method getById called on a 
+specific HopObject.
+<br /><br />
+Example:
+<pre>//get the child with id 17
+var child = root.getById(17);
+writeln(child._id);
+<i>17</i>
+&nbsp;
+//get the child at index 17 of the HopObject's children-collection
+child = root.get(17);
+writeln(child._id);
+<i>42</i>
+&nbsp;
+//get the child with the name "17" (_children.accessname = name) of the HopObject
+child = root.get("17");
+writeln(child._id);
+<i>69</i>
+writeln(child.name);
+<i>17</i>
+&nbsp;
+//get the persistent HopObject with prototype "Page" and id 127
+var page = HopObject.getById(127, "Page");
+writeln(page._id);
+<i>127</i>
+&nbsp;
+//get the persistent HopObject with prototype "Page" and id 127
+var page = Page.getById(127);
+writeln(page._id);
+<i>127</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            as Number
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            proto
+                        </td>
+                        <td>
+                            as String, the name of the prototype
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject that was retrieved
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.get">HopObject.get</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.getCollection"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">getCollection</span>(<span class="signature">props</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a collection of HopObjects as defined by
+a provided properties object.
+<br /><br />
+The getCollection function is a static method of HopObject 
+constructors, taking a single JS object argument, which  
+provides the collection properties as you would otherwise  
+define them in the _children section of a type.properties file.
+<br /><br />
+Examples:
+<pre>var c = Page.getCollection({
+&nbsp;&nbsp;order: "name",
+&nbsp;&nbsp;filter: "id > 10",
+};</pre>
+You can also specify the type of contained objects using  
+the "collection" property, so the following collection is 
+equivalent to the one defined above:
+<pre>var c = HopObject.getCollection({
+&nbsp;&nbsp;collection: "Page",
+&nbsp;&nbsp;order: "name",
+&nbsp;&nbsp;filter: "id > 10",
+};</pre>
+Note that for "nested" properties such as group.order or 
+local.1 you have to use quoted "flat" properties, not 
+nested objects:
+<pre>var c = Page.getCollection({
+&nbsp;&nbsp;group: "author",
+&nbsp;&nbsp;"group.order": "author",
+&nbsp;&nbsp;"group.prototype": "AuthorGroup"
+});</pre>
+Additionally, the collection properties "limit" and 
+"offset" provide support for easy pagination. In order 
+to fetch pages 11-20, you would do something like this:
+<pre>var q = Page.getCollection({
+&nbsp;&nbsp;limit: 10,
+&nbsp;&nbsp;offset: 10
+});</pre>
+Note that "limit" is just an alias for "maxSize" introduced 
+to be more consistent with the underlying SQL syntax.
+<br /><br />
+This feature is currently implemented and known to work 
+on MySQL, Postgresql, and Oracle.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            props
+                        </td>
+                        <td>
+                            as Object, properties defining the desired collection
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Array the collection of HopObjects as defined by the provided properties
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.getChildElement"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">getChildElement</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Optional handler to override the default URL path resolution.
+<br /><br />
+If defined, the getChildElement() method is called on an 
+object contained in the request path in order to determine 
+the URL path resolution from that object to its (potential) 
+child objects.
+<br /><br />
+The string parameter passed to this method is the name of 
+the next element in the URL path being resolved. The object 
+being returned by this method is then used to continue 
+resolving the URL path.
+<br /><br />
+Example:
+<pre>function getChildElement(name) {
+&nbsp;&nbsp;if (name == 'transient') {
+&nbsp;&nbsp;&nbsp;&nbsp;return new HopObject();
+&nbsp;&nbsp;}
+&nbsp;&nbsp;else {
+&nbsp;&nbsp;&nbsp;&nbsp;return this.get(name);
+&nbsp;&nbsp;}
+}</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the name of the child element in the requested URL path
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject the child object to be used for further path resolution
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.getOrderedView"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">getOrderedView</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a collection including all subnodes of a 
+HopObject ordered according to the properties 
+listed in the string passed as argument.
+<br /><br />
+While the sort pattern, passed as string argument, uses 
+an SQL-like notation for the sorting, it contains 
+property names, not database column names.
+<br /><br />
+The method returns a collection object that is ordered 
+according to the specified sort order. The returned 
+collections are cached and bound to the original 
+collections, i.e. they reflect changes to the original 
+collection. Both initial ordering and re-ordering are 
+done on the Helma side, meaning that no additional db 
+traffic is generated by multiple ordered views.
+<br /><br />
+Example:
+<pre>var orderedByDate = hobj.getOrderedView("createtime desc, name");
+var collection = orderedByDate.list();
+for (var i in collection) {
+&nbsp;&nbsp;doSomething(collection[i]);
+}
+// other syntax examples:
+var orderedByName = hobj.getOrderedView("name");
+var collectionByName = hobj.collection.getOrderedView("name");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the property names to sort by
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject HopObject containing the sorted subnodes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.getResource"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">getResource</span>(<span class="signature">resourceName</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a helma.framework.repository.Resource object 
+defined for the prototype.
+<br /><br />
+Returns a resource referenced by its name for the 
+current HopObject's prototype - getResource() walks 
+up the inheritance chain and through all defined 
+repositories to find the resource and returns null 
+if unsucessful.
+<br /><br />
+Example:
+<pre>root.getResource("main.skin");
+/usr/local/helma-apps/myApp/repository1/HopObject/main.skin
+root.getResource("type.properties");
+/usr/local/helma-apps/myApp/repository3/Root/type.properties
+root.getResource("Functions.js");
+/usr/local/helma-apps/myApp/repository17/Root/Functions.js</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            resourceName
+                        </td>
+                        <td>
+                            as String, the name of the requested resource
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            helma.framework.repository.Resource
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.getResources">HopObject.getResources</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.getResources"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">getResources</span>(<span class="signature">resourceName</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an Array of helma.framework.repository.Resource 
+objects defined for the prototype.
+<br /><br />
+Returns an array of resources by the specified name for 
+the current HopObject's prototype - getResources() walks 
+up the inheritance chain and through all defined 
+repositories to collect all the resources by that name 
+and returns null if unsucessful.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            resourceName
+                        </td>
+                        <td>
+                            as String, the name of the requested resource
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Array of helma.framework.repository.Resource objects
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.getResource">HopObject.getResource</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.href"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">href</span>(<span class="signature">action</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the absoulte URL path of a HopObject relative 
+to the application's root.
+<br /><br />
+This function is useful when referring to a HopObject 
+in a markup tag (e.g. with a href attribute in an HTML 
+&lt;a&gt;-tag). An optional string argument is appended 
+to the return value.
+<br /><br />
+Example:
+<pre>var obj = root.get(0);
+&nbsp;
+res.write('&lt;a href="' + obj.href() + '"&gt;');
+<i>&lt;a href="/main/"&gt;</i>
+&nbsp;
+res.write('&lt;a href="' + obj.href('edit') + '"&gt;');
+<i>&lt;a href="/main/edit"&gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            action
+                        </td>
+                        <td>
+                            as String, optional part to be attached to the URL of this HopObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String of the URL path for this HopObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.invalidate"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">invalidate</span>(<span class="signature">childId</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Marks a HopObject as invalid so that it is fetched 
+again from the database.
+<br /><br />
+Helma will overwrite the HopObject's node cache 
+with the database contents the next time the 
+HopObject is accessed.
+<br /><br />
+In other words, use this function to kick out 
+an HopObject of Helma's node cache and force a 
+database retrieval of the HopObject data.
+<br /><br />
+Example:
+<pre>var obj = this.get(0);
+obj.invalidate();</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            childId
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.indexOf"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">indexOf</span>(<span class="signature">obj</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Determines if a HopObject contains a certain subnode.
+<br /><br />
+Returns the index position of a Subnode contained by a HopObject 
+(as usual for JavaScript, 0 refers to the first position).
+<br /><br />
+The index position is a relative value inside a HopObject 
+(not to be confused with a Hop ID which is unique for each HopObject).
+<br /><br/>
+If there is no appropriate subnode inside the HopObject the returned value equals -1.
+<br /><br />
+Example:
+<pre>var obj = root.get("myObject");
+res.write(root.indexOf(obj));
+<i>23</i>
+&nbsp;
+obj = root.get("blobject");
+res.write(root.indexOf(obj));
+<i>-1</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            HopObject
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            as HopObject, the node to look for
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Number of the index position or -1
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.isPersistent"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">isPersistent</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the HopObject is in persistent state, meaning
+that it is stored in the database, and false if it is transient.
+Persistent state is also assumed if the object is currently in 
+the process of being inserted into or deleted from the database.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            true if the HopObject is in persistent state
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.isTransient">HopObject.isTransient</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.isTransient"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">isTransient</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the HopObject is in transient state, meaning that
+it is not stored in the database. This method returns false if the   
+object is stored in the database, or is in the process of being 
+inserted into or deleted from the database.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            true if the the HopObject is in transient state
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.isPersistent">HopObject.isPersistent</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.list"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">list</span>(<span class="signature">startIndex, length</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an array including all subnodes of a HopObject.
+<br /><br />
+The startIndex and length parameters are optional, if 
+omitted, an array of the entire collection of subnodes 
+is returned, otherwise only the specified range.
+<br /><br />
+Example:
+<pre>var objectList = root.list();
+for (var i=0; i &lt; objectList.length; i++){
+&nbsp;&nbsp;var myObject = objectList[i];
+&nbsp;&nbsp;res.writeln(myObject.created);
+}
+<i>Wed Oct 18 02:01:41 GMT+01:00 1971
+Fri Nov 03 13:25:15 GMT+01:00 2000
+Mon May 29 07:43:09 GMT+01:00 1999</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            startIndex
+                        </td>
+                        <td>
+                            as Number
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            length
+                        </td>
+                        <td>
+                            as Number
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Array of HopObjects
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.persist"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">persist</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stores a transient HopObject and all HopObjects 
+reachable from it to database.
+<br /><br />
+The function returns the id (primary key) of the 
+newly stored HopObject as string, or null if the 
+HopObject couldn't be stored for some reason.
+<br /><br />
+Example:
+<pre>var hobj = new HopObject();
+hobj.foo = new HopObject();
+res.debug(hobj.persist());
+2
+res.debug(hobj.foo._id)
+3</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.prefetchChildren"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">prefetchChildren</span>(<span class="signature">startIndex, length</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Manually retrieving a particular set of subnodes.
+<br /><br />
+This function provides some control of how many 
+subnodes Helma should retrieve from the database and 
+hold prepared in the node cache for further processing.
+<br /><br />
+This means that for large collections Helma does 
+not need to retrieve neither the subset of subnodes 
+via one SQL statement for each subnode nor the whole 
+collection at once via one statement.
+<br /><br />
+Moreover, only subnodes are retrieved that are not 
+in the node cache already which leads to a maximum of 
+caching efficiency and loading performance.
+<br /><br />
+Example:
+<pre>res.writeln(root.length);
+53874
+root.prefetchChildren(0, 3);
+for (var i=0; i&lt;3; i++)
+&nbsp;&nbsp;res.writeln(i + ": " + root.get(i));
+<i>HopObject 1
+HopObject 5
+HopObject 4</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            startIndex
+                        </td>
+                        <td>
+                            as Number
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            length
+                        </td>
+                        <td>
+                            as Number
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.remove"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">remove</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Deletes a HopObject from the database.
+<br /><br />
+The remove() function deletes a persistent HopObject 
+from the database.
+<br /><br />
+Note that additionally you may want to call the 
+removeChild() function on any object holding the 
+deleted object in its child collection in order to 
+notify it that the child object has been removed.
+<br /><br />
+Example:
+<pre>res.write(parent.size());
+24
+var child = parent.get(5);
+child.remove();
+parent.removeChild(child);
+res.write(parent.size());
+23</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.removeChild">HopObject.removeChild</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.removeChild"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">removeChild</span>(<span class="signature">child</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Notifies a parent object that a child object has been removed.
+<br /><br />
+The removeChild() function lets a parent object 
+know that a child object has been removed. 
+Note that calling removeChild() will not actually 
+delete the child object. Directly call remove() 
+on the child object in order to delete it from 
+the database.
+<br /><br />
+Example:
+<pre>res.write(parent.size());
+<i>24</i>
+var child = parent.get(5);
+child.remove();
+parent.removeChild(child);
+res.write(parent.size());
+<i>23</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            HopObject
+                        </td>
+                        <td>
+                            child
+                        </td>
+                        <td>
+                            as HopObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.remove">HopObject.remove</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.renderSkin"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">renderSkin</span>(<span class="signature">skin, params</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders a skin of a HopObject and writes the result 
+to the output buffer.
+<br /><br />
+Either renders the provided SkinObject or a skin in the 
+HopObject's prototype chain by the specified name. 
+<br /><br />
+A skin can contain markup (e.g. HTML or XML) and macros. 
+Macros are references to Helma functions wrapped in special 
+tags (<% and %>). For more information about skin and macro 
+techniques please refer to the section about About Skins.
+<br /><br />
+Optionally, a JavaScript object can be assigned to the 
+function call as second argument. This object's properties 
+later can be accessed from the skin via macro calls of 
+the kind <% param.propertyName %>.
+<br /><br />
+If a param property is not set but referred to 
+in the skin file, it will be replaced with an empty string. 
+Please note that this behaviour is different from generic 
+macro calls.
+<br /><br />
+Example:
+<pre>Contents of the file root/example.skin:
+&lt;html&gt;
+&lthead&gt;
+&nbsp;&nbsp;&lt;title&gt;Hello, &lt;% param.title %&gt;!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="&lt;% param.bgcolor %&gt;">
+I greet you &lt;% param.amount %&gt; times.
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<b>Rendering the skin:</b>
+<pre>var param = new Object();
+param.bgcolor = "#ffcc00";
+param.title = "World";
+param.amount = "12345";
+root.renderSkin("example", param);
+&nbsp;
+<i>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello, World!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#ffcc00"&gt;
+I greet you 12345 times.
+&lt;/body&gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            skin
+                        </td>
+                        <td>
+                            as SkinObject or the name of the skin as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            params
+                        </td>
+                        <td>
+                            optional, properties to be passed to the skin
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.renderSkinAsString">HopObject.renderSkinAsString</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkin">global.renderSkin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkinAsString">global.renderSkinAsString</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.renderSkinAsString"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">renderSkinAsString</span>(<span class="signature">skin, params</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders a skin of a HopObject and returns the result as string.
+<br /><br />
+Either renders the provided SkinObject or a skin in the 
+HopObject's prototype chain by the specified name. 
+<br /><br />
+Similar to renderSkin(), this function returns the 
+result of the rendered skin as string instead of 
+immediately writing it to the response object.
+<br /><br />
+Example:
+<pre>var str = root.renderSkinAsString("example", param);
+res.write(str);
+&nbsp;
+which is equivalent to
+&nbsp;
+root.renderSkin("example", param);</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            skin
+                        </td>
+                        <td>
+                            as SkinObject or the name of the skin as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            params
+                        </td>
+                        <td>
+                            as Object, optional properties to be passed to the skin
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String containing the result of the rendered skin
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.renderSkin">HopObject.renderSkin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkin">global.renderSkin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkinAsString">global.renderSkinAsString</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.size"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">size</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get the number of subnodes attached to this HopObject.
+<br /><br />
+Example:
+<pre>res.write(root.size());
+<i>5</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Number of subnodes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.count">HopObject.count</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.update"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">update</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Refetches updateable Subnode-Collections from the database. 
+<br /><br />
+The following conditions must be met to make a 
+subnodecollection updateable:<br />
+1) the collection must be specified with 
+collection.updateable=true<br />
+2) the id's of this collection must be in ascending order, 
+meaning, that new records do have a higher id than the 
+last record loaded by this collection.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Number of updated nodes
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.onCodeUpdate"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">onCodeUpdate</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If defined, the onCodeUpdate() function is called whenever 
+the code is recompiled.
+&nbsp;
+This is most useful when code from repositories is 
+dynamically modified by the application during runtime.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.onInit"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">onInit</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If a HopObject prototype defines a function named onInit(), 
+it will be called on each HopObject that is fetched from 
+embedded or relational database.
+<br /><br />
+Note that it is not called for HopObjects created using 
+a constructor.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.onPersist"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">onPersist</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If a HopObject prototype defines a function named onPersist(), 
+it will be called on each HopObject immediately before it is 
+stored to embedded or relational database.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.onUnhandledMacro"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">onUnhandledMacro</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If a HopObject prototype defines a function named 
+onUnhandledMacro(), it will be called when a macro is rendered 
+on the HopObject that can't be mapped to a macro function or 
+property of the HopObject.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the name of the unhandled macro
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.onRequest"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">onRequest</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If defined, the onRequest() function is called on the 
+object specified by the request path just before the 
+action is invoked.
+<br /><br />
+This is useful for performing some code before each and 
+every action in every prototype (when defining the 
+function for the hopobject prototype) or for each action 
+in one prototype. Often, it is used for checking access 
+permissions.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="HopObject.onResponse"></a>
+                    
+                    
+                        <i><a href="#HopObject" class="type">HopObject</a>.
+                        <span class="symbolname">onResponse</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If defined, the onResponse() method is called after 
+each page request is handled but before the response is
+returned. 
+<br /><br />
+This method is NOT called when a response is forwarded 
+or redirected using res.forward or res.redirect respectively.
+<br /><br />
+You can access the current repsonse buffer using the 
+method res.getBuffer.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html#res.getBuffer">res.getBuffer</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:03 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

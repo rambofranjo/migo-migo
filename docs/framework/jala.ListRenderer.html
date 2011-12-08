@@ -1,0 +1,3824 @@
+<html>
+<head>
+<title>
+ListRenderer - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: ListRenderer.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the jala.ListRenderer class.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">ListRenderer</span>(<span class="signature">coll, renderer</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+                
+                    <div class="desc"></div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            HopObject, ArrayList, Array
+                        </td>
+                        <td>
+                            coll
+                        </td>
+                        <td>
+                            The collection this ListRenderer
+operates on, or - for backwards compatibility only - a parameter object containing
+the collection and any other optional configuration parameters.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            renderer
+                        </td>
+                        <td>
+                            An optional renderer to use. If this is set,
+any rendering method defined in this renderer overrides the default renderer.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getCollection">getCollection</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setCollection">setCollection</a>(coll)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getPageSize">getPageSize</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setPageSize">setPageSize</a>(size)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getCurrentPage">getCurrentPage</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getMaxPages">getMaxPages</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setMaxPages">setMaxPages</a>(pages)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getTotalPages">getTotalPages</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getBaseHref">getBaseHref</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setBaseHref">setBaseHref</a>(href)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getItemSkin">getItemSkin</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setItemSkin">setItemSkin</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getUrlParameterName">getUrlParameterName</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setUrlParameterName">setUrlParameterName</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getUrlParameters">getUrlParameters</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setUrlParameters">setUrlParameters</a>(params)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getRenderer">getRenderer</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.setRenderer">setRenderer</a>(r)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getPageHref">getPageHref</a>(page)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getStartIndex">getStartIndex</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getEndIndex">getEndIndex</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderList">renderList</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getList">getList</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderListAsString">renderListAsString</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderPrevLink">renderPrevLink</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getPrevLink">getPrevLink</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderPrevLinkAsString">renderPrevLinkAsString</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderNextLink">renderNextLink</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getNextLink">getNextLink</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderNextLinkAsString">renderNextLinkAsString</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderPageNavigation">renderPageNavigation</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.getPageNavigation">getPageNavigation</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.renderPageNavigationAsString">renderPageNavigationAsString</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.limit_macro">limit_macro</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.prevLink_macro">prevLink_macro</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.nextLink_macro">nextLink_macro</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.pageNavigation_macro">pageNavigation_macro</a>(param)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.size_macro">size_macro</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.totalPages_macro">totalPages_macro</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.currentPage_macro">currentPage_macro</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.currentStart_macro">currentStart_macro</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.currentEnd_macro">currentEnd_macro</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.render_macro">render_macro</a>(param)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.ArrayList"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">ListRenderer.ArrayList</span>(<span class="signature">arr, offset, total</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new ArrayList instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            arr
+                        </td>
+                        <td>
+                            The array (or a subsection of an array) to wrap
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            offset
+                        </td>
+                        <td>
+                            An optional offset to use (mandatory if the array
+is just a subsection).
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            total
+                        </td>
+                        <td>
+                            An optional total size of the array. This argument is
+mandatory if the wrapped array is just a subsection.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.ArrayList.get">get</a>(idx)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.ArrayList.size">size</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.ArrayList.isSubset">isSubset</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.ListRenderer.ArrayList.subsetSize">subsetSize</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">Number</span> <a href="#jala.ListRenderer.ArrayList.offset">offset</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Number</span> <a href="#jala.ListRenderer.ArrayList.length">length</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.defaultRenderer"></a>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">ListRenderer.defaultRenderer</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Default Renderer object containing functions
+used for rendering different list items (eg. page navigation,
+prev/next links and list items).</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.defaultRenderer.list"></a>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">ListRenderer.defaultRenderer.list</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">List renderer object</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.defaultRenderer.pageNavigation"></a>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">ListRenderer.defaultRenderer.pageNavigation</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Pagenavigation renderer object</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.defaultRenderer.pageLink"></a>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">ListRenderer.defaultRenderer.pageLink</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Pagelink renderer object</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.ArrayList.offset"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala.ListRenderer.ArrayList" class="type">jala.ListRenderer.ArrayList</a>.
+                        <span class="symbolname">offset</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The offset of this ArrayList instance. This might be > zero for
+ArrayList instances wrapping just a subsection, that is
+mimicking a bigger list.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.ArrayList.length"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala.ListRenderer.ArrayList" class="type">jala.ListRenderer.ArrayList</a>.
+                        <span class="symbolname">length</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The length of this ArrayList instance.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getCollection"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getCollection</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the collection this ListRenderer instance operates on</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The collection of this ListRenderer
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setCollection"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setCollection</span>(<span class="signature">coll</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the collection of this ListRenderer</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            HopObject, ArrayList, Array
+                        </td>
+                        <td>
+                            coll
+                        </td>
+                        <td>
+                            The collection this ListRenderer instance
+should operate on
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getPageSize"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getPageSize</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the number of items displayed on one page</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of items displayed on a single page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setPageSize"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setPageSize</span>(<span class="signature">size</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the number of items to display on a single page</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            size
+                        </td>
+                        <td>
+                            The number of items to display on one page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getCurrentPage"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getCurrentPage</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the current page index. This is either the page url parameter
+or the page number 1.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The current page number (starts with 1).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.setUrlParameterName">jala.ListRenderer.setUrlParameterName</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getMaxPages"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getMaxPages</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the maximum number of pages handled by this ListRenderer instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The maximum number of pages
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setMaxPages"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setMaxPages</span>(<span class="signature">pages</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the maximum number of pages to display</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            pages
+                        </td>
+                        <td>
+                            The maximum number of pages to display
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getTotalPages"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getTotalPages</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the total number of pages handled by this ListRenderer instance
+(which is the collection size divided by the page size).</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The total number of pages
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getBaseHref"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getBaseHref</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the base href of this ListRenderer instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The base href of this ListRenderer instance
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setBaseHref"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setBaseHref</span>(<span class="signature">href</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the base href of this ListRenderer instance. All links rendered
+will start with the href passed as argument</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            href
+                        </td>
+                        <td>
+                            The base href to use for rendering links
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getItemSkin"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getItemSkin</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the name of the skin rendered for a single list item</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The name of the list item skin
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setItemSkin"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setItemSkin</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the name of the skin to render for every list item</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the skin to render for every list item
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getUrlParameterName"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getUrlParameterName</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the name of the URL parameter name containing the index
+of the page to display</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The name of the page URL parameter name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setUrlParameterName"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setUrlParameterName</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the name of the URL parameter name containing the index of the page
+to display</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the page URL parameter
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getUrlParameters"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getUrlParameters</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns any additional URL parameters included in every navigation link
+rendered by this ListRenderer instance.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A string containing additional URL parameters
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setUrlParameters"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setUrlParameters</span>(<span class="signature">params</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets additional parameters to include in every navigation link</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            params
+                        </td>
+                        <td>
+                            A string to append to every navigation URL
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getRenderer"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getRenderer</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the renderer used by this ListRenderer instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.setRenderer"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">setRenderer</span>(<span class="signature">r</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the renderer to be used by this ListRenderer instance</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            r
+                        </td>
+                        <td>
+                            The renderer to use
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getPageHref"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getPageHref</span>(<span class="signature">page</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the href of a page. If no argument is given, the href
+of the current page is returned. Any URL parameters set with
+{@link #setUrlParameters} are added to the href.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            page
+                        </td>
+                        <td>
+                            The optional page number to include in the href.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The href of the page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.setUrlParameters">jala.ListRenderer.setUrlParameters</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.setUrlParameterName">jala.ListRenderer.setUrlParameterName</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getStartIndex"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getStartIndex</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the zero-based index position of the first item of the current page
+in the collection this ListRenderer operates on.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The index position of the first item in the list
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getEndIndex"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getEndIndex</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the zero-based index position of the last item of the current page
+in the collection this ListRenderer operates on.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The index position of the last item in the list
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderList"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderList</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders the list of items for one page directly to response.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.getList">jala.ListRenderer.getList</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getList"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getList</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the rendered list of collection items as string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered list
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderList">jala.ListRenderer.renderList</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderListAsString"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderListAsString</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated Use {@link #getList} instead</span>
+                </div>
+                
+                
+                    <div class="desc">Returns the rendered list of collection items as string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered list
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderList">jala.ListRenderer.renderList</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderPrevLink"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderPrevLink</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders a link to the previous page directly to response.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.getPrevLink">jala.ListRenderer.getPrevLink</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getPrevLink"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getPrevLink</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered link to the previous page as string. For performance
+reasons this method caches the rendered link in the local cache of this
+ListRenderer instance.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A rendered link to the previous page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderPrevLink">jala.ListRenderer.renderPrevLink</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderPrevLinkAsString"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderPrevLinkAsString</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated Use {@link #getPrevLink} instead</span>
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered link to the previous page as string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A rendered link to the previous page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderNextLink"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderNextLink</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders a link to the next page directly to response.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.getNextLink">jala.ListRenderer.getNextLink</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getNextLink"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getNextLink</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered link to the previous page as string. For performance
+reasons this method caches the rendered link in the local cache of this
+ListRenderer instance.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A rendered link to the previous page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderNextLink">jala.ListRenderer.renderNextLink</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderNextLinkAsString"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderNextLinkAsString</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated Use {@link #getNextLink} instead</span>
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered link to the previous page as string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A rendered link to the next page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderPageNavigation"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderPageNavigation</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders the page navigation bar directly to response. For performance reasons
+this method caches the rendered page navigation in the local cache of this
+ListRenderer instance.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.getPageNavigation">jala.ListRenderer.getPageNavigation</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.getPageNavigation"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">getPageNavigation</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the rendered page navigation bar as string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Object containing extra parameters (e.g. from a macro call).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered page navigation
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderPageNavigation">jala.ListRenderer.renderPageNavigation</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.renderPageNavigationAsString"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">renderPageNavigationAsString</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated Use {@link #getPageNavigation} instead</span>
+                </div>
+                
+                
+                    <div class="desc">Returns the rendered page navigation bar as string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered page navigation bar
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.limit_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">limit_macro</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Either renders the maximum number of items per page, or
+sets the limit to a given number.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Extra macro parameters:
+<ul>
+<li>to - The maximum number of items per page to be set.
+</ul>
+If no limit is set, this macro returns the current number
+of items per page.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The current maximum number of items per page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.prevLink_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">prevLink_macro</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered link to the previous page.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Extra macro parameters:
+<ul>
+<li>type - The type of renderer to be applied.</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A rendered link to the previous page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderPrevLink">jala.ListRenderer.renderPrevLink</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.nextLink_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">nextLink_macro</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a rendered link to the next page.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Extra macro parameters:
+<ul>
+<li>type - The type of renderer to be applied.</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A rendered link to the next page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderNextLink">jala.ListRenderer.renderNextLink</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.pageNavigation_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">pageNavigation_macro</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the rendered page navigation bar.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Extra macro parameters:
+<ul>
+<li>type - The type of renderer to be applied.</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The rendered page navigation bar
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.getPageNavigation">jala.ListRenderer.getPageNavigation</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.size_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">size_macro</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the total number of items</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The total number of items in the collection this ListRenderer
+instance is working on
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.totalPages_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">totalPages_macro</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the total number of pages</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The total number of pages available
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.currentPage_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">currentPage_macro</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the current page number</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The current page number
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.currentStart_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">currentStart_macro</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the start item number in the current page</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The start item number in the current page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.currentEnd_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">currentEnd_macro</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the end item number in the current page</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The end item number in the current page
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.render_macro"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer" class="type">jala.ListRenderer</a>.
+                        <span class="symbolname">render_macro</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders the current page of this list.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            Extra macro parameters:
+<ul>
+<li>skin - The name of the list skin to render for each item in the list.</li>
+<li>type - The type of renderer to be applied.</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.ListRenderer.html#jala.ListRenderer.renderList">jala.ListRenderer.renderList</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.ArrayList.get"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer.ArrayList" class="type">jala.ListRenderer.ArrayList</a>.
+                        <span class="symbolname">get</span>(<span class="signature">idx</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the element at the index position passed
+as argument. If the wrapped array is just a subsection
+the index position passed will be corrected using
+the offset.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            idx
+                        </td>
+                        <td>
+                            The index position of the element
+to return
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The element at the given index position
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.ArrayList.size"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer.ArrayList" class="type">jala.ListRenderer.ArrayList</a>.
+                        <span class="symbolname">size</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the size of this ArrayList, which is either
+the length of the wrapped array or the total size
+passed as argument to the constructor (in case the wrapped
+array is just a subsection).</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The size of this ArrayList instance
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.ArrayList.isSubset"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer.ArrayList" class="type">jala.ListRenderer.ArrayList</a>.
+                        <span class="symbolname">isSubset</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if this ArrayList is a subsection of a bigger array</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this ArrayList is a subsection of a bigger array
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.ListRenderer.ArrayList.subsetSize"></a>
+                    
+                    
+                        <i><a href="#jala.ListRenderer.ArrayList" class="type">jala.ListRenderer.ArrayList</a>.
+                        <span class="symbolname">subsetSize</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the actual size of this ArrayList's wrapped array.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The actual size of this ArrayList's wrapped array.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:07 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

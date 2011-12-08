@@ -1,0 +1,1910 @@
+<html>
+<head>
+<title>
+Mail - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Mail.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the helma.Mail class.
+<br /><br />
+To use this optional module, its repository needs to be added to the 
+application, for example by calling app.addRepository('modules/helma/Mail.js')</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Mail"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Mail</span>(<span class="signature">smtp</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Mail client enabling you to send e-mail via SMTP using Packages.javax.mail.
+<br /><br /></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            smtp
+                        </td>
+                        <td>
+                            as String, the hostname of the mail server
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setAuthentication">setAuthentication</a>(uname, pwd)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.getMessage">getMessage</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setDebug">setDebug</a>(debug)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setFrom">setFrom</a>(addstr, name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setHeader">setHeader</a>(name, value)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.addHeader">addHeader</a>(name, value)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.getHeader">getHeader</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.removeHeader">removeHeader</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setReplyTo">setReplyTo</a>(addstr)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setTo">setTo</a>(addstr, name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.addTo">addTo</a>(addstr, name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.addCC">addCC</a>(addstr, name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.addBCC">addBCC</a>(addstr, name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setSubject">setSubject</a>(subject)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setText">setText</a>(text)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.addText">addText</a>(text)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.setMultipartType">setMultipartType</a>(messageType)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.getMultipartType">getMultipartType</a>(messageType)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.addPart">addPart</a>(obj, filename, contentType)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.writeToFile">writeToFile</a>(dir)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.getSource">getSource</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.send">send</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Mail.status">status</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Mail.status"></a>
+                    
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">status</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The status of this Mail object. This equals <code>0</code> unless
+an error occurred. See  {@link helma.Mail Mail.js} source code for a list of
+possible error codes.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setAuthentication"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setAuthentication</span>(<span class="signature">uname, pwd</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets username and password to use for SMTP authentication.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            uname
+                        </td>
+                        <td>
+                            The username to use
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            pwd
+                        </td>
+                        <td>
+                            The password to use
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.getMessage"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">getMessage</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped message</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The wrapped message
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setDebug"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setDebug</span>(<span class="signature">debug</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Switches debug mode on or off.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Boolean
+                        </td>
+                        <td>
+                            debug
+                        </td>
+                        <td>
+                            If true debug mode is enabled
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setFrom"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setFrom</span>(<span class="signature">addstr, name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the sender of an e-mail message.
+<br /><br />
+The first argument specifies the receipient's 
+e-mail address. The optional second argument 
+specifies the name of the recipient.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            addstr
+                        </td>
+                        <td>
+                            as String, sender email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, optional sender name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setHeader"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setHeader</span>(<span class="signature">name, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Set a header in the e-mail message. If the given header is already set the previous
+value is replaced with the new one.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            a header name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            the header value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.addHeader"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">addHeader</span>(<span class="signature">name, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Set a header in the e-mail message. If the given header is already set the previous 
+value is replaced with the new one.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            a header name
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            the header value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.getHeader"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">getHeader</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get all the headers for this header name.
+Returns null  if no headers for this header name are available.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            a header name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String[]
+                        </td>
+                        <td>
+                            a string array of header values, or null
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.removeHeader"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">removeHeader</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Remove all headers with this name.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            the header name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setReplyTo"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setReplyTo</span>(<span class="signature">addstr</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the Reply-To address of an e-mail message.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            addstr
+                        </td>
+                        <td>
+                            as String, the reply-to email address
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setTo"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setTo</span>(<span class="signature">addstr, name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the recipient of an e-mail message.
+&nbsp;
+The first argument specifies the receipient's 
+e-mail address. The optional second argument 
+specifies the name of the recipient.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            addstr
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail.addTo">helma.Mail.addTo</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.addTo"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">addTo</span>(<span class="signature">addstr, name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a recipient to the address list of an e-mail message.
+<br /><br />
+The first argument specifies the receipient's 
+e-mail address. The optional second argument 
+specifies the name of the recipient.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            addstr
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="setTo.html">setTo</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.addCC"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">addCC</span>(<span class="signature">addstr, name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a recipient to the list of addresses to get a "carbon copy"
+of an e-mail message.
+<br /><br />
+The first argument specifies the receipient's 
+e-mail address. The optional second argument 
+specifies the name of the recipient.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            addstr
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.addBCC"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">addBCC</span>(<span class="signature">addstr, name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a recipient to the list of addresses to get a "blind carbon copy" of an e-mail message.
+<br /><br />
+The first argument specifies the receipient's 
+e-mail address. The optional second argument 
+specifies the name of the recipient.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            addstr
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setSubject"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setSubject</span>(<span class="signature">subject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the subject of an e-mail message.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            subject
+                        </td>
+                        <td>
+                            as String, the email subject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setText"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setText</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the body text of an e-mail message.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String, to be appended to the message body
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail.addText">helma.Mail.addText</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.addText"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">addText</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Appends a string to the body text of an e-mail message.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String, to be appended to the message body
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail.setText">helma.Mail.setText</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.setMultipartType"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">setMultipartType</span>(<span class="signature">messageType</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the MIME multiparte message subtype. The default value is
+"mixed" for messages of type multipart/mixed. A common value
+is "alternative" for the multipart/alternative MIME type.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            messageType
+                        </td>
+                        <td>
+                            the MIME subtype such as "mixed" or "alternative".
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail.getMultipartType">helma.Mail.getMultipartType</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail.addPart">helma.Mail.addPart</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.getMultipartType"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">getMultipartType</span>(<span class="signature">messageType</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the MIME multiparte message subtype. The default value is
+"mixed" for messages of type multipart/mixed.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            messageType
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            the MIME subtype
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail.setMultipartType">helma.Mail.setMultipartType</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail.addPart">helma.Mail.addPart</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.addPart"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">addPart</span>(<span class="signature">obj, filename, contentType</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds an attachment to an e-mail message.
+<br /><br />
+The attachment needs to be either a helma.util.MimePart Object retrieved
+through the global getURL function, or a {@link helma.File} object, or a String.
+<br /><br />
+Use the getURL() function to retrieve a MIME object or wrap a
+helma.File object around a file of the local file system.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            fileOrMimeObjectOrString
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            File, Mime object or String to attach to the email
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            filename
+                        </td>
+                        <td>
+                            optional name of the attachment
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            contentType
+                        </td>
+                        <td>
+                            optional content type (only if first argument is a string)
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#getURL">global.getURL</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.util.html#helma.util.MimePart">helma.util.MimePart</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.File.html#helma.File">helma.File</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.writeToFile"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">writeToFile</span>(<span class="signature">dir</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Saves this mail RFC 822 formatted into a file. The name of the
+file is prefixed with "helma.Mail" followed by the current time
+in milliseconds and a random number.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            An optional directory where to save
+this mail to. If omitted the mail will be saved in the system's
+temp directory.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.getSource"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">getSource</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the source of this mail as RFC 822 formatted string.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The source of this mail as RFC 822 formatted string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Mail.send"></a>
+                    
+                    
+                        <i><a href="#helma.Mail" class="type">helma.Mail</a>.
+                        <span class="symbolname">send</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sends an e-mail message.
+<br /><br />
+This function sends the message using the SMTP
+server as specified when the Mail object was
+constructed using helma.Mail.
+<br /><br />
+If no smtp hostname was specified when the Mail
+object was constructed, the smtp property in either
+the app.properties or server.properties file needs
+to be set in order for this to work.
+<br /><br />
+As a fallback, the message will then be written to
+file using the {@link #writeToFile} method. 
+Additionally, the location of the message files can
+be determined by setting smtp.dir in app.properties
+to the desired file path.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

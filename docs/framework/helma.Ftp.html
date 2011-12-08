@@ -1,0 +1,1762 @@
+<html>
+<head>
+<title>
+Ftp - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Ftp.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Default properties and methods of the FTP prototype.
+<br /><br />
+To use this optional module, its repository needs to be added to the 
+application, for example by calling app.addRepository('modules/helma/Ftp.js')</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Ftp"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Ftp</span>(<span class="signature">server</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructor for FTP client objects, to send and receive files from an FTP server.
+<br /><br /></div>
+                
+                
+                
+                
+                
+                
+                    <pre class="code">var ftp = new helma.Ftp("ftp.mydomain.com");</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            server
+                        </td>
+                        <td>
+                            as String, the address of the FTP Server to connect to
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.setReadTimeout">setReadTimeout</a>(timeout)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.setTimeout">setTimeout</a>(timeout)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.login">login</a>(username, password)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.binary">binary</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.ascii">ascii</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.active">active</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.passive">passive</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.pwd">pwd</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.dir">dir</a>(path)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.mkdir">mkdir</a>(dir)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.rmdir">rmdir</a>(dir)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.cd">cd</a>(dir)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.lcd">lcd</a>(dir)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.putFile">putFile</a>(localFile, remoteFile)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.putString">putString</a>(str, remoteFile, charset)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.putBytes">putBytes</a>(bytes, remoteFile)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.getFile">getFile</a>(remoteFile, localFile)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.getString">getString</a>(remoteFile)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.deleteFile">deleteFile</a>(remoteFile)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.renameFile">renameFile</a>(from, to)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Ftp.logout">logout</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.setReadTimeout"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">setReadTimeout</span>(<span class="signature">timeout</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Set the default timeout in milliseconds to use when opening a socket.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            timeout
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.setTimeout"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">setTimeout</span>(<span class="signature">timeout</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the timeout in milliseconds to use when reading from the data connection.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            timeout
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.login"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">login</span>(<span class="signature">username, password</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Logs in to the FTP server.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            username
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            password
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the login was successful, otherwise false
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.binary"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">binary</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets transfer mode to binary for transmitting images and other non-text files.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.binary();</pre>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.ascii"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">ascii</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets transfer mode to ascii for transmitting text-based data.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.ascii();</pre>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.active"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">active</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Switches the connection to use active mode.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.active();</pre>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.passive"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">passive</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Switches the connection to use passive mode.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.passive();</pre>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.pwd"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">pwd</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the path of the current working directory.</div>
+                
+
+                
+                
+                
+                    <pre class="code">var remotepath = ftp.pwd();</pre>
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String containing the current working directory path
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.dir"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">dir</span>(<span class="signature">path</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a listing of the files contained in a directory on the FTP server.
+<br /><br />
+Lists the files contained in the current working 
+directory or, if an alternative path is specified, the
+files contained in the specified directory.</div>
+                
+
+                
+                
+                
+                    <pre class="code">var filelist = ftp.dir();</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            path
+                        </td>
+                        <td>
+                            as String, optional alternative directory
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Array containing the list of files in that directory
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.mkdir"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">mkdir</span>(<span class="signature">dir</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new directory on the server.
+<br /><br />
+The name of the directory is determined as the function's 
+string parameter. Returns false when an error occured 
+(e.g. due to access restrictions, directory already 
+exists etc.), otherwise true.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            as String, the name of the directory to be created
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the directory was successfully created, false if there was an error
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.rmdir"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">rmdir</span>(<span class="signature">dir</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Deletes a directory on the FTP server.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            as String, the name of the directory to be deleted
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the deletion was successful, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.cd"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">cd</span>(<span class="signature">dir</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Changes the working directory on the FTP server.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.cd("/home/users/fred/www"); // use absolute pathname</pre>
+                
+                    <pre class="code">ftp.cd(".."); // change to parent directory</pre>
+                
+                    <pre class="code">ftp.cd("images"); // use relative pathname</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            as String, the path that the remote working directory should be changed to
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.lcd"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">lcd</span>(<span class="signature">dir</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Changes the working directory of the local machine when being connected to an FTP server.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.lcd("/home/users/fred/www"); // use absolute pathname</pre>
+                
+                    <pre class="code">ftp.lcd(".."); // change to parent directory</pre>
+                
+                    <pre class="code">ftp.lcd("images"); // use relative pathname</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            as String, the path that the local working directory should be changed to
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.putFile"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">putFile</span>(<span class="signature">localFile, remoteFile</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Transfers a file from the local file system to the remote server.
+<br /><br />
+Returns true if the transmission was successful, otherwise false.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            localFile
+                        </td>
+                        <td>
+                            as String, the name of the file to be uploaded
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            remoteFile
+                        </td>
+                        <td>
+                            as String, the name of the remote destination file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the file was successfully uploaded, false if there was an error
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.putString"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">putString</span>(<span class="signature">str, remoteFile, charset</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Transfers text from a string to a file on the FTP server.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.putString("Hello, World!", "message.txt");</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            str
+                        </td>
+                        <td>
+                            as String, the text content that should be uploaded
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            remoteFile
+                        </td>
+                        <td>
+                            as String, the name of the remote destination file
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            charset
+                        </td>
+                        <td>
+                            as String, optional
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the file was successfully uploaded, false if there was an error
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.putBytes"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">putBytes</span>(<span class="signature">bytes, remoteFile</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Transfers a byte array to a file on the FTP server.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            bytes
+                        </td>
+                        <td>
+                            The byte array that should be uploaded
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            remoteFile
+                        </td>
+                        <td>
+                            The name of the remote destination file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean True if the file was successfully uploaded, false if there was an error
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.getFile"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">getFile</span>(<span class="signature">remoteFile, localFile</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Transfers a file from the FTP server to the local file system.</div>
+                
+
+                
+                
+                
+                    <pre class="code">ftp.getFile(".htaccess", "htaccess.txt");</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            remoteFile
+                        </td>
+                        <td>
+                            as String, the name of the file that should be downloaded
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            localFile
+                        </td>
+                        <td>
+                            as String, the name which the file should be stored under
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Ftp.html#helma.Ftp.cd">helma.Ftp.cd</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Ftp.html#helma.Ftp.lcd">helma.Ftp.lcd</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.getString"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">getString</span>(<span class="signature">remoteFile</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Retrieves a file from the FTP server and returns it as string.</div>
+                
+
+                
+                
+                
+                    <pre class="code">var str = ftp.getString("messages.txt");</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            remoteFile
+                        </td>
+                        <td>
+                            as String, the name of the file that should be downloaded
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String containing the data of the downloaded file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Ftp.html#helma.Ftp.cd">helma.Ftp.cd</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.deleteFile"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">deleteFile</span>(<span class="signature">remoteFile</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Deletes a file on the FTP server.</div>
+                
+
+                
+                
+                
+                    <pre class="code">var str = ftp.deleteFile("messages.txt");</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            remoteFile
+                        </td>
+                        <td>
+                            as String, the name of the file to be deleted
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the deletion was successful, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.renameFile"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">renameFile</span>(<span class="signature">from, to</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renames a file on the FTP server.</div>
+                
+
+                
+                
+                
+                    <pre class="code">var success = ftp.renameFile("messages.tmp", "messages.txt");</pre>
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            from
+                        </td>
+                        <td>
+                            the name of the original file
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            to
+                        </td>
+                        <td>
+                            the new name the original file should get
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if renaming the remote file was successful, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Ftp.logout"></a>
+                    
+                    
+                        <i><a href="#helma.Ftp" class="type">helma.Ftp</a>.
+                        <span class="symbolname">logout</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Terminates the current FTP session.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

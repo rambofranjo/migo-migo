@@ -1,0 +1,1372 @@
+<html>
+<head>
+<title>
+I18n - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: I18n.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Methods and macros for internationalization
+of Helma applications.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.I18n"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">I18n</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new instance of jala.I18n</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.setMessages">setMessages</a>(msgObject)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.getMessages">getMessages</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.setLocaleGetter">setLocaleGetter</a>(func)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.getLocaleGetter">getLocaleGetter</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.setHandler">setHandler</a>(handler)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.getLocale">getLocale</a>(localeId)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.translate">translate</a>(key, plural, amount)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.getCatalog">getCatalog</a>(locale)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.formatMessage">formatMessage</a>(message, values)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.gettext">gettext</a>(key)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.ngettext">ngettext</a>(singularKey, pluralKey, amount)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.markgettext">markgettext</a>(key)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.I18n.message_macro">message_macro</a>(param)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.i18n"></a>
+                    
+                    <span class="type">jala.I18n</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">i18n</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Default i18n class instance.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.setMessages"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">setMessages</span>(<span class="signature">msgObject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Overwrite the default object containing
+the messages (ie. a vanilla EcmaScript object).</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            msgObject
+                        </td>
+                        <td>
+                            The object containing the messages
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.getMessages"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">getMessages</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get the message object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The object containing the messages
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.setLocaleGetter"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">setLocaleGetter</span>(<span class="signature">func</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Set the method for retrieving the locale.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Function
+                        </td>
+                        <td>
+                            func
+                        </td>
+                        <td>
+                            The getter method
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.getLocaleGetter"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">getLocaleGetter</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Get the method for retrieving the locale.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The getter method
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.setHandler"></a>
+                    <span class="deprecated"><del>
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">setHandler</span>(<span class="signature">handler</span>)</i>
+                    
+                    
+                    </del>&nbsp;&nbsp;deprecated Use {@link #setMessages} instead</span>
+                </div>
+                
+                
+                    <div class="desc">Set (overwrite) the default handler containing
+the messages (ie. a vanilla EcmaScript object).</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            handler
+                        </td>
+                        <td>
+                            The handler containing the message object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.getLocale"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">getLocale</span>(<span class="signature">localeId</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the locale for the given id, which is expected to follow
+the form <code>language[_COUNTRY][_variant]</code>, where <code>language</code>
+is a valid ISO Language Code (eg. "de"), <code>COUNTRY</code> a valid ISO
+Country Code (eg. "AT"), and variant an identifier for the variant to use.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            localeId
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The locale for the given id
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.translate"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">translate</span>(<span class="signature">key, plural, amount</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tries to "translate" the given message key into a localized
+message.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            The message to translate (required)
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            plural
+                        </td>
+                        <td>
+                            The plural form of the message to translate
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            amount
+                        </td>
+                        <td>
+                            A number to determine whether to use the
+singular or plural form of the message
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The localized message or the appropriate key if no
+localized message was found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.getCatalog"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">getCatalog</span>(<span class="signature">locale</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Helper method to get the message catalog  
+corresponding to the actual locale.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            locale
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The message catalog.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.formatMessage"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">formatMessage</span>(<span class="signature">message, values</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Converts the message passed as argument into an instance
+of java.text.MessageFormat, and formats it using the
+replacement values passed.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            message
+                        </td>
+                        <td>
+                            The message to format
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            values
+                        </td>
+                        <td>
+                            An optional array containing replacement values
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The formatted message or, if the formatting fails, the
+message passed as argument.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html">http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.gettext"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">gettext</span>(<span class="signature">key</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a localized message for the message key passed as
+argument. If no localization is found, the message key
+is returned. Any additional arguments passed to this function
+will be used as replacement values during message rendering.
+To reference these values the message can contain placeholders
+following "{number}" notation, where <code>number</code> must
+match the number of the additional argument (starting with zero).</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            The message to localize
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The translated message
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.I18n.html#jala.I18n.translate">jala.I18n.translate</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.I18n.html#jala.I18n.formatMessage">jala.I18n.formatMessage</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.ngettext"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">ngettext</span>(<span class="signature">singularKey, pluralKey, amount</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a localized message for the message key passed as
+argument. In contrast to gettext() this method
+can handle plural forms based on the amount passed as argument.
+If no localization is found, the appropriate message key is
+returned. Any additional arguments passed to this function
+will be used as replacement values during message rendering.
+To reference these values the message can contain placeholders
+following "{number}" notation, where <code>number</code> must
+match the number of the additional argument (starting with zero).</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            singularKey
+                        </td>
+                        <td>
+                            The singular message to localize
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            pluralKey
+                        </td>
+                        <td>
+                            The plural form of the message to localize
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            amount
+                        </td>
+                        <td>
+                            The amount which is used to determine
+whether the singular or plural form of the message should be returned.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The translated message
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.I18n.html#jala.I18n.translate">jala.I18n.translate</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.I18n.html#jala.I18n.formatMessage">jala.I18n.formatMessage</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.markgettext"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">markgettext</span>(<span class="signature">key</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">A simple proxy method which is used to mark a message string
+for the i18n parser as to be translated.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            The message that should be seen by the
+i18n parser as to be translated.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The message in unmodified form
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.I18n.message_macro"></a>
+                    
+                    
+                        <i><a href="#jala.I18n" class="type">jala.I18n</a>.
+                        <span class="symbolname">message_macro</span>(<span class="signature">param</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a translated message. The following macro attributes
+are accepted:
+<ul>
+<li>text: The message to translate (required)</li>
+<li>plural: The plural form of the message</li>
+<li>values: A list of replacement values. Use a comma to separate more
+than one value. Each value is either interpreted as a global property
+(if it doesn't containg a dot) or as a property name of the given macro
+handler object (eg. "user.name"). If the value of the property is a
+HopObject or an Array this macro uses the size() resp. length of the
+object, otherwise the string representation of the object will be used.</li>
+</ul></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            param
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The translated message
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.I18n.html#jala.I18n.gettext">jala.I18n.gettext</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.I18n.html#jala.I18n.ngettext">jala.I18n.ngettext</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="gettext"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">gettext</span>(<span class="signature"></span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">For convenience reasons the public methods and macros are
+put into global scope too</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:07 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

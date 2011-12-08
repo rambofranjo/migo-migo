@@ -1,0 +1,2008 @@
+<html>
+<head>
+<title>
+File - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: File.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Default properties and methods of  
+the File prototype.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="File"></a>
+                    <span class="deprecated"><del>
+                    
+                    
+                        <i><span class="symbolname">File</span>(<span class="signature">filepath</span>)</i>
+                    
+                    </del>&nbsp;&nbsp;deprecated use helma.File instead</span>
+                </div>
+                
+                
+                    <div class="desc">Constructor for File objects, providing read and write access to the file system.
+<br /><br />
+Example:
+<pre>var fileOrDir = new File('static/test.txt');</pre></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            filepath
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#File.getName">getName</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.getParent">getParent</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.isAbsolute">isAbsolute</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.write">write</a>(data)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.remove">remove</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.list">list</a>(pattern)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.flush">flush</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.writeln">writeln</a>(data)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.close">close</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.getPath">getPath</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.open">open</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.error">error</a>(Object)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.canRead">canRead</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.canWrite">canWrite</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.exists">exists</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.getAbsolutePath">getAbsolutePath</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.getLength">getLength</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.isDirectory">isDirectory</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.isFile">isFile</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.lastModified">lastModified</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.mkdir">mkdir</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.renameTo">renameTo</a>(dest)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.eof">eof</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.isOpened">isOpened</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.readln">readln</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.clearError">clearError</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#File.readAll">readAll</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.File.html#helma.File">helma.File</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.getName"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">getName</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the name of the file or directory represented by this File object.
+<br /><br />
+This is just the last name in the pathname's name sequence. If the pathname's 
+name sequence is empty, then the empty string is returned.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String containing the name of the file or directory
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.getParent"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">getParent</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the pathname string of this File object's parent directory.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String containing the pathname of the parent directory
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.isAbsolute"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">isAbsolute</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tests whether this File object's pathname is absolute. 
+<br /><br />
+The definition of absolute pathname is system dependent. 
+On UNIX systems, a pathname is absolute if its prefix is "/". 
+On Microsoft Windows systems, a pathname is absolute if its prefix 
+is a drive specifier followed by "\\", or if its prefix is "\\".</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean if this abstract pathname is absolute, false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.write"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">write</span>(<span class="signature">data</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Appends a string to the file represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            data
+                        </td>
+                        <td>
+                            as String, to be written to the file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="File.html#File.writeln">File.writeln</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.remove"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">remove</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Deletes the file or directory represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.list"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">list</span>(<span class="signature">pattern</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">List of all files within the directory represented by this File object.
+<br /><br />
+You may pass a RegExp Pattern to return just files matching this pattern.
+<br /><br />
+Example:
+<pre>var xmlFiles = dir.list(/.*\.xml/);</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            RegExp
+                        </td>
+                        <td>
+                            pattern
+                        </td>
+                        <td>
+                            as RegExp, optional pattern to test each file name against
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Array the list of file names
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.flush"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">flush</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Purges the content of the file represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.writeln"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">writeln</span>(<span class="signature">data</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Appends a string with a platform specific end of 
+line to the file represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            data
+                        </td>
+                        <td>
+                            as String, to be written to the file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="File.html#File.write">File.write</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.close"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">close</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Closes the file represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.getPath"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">getPath</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the pathname string of this File object. 
+<br /><br />
+The resulting string uses the default name-separator character 
+to separate the names in the name sequence.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String of this file's pathname
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.open"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">open</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Opens the file represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.error"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">error</span>(<span class="signature">Object</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the last error that occured, if any.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Object
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="File.html#File.clearError">File.clearError</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.canRead"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">canRead</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tests whether the application can read the file 
+represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the file exists and can be read; false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.canWrite"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">canWrite</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tests whether the file represented by this File object is writable.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the file exists and can be modified; false otherwise.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.exists"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">exists</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tests whether the file or directory represented by this File object exists.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the file or directory exists; false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.getAbsolutePath"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">getAbsolutePath</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the absolute pathname string of this file.
+<br /><br />
+If this File object's pathname is already absolute, then the pathname 
+string is simply returned as if by the getPath() method. If this 
+abstract pathname is the empty abstract pathname then the pathname 
+string of the current user directory, which is named by the system 
+property user.dir, is returned. Otherwise this pathname is resolved 
+in a system-dependent way. On UNIX systems, a relative pathname is 
+made absolute by resolving it against the current user directory. 
+On Microsoft Windows systems, a relative pathname is made absolute 
+by resolving it against the current directory of the drive named by 
+the pathname, if any; if not, it is resolved against the current user 
+directory.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String The absolute pathname string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.getLength"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">getLength</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the length of the file represented by this File object. 
+<br /><br />
+The return value is unspecified if this pathname denotes a directory.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Number The length, in bytes, of the file, or 0L if the file does not exist
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.isDirectory"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">isDirectory</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tests whether the file represented by this File object is a directory.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if this File object is a directory and exists; false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.isFile"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">isFile</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tests whether the file represented by this File object is a normal file. 
+<br /><br />
+A file is normal if it is not a directory and, in addition, satisfies 
+other system-dependent criteria. Any non-directory file created by a 
+Java application is guaranteed to be a normal file.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if this File object is a normal file and exists; false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.lastModified"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">lastModified</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the time when the file represented by this File object was last modified.
+<br /><br />
+A number representing the time the file was last modified, 
+measured in milliseconds since the epoch (00:00:00 GMT, January 1, 1970), 
+or 0L if the file does not exist or if an I/O error occurs.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Number in milliseconds since 00:00:00 GMT, January 1, 1970
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.mkdir"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">mkdir</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates the directory represented by this File object.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the directory was created; false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.renameTo"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">renameTo</span>(<span class="signature">dest</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renames the file represented by this File object.
+<br /><br />
+Whether or not this method can move a file from one filesystem to another is 
+platform-dependent. The return value should always be checked to make sure 
+that the rename operation was successful.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            FileObject
+                        </td>
+                        <td>
+                            dest
+                        </td>
+                        <td>
+                            as FileObject of the new path
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            true if the renaming succeeded; false otherwise
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.eof"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">eof</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the file represented by this File object
+has been read entirely and the end of file has been reached.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.isOpened"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">isOpened</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the file represented by this File object
+is currently open.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.readln"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">readln</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This methods reads characters until an end of line/file is encountered 
+then returns the string for these characters (without any end of line 
+character).</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String of the next unread line in the file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.clearError"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">clearError</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Clears any error message that may otherwise be returned by the error method.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="File.html#File.error">File.error</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="File.readAll"></a>
+                    
+                    
+                        <i><a href="#File" class="type">File</a>.
+                        <span class="symbolname">readAll</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This methods reads all the lines contained in the 
+file and returns them.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String of all the lines in the file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:04 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

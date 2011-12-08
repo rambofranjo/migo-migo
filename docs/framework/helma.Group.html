@@ -1,0 +1,3256 @@
+<html>
+<head>
+<title>
+Group - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Group.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">A JavaScript library wrapping 
+Packages.helma.extensions.helmagroups
+<br /><br />
+To use this optional module, its repository needs to be added to the 
+application, for example by calling app.addRepository('modules/helma/Group.js')</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Group"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Group</span>(<span class="signature">javaGroup</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Group Object.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            FIXME
+                        </td>
+                        <td>
+                            javaGroup
+                        </td>
+                        <td>
+                            FIXME
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.getJavaObject">getJavaObject</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.set">set</a>(key, val, sendMode)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.remove">remove</a>(key, sendMode)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.get">get</a>(key)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.listChildren">listChildren</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.listProperties">listProperties</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.countChildren">countChildren</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.countProperties">countProperties</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.callFunction">callFunction</a>(method, argArr, sendMode)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Group.GroupObject</span>(<span class="signature">Instance</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Group.GroupObject.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            Instance
+                        </td>
+                        <td>
+                            of helma.extensions.helmagroups.GroupObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.getJavaObject">getJavaObject</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.set">set</a>(key, The, The)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.remove">remove</a>(key, The)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.get">get</a>(key)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.getProperty">getProperty</a>(key)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.wrap">wrap</a>(The)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.unwrap">unwrap</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.toJSObject">toJSObject</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.listChildren">listChildren</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.listProperties">listProperties</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.countChildren">countChildren</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.countProperties">countProperties</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.GroupObject.isLocal">isLocal</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Group.Manager</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This is mounted as "groups".</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.get">get</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.checkWriteAccess">checkWriteAccess</a>(nameOrJGroup)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.connect">connect</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.disconnect">disconnect</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.reconnect">reconnect</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.reset">reset</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.destroy">destroy</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.restart">restart</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.listMembers">listMembers</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.listMemberApps">listMemberApps</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.getContent">getContent</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.getFullContent">getFullContent</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.getConfig">getConfig</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.getFullConfig">getFullConfig</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.getConnection">getConnection</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.isConnected">isConnected</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.size">size</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Group.Manager.count">count</a>(name)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.GET_FIRST"></a>
+                    
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>.
+                        <span class="symbolname">Group.GroupObject.GET_FIRST</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Static properties of GroupObject constructor function.
+These values determine if and for how many confirmation of the
+group members this instance waits after a modification.
+These values are passed through to org.jgroups.blocks.GroupRequest,
+for further comments see the sourcecode of that class</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.getJavaObject"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">getJavaObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            the wrapped java object Group
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.set"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">set</span>(<span class="signature">key, val, sendMode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">sets a key/value pair on the group's root, 
+wraps the function of the wrapper object</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            val
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            sendMode
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.remove"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">remove</span>(<span class="signature">key, sendMode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">removes a key from the group's root, 
+wraps the function of the root GroupObject</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            sendMode
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.get"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">get</span>(<span class="signature">key</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">retrieves a key from the group's root, 
+wraps the function of the root GroupObject</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.listChildren"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">listChildren</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Group.html#helma.Group.GroupObject.listChildren">helma.Group.GroupObject.listChildren</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.listProperties"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">listProperties</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Group.html#helma.Group.GroupObject.listProperties">helma.Group.GroupObject.listProperties</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.countChildren"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">countChildren</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Group.html#helma.Group.GroupObject.countChildren">helma.Group.GroupObject.countChildren</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.countProperties"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">countProperties</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Group.html#helma.Group.GroupObject.countProperties">helma.Group.GroupObject.countProperties</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.callFunction"></a>
+                    
+                    
+                        <i><a href="#helma.Group" class="type">helma.Group</a>.
+                        <span class="symbolname">callFunction</span>(<span class="signature">method, argArr, sendMode</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">calls a function in all connected applications 
+(to be specific: in all registered localClients).</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            method
+                        </td>
+                        <td>
+                            name of the method in xmlrpc-style: test 
+is called as root.test(), stories.137.render
+is called as root.stories.get("137").render() etc etc.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            argArr
+                        </td>
+                        <td>
+                            array of arguments to the remote method
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            sendMode
+                        </td>
+                        <td>
+                            as defined for helma.Group.GroupObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            array of result objects
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.getJavaObject"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">getJavaObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped java GroupObject.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Instance of helma.extensions.helmagroups.GroupObject;
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.set"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">set</span>(<span class="signature">key, The, The</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets a property or a child GroupObject in this instance.
+The Key may be a String, an Array or a String with separator characters ("/").
+In the latter two cases the argument is considered a path and
+all GroupObjects along this path are created if necessary.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            Either
+<ul>
+<li>a String</li>
+<li>a String containing slashes</li>
+<li>an Array containing String keys</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            The
+                        </td>
+                        <td>
+                            value to set the property to.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            The
+                        </td>
+                        <td>
+                            mode to use when committing the change to
+the helma.Group
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.remove"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">remove</span>(<span class="signature">key, The</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes a property or a child GroupObject from this instance.
+The Key may be a String, an Array or a String with separator characters ("/").
+In the latter two cases the argument is considered a path and
+the function walks down that path to find the GroupObject and
+deletes it.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            Either
+<ul>
+<li>a String</li>
+<li>a String containing slashes</li>
+<li>an Array containing String keys</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            The
+                        </td>
+                        <td>
+                            mode to use when committing the change to
+the helma.Group
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.get"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">get</span>(<span class="signature">key</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns either a property or a child GroupObject from
+this GroupObject instance. The key passed as argument
+may be a String, an Array containing Strings or a
+String containing separator characters ("/"). In the latter
+two cases the argument is considered a path and
+the function walks down that path to find the requested
+GroupObject.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            Either
+<ul>
+<li>a String</li>
+<li>a String containing slashes</li>
+<li>an Array containing String keys</li>
+</ul>
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Depending on the argument either the appropriate property
+value or a helma.Group.GroupObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.getProperty"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">getProperty</span>(<span class="signature">key</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Gets a property from this GroupObject. The key passed as argument
+is always considered a property even if it contains a slash.
+This is actually a workaround for the fact that other
+instances of the group not using the javascript extension aren't forbidden
+to add properties containing a slash in the property's name.
+So, using this extension we can at least read the property.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            key
+                        </td>
+                        <td>
+                            The name of the property to return
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The value of the property
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.wrap"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">wrap</span>(<span class="signature">The</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Exchanges this GroupObject with the one passed
+as argument. This is done by exchanging the wrapped
+instance of helma.extensions.helmagroups.GroupObject</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            GroupObject
+                        </td>
+                        <td>
+                            The
+                        </td>
+                        <td>
+                            GroupObject to use
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The GroupObject with the exchanged wrapped java object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.unwrap"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">unwrap</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Clones this GroupObject and returns it.
+This method should be considered if many properties
+of a GroupObject must be set or modified since every
+change to an already replicated GroupObject will
+result in immediate network traffic. Using unwrap
+one can modify several properties and then commit
+the GroupObject at once using {@link #wrap).</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A clone of this GroupObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.toJSObject"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">toJSObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Converts this GroupObject into a vanilla Object</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An Object containing all properties of this GroupObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.listChildren"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">listChildren</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an Array containing all child GroupObjects</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An Array containing GroupObjects
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.listProperties"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">listProperties</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an Array containing all property
+names of this GroupObject instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An Array containing property names
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.countChildren"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">countChildren</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the number of child GroupObjects</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of child GroupObjects of this
+helma.Group.GroupObject instance
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.countProperties"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">countProperties</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the number of properties of this GroupObject</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The number of properties
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.GroupObject.isLocal"></a>
+                    
+                    
+                        <i><a href="#helma.Group.GroupObject" class="type">helma.Group.GroupObject</a>.
+                        <span class="symbolname">isLocal</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the GroupObject is <em>not</em> replicated</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this GroupObject is still local
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.get"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">get</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">visible to scripting env: get a group, wrapped as a javascript helma.Group object.
+the group must be defined in app.properties: group.nameXX = <configfile>
+and can then be accessed like this group.get("nameXX")</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            null if group is not defined or not connected
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.checkWriteAccess"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">checkWriteAccess</span>(<span class="signature">nameOrJGroup</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">checks for write access to a group according to app.properties
+group.nameXX.writable must be true so that this function returns</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            nameOrJGroup
+                        </td>
+                        <td>
+                            can be the name of a group or a java Group itself
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">exceptions</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            an error if group is not writable
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.connect"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">connect</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">try to connect a group</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.disconnect"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">disconnect</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">try to disconnect from a group</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.reconnect"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">reconnect</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">try to disconnect and connect again to a group</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.reset"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">reset</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">try to reset a group (if application may write in group).
+all instances of the group empty their cache.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.destroy"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">destroy</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">try to destroy a group (if application may write in group).
+all other instances of the group disconnect</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.restart"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">restart</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">try to restart a group (if application may write in group).
+all other instances of the group disconnect and reconnect - each app after a different pause
+so that they don't all come up at the same moment</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.listMembers"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">listMembers</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">list the members of this group (ie instances of Group, one helma server is one instance)</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            array of strings, false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.listMemberApps"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">listMemberApps</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">lists the members applications of this group (may be more than one per instance but also none)</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            array of strings, false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.getContent"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">getContent</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">dumps the keys of the group to a string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string, notice if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.getFullContent"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">getFullContent</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">dumps the keys and the content of the group to a string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string, notice if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.getConfig"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">getConfig</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">dumps the config of the jgroups stack to a string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string, false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.getFullConfig"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">getFullConfig</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">dumps the config of the jgroups stack including all properties to a string</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string, false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.getConnection"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">getConnection</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">returns the connection identifier of the Group instance (localname + multicast-target)</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string, false if group is not found
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.isConnected"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">isConnected</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">returns true/false if the group is connected</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.size"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">size</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">returns the total number of groupobjects in this group</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Group.Manager.count"></a>
+                    
+                    
+                        <i><a href="#helma.Group.Manager" class="type">helma.Group.Manager</a>.
+                        <span class="symbolname">count</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">returns the total number of groupobjects in this group</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

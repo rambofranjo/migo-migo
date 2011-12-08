@@ -1,0 +1,1883 @@
+<html>
+<head>
+<title>
+IndexManager - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: IndexManager.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the jala.IndexManager class.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">IndexManager</span>(<span class="signature">name, dir, lang</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new IndexManager object.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the index, which is the name of the directory
+the index already resides or will be created in.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            helma.File
+                        </td>
+                        <td>
+                            dir
+                        </td>
+                        <td>
+                            The base directory where this index's directory
+is already existing or will be created in.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            lang
+                        </td>
+                        <td>
+                            The language of the documents in this index. This leads
+to the proper Lucene analyzer being used for indexing documents.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.getIndex">getIndex</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.getStatus">getStatus</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.setStatus">setStatus</a>(s)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.getQueue">getQueue</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.getName">getName</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.getIdFieldname">getIdFieldname</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.setIdFieldname">setIdFieldname</a>(name)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.hasOptimizingJob">hasOptimizingJob</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.isRebuilding">isRebuilding</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.start">start</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.stop">stop</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.isRunning">isRunning</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.log">log</a>(level, msg)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.add">add</a>(doc)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.remove">remove</a>(id)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.optimize">optimize</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Search.html#helma.Search.createIndex">helma.Search.createIndex</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">IndexManager.Job</span>(<span class="signature">id, type, data</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new Job instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            The Id of the job
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            type
+                        </td>
+                        <td>
+                            The type of job, which can be either
+jala.IndexManager.Job.ADD, jala.IndexManager.Job.REMOVE
+or jala.IndexManager.Job.OPTIMIZE.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            data
+                        </td>
+                        <td>
+                            The data needed to process the job.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">Number</span> <a href="#jala.IndexManager.Job.type">type</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.IndexManager.Job.callback">callback</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Number</span> <a href="#jala.IndexManager.Job.errors">errors</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Date</span> <a href="#jala.IndexManager.Job.createtime">createtime</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.Job">jala.IndexManager.Job</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.MAXTRIES"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">IndexManager.MAXTRIES</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constant defining the maximum number of tries to add/remove
+an object to/from the underlying index.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.NORMAL"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">IndexManager.NORMAL</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constant defining normal mode of this index manager.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.REBUILDING"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">IndexManager.REBUILDING</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constant defining rebuilding mode of this index manager.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job.type"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala.IndexManager.Job" class="type">jala.IndexManager.Job</a>.
+                        <span class="symbolname">type</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The type of the job</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job.callback"></a>
+                    
+                    
+                    
+                        <i><a href="#jala.IndexManager.Job" class="type">jala.IndexManager.Job</a>.
+                        <span class="symbolname">callback</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The data needed to process this job. For adding jobs this property
+must contain the {@link helma.Search.Document} instance to add to
+the index. For removal job this property must contain the unique identifier
+of the document that should be removed from the index. For optimizing
+jobs this property is null.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job.errors"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala.IndexManager.Job" class="type">jala.IndexManager.Job</a>.
+                        <span class="symbolname">errors</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">An internal error counter which is increased whenever processing
+the job failed.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.MAXTRIES">jala.IndexManager.MAXTRIES</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job.createtime"></a>
+                    
+                    <span class="type">Date</span>
+                    
+                    
+                    
+                        <i><a href="#jala.IndexManager.Job" class="type">jala.IndexManager.Job</a>.
+                        <span class="symbolname">createtime</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The date and time at which this job was created.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job.ADD"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">IndexManager.Job.ADD</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constant defining an add job</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job.REMOVE"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">IndexManager.Job.REMOVE</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constant defining a removal job</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.Job.OPTIMIZE"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">IndexManager.Job.OPTIMIZE</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constant defining an optimizing job</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.getIndex"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">getIndex</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the underlying index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The index this queue is working on.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.getStatus"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">getStatus</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the status of this manager.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The status of this index manager.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.NORMAL">jala.IndexManager.NORMAL</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.REBUILDING">jala.IndexManager.REBUILDING</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.setStatus"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">setStatus</span>(<span class="signature">s</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Modifies the status of this manager, which has implications
+on how index modifying jobs are handled. If the status
+is {@link #REBUILDING}, all jobs are queued until the status
+is set back to {@link #NORMAL}.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            s
+                        </td>
+                        <td>
+                            The new status of this manager.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.NORMAL">jala.IndexManager.NORMAL</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.REBUILDING">jala.IndexManager.REBUILDING</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.getQueue"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">getQueue</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the queue this index manager is using.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The queue.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.getName"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">getName</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the name of the index manger, which
+is equal to the name of the underlying index</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The name of the index manager
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.getIdFieldname"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">getIdFieldname</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the name of the field containing the unique identifier
+of document objects in the index wrapped by this IndexManager.
+Defaults to "id".</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The name of the id field in the index
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.setIdFieldname">jala.IndexManager.setIdFieldname</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.setIdFieldname"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">setIdFieldname</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the name of the field containing the unique identifier
+of document objects in the index wrapped by this IndexManager.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.IndexManager.html#jala.IndexManager.getIdFieldname">jala.IndexManager.getIdFieldname</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.hasOptimizingJob"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">hasOptimizingJob</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the underlying index is currently optimized.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True in case the index is optimized, false otherwise.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.isRebuilding"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">isRebuilding</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the underlying index is currently rebuilding.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True in case the index is rebuilding, false otherwise.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.start"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">start</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Starts the IndexManager worker thread that processes the job queue</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.stop"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">stop</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stops this IndexManager instance</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.isRunning"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">isRunning</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if this IndexManager instance is running</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if this IndexManager instance is running, false otherwise.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.log"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">log</span>(<span class="signature">level, msg</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Helper function that prefixes every log message with
+the name of the IndexManager.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            level
+                        </td>
+                        <td>
+                            An optional logging level. Accepted values
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            msg
+                        </td>
+                        <td>
+                            The log message
+are "debug", "info", "warn" and "error".
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.add"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">add</span>(<span class="signature">doc</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Queues the document object passed as argument for addition to the underlying
+index. This includes that all existing documents with the same identifier will
+be removed before the object passed as argument is added.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Search.Document
+                        </td>
+                        <td>
+                            doc
+                        </td>
+                        <td>
+                            The document object that should be
+added to the underlying index.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the job was added successfully to the internal queue,
+false otherwise.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Search.html#helma.Search.Document">helma.Search.Document</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.remove"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">remove</span>(<span class="signature">id</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Queues the removal of all index documents whose identifier value ("id" by default)
+matches the number passed as argument.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            The identifier value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the removal job was added successfully to the queue, false
+otherwise.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.IndexManager.optimize"></a>
+                    
+                    
+                        <i><a href="#jala.IndexManager" class="type">jala.IndexManager</a>.
+                        <span class="symbolname">optimize</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Queues the optimization of the underlying index.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            True if the optimizing job was added, false otherwise, which means
+that there is already an optimizing job waiting in the queue.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:07 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

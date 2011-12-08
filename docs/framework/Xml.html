@@ -1,0 +1,717 @@
+<html>
+<head>
+<title>
+get - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Xml.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Default properties and methods of the Xml object.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Xml.get"></a>
+                    
+                    
+                        <i><a href="#Xml" class="type">Xml</a>.
+                        <span class="symbolname">get</span>(<span class="signature">urlString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Retrieves an XML document from a given URL and transforms it into a HopObject.
+<br /><br />
+Syntax:
+<pre>Xml.get(urlString)
+Xml.get(urlString, filenameString)</pre>
+<br /><br />
+The optional argument filenameString refers to a file containing 
+a set of transformation rules how the XML data should be turned 
+into a HopObject. Please take a look at the RFC for details.
+<br /><br />
+Example:
+<pre>var obj = Xml.get("http://localhost:8080/antville/rss10");
+for (var i in obj)
+&nbsp;&nbsp;res.writeln(i + ": " + obj[i]);
+&nbsp;
+<i>xmlns_sy: http://purl.org/rss/1.0/modules/syndication/
+xmlns_dc: http://purl.org/dc/elements/1.1/
+item: HopObject item
+channel: HopObject channel
+xmlns: http://purl.org/rss/1.0/
+xmlns_rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            urlString
+                        </td>
+                        <td>
+                            as String, containing the URL to fetch the XML from
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Xml.getFromString"></a>
+                    
+                    
+                        <i><a href="#Xml" class="type">Xml</a>.
+                        <span class="symbolname">getFromString</span>(<span class="signature">xmlString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Parses the string argument as XML and transforms it into a HopObject.
+<br /><br />
+Syntax:
+<pre>Xml.getFromString(xmlString)
+Xml.getFromString(xmlString, filenameString)</pre>
+<br /><br />
+The optional argument filenameString refers to a file containing a 
+set of transformation rules how the XML data should be turned into 
+a HopObject. Please take a look at the RFC for details.
+<br /><br />
+Example:
+<pre>var obj = Xml.getFromString("&lt;a&gt;hello &lt;b&gt;world&lt;/b&gt;&lt;/a&gt;");
+for (var i in obj)
+&nbsp;&nbsp;res.writeln(i + ": " + obj[i]);
+&nbsp;
+<i>b: HopObject b
+text: hello</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            xmlString
+                        </td>
+                        <td>
+                            as String in XML format
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Xml.read"></a>
+                    
+                    
+                        <i><a href="#Xml" class="type">Xml</a>.
+                        <span class="symbolname">read</span>(<span class="signature">String</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Reads an XML tree from file and transforms it into a HopObject.
+<br /><br />
+Syntax:
+<pre>Xml.read(filenameString)
+Xml.read(filenameString, HopObject)</pre>
+<br /><br />
+If an optional HopObject is specified, the HopObject 
+derived from the XML tree will be added to it.
+<br /><br />
+Example:
+<pre>var obj = Xml.read("/tmp/dump.xml");
+res.write(obj);
+<i>HopObject message</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Xml.readFromString"></a>
+                    
+                    
+                        <i><a href="#Xml" class="type">Xml</a>.
+                        <span class="symbolname">readFromString</span>(<span class="signature">String</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Reads an XML tree from a string and transforms it into a HopObject.
+<br /><br />
+Syntax:
+<pre>Xml.readFromString(String)
+Xml.readFromString(String, HopObject)</pre>
+<br /><br />
+If an optional HopObject is specified, the HopObject 
+derived from the XML tree will be added to it.
+<br /><br />
+Example:
+<pre>var f = new File("/tmp/dump.xml");
+var obj = Xml.readFromString(f.readAll());
+res.write(obj);
+HopObject message</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Xml.write"></a>
+                    
+                    
+                        <i><a href="#Xml" class="type">Xml</a>.
+                        <span class="symbolname">write</span>(<span class="signature">HopObject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Dumps a HopObject as XML tree to a file.
+<br /><br />
+Syntax:
+<pre>Xml.write(HopObject, filenameString)</pre>
+<br /><br />
+Example:
+<pre>var obj = new message();
+obj.title = "The Message";
+obj.text = "Don't push me 'cause I'm close to the edge.";
+root.add(obj);
+Xml.write(obj, "/tmp/dump.xml");
+&nbsp;
+File /tmp/dump.xml: 
+&nbsp;
+&lt;?xml version="1.0"?&gt;
+&lt;!-- printed by helma object publisher     --&gt;
+&lt;!-- created Fri Jul 12 17:25:24 CEST 2002 --&gt;
+&lt;xmlroot xmlns:hop="http://www.helma.org/docs/
+guide/features/database"&gt;
+&nbsp;&nbsp;&lt;hopobject id="8" name="message" prototype="message" 
+created="1026487524440" lastModified="1026487524440"&gt;
+&nbsp;&nbsp;&lt;hop:parent idref="0" prototyperef="root"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;The Message&lt;/title&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;Don't push me 'cause I'm close 
+to the edge.&lt;/text&gt;
+&nbsp;&nbsp;&lt;/hopobject&gt;
+&lt;/xmlroot&gt;&lt;</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject
+                        </td>
+                        <td>
+                            and file name as string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Xml.writeToString"></a>
+                    
+                    
+                        <i><a href="#Xml" class="type">Xml</a>.
+                        <span class="symbolname">writeToString</span>(<span class="signature">HopObject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stores a HopObject as XML tree in a string.
+<br /><br />
+Syntax:
+<pre>Xml.writeToString(HopObject)</pre>
+<br /><br />
+Example:
+<pre>var str = Xml.writeToString(this.get(0));
+res.write(str);
+&nbsp;
+&lt;?xml version="1.0"?&gt;
+&lt;!-- printed by helma object publisher     --&gt;
+&lt;!-- created Fri Jul 12 17:25:24 CEST 2002 --&gt;
+&lt;xmlroot xmlns:hop="http://www.helma.org/docs/
+guide/features/database"&gt;
+&nbsp;&nbsp;&lt;hopobject id="8" name="message" prototype="message" 
+created="1026487524440" lastModified="1026487524440"&gt;
+&nbsp;&nbsp;&lt;hop:parent idref="0" prototyperef="root"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;The Message&lt;/title&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;Don't push me 'cause I'm close 
+to the edge.&lt;/text&gt;
+&nbsp;&nbsp;&lt;/hopobject&gt;
+&lt;/xmlroot&gt;</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            HopObject
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String in XML encoded
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+<a href="mailto:<% this.email %>"><% this.firstname %> <% this.lastname %></a><br />

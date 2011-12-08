@@ -1,0 +1,962 @@
+<html>
+<head>
+<title>
+session - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: session.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Default properties and methods of the session object.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session"></a>
+                    
+                    <span class="type">SessionBean</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">session</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This object is automatically instantiated as the session property 
+of the global object (or global.session).
+<br /><br />
+The session object is a host object representing the session  
+for the request that is currently handled by the scripting 
+environment.
+<br /><br />
+Each web request is associated with a SessionObject 
+representing a 'user session'. Helma recognises requests 
+being made from the same client within the same session through 
+a session cookie named 'HopSession'. If no such cookie is sent 
+with the request, Helma will set that a cookie with a random 
+hash with the next response.
+<br /><br />
+Within the scripting environment 'session' always 
+represents the current session of the user, who initiated 
+the web request.
+<br /><br />
+Besides that default session object, it is also possible 
+to fetch active sessions of other clients through the method 
+app.getSessions(), and to create additional SessionObjects 
+through app.createSession().
+<br /><br />
+For further details also see the JavaDocs for 
+helma.framework.core.SessionBean. Since that class is a 
+JavaBean all get- and set-methods are also directly 
+available as properties of that object.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://adele.helma.org/download/helma/apidocs/api/helma/framework/core/SessionBean.html">Packages.helma.framework.core.SessionBean</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session._id"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">_id</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The unique identifier for a session object (session cookie).
+<br /><br />
+Contains the unique identifier of the current 
+session, which is equivalent to the value stored in
+the HopSession-cookie on the client side.
+<br /><br />
+This property is read-only.
+<br /><br />
+Example:
+<pre>res.writeln(session._id);
+<i>1fcca129764400&#64;eefa22dfab</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session.cookie"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">cookie</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The cookie value of a session.
+<br /><br />
+Contains the unique identifier of the current 
+session, which is equivalent to the value stored 
+in the HopSession-cookie on the client side.
+<br /><br />
+This property is read-only.
+<br /><br />
+Example:
+<pre>res.writeln(session.cookie);
+<i>1fcca129764400&#64;eefa22dfab</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session.data"></a>
+                    
+                    <span class="type">TransientNode</span>
+                    
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">data</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Object providing space for run-time user data (user cache).
+<br /><br />
+This property of the SessionObject offers the 
+possibility to store arbitrary data within the current 
+user session. Note, that this can just be used as a 
+temporary storage, since sessions are not stored 
+persistently within Helma, and are generally lost when 
+the application is restarted.
+<br /><br />
+Example:
+<pre>session.data.lastclick = new Date();
+session.data.language = "en";
+&nbsp;
+res.write(session.data);
+<i>TransientNode session</i>
+&nbsp;
+for (var p in session.data)
+&nbsp;&nbsp;res.writeln(p + ": " + session.data[p]);
+<i>lastclick: Fri Jul 12 14:08:20 CEST 2002
+language: en</i>
+&nbsp;
+res.write(session.data.lastclick);
+<i>Fri Jul 12 14:08:20 CEST 2002</i>
+&nbsp;
+res.write(session.data["language"]);
+<i>en</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session.lastModified"></a>
+                    
+                    <span class="type">Date</span>
+                    
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">lastModified</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The date a session was created or a login or logout was performed the last time.
+<br /><br />
+This is a convenience property to acknowledge 
+that pages are often dependent on the login status 
+and must be re-rendered when a user has logged in, 
+logged out or is running with a new session.
+<br /><br />
+Contains the timestamp of when the associated 
+client started the session, or logged in, or 
+logged out the last time, whichever happened most 
+recently.
+<br /><br />
+This property is read- and write-able.
+<br /><br />
+Example:
+<pre>if (session.lastModified < this.modifytime)
+&nbsp;&nbsp;renderSkin("main");
+else
+&nbsp;&nbsp;res.notModified();</pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session.message"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">message</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If set, the message will be available during the next request as res.message</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session.user"></a>
+                    
+                    <span class="type">User</span>
+                    
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">user</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">A reference to the user object associated with the current session.
+<br /><br />
+Contains a reference to the UserObject associated 
+with this session. This property is null if the client 
+has not been logged in yet, or has already been logged 
+out. Checking this for being unequal to null is the 
+usual way to check whether a client is logged in or not. 
+This property is read-only, but can be set through the 
+method session.login(User usr).
+<br /><br />
+Example:
+<pre>session.login("tobi", "mumbl3");
+res.write(session.user);
+<i>HopObject tobi</i>
+&nbsp;
+res.write(session.user.registered);
+<i>Thu Jun 28 17:25:33 CEST 2001</i>
+&nbsp;
+res.write(session.user["url"]);
+<i>http://helma.org</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="session.lastActive"></a>
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">lastActive</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">A date object representing the time this user's session was last active.
+<br /><br />
+Contains the timestamp of the last web request, that 
+has been submitted by that client. This property is 
+read-only, but can be set to the current time through 
+session.touch().
+<br /><br />
+For new sessions, if the session represents a 
+registered user the result equals the date the user 
+was logged in the last time; otherwise the result 
+equals the current date.
+<br /><br />
+This property is read-only
+<br /><br />
+Example:
+<pre>res.write(session.lastActive())
+<i>Thu Nov 02 16:12:13 GMT+01:00 2000</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Date of last request by this user
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="session.login"></a>
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">login</span>(<span class="signature">user, password</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Logs in a user defined by its name and a password phrase, or by directly passing a HopObject.
+<br /><br />
+There are two variants of session.login():
+<br /><br />
+If called with one HopObject argument, the session 
+is associated with the user represented by the 
+HopObject.
+<br /><br />
+If called with two string arguments, it returns true 
+if the user name / password pair matches the stored 
+values in the database and false otherwise.
+<br /><br />
+Associates the passed User to that session, 
+i.e. logs the client in as that User. The property 
+user of the session object will refer to the User.
+<br /><br />
+Example:
+<pre>var login = session.login("tobi", "mumbl3");
+if (login)
+&nbsp;&nbsp;res.write("Welcome back, " + session.user.name + "!");
+else
+&nbsp;&nbsp;res.write("Oops, please try again...");
+<i>Welcome back, tobi!</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            User, String
+                        </td>
+                        <td>
+                            user
+                        </td>
+                        <td>
+                            either as User object to be logged in or the username to be checked as string
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            password
+                        </td>
+                        <td>
+                            as String, if the first parameter is a username
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true if the user was logged in, otherwise false
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="session.logout"></a>
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">logout</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Logs out a user.
+<br /><br />
+Removes the reference to a User associated with 
+the current session, if such a reference exists. 
+Additionally the global function onLogout will 
+be called.
+<br /><br />
+Example:
+<pre>res.write(session);
+<i>[Session for user tobi]</i>
+&nbsp;
+session.logout();
+res.write(session);
+<i>[Anonymous Session]</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="session.onSince"></a>
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">onSince</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">A date object representing the time a user's session was started.
+<br /><br />
+This property is read-only.
+<br /><br />
+Example:
+<pre>res.write(session.onSince());
+<i>Fri Aug 10 16:36:36 GMT+02:00 2001</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Date when the current session was started.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="session.touch"></a>
+                    
+                    
+                        <i><a href="#session" class="type">session</a>.
+                        <span class="symbolname">touch</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Refreshes the user's session.
+<br /><br />
+The session's expiration date is set to the current date 
+plus session timeout. This also happens automatically 
+when a user request is sent to Helma.
+<br /><br />
+The lastActive property will be set to the current 
+timestamp. Useful to artificially avoid a session timeout.
+<br /><br />
+Example:
+<pre>res.writeln(session.lastActive);
+<i>Fri Jul 12 14:40:20 CEST 2002</i>
+&nbsp;
+session.touch();
+&nbsp;
+res.writeln(session.lastActive);
+<i>Fri Jul 12 14:55:20 CEST 2002</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:04 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

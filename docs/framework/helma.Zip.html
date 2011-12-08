@@ -1,0 +1,1450 @@
+<html>
+<head>
+<title>
+Zip - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Zip.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the helma.Zip class.
+<br /><br />
+To use this optional module, its repository needs to be added to the 
+application, for example by calling app.addRepository('modules/helma/Zip.js')</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Zip"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Zip</span>(<span class="signature">file</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new helma.Zip instance</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File, java.io.File, String
+                        </td>
+                        <td>
+                            file
+                        </td>
+                        <td>
+                            Either
+a file object representing the .zip file on disk, or the
+path to the .zip file as string.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.list">list</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.extract">extract</a>(name, destPath)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.extractAll">extractAll</a>(destPath)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.add">add</a>(f, level, pathPrefix)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.addData">addData</a>(buf, name, level)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.close">close</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.getData">getData</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.save">save</a>(dest)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Content"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Zip.Content</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new helma.Zip.Content instance</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.Content.add">add</a>(entry)</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">Array</span> <a href="#helma.Zip.Content.toc">toc</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#helma.Zip.Content.files">files</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Entry"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>
+                        <span class="symbolname">Zip.Entry</span>(<span class="signature">entry</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a new instance of helma.Zip.Entry</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            java.util.zip.ZipEntry
+                        </td>
+                        <td>
+                            entry
+                        </td>
+                        <td>
+                            The zip entry object whose metadata
+should be stored in this instance
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#helma.Zip.Entry.name">name</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Number</span> <a href="#helma.Zip.Entry.size">size</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Date</span> <a href="#helma.Zip.Entry.time">time</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">Boolean</span> <a href="#helma.Zip.Entry.isDirectory">isDirectory</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">ByteArray</span> <a href="#helma.Zip.Entry.data">data</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Content.toc"></a>
+                    
+                    <span class="type">Array</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Zip.Content" class="type">helma.Zip.Content</a>.
+                        <span class="symbolname">toc</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The table of contents of the archive</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Content.files"></a>
+                    
+                    
+                    
+                        <i><a href="#helma.Zip.Content" class="type">helma.Zip.Content</a>.
+                        <span class="symbolname">files</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The files contained in the zip archive, where
+each directory level is a separate object containing
+the entries (files and directories) as properties.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Entry.name"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Zip.Entry" class="type">helma.Zip.Entry</a>.
+                        <span class="symbolname">name</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The name of the zip archive entry</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Entry.size"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Zip.Entry" class="type">helma.Zip.Entry</a>.
+                        <span class="symbolname">size</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The size of the entry in bytes</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Entry.time"></a>
+                    
+                    <span class="type">Date</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Zip.Entry" class="type">helma.Zip.Entry</a>.
+                        <span class="symbolname">time</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The file date of the entry</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Entry.isDirectory"></a>
+                    
+                    <span class="type">Boolean</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Zip.Entry" class="type">helma.Zip.Entry</a>.
+                        <span class="symbolname">isDirectory</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">True if the entry is a directory, false otherwise</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Entry.data"></a>
+                    
+                    <span class="type">ByteArray</span>
+                    
+                    
+                    
+                        <i><a href="#helma.Zip.Entry" class="type">helma.Zip.Entry</a>.
+                        <span class="symbolname">data</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The data of the zip entry</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.list"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">list</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns an array containing the entries of the archive
+represented by this helma.Zip instance.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The entries stored in the zip archive
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.extract"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">extract</span>(<span class="signature">name, destPath</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Extracts a single file from the zip archive represented
+by this helma.Zip instance. If a destination path is given it
+writes the extracted data directly to disk using the
+name of the zip entry, otherwise the resulting entry object
+contains the extracted data in the property <code>data</code>.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the file to extract
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            destPath
+                        </td>
+                        <td>
+                            An optional destination path where
+the extracted file should be stored.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An object containing the entry's properties
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Zip.html#helma.Zip.Entry">helma.Zip.Entry</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.extractAll"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">extractAll</span>(<span class="signature">destPath</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Extracts all files within the zip archive represented by
+this helma.Zip instance. If a destination path is given it
+stores the files directly on disk, while preserving any directory
+structure within the archive. If no destination path is given,
+the resulting entry objects will contain the extracted data
+in their property <code>data</code>.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            destPath
+                        </td>
+                        <td>
+                            An optional destination path where the
+files in the zip archive should be stored.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An object containing the extracted entries.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Zip.html#helma.Zip.Entry">helma.Zip.Entry</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.add"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">add</span>(<span class="signature">f, level, pathPrefix</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a single file or a whole directory (recursive!) to the zip archive</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.File, java.io.File, String
+                        </td>
+                        <td>
+                            f
+                        </td>
+                        <td>
+                            Either a file object
+or the path to a file or directory on disk that should be added to the
+archive. If the argument represents a directory, its contents will be added
+<em>recursively</em> to the archive.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            level
+                        </td>
+                        <td>
+                            An optional compression level to use. The argument 
+must be between zero and 9 (default: 9 = best compression).
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            pathPrefix
+                        </td>
+                        <td>
+                            An optional path prefix to use within the archive.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.addData"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">addData</span>(<span class="signature">buf, name, level</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a new entry to the zip file.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            ByteArray
+                        </td>
+                        <td>
+                            buf
+                        </td>
+                        <td>
+                            A byte array containing the data to add
+to the archive.
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            The name of the file to add, containing
+an optional path prefix
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            level
+                        </td>
+                        <td>
+                            The compression level to use (0-9, defaults to 9).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.close"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">close</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Closes the zip archive. This method should be called when
+all operations have been finished, to ensure that no open
+file handles are left.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.getData"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">getData</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the binary data of the zip archive.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            A ByteArray containing the binary data of the zip archive
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.save"></a>
+                    
+                    
+                        <i><a href="#helma.Zip" class="type">helma.Zip</a>.
+                        <span class="symbolname">save</span>(<span class="signature">dest</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Saves the archive.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            dest
+                        </td>
+                        <td>
+                            The full destination path including the name
+where the zip archive should be saved.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.Content.add"></a>
+                    
+                    
+                        <i><a href="#helma.Zip.Content" class="type">helma.Zip.Content</a>.
+                        <span class="symbolname">add</span>(<span class="signature">entry</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a zip entry object to the table of contents
+and the files collection</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            helma.Zip.Entry
+                        </td>
+                        <td>
+                            entry
+                        </td>
+                        <td>
+                            The entry to add to the
+zip archive
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="helma.Zip.extractData"></a>
+                    
+                    
+                        <i><a href="#helma" class="type">helma</a>.
+                        <span class="symbolname">Zip.extractData</span>(<span class="signature">zipData</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Extracts all files in the zip archive data passed as argument
+and returns them.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            ByteArray
+                        </td>
+                        <td>
+                            zipData
+                        </td>
+                        <td>
+                            A ByteArray containing the data of the zip archive
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The entries of the zip archive
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

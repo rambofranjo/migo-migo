@@ -1,0 +1,5149 @@
+<html>
+<head>
+<title>
+Mp3 - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Mp3.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the jala.audio package.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.Mp3"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">Mp3</span>(<span class="signature">file</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new jala.Mp3 wrapper and
+parses the header data of the MP3 file.
+The standard fields for a tag are accessible
+as properties of the new object.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String, File
+                        </td>
+                        <td>
+                            file
+                        </td>
+                        <td>
+                            The mp3 file to be parsed, either as
+path string or as any kind of file object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getFile">getFile</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getJavaObject">getJavaObject</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.createTag">createTag</a>(tagClass, tagObject)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getTag">getTag</a>(tagClass)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.hasTag">hasTag</a>(tagClass)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.removeTag">removeTag</a>(tagClass)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.save">save</a>(outFile)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getDuration">getDuration</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.parseDuration">parseDuration</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getSize">getSize</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getBitRate">getBitRate</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getChannelMode">getChannelMode</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getFrequency">getFrequency</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.isVariableBitRate">isVariableBitRate</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.createV1Tag">createV1Tag</a>(tagObject)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.createV2Tag">createV2Tag</a>(tagObject)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getV1Tag">getV1Tag</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getV2Tag">getV2Tag</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.hasV1Tag">hasV1Tag</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.hasV2Tag">hasV2Tag</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.removeV1Tag">removeV1Tag</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.removeV2Tag">removeV2Tag</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.getMetadata">getMetadata</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.setMetadata">setMetadata</a>(metadata)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">Mp3.Id3v1</span>(<span class="signature">mp3File</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new Id3v1 tag from an Mp3 file</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            jala.Mp3
+                        </td>
+                        <td>
+                            mp3File
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getAudio">getAudio</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getJavaObject">getJavaObject</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.copyFrom">copyFrom</a>(src)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getAlbum">getAlbum</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getArtist">getArtist</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getComment">getComment</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getTitle">getTitle</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getTrackNumber">getTrackNumber</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getGenre">getGenre</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getYear">getYear</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.getTextContent">getTextContent</a>(id)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setAlbum">setAlbum</a>(album)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setArtist">setArtist</a>(artist)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setComment">setComment</a>(comment)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setTitle">setTitle</a>(title)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setTrackNumber">setTrackNumber</a>(trackNumber)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setGenre">setGenre</a>(genre)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setYear">setYear</a>(year)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v1.setTextContent">setTextContent</a>(id, value)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">Mp3.Id3v2</span>(<span class="signature">mp3File</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new Id3v2 tag from an Mp3 file</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            jala.Mp3
+                        </td>
+                        <td>
+                            mp3File
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getAudio">getAudio</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getJavaObject">getJavaObject</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.removeFromAudio">removeFromAudio</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setTextEncoding">setTextEncoding</a>(encType)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getTextEncoding">getTextEncoding</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.copyFrom">copyFrom</a>(src)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getTextContent">getTextContent</a>(id)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setTextContent">setTextContent</a>(id, value)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getSubtype">getSubtype</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getAlbum">getAlbum</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getArtist">getArtist</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getComment">getComment</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getTitle">getTitle</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getSubtitle">getSubtitle</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getTrackNumber">getTrackNumber</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getGenre">getGenre</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getYear">getYear</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getAuthor">getAuthor</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getCopyright">getCopyright</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getUrl">getUrl</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setAlbum">setAlbum</a>(album)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setArtist">setArtist</a>(artist)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setComment">setComment</a>(comment)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setTitle">setTitle</a>(title)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setSubtitle">setSubtitle</a>(title)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setTrackNumber">setTrackNumber</a>(trackNumber)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setGenre">setGenre</a>(genre)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setYear">setYear</a>(year)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setAuthor">setAuthor</a>(author)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setCopyright">setCopyright</a>(copyright)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setUrl">setUrl</a>(url, desc)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.getImage">getImage</a>(pictureType)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.Mp3.Id3v2.setImage">setImage</a>(pictureType, mimeType, byteArray, desc)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.GENRES"></a>
+                    
+                    <span class="type">Array</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">Mp3.GENRES</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Array defining valid genres in ID3v1</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.MODES"></a>
+                    
+                    <span class="type">Array</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">Mp3.MODES</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Array defining mp3 modes.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.TEXT_ENCODINGS"></a>
+                    
+                    <span class="type">Array</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">Mp3.TEXT_ENCODINGS</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Array defining valid text encodings. Note: UTF-8 is valid for v2.4 only.
+UTF-16 with BOM doesn't work with Winamp etc - use UTF-16BE instead!
+The index position within the array defines the number used in the mp3 file.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.PICTURE_TYPES"></a>
+                    
+                    <span class="type">Array</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">Mp3.PICTURE_TYPES</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Array defining valid picture types. Note: Most image tagged files come with
+one picture of picture type null!
+The index position within the array defines the number used in the mp3 file.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getFile"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getFile</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a helma.File reference to the wrapped file.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getJavaObject"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getJavaObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the underlying java object</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.createTag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">createTag</span>(<span class="signature">tagClass, tagObject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This method creates a new tag object, attaches it
+to the file (thereby replacing an existing tag of
+this type) and returns it. Type is specified using 
+the class name in jala.Mp3.*. If a second 
+argument is provided, its values are copied into 
+the new tag.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            tagClass
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            tagObject
+                        </td>
+                        <td>
+                            optional tag whose standard
+       properties are copied to the new tag.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getTag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getTag</span>(<span class="signature">tagClass</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a tag object, type is specified using the class name
+in jala.Mp3.*.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            tagClass
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.hasTag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">hasTag</span>(<span class="signature">tagClass</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Tells if the file contains a certain tag, type is specified
+using the class name in jala.Mp3.*</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            tagClass
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.removeTag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">removeTag</span>(<span class="signature">tagClass</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes a tag from the file, type is specified using the
+class name in jala.Mp3.*</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            tagClass
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.save"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">save</span>(<span class="signature">outFile</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes changed metadata back to the source file or to a new file.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String, helma.File
+                        </td>
+                        <td>
+                            outFile
+                        </td>
+                        <td>
+                            (optional) save the modified file
+                      to a different file
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            true on success, false if the file contains tags that cannot be saved (Id3v2_2).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getDuration"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getDuration</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The audio length of the file in seconds at best estimate
+from the file info (method returns immediately).
+This method calculates based on the bitrate. Therefore it
+has to produce wrong results for files encoded with variable
+bitrate (vbr). For these files parseDuration() can be used.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            length in seconds
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.Mp3.html#jala.Mp3.parseDuration">jala.Mp3.parseDuration</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.parseDuration"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">parseDuration</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Parses the audio file to extract the precise duration of the audio.
+The upside is that it works fine for files with variable bitrates.
+The downside is that this action may take a few seconds depending on
+the size of the audio file.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            length in seconds
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.Mp3.html#jala.Mp3.getDuration">jala.Mp3.getDuration</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getSize"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getSize</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the file size in bytes.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getBitRate"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getBitRate</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the bit rate the file was encoded with.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getChannelMode"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getChannelMode</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the channel mode the file was encoded with.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getFrequency"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getFrequency</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the frequency the file was encoded with.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.isVariableBitRate"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">isVariableBitRate</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the file is (or seems to be) encoded with
+variable bit rate. FIXME: The current implementation returned
+true for all test files.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.createV1Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">createV1Tag</span>(<span class="signature">tagObject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If the file doesn't contain an ID3v1 tag, this method
+creates a new ID3v1 tag object, attaches it to the file
+and returns it. If a second argument is provided, its
+values are copied into the new tag.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            tagObject
+                        </td>
+                        <td>
+                            optional tag whose standard
+       properties are copied to the new tag.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.createV2Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">createV2Tag</span>(<span class="signature">tagObject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If the file doesn't contain an ID3v2 tag, this method
+creates a new ID3v2 tag object, attaches it to the file
+and returns it. If a second argument is provided, its
+values are copied into the new tag.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            tagObject
+                        </td>
+                        <td>
+                            optional tag whose standard
+       properties are copied to the new tag.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getV1Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getV1Tag</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getV2Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getV2Tag</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc"></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.hasV1Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">hasV1Tag</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the file contains a ID3v1 tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.hasV2Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">hasV2Tag</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns true if the file contains a ID3v2 tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.removeV1Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">removeV1Tag</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes the ID3v1 tag from the file.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.removeV2Tag"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">removeV2Tag</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes the ID3v2 tag from the file.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.getMetadata"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">getMetadata</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns a plain JavaScript object containing the values of
+all fields stored in either the Id3 V1 or V2 tag</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            An object containing the values of all fields
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.setMetadata"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3" class="type">jala.Mp3</a>.
+                        <span class="symbolname">setMetadata</span>(<span class="signature">metadata</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stores the metadata passed as argument in the ID2 v1 and v2 tags
+of the wrapped MP3 file.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            metadata
+                        </td>
+                        <td>
+                            An object containing the fields to set
+and their values.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getAudio"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getAudio</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapper for the underlying audio file.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getJavaObject"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getJavaObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the java representation of the tag,
+class depends on the actual library used.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.copyFrom"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">copyFrom</span>(<span class="signature">src</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Copies standard fields from another tag.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            src
+                        </td>
+                        <td>
+                            object with getter methods for fields album, artist,
+                    comment, title, trackNumber, genre and year.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getAlbum"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getAlbum</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the album information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing album name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getArtist"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getArtist</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the artist information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing artist name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getComment"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getComment</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the comment information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing comment
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getTitle"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getTitle</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the title information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing title
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getTrackNumber"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getTrackNumber</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the track number information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string representing track number or null 
+if tag doesn't contain a track number.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getGenre"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getGenre</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the genre information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing genre name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getYear"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getYear</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the year information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string representing year
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.getTextContent"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">getTextContent</span>(<span class="signature">id</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This method could be used to retrieve an arbitrary field
+of the underlying tag. For Id3v1 tags all information
+is available through getter and setter methods, so this
+implementation always returns null.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            null
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setAlbum"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setAlbum</span>(<span class="signature">album</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the album information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            album
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setArtist"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setArtist</span>(<span class="signature">artist</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the artist information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            artist
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setComment"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setComment</span>(<span class="signature">comment</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the comment</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            comment
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setTitle"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setTitle</span>(<span class="signature">title</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the title information</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            title
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setTrackNumber"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setTrackNumber</span>(<span class="signature">trackNumber</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the track number information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            trackNumber
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setGenre"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setGenre</span>(<span class="signature">genre</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the genre information. A list of genre names that are valid
+for ID3v1 tags is located in jala.Mp3.GENRES.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            genre
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setYear"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setYear</span>(<span class="signature">year</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the year information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            year
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v1.setTextContent"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v1" class="type">jala.Mp3.Id3v1</a>.
+                        <span class="symbolname">setTextContent</span>(<span class="signature">id, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This method could be used to set an arbitrary field
+of the underlying tag. For Id3v1 tags all information
+is available through getter and setter methods, so this
+implementation does nothing.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getAudio"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getAudio</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapper for the underlying audio file.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getJavaObject"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getJavaObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">returns the java representation of the tag,
+class depends on the actual library used.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.removeFromAudio"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">removeFromAudio</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes the tag from the audio file and
+nulls out the wrapper.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setTextEncoding"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setTextEncoding</span>(<span class="signature">encType</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">sets the text encoding used when creating new frames
+(the encoding type of old frames can't be changed with
+JavaMusicTag)</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number, String
+                        </td>
+                        <td>
+                            encType
+                        </td>
+                        <td>
+                            the new encoding type
+      as number or string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.Mp3#TEXT_ENCODINGS.html#jala.Mp3#TEXT_ENCODINGS">jala.Mp3#TEXT_ENCODINGS</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getTextEncoding"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getTextEncoding</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the text encoding used when setting values.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The text encoding
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.copyFrom"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">copyFrom</span>(<span class="signature">src</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Copies standard fields from another tag.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            src
+                        </td>
+                        <td>
+                            object with getter methods for fields album, artist,
+                    comment, title, trackNumber, genre and year.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getTextContent"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getTextContent</span>(<span class="signature">id</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This method can be used to retrieve an arbitrary text frame
+of the underlying tag. For the list of valid identifiers
+and their meaning see http://www.id3.org/
+The identifiers vary across the sub versions of id3v2 tags,
+use getSubtype to make sure you use the correct version.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            Frame identifier according to Id3v2 specification
+                  or shortcut as defined in jala.Mp3.FIELD_MAPPING.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String contained in the frame
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.Mp3.Id3v2.html#jala.Mp3.Id3v2.getSubtype">jala.Mp3.Id3v2.getSubtype</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setTextContent"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setTextContent</span>(<span class="signature">id, value</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This method can be used to set an arbitrary field
+of the underlying tag. For the list of valid identifiers
+and their meaning see http://www.id3.org/
+The identifiers vary across the sub versions of id3v2 tags,
+use getSubtype to make sure you use the correct version.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            Frame identifier according to Id3v2 specification
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            value
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.Mp3.Id3v2.html#jala.Mp3.Id3v2.getSubtype">jala.Mp3.Id3v2.getSubtype</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getSubtype"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getSubtype</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the version number of this id3v2 (values 2 to 4 for id3v2.2 to id3v2.4)</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The version number of this Id3v2 tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getAlbum"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getAlbum</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the album information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing album name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getArtist"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getArtist</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the artist information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing artist name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getComment"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getComment</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the comment information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing comment
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getTitle"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getTitle</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the title information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing title
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getSubtitle"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getSubtitle</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the subtitle information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing subtitle
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getTrackNumber"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getTrackNumber</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the track number information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string representing track number
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getGenre"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getGenre</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the genre information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing genre name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getYear"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getYear</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the year information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string representing year
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getAuthor"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getAuthor</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the author information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            string containing author information
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getCopyright"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getCopyright</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the copyright information of the tag.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The copyright information of the tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getUrl"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getUrl</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the Url stored in this tag</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The url stored in this tag
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setAlbum"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setAlbum</span>(<span class="signature">album</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the album information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            album
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setArtist"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setArtist</span>(<span class="signature">artist</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the artist information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            artist
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setComment"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setComment</span>(<span class="signature">comment</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the comment</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            comment
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setTitle"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setTitle</span>(<span class="signature">title</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the title information</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            title
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setSubtitle"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setSubtitle</span>(<span class="signature">title</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the subtitle information</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            title
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setTrackNumber"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setTrackNumber</span>(<span class="signature">trackNumber</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the track number information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            trackNumber
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setGenre"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setGenre</span>(<span class="signature">genre</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the genre information. A list of genre names that are compatible
+with ID3v1 tags is located in jala.Mp3.GENRES.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            genre
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setYear"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setYear</span>(<span class="signature">year</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the year information.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            year
+                        </td>
+                        <td>
+                            
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setAuthor"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setAuthor</span>(<span class="signature">author</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the author information in this tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            author
+                        </td>
+                        <td>
+                            The author information to set
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setCopyright"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setCopyright</span>(<span class="signature">copyright</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the copyright information in this tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            copyright
+                        </td>
+                        <td>
+                            The copyright information to set
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setUrl"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setUrl</span>(<span class="signature">url, desc</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Stores the Url passed as argument in this tag.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            url
+                        </td>
+                        <td>
+                            The url to store in this tag
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            desc
+                        </td>
+                        <td>
+                            An optiona description of the Url
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.getImage"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">getImage</span>(<span class="signature">pictureType</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Extracts the image from the tag</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            pictureType
+                        </td>
+                        <td>
+                            number describing picture type
+               (default is 3, describing a front cover).
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            image as mime object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.Mp3.Id3v2.setImage"></a>
+                    
+                    
+                        <i><a href="#jala.Mp3.Id3v2" class="type">jala.Mp3.Id3v2</a>.
+                        <span class="symbolname">setImage</span>(<span class="signature">pictureType, mimeType, byteArray, desc</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">adds an image to the file.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            pictureType
+                        </td>
+                        <td>
+                            number determining picture type
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            mimeType
+                        </td>
+                        <td>
+                            mime type of image
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Array
+                        </td>
+                        <td>
+                            byteArray
+                        </td>
+                        <td>
+                            image binary data
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            desc
+                        </td>
+                        <td>
+                            optional description
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.Mp3.html#jala.Mp3">jala.Mp3</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:07 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

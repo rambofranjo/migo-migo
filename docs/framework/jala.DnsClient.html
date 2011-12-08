@@ -1,0 +1,1368 @@
+<html>
+<head>
+<title>
+DnsClient - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: DnsClient.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Fields and methods of the jala.DnsClient class.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">DnsClient</span>(<span class="signature">nameServer</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new DnsClient object.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            nameServer
+                        </td>
+                        <td>
+                            IP-Address or FQDN of nameserver to query
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.DnsClient.query">query</a>(dName, queryType)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#jala.DnsClient.queryMailHost">queryMailHost</a>(dName)</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#jala.DnsClient.nameServer">nameServer</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record"></a>
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>
+                        <span class="symbolname">DnsClient.Record</span>(<span class="signature">data</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructs a new instance of jala.DnsClient.Record.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            org.wonderly.net.dns.RR
+                        </td>
+                        <td>
+                            data
+                        </td>
+                        <td>
+                            The data as received from
+the nameserver
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#jala.DnsClient.Record.getData">getData</a>()</li>
+                    </ul>
+                
+                
+                
+                
+                <div class="detailHead">properties</div>
+                
+                    <ul class="details">
+                        <li><span class="type">Number</span> <a href="#jala.DnsClient.Record.type">type</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#jala.DnsClient.Record.host">host</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#jala.DnsClient.Record.ipAddress">ipAddress</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#jala.DnsClient.Record.cname">cname</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#jala.DnsClient.Record.mx">mx</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#jala.DnsClient.Record.email">email</a></li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><span class="type">String</span> <a href="#jala.DnsClient.Record.text">text</a></li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.nameServer"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient" class="type">jala.DnsClient</a>.
+                        <span class="symbolname">nameServer</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Contains the IP Adress/FQDN of the name server to query.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_A"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_A</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "A" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_CNAME"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_CNAME</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "CNAME" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_MX"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_MX</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "MX" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_NS"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_NS</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "NS" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_PTR"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_PTR</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "PTR" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_SOA"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_SOA</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "SOA" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_TXT"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_TXT</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "TXT" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.TYPE_WKS"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala" class="type">jala</a>.
+                        <span class="symbolname">DnsClient.TYPE_WKS</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The "WKS" record/query type.</div>
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.type"></a>
+                    
+                    <span class="type">Number</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">type</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The type of the nameserver record represented by this Answer instance.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_A">jala.DnsClient.Record.TYPE_A</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_CNAME">jala.DnsClient.Record.TYPE_CNAME</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_HINFO">jala.DnsClient.Record.TYPE_HINFO</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_MX">jala.DnsClient.Record.TYPE_MX</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_NS">jala.DnsClient.Record.TYPE_NS</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_PTR">jala.DnsClient.Record.TYPE_PTR</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_SOA">jala.DnsClient.Record.TYPE_SOA</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_TXT">jala.DnsClient.Record.TYPE_TXT</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_WKS">jala.DnsClient.Record.TYPE_WKS</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.host"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">host</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The name of the host. This will only be set for records
+of type A, AAAA and NS.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_A">jala.DnsClient.Record.TYPE_A</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_AAAA">jala.DnsClient.Record.TYPE_AAAA</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_NS">jala.DnsClient.Record.TYPE_NS</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.ipAddress"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">ipAddress</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The IP address of the host. This will only be set for records
+of type A and AAAA</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_A">jala.DnsClient.Record.TYPE_A</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_AAAA">jala.DnsClient.Record.TYPE_AAAA</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.cname"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">cname</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The CNAME of this record. This will only be set for records
+of type CNAME</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_CNAME">jala.DnsClient.Record.TYPE_CNAME</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.mx"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">mx</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The name of the mail exchanging server. This is only set for
+records of type MX</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_MX">jala.DnsClient.Record.TYPE_MX</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.email"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">email</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The email address responsible for a name server. This property
+will only be set for records of type SOA</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_SOA">jala.DnsClient.Record.TYPE_SOA</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.text"></a>
+                    
+                    <span class="type">String</span>
+                    
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">text</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Descriptive text as received from the nameserver. This is only
+set for records of type TXT</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="jala.DnsClient.Record.html#jala.DnsClient.Record.TYPE_TXT">jala.DnsClient.Record.TYPE_TXT</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.query"></a>
+                    
+                    
+                        <i><a href="#jala.DnsClient" class="type">jala.DnsClient</a>.
+                        <span class="symbolname">query</span>(<span class="signature">dName, queryType</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Queries the nameserver for a specific domain
+and the given type of record.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            dName
+                        </td>
+                        <td>
+                            The domain name to query for
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            queryType
+                        </td>
+                        <td>
+                            The type of records to retrieve
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The records retrieved from the nameserver
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.queryMailHost"></a>
+                    
+                    
+                        <i><a href="#jala.DnsClient" class="type">jala.DnsClient</a>.
+                        <span class="symbolname">queryMailHost</span>(<span class="signature">dName</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Convenience method to query for the MX-records
+of the domain passed as argument.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            dName
+                        </td>
+                        <td>
+                            The domain name to query for
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The records retrieved from the nameserver
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="jala.DnsClient.Record.getData"></a>
+                    
+                    
+                        <i><a href="#jala.DnsClient.Record" class="type">jala.DnsClient.Record</a>.
+                        <span class="symbolname">getData</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the wrapped nameserver record data</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            The wrapped data
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:06 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

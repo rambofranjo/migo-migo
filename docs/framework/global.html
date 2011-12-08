@@ -1,0 +1,3641 @@
+<html>
+<head>
+<title>
+global - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: global.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Objects and functions made available in the 
+global scope of the Helma environment.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="global.global"></a>
+                    
+                    <span class="type">Object</span>
+                    
+                    
+                    
+                        <i><a href="#global" class="type">global</a>.
+                        <span class="symbolname">global</span></i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Built-in reference to the global object. 
+<br /><br />
+Useful as a way to access the global scope from within 
+the local scope of a function.
+<br /><br />
+The global object is based on a library scope, compiled from 
+the application's code repositories and is updated automatically 
+whenever any code repositories are modified, without the need 
+to restart/reset a running application. Each request receives
+a fresh global scope based on the application's library scope.
+<br /><br />
+Modifications to global variables that are defined at 
+compile-time are synchronized between requests, while global  
+variables newly created at runtime are cleared when the 
+current request scope is purged. For global variables created
+at runtime to survive between requests, they need to be 
+declared once using defineLibraryScope().</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#defineLibraryScope">global.defineLibraryScope</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="helma"></a>
+                    
+                    <span class="type">Object</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">helma</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Library object for the HelmaLib javascript library.
+<br /><br />
+HelmaLib is organized into two groups of modules:
+<ul>
+<li>modules/core which contains extensions to core 
+JavaScript types such as Object, Array, or Date.</li>
+<li>modules/helma which provides new functionality to 
+JavaScript, usually by wrapping a Java library.</li>
+</ul>
+<br /><br />
+To use a HelmaLib module in your Helma application, you 
+need to add it to the app's repositories. The simplest 
+way to do so is by using the app.addRepository() method:
+<pre>app.addRepository("modules/helma/Search.js");</pre>
+<br /><br />
+If you are looking for more Helma libraries, be sure 
+to check out the <a href="https://dev.orf.at/trac/jala/wiki/">Jala project</a>!</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="Array.html">Array</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="Date.html">Date</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="Number.html">Number</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="Object.html">Object</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="String.html">String</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Aspects.html#helma.Aspects">helma.Aspects</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Chart.html#helma.Chart">helma.Chart</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Color.html#helma.Color">helma.Color</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Database.html#helma.Database">helma.Database</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.File.html#helma.File">helma.File</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Ftp.html#helma.Ftp">helma.Ftp</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Group.html#helma.Group">helma.Group</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Html.html#helma.Html">helma.Html</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Http.html#helma.Http">helma.Http</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Image.html#helma.Image">helma.Image</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail">helma.Mail</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Search.html#helma.Search">helma.Search</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Skin.html#helma.Skin">helma.Skin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Ssh.html#helma.Ssh">helma.Ssh</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Url.html#helma.Url">helma.Url</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Zip.html#helma.Zip">helma.Zip</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="root"></a>
+                    
+                    <span class="type">HopObject</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">root</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Represents the root of the object model hierarchy.
+<br /><br />
+Each application has only one root object. This single
+instance of the root object inherits its properties from 
+the Root prototype, which itself inherits from the 
+HopObject prototype. 
+<br /><br />
+The root object serves as the starting point against 
+which the URI path of incoming requests are resolved.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html">HopObject</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="path"></a>
+                    
+                    <span class="type">PathWrapper</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">path</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Accessing objects in the URI path.
+<br /><br />
+The objects in the URI request path are accessible 
+as array members of the global path object as well 
+as named properties of path via their prototype name.
+<br /><br />
+When Helma receives an HTTP request e.g. from a browser, 
+it maps the URI path of the URL to HopObjects. This way, 
+the path is interpreted as an hierarchy of HopObjects.
+<br /><br />
+For instance, if an object in the URI path has a prototype called 
+"story", it will be accessible as path["story"] or path.story.
+<br /><br />
+<pre>for (var i=0; i &lt; path.length; i++)
+&nbsp;&nbsp;res.writeln(path[i]);
+&nbsp;
+<i>HopObject file
+HopObject document
+HopObject story
+HopObject note</i>
+&nbsp;
+var obj = path.story;
+res.write(obj);
+&nbsp;
+<i>HopObject story</i></pre>
+The path object behaves similar to a Javascript 
+array, but it is actually an instance of the 
+Packages.helma.scripting.rhino.PathWrapper Java class.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://adele.helma.org/download/helma/apidocs/api/helma/scripting/rhino/PathWrapper.html">Packages.helma.scripting.rhino.PathWrapper</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="app"></a>
+                    
+                    <span class="type">app</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">app</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This object is automatically instantiated as the app property 
+of the global object (or global.app) and there is no constructor 
+to instantiate further instances.
+<br /><br />
+The app object is a host object representing the application 
+for which the current scripting environment is provided.
+<br /><br />
+For further details also see the JavaDocs for 
+Packages.helma.framework.core.ApplicationBean. Since that class 
+is a JavaBean all of its get- and set-methods are also directly 
+available as properties of this object.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="app.html">app</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="req"></a>
+                    
+                    <span class="type">req</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">req</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This object is automatically instantiated as the req property 
+of the global object (or global.req) and there is no constructor 
+to instantiate further instances.
+<br /><br />
+The req object is a host object representing the request  
+that is currently handled by the scripting environment.
+<p>For further details also see the JavaDocs for 
+Packages.helma.framework.RequestBean. Since that class is a 
+JavaBean all of its get- and set-methods are also directly 
+available as properties of this object.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="req.html">req</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="res"></a>
+                    
+                    <span class="type">res</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">res</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This object is automatically instantiated as the res property 
+of the global object (or global.res) and there is no constructor 
+to instantiate further instances.
+<br /><br />
+The res object is a host object representing the response 
+for the request that is currently handled by the scripting 
+environment.
+<br /><br />
+For further details also see the JavaDocs for 
+Packages.helma.framework.ResponseBean. Since that class is a 
+JavaBean all of its get- and set-methods are also directly 
+available as properties of this object.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="res.html">res</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="session"></a>
+                    
+                    <span class="type">session</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">session</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">This object is automatically instantiated as the session property 
+of the global object (or global.session).
+<br /><br />
+The session object is a host object representing the session  
+for the request that is currently handled by the scripting 
+environment.
+<br /><br />
+Each web request is associated with a SessionObject 
+representing a 'user session'. Helma recognises requests 
+being made from the same client within the same session through 
+a session cookie named 'HopSession'. If no such cookie is sent 
+with the request, Helma will set that a cookie with a random 
+hash with the next response.
+<br /><br />
+Within the scripting environment 'session' always 
+represents the current session of the user, who initiated 
+the web request.
+<br /><br />
+Besides that default session object, it is also possible 
+to fetch active sessions of other clients through the method 
+app.getSessions(), and to create additional SessionObjects 
+through app.createSession().
+<br /><br />
+For further details also see the JavaDocs for 
+Packages.helma.framework.core.SessionBean. Since that class 
+is a JavaBean all get- and set-methods are also directly 
+available as properties of that object.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="session.html">session</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section object">
+                <div class="itemTitle">
+                    <a name="Xml"></a>
+                    
+                    <span class="type">Xml</span>
+                    
+                    
+                    
+                    
+                        <i><span class="symbolname">Xml</span></i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The Xml object provides easy means to convert XML to 
+HopObject and HopObjects to XML.</div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="Xml.html">Xml</a></div></td></tr>
+                
+                </table>
+                
+
+                <!-- if test="symbol.properties.length">
+                <div class="detailHead">properties</div>
+                <table class="params">
+                
+                </table>
+                </if -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="HopObject"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">HopObject</span>(<span class="signature"></span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructor for HopObject objects, providing the 
+building blocks of the Helma framework.
+<br /><br />
+Extends the standard JavaScript object with 
+Helma-specific properties and functions. The HopObject is
+the basic building block of a Helma application. The 
+website root object as well as custom types defined by 
+the application inherit from the HopObject prototype.
+<br /><br />
+HopObjects can be given special Helma specific 
+properties, such as "collections" that can be configured 
+to map to relational databases, and will make such data 
+available when rendering "skins".
+<br /><br />
+HopObjects can be in transient state or are persistently 
+mapped on a database. HopObjects that are directly or 
+indirectly attached to the application's root object are 
+automatically persisted using the built-in XML database, if 
+they are not otherwise mapped to a relational database. 
+see JavaDocs for helma.scripting.rhino.HopObject</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html">HopObject</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="File"></a>
+                    <span class="deprecated"><del>
+                    
+                    
+                        <i><span class="symbolname">File</span>(<span class="signature">filepath</span>)</i>
+                    
+                    </del>&nbsp;&nbsp;deprecated use helma.File instead</span>
+                </div>
+                
+                
+                    <div class="desc">Constructor for File objects, providing read and write access to the file system.
+<br /><br />
+Example:
+<pre>var fileOrDir = new File('static/test.txt');</pre></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            filepath
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="File.html">File</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="FtpClient"></a>
+                    <span class="deprecated"><del>
+                    
+                    
+                        <i><span class="symbolname">FtpClient</span>(<span class="signature">server</span>)</i>
+                    
+                    </del>&nbsp;&nbsp;deprecated use helma.Ftp instead</span>
+                </div>
+                
+                
+                    <div class="desc">Constructor for File objects, to send and receive files from an FTP server.
+<br /><br />
+The FTP client needs Daniel Savarese's NetComponents 
+library in the classpath in order to work.
+<br /><br />
+Example:
+<pre>var ftp = new FtpClient("ftp.mydomain.com");</pre></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            server
+                        </td>
+                        <td>
+                            as String, the address of the FTP Server to connect to
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Ftp.html#helma.Ftp">helma.Ftp</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="FtpClient.html">FtpClient</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="Image"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">Image</span>(<span class="signature">url</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Helma's built-in image object allows you to read, manipulate, and save images.
+<br /><br />
+An image object is created using the Image() constructor.
+<br /><br />
+Example:
+<pre>var img = new Image("http://helma.org/image.gif");</pre></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            url
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="Image.html">Image</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="Mail"></a>
+                    <span class="deprecated"><del>
+                    
+                    
+                        <i><span class="symbolname">Mail</span>(<span class="signature"></span>)</i>
+                    
+                    </del>&nbsp;&nbsp;deprecated use helma.Mail instead</span>
+                </div>
+                
+                
+                    <div class="desc">Helma's built-in mail client enables you to send e-mail via SMTP.
+<br /><br />
+A mail client object is created by using the Mail() constructor.
+The mail object then can be manipulated and sent using the 
+methods listed below.
+<br /><br />
+You'll need the JavaMail library installed for this to work. 
+Also, don't forget to set your mail server via the smtp 
+property in the app.properties or server.properties file.
+<br /><br />
+Note: Make sure that the SMTP server itself is well-configured, 
+so that it accepts e-mails coming from your server and does 
+not deny relaying. Best and fastest configuration is of course 
+if you run your own SMTP server (e.g. postfix) which might be 
+a bit tricky to set up, however.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail">helma.Mail</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="Mail.html">Mail</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="Remote"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">Remote</span>(<span class="signature">server</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Constructor for Remote objects, implementing an XML-RPC client.
+<br /><br />
+XML-RPC is a simple framework to enable one machine to 
+execute remote procedures on another using HTTP and XML.
+<br /><br />
+In Helma such calls are performed using a Remote object. 
+Remote objects are created with the URL of the XML-RPC 
+service. Functions of the remote XML-RPC service then 
+can be called just like local functions.
+<br /><br />
+To compensate for the missing exception handling, 
+Remote objects return result wrappers which contain 
+either the result of the remote function, or a 
+description of the error if one occurred.
+<br /><br />
+Example:
+<pre>var xr = new Remote("http://helma.domain.tld:5056/");
+var msg1 = xr.helmaorg.getXmlRpcMessage();
+if (msg1.error)
+&nbsp;&nbsp;res.write(msg1.error);
+else
+&nbsp;&nbsp;res.write(msg1.result);
+&nbsp;
+<i>Hello, Xml-Rpc World!</i>
+&nbsp;
+var msg2 = xr.hotelGuide.hotels.grandimperial.getXmlRpcMessage();
+if (!msg2.error)
+&nbsp;&nbsp;res.write(msg2.result);
+&nbsp;
+<i>Welcome to the Grand Imperial Hotel, Vienna!</i>
+&nbsp;
+var msg3 = xr.kolin.document.comments["23"].getXmlRpcMessage();
+if (!msg3.error)
+&nbsp;&nbsp;res.write(msg3.result);
+&nbsp;
+<i>Here you can write your comments.</i>
+&nbsp;
+var xr = new Remote("http://betty.userland.com/RPC2");
+var state = xr.examples.getStateName(23);
+if (!state.error)
+&nbsp;&nbsp;res.write(state.result);
+&nbsp;
+<i>Minnesota</i></pre></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            server
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://adele.helma.org/download/helma/apidocs/api/helma/scripting/rhino/extensions/XmlRpcObject.html">Packages.helma.scripting.rhino.extensions.XmlRpcObject</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="User"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">User</span>(<span class="signature"></span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">The built-in User prototype.
+<br /><br />
+Normally, the User constructor is never called directly and 
+the app.registerUser method is used instead to create new
+users.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="User.html">User</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Object.dontEnum"></a>
+                    
+                    
+                        <i><a href="#Object" class="type">Object</a>.
+                        <span class="symbolname">dontEnum</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Prevents the specified property from being enumerated.
+<br /><br />
+Useful for example in order to extend the Object and Array 
+prototypes without breaking for/in loops, since the added 
+methods would otherwise get enumerated together with  
+instance properties.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the name of the property that should not be enumerable
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="authenticate"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">authenticate</span>(<span class="signature">username, password</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Authenticates a user against a standard Unix password file. 
+<br /><br />
+Returns true if the provided credentials match an according 
+entry in the files  [AppDir]/passwd or  [HelmaHome]/passwd. 
+The stored passwords in these files must be either encrypted 
+with the unix crypt algorithm, or with the MD5 algorithm. 
+The Apache web server provides the utility tool 'htpasswd' 
+to generate such password files.
+<br /><br />
+Example:
+<pre>var login = authenticate("user", "pass");
+if (login)
+&nbsp;&nbsp;&nbsp;res.write("Welcome back!");
+else
+&nbsp;&nbsp;&nbsp;res.write("Oops, please try again...");
+&nbsp;
+<i>Welcome back!</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            username
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            password
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Boolean true or false depending on whether 
+        the authentication was successful
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="createSkin"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">createSkin</span>(<span class="signature">skin</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Creates a Skin object from the passed String.
+<br /><br />
+The returned object can be passed to the global functions 
+renderSkin, resp. renderSkinAsString.
+<br /><br />
+Skins can also be defined by text files using a *.skin 
+suffix, placed in an application's code repository. The 
+createSkin method provides the ability to create skins 
+dynamically as an alternative.
+<br /><br />
+Example:
+<pre>var str = "Hello, &lt;% response.body %&gt;!";
+var skin = createSkin(str);
+res.data.body = "World";
+renderSkin(skin);
+&nbsp;
+<i>Hello, World!</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            skin
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Skin generated from the skin string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#Skin">Skin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkin">renderSkin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkinAsString">renderSkinAsString</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="defineLibraryScope"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">defineLibraryScope</span>(<span class="signature">namespace</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Declares a new global variable to not be cleared between requests.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            namespace
+                        </td>
+                        <td>
+                            as String, the name of the protected namespace
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#global">global</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="deserialize"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">deserialize</span>(<span class="signature">filename</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Deserialize a JavaScript object that was previously serialized to a file.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            filename
+                        </td>
+                        <td>
+                            as String, the file to deserialize the object from
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Object the deserialized object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="encode"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">encode</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Encodes a string for HTML output and inserts linebreak tags.
+<br /><br />
+Performs the following string manipulations:
+<ul>
+<li>All line breaks (i.e. carriage returns and line feeds) 
+    are replaced with &lt;br /> tags.</li>
+<li>All special characters (i.e. non ASCII) are being 
+    replaced with their equivalent HTML entity.</li>
+<li>Existing markup tags are being encoded.</li>
+</ul>
+<br /><br />
+Example:
+<pre>var str = encode("&lt;b&gt;Bananer v&auml;xer\n minsann inte p&aring; tr&auml;d.&lt;b&gt;");
+res.write(str);
+&nbsp;
+<i>&amp;lt;b&amp;gt;Bananer v&amp;auml;xer
+&lt;br /&gt; &amp;lt;br&amp;gt; minsann inte p&amp;aring; tr&amp;auml;d.&amp;lt;/b&amp;gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String the modified string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeForm">encodeForm</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeXml">encodeXml</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#format">format</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#formatParagraphs">formatParagraphs</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="encodeForm"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">encodeForm</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Encodes a string for HTML output, leaving linebreaks untouched.
+<br /><br />
+Performs the following string manipulations:
+<ul>
+<li>Unlike encode, leaves linebreaks untouched. 
+    This is what you usually want to do for encoding form 
+    content (esp. with text input values).</li>
+<li>All special characters (i.e. non ASCII) are being 
+    replaced with their equivalent HTML entity.</li>
+<li>Existing markup tags are being encoded.</li>
+</ul>
+<br /><br />
+Example:
+<pre>var str = encodeForm("&lt;b&gt;Bananer v&auml;xer\n minsann inte p&aring; tr&auml;d.&lt;/b&gt;");
+res.write(str);
+&nbsp;
+<i>&amp;lt;b&amp;gt;Bananer v&amp;auml;xer
+minsann inte p&amp;aring; tr&amp;auml;d.&amp;lt;/b&amp;gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String the modified string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encode">encode</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeXml">encodeXml</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#format">format</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#formatParagraphs">formatParagraphs</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="encodeXml"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">encodeXml</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Encodes a string for XML output.
+<br /><br />
+Performs the following string manipulations:
+<ul>
+<li>All special characters (i.e. non ASCII) are being 
+    replaced with their equivalent HTML entity.</li>
+<li>Existing tags, single and double quotes, as well as 
+    ampersands are being encoded.</li>
+<li>Some invalid XML characters below '0x20' are removed</li>
+</ul>
+<br /><br />
+Example:
+<pre>var str = encodeXml("&lt;title&gt;Sm&oslash;rebr&oslash;d&lt;/title&gt;");
+res.write(str);
+&nbsp;
+<i>&amp;lt;title&amp;gt;Sm&oslash;rebr&amp;amp;oslash:d&amp;lt;/title&amp;gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String the modified string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encode">encode</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeForm">encodeForm</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#format">format</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#formatParagraphs">formatParagraphs</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="format"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">format</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Encodes a string for HTML output, leaving existing markup tags untouched.
+<br /><br />
+Performs the following string manipulations:
+<ul>
+<li>All line breaks (i.e. carriage returns and line feeds) are
+    replaced with &lt;br /> tags, with the exception of line breaks
+    that follow certain block tags (e.g. table, div, h1, ..).</li>
+<li>All special characters (i.e. non ASCII) are being replaced 
+    with their equivalent HTML entity.</li>
+</ul>
+<br /><br />
+Example:
+<pre>var str = format("&lt;b&gt;Bananer v&auml;xer\n minsann inte p&aring; tr&auml;d.&lt;/b&gt;");
+res.write(str);
+&nbsp;
+<i>&lt;b&gt;Bananer v&amp;auml;xer
+&lt;br /&gt; minsann inte p&amp;aring; tr&amp;auml;d.&lt;/b&gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String the modified string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encode">encode</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeForm">encodeForm</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeXml">encodeXml</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#formatParagraphs">formatParagraphs</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="formatParagraphs"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">formatParagraphs</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Encodes a string for HTML output, inserting paragraph tags.
+<br /><br />
+Performs the following string manipulations:
+<ul>
+<li>Empty lines (double line breaks) are considered to indicate a 
+    paragraph, and are surrounded with &lt;p> tags.</li>
+<li>All single line breaks (i.e. carriage returns and line feeds) are
+    replaced with &lt;br /> tags, with the exception of line breaks
+    that follow certain block tags (e.g. table, div, h1, ..).</li>
+<li>All special characters (i.e. non ASCII) are being replaced 
+    with their equivalent HTML entity.</li>
+</ul>
+<br /><br />
+Example:
+<pre>var str = format("Sm&oslash;rebr&oslash;d:\n\n&lt;b&gt;Bananer v&auml;xer\n minsann inte p&aring; tr&auml;d.&lt;/b&gt;");
+res.write(str);
+&nbsp;
+<i>&lt;p&gt;Sm&amp;oslash;rebr&amp;oslash;d:&lt;/p&gt;
+&nbsp;
+&lt;p&gt;&lt;b&gt;Bananer v&amp;auml;xer
+&lt;br /&gt; minsann inte p&amp;aring; tr&amp;auml;d.&lt;/b&gt;&lt;/p&gt;</i></pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String the modified string
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encode">encode</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeForm">encodeForm</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#encodeXml">encodeXml</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#format">format</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="getDBConnection"></a>
+                    <span class="deprecated"><del>
+                    
+                    
+                        <i><span class="symbolname">getDBConnection</span>(<span class="signature">datasource</span>)</i>
+                    
+                    </del>&nbsp;&nbsp;deprecated use helma.Database instead</span>
+                </div>
+                
+                
+                    <div class="desc">Connects to a relational database, and returns a DatabaseObject 
+representing that connection. 
+<br /><br />
+The Direct DB interface allows the developer to directly access 
+relational databases defined in the db.properties file without 
+going through the Helma object model layer.
+<br /><br />
+The passed string must match one of the data sources being defined 
+in [AppDir]/db.properties, or an error will be thrown. 
+&nbsp;
+Also see the reference on the DatabaseObject and the documentation 
+for the methods of the returned dbConnection and dbIterator objects.
+<br /><br />
+Example:
+<pre>var dbConnection = getDBConnection("db_source_name");
+&nbsp;
+var dbRowset = dbConnection.executeRetrieval("select title from dummy");
+while (dbRowset.next())
+&nbsp;&nbsp;res.writeln(dbRowset.getColumnItem("title"));
+&nbsp;
+var deletedRows = dbConnection.executeCommand("delete from foobar");
+if(deletedRows){
+&nbsp;&nbsp;res.writeln(deletedRows + " rows successfully deleted");
+}</pre>
+<br /><br />
+See the documentation of the databaseObject for a list of the 
+available methods and properties of the returned object.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            datasource
+                        </td>
+                        <td>
+                            name as String
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Packages.helma.scripting.rhino.extensions.DatabaseObject - a reference to the created db connection
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://adele.helma.org/download/helma/apidocs/api/helma/scripting/rhino/extensions/DatabaseObject.html">Packages.helma.scripting.rhino.extensions.DatabaseObject</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="DatabaseObject.html">DatabaseObject</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="DatabaseObject.html#DatabaseObject.RowSet">DatabaseObject.RowSet</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Database.html#helma.Database">helma.Database</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="getHtmlDocument"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">getHtmlDocument</span>(<span class="signature">source</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Parses an HTML string to an XML DOM tree.
+<br /><br />
+Tries to parse a string to a XML DOM tree using Xerces' HTML 
+parser (nekohtml). The argument must be either a URL, a piece 
+of XML, an InputStream or a Reader. Returns an instance of 
+org.apache.html.dom.HTMLDocumentImpl.
+<br /><br />
+See the JavaDocs for that class for further details.<br />
+FIXME: Links to other recommended HTML parsers</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            source
+                        </td>
+                        <td>
+                            as String, HTML formatted
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Packages.org.apache.html.dom.HTMLDocumentImpl XML DOM tree object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://google.com/search?q=org.apache.html.dom.HTMLDocumentImpl">Packages.org.apache.html.dom.HTMLDocumentImpl</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#getXmlDocument">getXmlDocument</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="getProperty"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">getProperty</span>(<span class="signature">property, defaultvalue</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Looks up a property that was set in app.properties or server.properties
+&nbsp;
+Returns any property defined in  [AppDir]/app.properties, 
+resp. [HelmaHome]/server.properties that matches the passed 
+property name. This lookup is case-insensitive. Through the 
+optional second parameter it is possible to define a default 
+value that is being returned, in case the property has not 
+been set.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            property
+                        </td>
+                        <td>
+                            as String, the name of the property to look up
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            defaultvalue
+                        </td>
+                        <td>
+                            as String, optional default/fallback value
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String with the resulting value for the checked property
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="getURL"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">getURL</span>(<span class="signature">url, etagOrDate, timeout</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Retrieves a file/document from the passed URL as a MimePart 
+Object, and therefore functions as a minimalist version of 
+a HttpClient. The optional second parameter can either 
+contain a (last-modified) date object, or an eTag string, 
+which will be passed along with the Http request to the 
+specified URL.
+Also see the reference on the MimePart Object</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            url
+                        </td>
+                        <td>
+                            as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            etagOrDate
+                        </td>
+                        <td>
+                            either the etag as String or a Date object
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Number
+                        </td>
+                        <td>
+                            timeout
+                        </td>
+                        <td>
+                            optional request timeout in milliseconds
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Packages.helma.util.MimePart MimePart object of received Http response
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://adele.helma.org/download/helma/apidocs/api/helma/util/MimePart.html">Packages.helma.util.MimePart</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="mimePart.html">mimePart</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="getXmlDocument"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">getXmlDocument</span>(<span class="signature">source</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Parses an XML string to an XML DOM tree.
+<br /><br />
+Tries to parse a string to a XML DOM tree using the 
+Crimson' Parser. The argument must be either a URL, a 
+piece of XML, an InputStream or a Reader. Returns an 
+instance of org.apache.crimson.tree.XmlDocument.
+<br /><br />
+See the JavaDocs for that class for further details.<br />
+FIXME: Link to JavaDocs and other recommended XML parsers</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            source
+                        </td>
+                        <td>
+                            as String, using XML syntax
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Packages.org.apache.crimson.tree.XmlDocument XML DOM tree object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#getHtmlDocument">getHtmlDocument</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="renderSkin"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">renderSkin</span>(<span class="signature">skin, params</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Renders the passed SkinObject or a global skin matching the 
+passed name to the response buffer.
+&nbsp;
+The properties of the optional parameter object are accessible 
+within the skin through the 'param' macro handler.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            skin
+                        </td>
+                        <td>
+                            as SkinObject or the name of the skin as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            params
+                        </td>
+                        <td>
+                            as Object, optional properties to be passed to the skin
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkinAsString">global.renderSkinAsString</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.renderSkin">HopObject.renderSkin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.renderSkinAsString">HopObject.renderSkinAsString</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="renderSkinAsString"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">renderSkinAsString</span>(<span class="signature">skin, params</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Returns the result of the rendered SkinObject or a rendered 
+global skin matching the passed name.
+&nbsp;
+The properties of the optional parameter object are accessible 
+within the skin through the 'param' macro handler.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            skin
+                        </td>
+                        <td>
+                            as SkinObject or the name of the skin as String
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            params
+                        </td>
+                        <td>
+                            as Object, optional properties to be passed to the skin
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String of the rendered skin
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#renderSkin">global.renderSkin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.renderSkin">HopObject.renderSkin</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="HopObject.html#HopObject.renderSkinAsString">HopObject.renderSkinAsString</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="seal"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">seal</span>(<span class="signature">obj</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Seals an object, and prevents any further modifications of 
+that object. If any property is tried to be modified after 
+it has been sealed, an error is thrown.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            that is to be sealed
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="serialize"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">serialize</span>(<span class="signature">obj, filename</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Serialize a JavaScript object to a file.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            as Object, the object to be serialized
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            filename
+                        </td>
+                        <td>
+                            as String, the file to serialize the object to
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="stripTags"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">stripTags</span>(<span class="signature">markup</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Removes any markup tags contained in the passed string, and 
+returns the modified string.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            markup
+                        </td>
+                        <td>
+                            as String, the text that is to be stripped of tags
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            String with the tags stripped out
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="toJava"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">toJava</span>(<span class="signature">obj</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Converts a Javascript String, Date, etc to its Java counterpart.
+<br /><br />
+Converts an object into a wrapper that exposes the java
+methods of the object to JavaScript. This is useful for
+treating native numbers, strings, etc as their java
+counterpart such as java.lang.Double, java.lang.String etc.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            as String, Date, Boolean, Number, etc.
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            NativeJavaObject wrapping the provided object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="unwrapJavaMap"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">unwrapJavaMap</span>(<span class="signature">obj</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Unwrap a map previously wrapped using wrapJavaMap().</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Object
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            as Object, a map previously wrapped using wrapJavaMap()
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Packages.java.util.Map the unwrapped map object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="http://google.com/search?q=java.util.Map">Packages.java.util.Map</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#wrapJavaMap">wrapJavaMap</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="wrapJavaMap"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">wrapJavaMap</span>(<span class="signature">obj</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Wrap a java.util.Map so that it looks and behaves 
+like a native JS object.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            Packages.java.util.Map
+                        </td>
+                        <td>
+                            obj
+                        </td>
+                        <td>
+                            as Packages.java.util.Map to be wrapped
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                <div class="detailHead">returns</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            
+                        </td>
+                        <td>
+                            Object wrapping the map, making it look like a JS object
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#unwrapJavaMap">unwrapJavaMap</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="write"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">write</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string to java.lang.System.out, i.e. to the console. 
+Useful for debugging purposes.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String, the message that is to be output
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="writeln"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">writeln</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Writes a string together with a line break to 
+java.lang.System.out, i.e. to the console. Useful for 
+debugging purposes.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String, the message that is to be output
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="onLogout"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">onLogout</span>(<span class="signature"></span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If defined, the onLogout() function is called when a user 
+is logged out.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="onStart"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">onStart</span>(<span class="signature"></span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If defined, the onStart() function is called when the 
+application is started.
+<br /><br />
+This is most useful for any initialization purposes 
+your application may require.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="onStop"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">onStop</span>(<span class="signature"></span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If defined, the onStop() function is called when the 
+application is stopped.</div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="onUnhandledMacro"></a>
+                    
+                    
+                    
+                        <i><span class="symbolname">onUnhandledMacro</span>(<span class="signature">name</span>)</i>
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">If defined, the onUnhandledMacro() function is called when 
+a global macro call can not be handled.
+<br /><br />
+For macros that are not global, an onUnhandledMacro() 
+method would need to be defined on the handler object.</div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            as String, the name of the unhandled macro
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:04 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>

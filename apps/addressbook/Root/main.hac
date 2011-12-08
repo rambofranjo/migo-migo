@@ -1,0 +1,15 @@
+var str = "";
+for (var i=0; i< root.person.size(); i++) {
+   var person = root.person.get(i);
+   str += person.renderSkinAsString("link");
+}
+
+var str_ ="";
+for (var i=0; i< root.gruppe.size(); i++) {
+	var gruppe = root.gruppe.get(i);
+	str_ = gruppe.name;
+}
+
+res.data.title = "Helma Address Book";
+res.data.body = str + str_;
+renderSkin("html");

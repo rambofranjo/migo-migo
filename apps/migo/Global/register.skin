@@ -1,0 +1,10 @@
+<% response.errorRegister%>
+<form action="<% root.href action="register" %>" method="POST"> 
+	Vorname: <input type="text" name="vorname" value="<% response.registerVorname %>"><br />
+	Nachname: <input type="text" name="nachname" value="<% response.registerNachname %>"><br />
+	Ort: <input type="text" name="ort" value="<% response.registerOrt %>"><br />
+	E-Mail: <input type="text" name="email" value="<% response.registerEmail %>"><br />
+	Passwort: <input type="password" name="password"><br />
+	Passwort wh: <input type="password" name="passwordWh"><br />
+	<input type="submit" name="register" value="Register!"> 
+</form>

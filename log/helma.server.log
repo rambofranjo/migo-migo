@@ -1,0 +1,67 @@
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopping application addressbook
+[2011/12/08 11:45:55] [INFO] [Thread-4] Unbinding application addressbook
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopped application addressbook
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopping application manage
+[2011/12/08 11:45:55] [INFO] [Thread-4] Unbinding application manage
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopped application manage
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopping application migo
+[2011/12/08 11:45:55] [INFO] [Thread-4] Unbinding application migo
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopped application migo
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopping application welcome
+[2011/12/08 11:45:55] [INFO] [Thread-4] Unbinding application welcome
+[2011/12/08 11:45:55] [INFO] [Thread-4] Stopped application welcome
+[2011/12/08 11:45:55] [INFO] [Thread-4] Shutting down Helma
+[2011/12/08 11:45:57] [INFO] [main] Starting Helma 1.7.0 (February 5 2010) on Java 1.6.0_29
+[2011/12/08 11:45:57] [INFO] [main] Setting Helma Home to /Users/danielbrandstetter/Desktop/helma-1.7.0
+[2011/12/08 11:45:57] [INFO] [Thread-3] Building application welcome
+[2011/12/08 11:45:58] [INFO] [Thread-3] Building application manage
+[2011/12/08 11:45:58] [INFO] [Thread-3] Building application migo
+[2011/12/08 11:45:58] [INFO] [Thread-3] Building application addressbook
+[2011/12/08 11:45:58] [INFO] [Thread-3] Binding application addressbook :: 1361123198 :: 930227286
+[2011/12/08 11:45:58] [INFO] [Thread-3] Binding application manage :: 1629943847 :: 1507951819
+[2011/12/08 11:45:58] [INFO] [Thread-3] Binding application migo :: 330512910 :: 1375138427
+[2011/12/08 11:45:58] [INFO] [Thread-3] Serving static from /Users/danielbrandstetter/Desktop/helma-1.7.0/apps/migo/static
+[2011/12/08 11:45:58] [INFO] [Thread-3] Mounting static at /static
+[2011/12/08 11:45:58] [INFO] [Thread-3] Binding application welcome :: 1640499969 :: 769732461
+[2011/12/08 11:45:58] [INFO] [Thread-3] Serving static from /Users/danielbrandstetter/Desktop/helma-1.7.0/apps/welcome/static
+[2011/12/08 11:45:58] [INFO] [Thread-3] Mounting static at /static
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopping application addressbook
+[2011/12/08 12:27:22] [INFO] [Thread-4] Unbinding application addressbook
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopped application addressbook
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopping application manage
+[2011/12/08 12:27:22] [INFO] [Thread-4] Unbinding application manage
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopped application manage
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopping application migo
+[2011/12/08 12:27:22] [INFO] [Thread-4] Unbinding application migo
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopped application migo
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopping application welcome
+[2011/12/08 12:27:22] [INFO] [Thread-4] Unbinding application welcome
+[2011/12/08 12:27:22] [INFO] [Thread-4] Stopped application welcome
+[2011/12/08 12:27:22] [INFO] [Thread-4] Shutting down Helma
+[2011/12/08 12:27:24] [INFO] [main] Starting Helma 1.7.0 (February 5 2010) on Java 1.6.0_29
+[2011/12/08 12:27:24] [INFO] [main] Setting Helma Home to /Users/danielbrandstetter/Desktop/helma-1.7.0
+[2011/12/08 12:27:24] [INFO] [Thread-3] Building application welcome
+[2011/12/08 12:27:24] [INFO] [Thread-3] Building application manage
+[2011/12/08 12:27:25] [INFO] [Thread-3] Building application migo
+[2011/12/08 12:27:25] [INFO] [Thread-3] Building application addressbook
+[2011/12/08 12:27:25] [INFO] [Thread-3] Binding application addressbook :: 10486149 :: 1228197450
+[2011/12/08 12:27:25] [INFO] [Thread-3] Binding application manage :: 64212394 :: 1045076605
+[2011/12/08 12:27:25] [INFO] [Thread-3] Binding application migo :: 2136875125 :: 875010279
+[2011/12/08 12:27:25] [INFO] [Thread-3] Serving static from /Users/danielbrandstetter/Desktop/helma-1.7.0/apps/migo/static
+[2011/12/08 12:27:25] [INFO] [Thread-3] Mounting static at /static
+[2011/12/08 12:27:25] [INFO] [Thread-3] Binding application welcome :: 1640499969 :: 1932951080
+[2011/12/08 12:27:25] [INFO] [Thread-3] Serving static from /Users/danielbrandstetter/Desktop/helma-1.7.0/apps/welcome/static
+[2011/12/08 12:27:25] [INFO] [Thread-3] Mounting static at /static
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopping application addressbook
+[2011/12/08 14:40:28] [INFO] [Thread-4] Unbinding application addressbook
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopped application addressbook
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopping application manage
+[2011/12/08 14:40:28] [INFO] [Thread-4] Unbinding application manage
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopped application manage
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopping application migo
+[2011/12/08 14:40:28] [INFO] [Thread-4] Unbinding application migo
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopped application migo
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopping application welcome
+[2011/12/08 14:40:28] [INFO] [Thread-4] Unbinding application welcome
+[2011/12/08 14:40:28] [INFO] [Thread-4] Stopped application welcome
+[2011/12/08 14:40:28] [INFO] [Thread-4] Shutting down Helma

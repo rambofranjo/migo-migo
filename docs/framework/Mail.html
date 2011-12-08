@@ -1,0 +1,978 @@
+<html>
+<head>
+<title>
+Mail - Helma Javascript Reference
+</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css" media="screen" />
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script type="text/javascript">_uacct = "UA-737027-2";urchinTracker();</script>
+<style>
+td {
+    font-family: "Trebuchet MS", sans-serif; 
+    font-size: 13px; 
+    line-height:135%;
+}
+.columnheight {
+    height: 1350px;
+}
+</style>
+</head>
+<body bgcolor="white">
+
+<div class="frame">
+
+<img class="home" onclick="location='http://dev.helma.org/'" src="helmaheader.gif" /><br />
+<div class="lead">
+    <p>Detailed reference of prototypes, properties and methods available in the <br />
+    Javascript environment of your Helma web applications.</p>
+</div>
+
+<script> openbox('content') </script>
+
+
+    <div class="content">
+        <div class="docs">
+        
+            <!--
+            <div class="sectionHead">Library: Mail.js</div>
+            -->
+            <div class="section overview">
+            <!--
+                <div class="itemTitle">
+                    Overview
+                </div>
+            -->
+                <div>   
+                    <div class="desc">Default properties and methods of  
+the Mail prototype.</div>
+                    <div class="itemTags">
+            <!--
+                    <ul>
+                        
+                    
+                    </ul>
+            -->
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            <div class="section constructor">
+                <div class="itemTitle">
+                    <a name="Mail"></a>
+                    <span class="deprecated"><del>
+                    
+                    
+                        <i><span class="symbolname">Mail</span>(<span class="signature"></span>)</i>
+                    
+                    </del>&nbsp;&nbsp;deprecated use helma.Mail instead</span>
+                </div>
+                
+                
+                    <div class="desc">Helma's built-in mail client enables you to send e-mail via SMTP.
+<br /><br />
+A mail client object is created by using the Mail() constructor.
+The mail object then can be manipulated and sent using the 
+methods listed below.
+<br /><br />
+You'll need the JavaMail library installed for this to work. 
+Also, don't forget to set your mail server via the smtp 
+property in the app.properties or server.properties file.
+<br /><br />
+Note: Make sure that the SMTP server itself is well-configured, 
+so that it accepts e-mails coming from your server and does 
+not deny relaying. Best and fastest configuration is of course 
+if you run your own SMTP server (e.g. postfix) which might be 
+a bit tricky to set up, however.</div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="detailHead">methods</div>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.addBCC">addBCC</a>(emailString, nameString)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.addCC">addCC</a>(emailString, nameString)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.addPart">addPart</a>(File, nameString)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.addTo">addTo</a>(emailString, nameString)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.send">send</a>()</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.setFrom">setFrom</a>(emailString, nameString)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.setSubject">setSubject</a>(subject)</li>
+                    </ul>
+                
+                    <ul class="details">
+                        <li><a href="#Mail.setTo">setTo</a>(emailString, nameString)</li>
+                    </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="helma.Mail.html#helma.Mail">helma.Mail</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Namespaces</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="sectionHead">Properties</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <!--
+            <div class="sectionHead">Constructors</div>
+            -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="sectionHead">Methods</div>
+            
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.addBCC"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">addBCC</span>(<span class="signature">emailString, nameString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a recipient to the list of addresses to get a "blind carbon copy" of an e-mail message.
+<br /><br />
+The emailString argument specifies the receipient's e-mail address. 
+The optional nameString argument specifies the name of the recipient.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.addBCC("hop&#64;helma.at");
+mail.addBCC("tobi&#64;helma.at", "Tobi Schaefer");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            emailString
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            nameString
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.addCC"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">addCC</span>(<span class="signature">emailString, nameString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds an address to the list of carbon copy recipients.
+<br /><br />
+The emailString argument specifies the receipient's e-mail address. 
+The optional nameString argument specifies the name of the recipient.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.addCC("hop&#64;helma.at");
+mail.addCC("tobi&#64;helma.at", "Tobi Schaefer");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            emailString
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            nameString
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.addPart"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">addPart</span>(<span class="signature">File, nameString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds an attachment to an e-mail message.
+<br /><br />
+The attachment needs to be either a MIME Object or a java.io.file object.
+<br /><br />
+Use the getURL() function to retrieve a MIME object or wrap a 
+java.io.File object around a file of the local file system.
+<br /><br />
+Example:
+<pre>var file1 = getURL("http://localhost:8080/static/image.gif");
+var file2 = getURL("file:////home/snoopy/woodstock.jpg");
+var file3 = new java.io.File("/home/snoopy/woodstock.jpg");
+var mail = new Mail();
+mail.addPart(file1);
+mail.addPart(file2);
+mail.addPart(file3);
+&nbsp;
+mail.setFrom("snoopy&#64;doghouse.com");
+mail.setTo("woodstock&#64;birdcage.com");
+mail.setSubject("Look at this!");
+mail.addText("I took a photograph from you. Neat, isn't it? -Snoop");
+mail.send();</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            fileOrMimeObject
+                        </td>
+                        <td>
+                            File
+                        </td>
+                        <td>
+                            or Mime object to attach to the email
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            nameString
+                        </td>
+                        <td>
+                            as String, optional name of the attachment
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="global.html#getUrl">global.getUrl</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="mimePart.html">mimePart</a></div></td></tr>
+                
+                    <tr><td class="type"><div class="see"><a href="java.io.File">java.io.File</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.addText"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">addText</span>(<span class="signature">text</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Appends a string to the body text of an e-mail message.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.addText("Hello, World!");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            text
+                        </td>
+                        <td>
+                            as String, to be appended to the message body
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.addTo"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">addTo</span>(<span class="signature">emailString, nameString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Adds a recipient to the address list of an e-mail message.
+<br /><br />
+The emailString argument specifies the receipient's e-mail address. 
+The optional nameString argument specifies the name of the recipient.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.setTo("hop&#64;helma.at");
+mail.addTo("hopdoc&#64;helma.at");
+mail.addTo("tobi&#64;helma.at", "Tobi Schaefer");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            emailString
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            nameString
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="setTo.html">setTo</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.send"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">send</span>(<span class="signature"></span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sends an e-mail message.
+<br /><br />
+This function sends the message created with the Mail 
+object using the SMTP server as specified in either 
+the app.properties or the server.properties file.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.setTo("watching&#64;michi.tv", "michi");
+mail.addCC("franzi&#64;home.at", "franzi");
+mail.addBCC("monie&#64;home.at");
+mail.setFrom("chef&#64;frischfleisch.at", "Hannes");
+mail.setSubject("Registration Conformation");
+mail.addText("Thanks for your Registration...");
+mail.send();</pre></div>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.setFrom"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">setFrom</span>(<span class="signature">emailString, nameString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the sender of an e-mail message.
+<br /><br />
+The emailString argument specifies the receipient's 
+e-mail address. The optional nameString argument 
+specifies the name of the recipient.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.setFrom("tobi&#64;helma.at", "Tobi Schaefer");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            emailString
+                        </td>
+                        <td>
+                            as String, sender email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            nameString
+                        </td>
+                        <td>
+                            as String, optional sender name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.setSubject"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">setSubject</span>(<span class="signature">subject</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the subject of an e-mail message.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.setSubject("Hello, World!");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            subject
+                        </td>
+                        <td>
+                            as String, the email subject
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+
+            </div>
+            
+            
+            
+            <div class="section function">
+                <div class="itemTitle">
+                    <a name="Mail.setTo"></a>
+                    
+                    
+                        <i><a href="#Mail" class="type">Mail</a>.
+                        <span class="symbolname">setTo</span>(<span class="signature">emailString, nameString</span>)</i>
+                    
+                    
+                    
+                </div>
+                
+                
+                    <div class="desc">Sets the recipient of an e-mail message.
+&nbsp;
+The emailString argument specifies the receipient's 
+e-mail address. The optional nameString argument 
+specifies the name of the recipient.
+<br /><br />
+Example:
+<pre>var mail = new Mail();
+mail.setTo("hop&#64;helma.at");</pre></div>
+                
+
+                
+                
+                
+                
+                
+                <div class="detailHead">parameters</div>
+                <table class="params">
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            emailString
+                        </td>
+                        <td>
+                            as String, receipients email address
+                        </td> 
+                    </tr>
+                
+                    <tr>
+                        <td class="type">
+                            String
+                        </td>
+                        <td>
+                            nameString
+                        </td>
+                        <td>
+                            as String, optional receipients name
+                        </td> 
+                    </tr>
+                
+                </table>
+                
+                
+                
+                
+                
+
+                
+                <div class="detailHead">see</div>
+                <table class="params">
+                
+                    <tr><td class="type"><div class="see"><a href="Mail.html#Mail.addTo">Mail.addTo</a></div></td></tr>
+                
+                </table>
+                
+
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="finePrint">
+    Fri, 05 Feb 2010 17:40:05 GMT.
+    </div>
+
+<script> closebox() </script>
+
+<script> openbox('pageintro') </script>
+
+    <h3>core framework</h3>
+        <ul>            
+            <li><a href="global.html">global</a></li>
+            <li><a href="app.html">app (application)</a></li>
+            <li><a href="req.html">req (request)</a></li>
+            <li><a href="res.html">res (response)</a></li>
+            <li><a href="session.html">session</a></li>
+            <li><a href="global.html#path">path</a></li>
+            <li><a href="global.html#root">root</a></li>
+            <li><a href="HopObject.html">HopObject</a></li>
+            <li><a href="User.html">User</a></li>
+            <li><a href="File.html">File</a></li>
+            <li><a href="FtpClient.html">FtpClient</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="Mail.html">Mail</a></li>
+            <li><a href="global.html#Remote">Remote</a></li>
+            <li><a href="Xml.html">Xml</a></li>
+            <li><a href="DatabaseObject.html">DatabaseObject</a></li>
+            <li><a href="MimePart.html">MimePart</a></li>
+            <li><a href="Skin.html">Skin</a></li>
+            <li><a href="global.html#Object.dontEnum">Object</a></li>
+        </ul>
+        
+    <h3>optional modules</h3>
+        <ul>            
+            <li><a href="ArrayExtensions.html">Array extensions</a></li>
+            <li><a href="DateExtensions.html">Date extensions</a></li>
+            <li><a href="NumberExtensions.html">Number extensions</a></li>
+            <li><a href="ObjectExtensions.html">Object extensions</a></li>
+            <li><a href="StringExtensions.html">String extensions</a></li>
+            <li><a href="HopObjectExtensions.html">HopObject extensions</a></li>
+            <li><a href="GlobalMacros.html">global macros</a></li>
+            <li><a href="MacroFilters.html">macro filters</a></li>
+            <li><a href="JSON.html">JSON methods</a></li>
+            <br />
+            <li><a href="helma.Aspects.html">helma.Aspects</a></li>
+            <li><a href="helma.Chart.html">helma.Chart</a></li>
+            <li><a href="helma.Color.html">helma.Color</a></li>
+            <li><a href="helma.Database.html">helma.Database</a></li>
+            <li><a href="helma.File.html">helma.File</a></li>
+            <li><a href="helma.Ftp.html">helma.Ftp</a></li>
+            <li><a href="helma.Group.html">helma.Group</a></li>
+            <li><a href="helma.Html.html">helma.Html</a></li>
+            <li><a href="helma.Http.html">helma.Http</a></li>
+            <li><a href="helma.Image.html">helma.Image</a></li>
+            <li><a href="helma.Mail.html">helma.Mail</a></li>
+            <li><a href="helma.Search.html">helma.Search</a></li>
+            <li><a href="helma.Skin.html">helma.Skin</a></li>
+            <li><a href="helma.Ssh.html">helma.Ssh</a></li>
+            <li><a href="helma.Url.html">helma.Url</a></li>
+            <li><a href="helma.Zip.html">helma.Zip</a></li>
+            <br />
+            <li><a href="jala.BitTorrent.html">jala.BitTorrent</a></li>
+            <li><a href="jala.Captcha.html">jala.Captcha</a></li>
+            <li><a href="jala.Date.html">jala.Date</a></li>
+            <li><a href="jala.db.html">jala.db</a></li>
+            <li><a href="jala.DnsClient.html">jala.DnsClient</a></li>
+            <li><a href="jala.Form.html">jala.Form</a></li>
+            <li><a href="jala.History.html">jala.History</a></li>
+            <li><a href="jala.HopObjectExtensions.html">jala HopObject extensions</a></li>
+            <li><a href="jala.HtmlDocument.html">jala.HtmlDocument</a></li>
+            <li><a href="jala.I18n.html">jala.I18n</a></li>
+            <li><a href="jala.ImageFilter.html">jala.ImageFilter</a></li>
+            <li><a href="jala.IndexManager.html">jala.IndexManager</a></li>
+            <li><a href="jala.ListRenderer.html">jala.ListRenderer</a></li>
+            <li><a href="jala.Mp3.html">jala.Mp3</a></li>
+            <li><a href="jala.PodcastWriter.html">jala.PodcastWriter</a></li>
+            <li><a href="jala.RemoteContent.html">jala.RemoteContent</a></li>
+            <li><a href="jala.Rss20Writer.html">jala.Rss20Writer</a></li>
+            <li><a href="jala.Utilities.html">jala.Utilities</a></li>
+            <li><a href="jala.XmlRpcRequest.html">jala.XmlRpcRequest</a></li>
+            <li><a href="jala.XmlWriter.html">jala.XmlWriter</a></li>
+        </ul>
+    
+    <h3>java libraries</h3>
+        <ul>            
+            <li><a href="http://www.docjar.org/">docjar search</a></li>
+        </ul>
+
+    <h3>properties files</h3>
+        <ul>            
+            <li><a href="http://dev.helma.org/docs/Properties+Files/apps.properties/">apps.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/app.properties/">app.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/server.properties/">server.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/db.properties/">db.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Properties+Files/class.properties/">class.properties</a></li>
+            <li><a href="http://dev.helma.org/docs/Type.properties+Documentation/">type.properties</a></li>
+         </ul>
+    
+<script> closebox() </script>
+
+</div>
+<br clear="all" /><br /><br />
+
+
+
+</body>
+</html>
