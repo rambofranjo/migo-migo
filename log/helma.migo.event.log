@@ -1543,3 +1543,4 @@ Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column '
 	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
 	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
 	... 22 more
+[2011/12/29 12:17:56] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@303bc1a1
