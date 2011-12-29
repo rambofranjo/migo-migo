@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 29. Dezember 2011 um 11:24
+-- Erstellungszeit: 29. Dezember 2011 um 13:00
 -- Server Version: 5.1.44
 -- PHP-Version: 5.3.1
 
@@ -18,6 +18,8 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Datenbank: `Migo`
 --
+CREATE DATABASE `Migo` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `Migo`;
 
 -- --------------------------------------------------------
 
@@ -30,11 +32,11 @@ CREATE TABLE IF NOT EXISTS `Dropbox` (
   `Text` text COLLATE latin1_german1_ci NOT NULL,
   `Datum` date NOT NULL,
   `Uhrzeit` time NOT NULL,
-  `Gruppe.ID` int(9) NOT NULL,
-  `Person.ID` int(9) NOT NULL,
+  `GruppeID` int(9) NOT NULL,
+  `PersonID` int(9) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `Gruppe.ID` (`Gruppe.ID`),
-  KEY `Person.ID` (`Person.ID`)
+  KEY `GruppeID` (`GruppeID`),
+  KEY `PersonID` (`PersonID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci AUTO_INCREMENT=1 ;
 
 --
@@ -67,7 +69,11 @@ INSERT INTO `Gruppe` (`ID`, `Name`, `Sportart`, `Farbe`, `Logo`, `Sichtbar`) VAL
 (2, 'Fussball', 'Fussball', '#000000', '../images/Logos/ask01.jpg', 1),
 (4, 'GpG', 'Tennis', '#00FFFF', '../images/Logos/gpg01.jpg', 1),
 (5, 'FZSV Ybbs', 'Badminton', '#000000', '../images/Logos/sv01.jpg', 1),
-(6, 'SC Wieselburg', 'Fussball', '#000000', '../images/Logos/Migo01.jpg', 1);
+(6, 'SC Wieselburg', 'Fussball', '#000000', '../images/Logos/Migo01.jpg', 1),
+(7, 'föjfklsdjkl', '', '', '', 1),
+(8, 'fldsjfksad', '', '', '', 1),
+(9, 'gfdsfd', '', '', '', 1),
+(10, 'dfasf3fds', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -80,11 +86,11 @@ CREATE TABLE IF NOT EXISTS `Kommentare` (
   `Text` text CHARACTER SET latin1 NOT NULL,
   `Datum` date NOT NULL,
   `Uhrzeit` time NOT NULL,
-  `Gruppe.ID` int(9) NOT NULL,
-  `Person.ID` int(9) NOT NULL,
+  `GruppeID` int(9) NOT NULL,
+  `PersonID` int(9) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `Gruppe.ID` (`Gruppe.ID`),
-  KEY `Person.ID` (`Person.ID`)
+  KEY `GruppeID` (`GruppeID`),
+  KEY `PersonID` (`PersonID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci AUTO_INCREMENT=1 ;
 
 --
@@ -106,9 +112,9 @@ CREATE TABLE IF NOT EXISTS `Nachrichten` (
   `Empfaenger` varchar(255) COLLATE latin1_german1_ci NOT NULL,
   `Datum` date NOT NULL,
   `Uhrzeit` time NOT NULL,
-  `Person.ID` int(9) NOT NULL,
+  `PersonID` int(9) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `Person.ID` (`Person.ID`)
+  KEY `PersonID` (`PersonID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci AUTO_INCREMENT=1 ;
 
 --
@@ -129,11 +135,11 @@ CREATE TABLE IF NOT EXISTS `News` (
   `Datum` date NOT NULL,
   `Uhrzeit` time NOT NULL,
   `Tag` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
-  `Gruppe.ID` int(9) NOT NULL,
-  `Person.ID` int(9) NOT NULL,
+  `GruppeID` int(9) NOT NULL,
+  `PersonID` int(9) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `Gruppe.ID` (`Gruppe.ID`),
-  KEY `Person.ID` (`Person.ID`)
+  KEY `GruppeID` (`GruppeID`),
+  KEY `PersonID` (`PersonID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci AUTO_INCREMENT=1 ;
 
 --
@@ -180,20 +186,20 @@ INSERT INTO `Person` (`ID`, `Vorname`, `Nachname`, `Ort`, `Passwort`, `Avatar`, 
 
 CREATE TABLE IF NOT EXISTS `PersonGruppe` (
   `ID` int(9) NOT NULL AUTO_INCREMENT,
-  `Gruppe.ID` int(9) DEFAULT NULL,
-  `Person.ID` int(9) NOT NULL,
+  `GruppeID` int(9) DEFAULT NULL,
+  `PersonID` int(9) NOT NULL,
   `IsAdmin` tinyint(1) NOT NULL DEFAULT '0',
   `Status` varchar(255) COLLATE latin1_german1_ci NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `Person.ID` (`Person.ID`),
-  KEY `Gruppe.ID` (`Gruppe.ID`)
+  KEY `PersonID` (`PersonID`),
+  KEY `GruppeID` (`GruppeID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci AUTO_INCREMENT=4 ;
 
 --
 -- Daten für Tabelle `PersonGruppe`
 --
 
-INSERT INTO `PersonGruppe` (`ID`, `Gruppe.ID`, `Person.ID`, `IsAdmin`, `Status`) VALUES
+INSERT INTO `PersonGruppe` (`ID`, `GruppeID`, `PersonID`, `IsAdmin`, `Status`) VALUES
 (1, 1, 1, 1, 'aktiv'),
 (2, 2, 2, 1, 'aktiv'),
 (3, 5, 2, 1, 'aktiv');
@@ -216,11 +222,11 @@ CREATE TABLE IF NOT EXISTS `Termine` (
   `Woechentlich` tinyint(1) NOT NULL DEFAULT '0',
   `Ganztaegig` tinyint(1) NOT NULL DEFAULT '0',
   `Taeglich` tinyint(1) NOT NULL DEFAULT '0',
-  `Gruppe.ID` int(9) NOT NULL,
-  `Person.ID` int(9) NOT NULL,
+  `GruppeID` int(9) NOT NULL,
+  `PersonID` int(9) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `Gruppe.ID` (`Gruppe.ID`),
-  KEY `Person.ID` (`Person.ID`)
+  KEY `GruppeID` (`GruppeID`),
+  KEY `PersonID` (`PersonID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci AUTO_INCREMENT=1 ;
 
 --
@@ -236,39 +242,39 @@ CREATE TABLE IF NOT EXISTS `Termine` (
 -- Constraints der Tabelle `Dropbox`
 --
 ALTER TABLE `Dropbox`
-  ADD CONSTRAINT `dropbox_ibfk_1` FOREIGN KEY (`Gruppe.ID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `dropbox_ibfk_2` FOREIGN KEY (`Person.ID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `dropbox_ibfk_1` FOREIGN KEY (`GruppeID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `dropbox_ibfk_2` FOREIGN KEY (`PersonID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints der Tabelle `Kommentare`
 --
 ALTER TABLE `Kommentare`
-  ADD CONSTRAINT `kommentare_ibfk_1` FOREIGN KEY (`Gruppe.ID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `kommentare_ibfk_2` FOREIGN KEY (`Person.ID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `kommentare_ibfk_1` FOREIGN KEY (`GruppeID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `kommentare_ibfk_2` FOREIGN KEY (`PersonID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints der Tabelle `Nachrichten`
 --
 ALTER TABLE `Nachrichten`
-  ADD CONSTRAINT `nachrichten_ibfk_1` FOREIGN KEY (`Person.ID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `nachrichten_ibfk_1` FOREIGN KEY (`PersonID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints der Tabelle `News`
 --
 ALTER TABLE `News`
-  ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`Gruppe.ID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `news_ibfk_2` FOREIGN KEY (`Person.ID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`GruppeID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `news_ibfk_2` FOREIGN KEY (`PersonID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints der Tabelle `PersonGruppe`
 --
 ALTER TABLE `PersonGruppe`
-  ADD CONSTRAINT `persongruppe_ibfk_1` FOREIGN KEY (`Gruppe.ID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `persongruppe_ibfk_2` FOREIGN KEY (`Person.ID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `persongruppe_ibfk_1` FOREIGN KEY (`GruppeID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `persongruppe_ibfk_2` FOREIGN KEY (`PersonID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints der Tabelle `Termine`
 --
 ALTER TABLE `Termine`
-  ADD CONSTRAINT `termine_ibfk_1` FOREIGN KEY (`Gruppe.ID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `termine_ibfk_2` FOREIGN KEY (`Person.ID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `termine_ibfk_1` FOREIGN KEY (`GruppeID`) REFERENCES `gruppe` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `termine_ibfk_2` FOREIGN KEY (`PersonID`) REFERENCES `person` (`ID`) ON DELETE CASCADE;

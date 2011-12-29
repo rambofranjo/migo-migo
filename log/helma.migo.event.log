@@ -1544,3 +1544,898 @@ Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column '
 	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
 	... 22 more
 [2011/12/29 12:17:56] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@303bc1a1
+[2011/12/29 13:27:43] [INFO] [migo-2] Function onLogout not defined for [object Person]
+[2011/12/29 13:44:00] [INFO] [migo-3] Function onStop not defined in global scope
+[2011/12/29 13:44:00] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 13:44:02] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 13:44:02] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 13:44:02] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 13:44:13] [ERROR] [migo-1] Error retrieving Node "1" from [object HopObject]
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'PersonGruppe.personID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 13:44:13] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@4440ece0
+[2011/12/29 13:44:13] [ERROR] [migo-1] POST:newGroup helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37
+Full trace: org.mozilla.javascript.WrappedException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1773)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:183)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.RuntimeException: Error retrieving Node
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:96)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	... 13 more
+Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'PersonGruppe.personID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	... 22 more
+[2011/12/29 13:50:13] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 13:50:13] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 13:50:14] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 13:50:14] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 13:50:14] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 13:53:05] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@6e82254d
+[2011/12/29 13:53:05] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 13:53:34] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@529c176c
+[2011/12/29 13:53:34] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 13:55:31] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 13:55:31] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 13:55:32] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 13:55:32] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 13:55:32] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 13:55:52] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@2967c5e3
+[2011/12/29 13:55:52] [ERROR] [migo-1] POST:newGroup java.sql.SQLException: Field 'Person.ID' doesn't have a default value
+java.sql.SQLException: Field 'Person.ID' doesn't have a default value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:946)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:12:39] [INFO] [migo-2] Function onStop not defined in global scope
+[2011/12/29 14:12:39] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:12:40] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:12:40] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:12:40] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:13:32] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:13:32] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:13:32] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@3d015a9e
+[2011/12/29 14:13:33] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:13:33] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:13:33] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:14:02] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@7f342545
+[2011/12/29 14:14:02] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:14:32] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:14:32] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:14:34] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:14:34] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:14:34] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:14:43] [ERROR] [migo-1] Error retrieving Node "2" from [object HopObject]
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'PersonGruppe.personID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:40)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:14:43] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@c96ad7c
+[2011/12/29 14:14:43] [ERROR] [migo-1] POST:newGroup helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#40)
+helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#40)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:40
+Full trace: org.mozilla.javascript.WrappedException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#40)
+	at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1773)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:183)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:40)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.RuntimeException: Error retrieving Node
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:96)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	... 13 more
+Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'PersonGruppe.personID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	... 22 more
+[2011/12/29 14:20:22] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:20:22] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:20:23] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:20:23] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:20:23] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:21:33] [ERROR] [migo-1] Error retrieving Node "1" from [object HopObject]
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'PersonGruppe.personID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c42._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c42.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c42.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:21:33] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@49594a88
+[2011/12/29 14:21:33] [ERROR] [migo-1] POST:newGroup helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37
+Full trace: org.mozilla.javascript.WrappedException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1773)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:183)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c42._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c42.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c42.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.RuntimeException: Error retrieving Node
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:96)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	... 13 more
+Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'PersonGruppe.personID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	... 22 more
+[2011/12/29 14:24:17] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:24:17] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:24:18] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:24:18] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:24:18] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:24:31] [ERROR] [migo-1] Error retrieving Node "1" from [object HopObject]
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Person.ID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:24:31] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@176f5261
+[2011/12/29 14:24:31] [ERROR] [migo-1] POST:newGroup helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37
+Full trace: org.mozilla.javascript.WrappedException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1773)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:183)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.RuntimeException: Error retrieving Node
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:96)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	... 13 more
+Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Person.ID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	... 22 more
+[2011/12/29 14:27:19] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:27:19] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:27:19] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@1f195fc
+[2011/12/29 14:27:21] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:27:21] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:27:21] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:27:33] [ERROR] [migo-1] Error retrieving Node "1" from [object HopObject]
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Person.ID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:27:33] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@54a9387
+[2011/12/29 14:27:33] [ERROR] [migo-1] POST:newGroup helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37
+Full trace: org.mozilla.javascript.WrappedException: Wrapped java.lang.RuntimeException: Error retrieving Node (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js#37)
+	at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1773)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:183)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:476)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c33._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js:37)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c33.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.RuntimeException: Error retrieving Node
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:96)
+	at helma.objectmodel.db.Node.getChildElement(Node.java:955)
+	at helma.objectmodel.db.Node.addNode(Node.java:811)
+	at helma.objectmodel.db.Node.addNode(Node.java:713)
+	at helma.scripting.rhino.HopObject.jsFunction_add(HopObject.java:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	... 13 more
+Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Person.ID' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3277)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3206)
+	at com.mysql.jdbc.Statement.executeQuery(Statement.java:1232)
+	at helma.objectmodel.db.NodeManager.getNodeByRelation(NodeManager.java:1417)
+	at helma.objectmodel.db.NodeManager.getNode(NodeManager.java:264)
+	at helma.objectmodel.db.WrappedNodeManager.getNode(WrappedNodeManager.java:87)
+	... 22 more
+[2011/12/29 14:29:14] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:29:14] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:29:15] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:29:15] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:29:15] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:32:00] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:32:00] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:32:00] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@78ba6c13
+[2011/12/29 14:32:02] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:32:02] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:32:02] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:33:03] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@4d16318b
+[2011/12/29 14:33:03] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:34:14] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@46d999a
+[2011/12/29 14:34:14] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:35:02] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:35:02] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:35:03] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:35:03] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:35:03] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:35:14] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@56cb07ef
+[2011/12/29 14:35:14] [ERROR] [migo-1] GET:chooseGroup helma.scripting.ScriptingException: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+helma.scripting.ScriptingException: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:68
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:30
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
+	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
+	at org.mozilla.javascript.gen.c30._c3(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:68)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:119)
+	at org.mozilla.javascript.gen.c30._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:30)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:35:29] [ERROR] [migo-1] GET:chooseGroup helma.scripting.ScriptingException: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+helma.scripting.ScriptingException: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:68
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:30
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
+	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
+	at org.mozilla.javascript.gen.c30._c3(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:68)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:119)
+	at org.mozilla.javascript.gen.c30._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:30)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:35:29] [ERROR] [migo-1] GET:chooseGroup helma.scripting.ScriptingException: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+helma.scripting.ScriptingException: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:68
+	at /Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:30
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "name" from null (/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js#68)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
+	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
+	at org.mozilla.javascript.gen.c30._c3(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:68)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:119)
+	at org.mozilla.javascript.gen.c30._c1(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js:30)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c30.call(/Users/danielbrandstetter/Desktop/helma-migo/apps/migo/Root/chooseGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:35:32] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:35:32] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:35:33] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:35:33] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:35:33] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:35:39] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@c96ad7c
+[2011/12/29 14:35:39] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:36:44] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:36:44] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:36:46] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:36:46] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:36:46] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:36:53] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@52158cc6
+[2011/12/29 14:36:53] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:38:04] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@2d26c6ea
+[2011/12/29 14:38:04] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:38:50] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@6335605a
+[2011/12/29 14:38:50] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:38:54] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:38:54] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:38:55] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:38:55] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:38:55] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:39:05] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@64e8606c
+[2011/12/29 14:39:05] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:40:26] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@4e8890da
+[2011/12/29 14:40:26] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:40:36] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@44323274
+[2011/12/29 14:40:36] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:40:50] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@4edc024a
+[2011/12/29 14:40:50] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:41:59] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@6eecb3f1
+[2011/12/29 14:41:59] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:43:09] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:43:09] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:43:10] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:43:10] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:43:10] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:43:19] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@257807a
+[2011/12/29 14:43:19] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:43:36] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:43:36] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:43:36] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:43:36] [INFO] [manage-1] Starting engine 1 for migo
+[2011/12/29 14:43:36] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:43:41] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:43:41] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:43:54] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:43:54] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:43:54] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:44:05] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@5f873eb2
+[2011/12/29 14:44:05] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'Gruppe.ID' in 'field list'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 14:54:30] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 14:54:30] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 14:54:31] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 14:54:31] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 14:54:31] [INFO] [migo-1] Function onStart not defined in global scope
+[2011/12/29 14:54:50] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@8429c19
+[2011/12/29 14:54:50] [ERROR] [migo-1] POST:newGroup com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'GruppeID' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'GruppeID' cannot be null
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2011/12/29 15:00:09] [INFO] [migo-1] Function onStop not defined in global scope
+[2011/12/29 15:00:09] [INFO] [migo-worker] Scheduler for migo exiting
+[2011/12/29 15:00:09] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@3dae160
+[2011/12/29 15:05:49] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2011/12/29 15:05:49] [INFO] [Thread-3] Starting engine 1 for migo
+[2011/12/29 15:05:49] [INFO] [migo-1] Function onStart not defined in global scope
