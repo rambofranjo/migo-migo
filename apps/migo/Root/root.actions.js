@@ -11,13 +11,9 @@ function main_action () {
 	}
 	
 	// session.user -> wenn kein Benutzer angemeldet (zur Session), liefert diese Funktion null
-	var login = "";
 	if (session.user != null) { 
-		login += "Hi " + session.user.vorname + ' ' + session.user.nachname + "!<br />"; 
-		login += "<a href=" + root.href("logout") + ">Logout</a>";
-		
-		res.data.loginMsg = login;
-		renderSkin("chooseGroup");
+		//root.renderGroup();
+		res.redirect(root.href("chooseGroup"));
 	} else { 
 		root.renderMain();
 	}
@@ -49,7 +45,6 @@ function allUsers() {
 }
 
 function renderMain() {
-		
 		res.data.title = "MIGO - Management Game Organisation";
 		res.data.login = renderSkinAsString("login");
 		res.data.registerLink = "<a href=" + root.href("register") + ">Register</a>";

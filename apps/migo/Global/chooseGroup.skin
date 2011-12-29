@@ -19,8 +19,31 @@
 
 <body>
 	<div id="main">
+		
 		<h1>MIGO</h1>
-		<% response.loginMsg %>
+		
+		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+			<% response.loginMsg %>
+		</div>
+		
+		<% response.myGroupsDiv %>
+		
+		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+			<form action="<% root.href action="chooseGroup" %>" method="POST"> 
+				<p>Zu einer Gruppe beitreten</p>
+		    	<select name="groupName">
+					<% response.optionGroups%>
+		    	</select>
+				<input type="submit" name="chooseGroup" value="Beitreten"> 
+			</form>
+			<br />
+			<% response.groupInquiry %>
+		</div>
+		
+		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+			<% response.newGroup %>
+		</div>
+					
 	</div>
 </body>
 </html>

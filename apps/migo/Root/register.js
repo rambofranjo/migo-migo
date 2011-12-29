@@ -8,9 +8,7 @@ function register_action() {
 		var email = req.data.email; 
 		var pass = req.data.password;
 		var passwh = req.data.passwordWh;
-
-		
-		
+	
 		if ((root.person.get(email) == null) && (pass == passwh) && (vname != "") && (nname != "") && (ort != "") && (email != "") && (pass != "")) { 
 			var pers = new Person();  
 			pers.vorname = vname;
@@ -20,7 +18,7 @@ function register_action() {
 			pers.passwort = pass;
 				
 			root.person.add(pers); 
-			session.login(pers); 
+			//session.login(pers); 
 			res.redirect(root.href()); 
 		} else {
 			error = "Registration failed!";
