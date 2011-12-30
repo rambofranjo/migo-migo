@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="helma.xsl"?>
+<xmlroot xmlns:hop="http://www.helma.org/docs/guide/features/database">
+  <hopobject id="2" name="filter" prototype="Root" created="1325000143694" lastModified="1325000143694">
+  <hop:parent idref="personGruppe" prototyperef="HopObject"/>
+  </hopobject>
+</xmlroot>

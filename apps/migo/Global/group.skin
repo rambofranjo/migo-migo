@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<title><% response.title %></title>
+    
+		<meta name="author-personal" content="David Davorin Barudzija" />
+		<meta name="author-mail" content="davorindavid.barudzija@gmail.at" />
+		<meta name="description" content="Management Interface of Game Organization" />
+     	<meta name="language" content="de" />
+		<meta name="robots" content="index, follow" />
+    	
+		<link rel="stylesheet" href="/static/main.css" type="text/css"  />
+    	<script src="/static/jQuery/jquery.js" type="text/javascript"></script>
+    
+</head>
+
+<body>
+	<div id="main">
+		
+		<h1>MIGO</h1>
+		
+		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+			<% response.loginMsg %>
+		</div>
+		
+		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+			<p>Gruppe:</p>
+			<% response.groupName %>
+		</div>
+					
+	</div>
+</body>
+</html>
