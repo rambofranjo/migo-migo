@@ -1,0 +1,52 @@
+<!-- Start News --> 
+<div id="news" style="padding:10px; border:1px solid #000; width:650px; margin-top:10px;">
+	
+	<!-- News Admin -->
+	<% response.nAction %>
+
+	<!-- News Header -->
+	<div id="newsHeader" style="padding:10px; border:1px solid #000; width:630px; margin-bottom:10px;" >
+		
+		<!-- Avatar -->
+		<div id="Avatar">
+			<% response.nAvatar %>
+		</div>
+		
+		<!-- Author -->
+		<div id="author">
+			<% response.nAuthor %>
+		</div>
+		
+		<!-- Date -->
+		<div id="date">
+			<% response.nDate %>
+		</div>
+		
+		<!-- Time -->
+		<div id="time">
+			<% response.nTime %>
+		</div>
+		
+		<!-- Title -->
+		<div id="title">
+			<% response.nTitle %>
+		</div>
+		
+		<!-- Tag -->
+		<div id="tag">
+			<% response.nTag %>
+		</div>
+	
+	</div>
+
+	<!-- Header Text -->
+	<div id="newsText" style="padding:10px; border:1px solid #000; width:630px; margin-bottom:10px;">
+		<% response.nText %>
+	</div>
+
+	<!-- Comments -->
+	<div id="newsComment" style="padding:10px; border:1px solid #000; width:630px; margin-bottom:10px;">
+		<% response.nComments %>
+	</div>
+
+</div>

@@ -1,0 +1,6 @@
+<div id="nAdmin">
+	<ul>
+		<li><% response.nDelete %></li>
+		<li><% response.nEdit %></li>
+	</ul>
+</div>
