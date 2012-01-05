@@ -24,12 +24,15 @@
 		
 		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
 			<% response.loginMsg %>
+			<p>Gruppe: <% response.groupName %></p>
+			<p><% response.allGroups %></p>
 		</div>
+			
+		<!-- Neue News schreiben -->
+		<% response.newNews %>
 		
-		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
-			<p>Gruppe:</p>
-			<% response.groupName %>
-		</div>
+		<!-- Alle News auflisten -->
+		<% response.listNews %>
 					
 	</div>
 </body>

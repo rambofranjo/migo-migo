@@ -17,7 +17,7 @@ function register_action() {
 			pers.email = email; 
 			pers.passwort = pass;
 				
-			root.person.add(pers); 
+			root.person.add(pers);
 			//session.login(pers); 
 			res.redirect(root.href()); 
 		} else {
