@@ -1,51 +1,61 @@
 <!-- Start News --> 
-<div id="news" style="padding:10px; border:1px solid #000; width:650px; margin-top:10px;">
+<div id="news" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px; width:650px;">
 	
 	<!-- News Admin -->
 	<% response.nAction %>
 
 	<!-- News Header -->
-	<div id="newsHeader" style="padding:10px; border:1px solid #000; width:630px; margin-bottom:10px;" >
+	<div id="newsHeader" style="padding:10px; border:1px solid #DDD; background-color:#F5F5F5; width:630px; margin-bottom:10px;" >
 		
 		<!-- Avatar -->
-		<div id="Avatar">
+		<div id="Avatar" style="float:left;">
 			<% response.nAvatar %>
 		</div>
 		
 		<!-- Author -->
-		<div id="author">
+		<div id="author" style="float:left; margin-right:5px;">
 			<% response.nAuthor %>
 		</div>
 		
 		<!-- Date -->
-		<div id="date">
+		<div id="date" style="float:left; margin-right:5px;">
 			<% response.nDate %>
 		</div>
 		
 		<!-- Time -->
-		<div id="time">
+		<div id="time" style="float:left; margin-right:5px;">
 			<% response.nTime %>
 		</div>
 		
-		<!-- Title -->
-		<div id="title">
-			<% response.nTitle %>
-		</div>
-		
 		<!-- Tag -->
-		<div id="tag">
+		<div id="tag" style="float:left; margin-right:5px;">
 			<% response.nTag %>
 		</div>
+		
+		<!-- Title -->
+		<div id="title" style="float:left; clear:left; margin-right:5px;">
+			<strong><% response.nTitle %></strong>
+		</div>
+		
+		<!-- Text -->
+		<div id="newsText" style="float:left; clear:left; margin-right:5px;">
+			<% response.nText %>
+		</div>
+		
+		<div style="clear:left;"></div>
 	
 	</div>
 
-	<!-- Header Text -->
-	<div id="newsText" style="padding:10px; border:1px solid #000; width:630px; margin-bottom:10px;">
-		<% response.nText %>
-	</div>
+	<!-- Button Comments -->
+	<p><input id="hideButton" onclick="showHideCommentsNews('comments<% response.commentId %>')" type="button" value="Kommentare" /></p>
 
 	<!-- Comments -->
-	<div id="newsComment" style="padding:10px; border:1px solid #000; width:630px; margin-bottom:10px;">
+	<div id="comments<% response.commentId %>" style="display:<% response.dispComments %>; padding:10px; border:1px dashed #CCC; width:630px; margin-bottom:10px;">
+		
+		<!-- New Comment -->
+		<% response.newComment %>
+		
+		<!-- List Comments -->
 		<% response.nComments %>
 	</div>
 

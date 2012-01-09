@@ -18,17 +18,17 @@
 </head>
 
 <body>
-	<div id="main">
+	<div id="main" style="margin:0 auto; width:700px;">
 		
 		<h1>MIGO</h1>
 		
-		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+		<div style="padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5; width:650px; margin-bottom:10px;">
 			<% response.loginMsg %>
 		</div>
 		
 		<% response.myGroupsDiv %>
 		
-		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+		<div style="padding:10px; border:1px solid #CCC; width:650px; margin-bottom:10px;">
 			<form action="<% root.href action="chooseGroup" %>" method="POST"> 
 				<p>Zu einer Gruppe beitreten</p>
 		    	<select name="groupName">
@@ -40,7 +40,7 @@
 			<% response.groupInquiry %>
 		</div>
 		
-		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+		<div style="padding:10px; border:1px solid #CCC; width:650px; margin-bottom:10px;">
 			<% response.newGroup %>
 		</div>
 					

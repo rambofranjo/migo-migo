@@ -35,10 +35,10 @@ function chooseGroup_action() {
 		
 		var myGroupsTable = "";
 		
-		myGroupsTable += "<table border=\"1\">";	
+		myGroupsTable += "<table style='padding:10px; margin:5px; border:1px dashed #CCC; background-color:#FFF;'>";	
 		for (var i = 0; i < gNames.length; i++) {
 			myGroupsTable += "<tr>";
-			myGroupsTable += "<td style=\"padding:5px\"><a href=" + root.href("group") + "?groupId=" + gIDs[i] + ">" + gNames[i] + "</a></td>";
+			myGroupsTable += "<td style=\"padding:5px;\"><a href=" + root.href("groupNews") + "?groupId=" + gIDs[i] + ">" + gNames[i] + "</a></td>";
 			myGroupsTable += "<td style=\"padding:5px\">"+ gStatus[i] + "</td>";
 			//myGroupsTable += "<td style=\"padding:5px\">";
 			//myGroupsTable += "<a href=" + root.href("chooseGroup") "loeschen";

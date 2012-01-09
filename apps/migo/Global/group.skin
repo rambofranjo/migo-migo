@@ -7,32 +7,87 @@
     	<title><% response.title %></title>
     
 		<meta name="author-personal" content="David Davorin Barudzija" />
-		<meta name="author-mail" content="davorindavid.barudzija@gmail.at" />
 		<meta name="description" content="Management Interface of Game Organization" />
      	<meta name="language" content="de" />
 		<meta name="robots" content="index, follow" />
     	
-		<link rel="stylesheet" href="/static/main.css" type="text/css"  />
-    	<script src="/static/jQuery/jquery.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="/static/main.css" type="text/css" />
+		<link rel="stylesheet" href="/static/css/fullcalendar.css" type="text/css" />
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script src="/static/scripts/fullcalendar.js" ></script>
+		
+		<script type="text/javascript">
+			function showHideCommentsNews(div) {
+				var d = '#' + div;
+
+				if (document.getElementById(div).style.display == "none") {
+					$(d).show("normal");
+				} else {
+					$(d).hide("normal");
+				}
+			}
+		</script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+		    	// page is now ready, initialize the calendar...
+
+		    	$('#calendar').fullCalendar({
+		        	// put your options and callbacks here
+		    	})
+
+			});
+		</script>
     
 </head>
 
 <body>
-	<div id="main">
+	<div id="main" style="margin:0 auto; width:700px;">
 		
 		<h1>MIGO</h1>
 		
-		<div style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Statusleiste -->
+		<!-- +++++++++++++++++++++++ -->
+		<div style="padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5; width:650px; margin-bottom:10px;">
 			<% response.loginMsg %>
 			<p>Gruppe: <% response.groupName %></p>
 			<p><% response.allGroups %></p>
 		</div>
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Menu -->
+		<!-- +++++++++++++++++++++++ -->
+		<% response.menu %>
 			
+			
+		<!-- +++++++++++++++++++++++ -->
+		<!-- News -->
+		<!-- +++++++++++++++++++++++ -->
 		<!-- Neue News schreiben -->
 		<% response.newNews %>
 		
+		<!-- Neue News bearbeiten -->
+		<% response.editNews %>
+		
 		<!-- Alle News auflisten -->
 		<% response.listNews %>
+				
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Calendar -->
+		<!-- +++++++++++++++++++++++ -->
+		<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div>
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Messages -->
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Neue News schreiben -->
+		<% response.newMessage %>
+		
+		<!-- Alle Nachrichten auflisten -->
+		<% response.listMessages %>
 					
 	</div>
 </body>

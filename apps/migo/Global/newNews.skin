@@ -1,7 +1,9 @@
-<div id ="newNews" style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;" >
+<!-- <p><a onclick="showHideCommentsNews('newNews')">Neuen Newseintrag schreiben</a></p> -->
+<p><input id="hideButton" onclick="showHideCommentsNews('newNews')" type="button" value="Neuen Newseintrag schreiben" /></p>
+
+<div id ="newNews" style="padding:10px; border:1px dashed #CCC; width:650px; margin-bottom:10px; display:none;" >
 	<% response.errorNewNews %>
 	<form name="form" method="post" action="<% root.href action="newNews" %>">
-		<p>Neue News schreiben</p>
 		<p>
 	    	<label for="title">Titel</label>
 	    	<input type="text" name="title" id="textfield" value="<% response.newNewsTitle %>" />

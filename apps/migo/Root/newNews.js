@@ -19,7 +19,7 @@ function newNews_action() {
 			newNews.personID = session.user._id;
 			
 			root.news.add(newNews); 
-			res.redirect(root.href("group") + "?groupId=" + session.data.grpId);
+			res.redirect(root.href("groupNews") + "?groupId=" + session.data.grpId);
 		} else {	
 			res.data.errorNewNews = "Fehler!";
 			res.data.newNewsTitle = title;

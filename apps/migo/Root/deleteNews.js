@@ -13,7 +13,7 @@ function deleteNews_action() {
 				n.remove();
 				
 				//Zurück zu News leiten
-				res.redirect(root.href("group") + "?groupId=" + session.data.grpId);
+				res.redirect(root.href("groupNews") + "?groupId=" + session.data.grpId);
 			}
 			
 		} else {

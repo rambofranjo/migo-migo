@@ -1,4 +1,4 @@
-function group_action () { 
+function groupNews_action () { 
 	
 	//Prüfen, ob der Benutzer auch wirklich angemeldet ist
 	if ((session.user != null) && (req.data.groupId) && root.gruppe.getById(req.data.groupId)) {
@@ -31,7 +31,7 @@ function group_action () {
 			session.data.grpId = gId;
 			
 			//Inhalt der Gruppe rendern	
-			this.renderGruppe();
+			root.renderGruppe("news");
 			
 		} else {
 			res.redirect(root.href(""));
@@ -41,41 +41,6 @@ function group_action () {
 	} else {
 		res.redirect(root.href(""));
 	}
-}
-
-function renderGruppe () {
-	
-	/* ------------------ */
-	//News auflisten
-	res.data.listNews = this.getAllNews(session.data.grpId);
-	
-	//Neue News anlegen
-	if (this.isUserInGroupAndAdmin(session.user._id, session.data.grpId)) {
-		res.data.newNewsGroup = session.data.grpId;
-		res.data.newNews = renderSkinAsString("newNews");
-	}
-	
-	
-	/* ------------------ */
-	//Statusausgeben
-	
-	//Title
-	res.data.title = "MIGO - Management Game Organisation - Gruppe " + this.getGroupNameById(session.data.grpId);
-
-	//Login Msg
-	var login = "";
-	login += "Hi " + session.user.vorname + ' ' + session.user.nachname + "!<br />"; 
-	login += "<a href=" + root.href("logout") + ">Logout</a>";
-	res.data.loginMsg = login;
-	
-	//Gruppenname
-	res.data.groupName = this.getGroupNameById(session.data.grpId);
-	
-	//Link zu Gruppenübersicht
-	res.data.allGroups = "<a href=" + root.href("group") + ">Zur&uumlck zur Gruppen&uumlbersicht</a>";
-	
-	//Skin rendern
-	renderSkin("group");
 }
 
 function getAllNews (gId) {
@@ -90,29 +55,77 @@ function getAllNews (gId) {
 			date = root.news.get(i).datum;
 			time = root.news.get(i).uhrzeit;
 			
-			if (this.isUserInGroupAndAdmin(session.user._id, gId)) {
+			/*-- News Action --*/
+			//News Löschen und bearbeiten
+			if (root.isUserInGroupAndAdmin(session.user._id, gId)) {
 				
 				//Löschen und bearbeiten der News
-				res.data.nDelete = "<a href=" + root.href("deleteNews") + "?groupId=" + gId + "&newsId=" + root.news.get(i)._id + ">l&oumlschen</a>";
-				//res.data.nEdit =
-				//TODO
+				res.data.nDelete = "<a href=" + root.href("deleteNews") + "?groupId=" + gId + "&newsId=" + root.news.get(i)._id + "><img src=\"../static/images/delete.png\" /></a>";
+				res.data.nEdit = "<a href=" + root.href("editNews") + "?groupId=" + gId + "&newsId=" + root.news.get(i)._id + "><img src=\"../static/images/edit.png\" /></a>";
 				res.data.nAction = renderSkinAsString("newsAction");
 			}
 			
+			/*-- News Header --*/
 			//res.data.nAvatar = this.getAvatarFromUser(root.news.get(i).personID);
-			res.data.nAuthor = this.getAuthorFromNews(root.news.get(i).personID);
+			res.data.nAuthor = this.getAuthorFromNewsOrComments(root.news.get(i).personID);
 			res.data.nDate = date.getDate() + "." + this.getMonthName(date.getMonth().toString()) + "." + date.getFullYear();
 			res.data.nTime = time.getHours() + ":" + time.getMinutes();
 			res.data.nTitle = root.news.get(i).titel;
 			res.data.nTag = root.news.get(i).tag;
 			res.data.nText = root.news.get(i).text;
-			//res.data.nComments = this.getCommentFromNews(root.news.get(i)._id);
+			
+			//Kommentare
+			res.data.newsId = root.news.get(i)._id;
+			res.data.commentId = root.news.get(i)._id;
+			res.data.newComment = renderSkinAsString("newComment");
+			if (req.data.newsId == root.news.get(i)._id) res.data.dispComments = "block";
+			else res.data.dispComments = "none";
+			res.data.nComments = this.getCommentsFromNews(root.news.get(i)._id);
 			
 			news += renderSkinAsString("news");
 		}
 	}
 	
 	return news;
+}
+
+function getCommentsFromNews (nId) {
+	
+	var comments = "";
+	var date = new Date();
+	var time = new Date();
+	var commentId = 0;
+	
+	for (var i = 0; i < root.comments.count(); i++) {
+		if (nId == root.comments.get(i).newsID) {
+			
+			date = root.comments.get(i).datum;
+			time = root.comments.get(i).uhrzeit;
+			
+			commentId = root.comments.get(i)._id;
+			
+			//Kommentare Löschen
+			res.data.cAction = this.isUserOwnerOfCommentorAdmin(commentId, session.data.grpId);
+			
+			/*-- Kommentare --*/
+			res.data.cAuthor = this.getAuthorFromNewsOrComments(root.comments.get(i).personID);
+			res.data.cDate = date.getDate() + "." + this.getMonthName(date.getMonth().toString()) + "." + date.getFullYear();
+			res.data.cTime = time.getHours() + ":" + time.getMinutes();
+			res.data.cText = root.comments.get(i).text;
+			
+			comments += renderSkinAsString("comments");
+		}
+	}
+	
+	return comments;
+}
+
+function isUserOwnerOfCommentorAdmin (cId, gId) {
+	var c = root.comments.getById(cId);
+ 	
+	if (root.isUserInGroupAndAdmin (session.user._id, gId)) return "<a href=" + root.href("deleteComment") + "><img src=\"../static/images/delete.png\" /></a>";
+	else if (c.personID == session.user._id) return "<a href=" + root.href("deleteComment") + "><img src=\"../static/images/delete.png\" /></a>";
+	else return "";
 }
 
 function getMonthName (id) {
@@ -160,7 +173,7 @@ function getMonthName (id) {
 	return month;
 }
 
-function getAuthorFromNews (persId) {
+function getAuthorFromNewsOrComments (persId) {
 	var vname = "";
 	var nname = "";
 	var name = "";
@@ -191,16 +204,4 @@ function getUsersIdByGroupId (id) {
 		}
 	}
 	return uId;
-} 
-
-function isUserInGroupAndAdmin (uId, gId) {
-	for (var i = 0; i < root.personGruppe.count(); i++) {
-		if ((gId == root.personGruppe.get(i).gruppeID) && (uId == root.personGruppe.get(i).personID)) {
-			if (root.personGruppe.get(i).isAdmin == 1) {
-				return true;
-				break;
-			}
-		}
-	}
-	return false;
 }
