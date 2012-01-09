@@ -1,2 +1,7 @@
 [2012/01/05 08:44:25] [INFO] [welcome-3] Function onStop not defined in global scope
 [2012/01/05 08:44:25] [INFO] [welcome-worker] Scheduler for welcome exiting
+[2012/01/09 17:34:32] [INFO] [welcome-init] Using session manager class helma.framework.core.SessionManager
+[2012/01/09 17:34:32] [INFO] [Thread-3] Starting engine 1 for welcome
+[2012/01/09 17:34:38] [INFO] [108625948@qtp-1384763166-2] Starting engine 2 for welcome
+[2012/01/09 17:35:04] [INFO] [welcome-1] Function onStop not defined in global scope
+[2012/01/09 17:35:04] [INFO] [welcome-worker] Scheduler for welcome exiting

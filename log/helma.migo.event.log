@@ -1,2 +1,8 @@
 [2012/01/05 08:44:25] [INFO] [migo-4] Function onStop not defined in global scope
 [2012/01/05 08:44:25] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/01/09 17:34:32] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/01/09 17:34:32] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/01/09 17:34:32] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/01/09 17:35:04] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/01/09 17:35:04] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/01/09 17:35:04] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@66178655

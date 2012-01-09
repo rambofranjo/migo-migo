@@ -230,3 +230,11 @@
 [2011/12/30 07:44:41] [INFO] [welcome-4] GET:static/main.css done in 2 millis
 [2011/12/30 07:44:47] [INFO] [welcome-4] GET:static/main.css done in 1 millis
 [2011/12/30 07:44:51] [INFO] [welcome-4] GET:static/main.css done in 2 millis
+[2012/01/09 17:34:32] [INFO] [welcome-1] INTERNAL:onStart done in 50 millis
+[2012/01/09 17:34:38] [INFO] [welcome-1] GET:static/main.css done in 4 millis
+[2012/01/09 17:34:38] [INFO] [welcome-1] GET:static/jQuery/jquery.js done in 5 millis
+[2012/01/09 17:34:41] [INFO] [welcome-1] GET:static/jQuery/jquery.js done in 4 millis
+[2012/01/09 17:34:41] [INFO] [welcome-1] GET:static/main.css done in 4 millis
+[2012/01/09 17:34:42] [INFO] [welcome-1] GET:static/main.css done in 1 millis
+[2012/01/09 17:34:44] [INFO] [welcome-1] GET:static/main.css done in 2 millis
+[2012/01/09 17:34:44] [INFO] [welcome-1] GET:static/main.css done in 1 millis
