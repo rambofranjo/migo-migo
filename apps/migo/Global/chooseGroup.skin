@@ -29,12 +29,12 @@
 		<% response.myGroupsDiv %>
 		
 		<div style="padding:10px; border:1px solid #CCC; width:650px; margin-bottom:10px;">
-			<form action="<% root.href action="chooseGroup" %>" method="POST"> 
+			<form action="<% root.href action="inquireGroup" %>" method="POST"> 
 				<p>Zu einer Gruppe beitreten</p>
 		    	<select name="groupName">
-					<% response.optionGroups%>
+					<% response.optionGroups %>
 		    	</select>
-				<input type="submit" name="chooseGroup" value="Beitreten"> 
+				<input type="submit" name="chooseGroup" value="Anfragen"> 
 			</form>
 			<br />
 			<% response.groupInquiry %>

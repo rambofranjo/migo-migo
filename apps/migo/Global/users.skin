@@ -1,0 +1,10 @@
+<!-- Start Mitglieder --> 
+<div id="users" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px; width:650px;">
+	
+	<!-- Mitglieder auflisten -->
+	<% response.showUsers %>
+	
+	<!-- Alle Gruppenanfragen auflisten -->
+	<% response.showInquiry %>
+
+</div>

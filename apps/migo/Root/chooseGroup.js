@@ -2,15 +2,6 @@ function chooseGroup_action() {
 	
 	//Wenn jemand angemeldet ist
 	if (session.user != null) {
-		 
-		//Gruppe wählen Button gedrückt
-		var group = "";	
-		if (req.data.chooseGroup) {
-			// Gruppe aus der Form holen
-			group = req.data.groupName;
-		
-			//Nachricht an admin(s) schicken
-		}
 	
 		//Title
 		res.data.title = "MIGO - Management Game Organisation - Gruppe";
@@ -23,7 +14,7 @@ function chooseGroup_action() {
 
 		//Gruppenanfrage
 		res.data.optionGroups = this.allGroups("2");
-		if (group != "") res.data.groupInquiry = "Gruppenanfrage zur Gruppe \"" + group + "\" wurde an den Administrator dieser Gruppe weitergeleitet.";
+		if (req.data.inquire != null) res.data.groupInquiry = "Gruppenanfrage zur Gruppe \"" + req.data.inquire + "\" wurde an den Administrator dieser Gruppe weitergeleitet.";
 	
 		//Eigene Gruppen
 		gNames = new Array();
@@ -38,11 +29,10 @@ function chooseGroup_action() {
 		myGroupsTable += "<table style='padding:10px; margin:5px; border:1px dashed #CCC; background-color:#FFF;'>";	
 		for (var i = 0; i < gNames.length; i++) {
 			myGroupsTable += "<tr>";
-			myGroupsTable += "<td style=\"padding:5px;\"><a href=" + root.href("groupNews") + "?groupId=" + gIDs[i] + ">" + gNames[i] + "</a></td>";
-			myGroupsTable += "<td style=\"padding:5px\">"+ gStatus[i] + "</td>";
-			//myGroupsTable += "<td style=\"padding:5px\">";
-			//myGroupsTable += "<a href=" + root.href("chooseGroup") "loeschen";
-			//myGroupsTable += "</td>";
+			if (gStatus[i] != "aktiv") myGroupsTable += "<td style=\"padding:5px;\">" + gNames[i] + "</td>";
+			else myGroupsTable += "<td style=\"padding:5px;\"><a href=" + root.href("groupNews") + "?groupId=" + gIDs[i] + ">" + gNames[i] + "</a></td>";
+			myGroupsTable += "<td style=\"padding:5px\">" + gStatus[i] + "</td>";
+			myGroupsTable += "<td style=\"padding:5px\"><a href=" + root.href("deleteMembership") + "?groupId=" + gIDs[i] + "><img src=\"../static/images/delete.png\" /></a></td>";
 			myGroupsTable += "</tr>";
 			
 		}
@@ -128,15 +118,24 @@ function allGroups(option) {
 		}
 	    break;
 	  case "2":
-		for (var i=0; i < root.gruppe.count(); i++) { 
-	    	groups += "<option>" + root.gruppe.get(i).name + "</option>";
-		}
-	    break;
-	  case "3":
-		for (var i=0; i < root.gruppe.count(); i++) { 
-	    	groups += "<option>" + root.gruppe.get(i).name + "</option>";
+		for (var i=0; i < root.gruppe.count(); i++) {			
+			//Nicht die eigenen Gruppen anzeigen
+			if (!(this.isUserInGroup_anyStatus(session.user._id, root.gruppe.get(i)._id))) {
+				groups += "<option>" + root.gruppe.get(i).name + "</option>";
+			}
 		}
 	    break;
 	}
+	
 	return groups;
+}
+
+function isUserInGroup_anyStatus (uId, gId) {
+	for (var i = 0; i < root.personGruppe.count(); i++) {
+		if ((gId == root.personGruppe.get(i).gruppeID) && (uId == root.personGruppe.get(i).personID)) {
+			return true;
+			break;
+		}
+	}
+	return false;
 }

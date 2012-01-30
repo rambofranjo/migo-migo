@@ -30,7 +30,7 @@ function newGroup_action() {
 				pgrp.gruppeID = this.getGroupIdByName(name);
 				pgrp.personID = session.user._id;
 				pgrp.isAdmin = 1;
-				pgrp.status = "angefragt";
+				pgrp.status = "aktiv";
 				root.personGruppe.add(pgrp);
 				
 				//Zur Gruppenauswahl weiterleiten

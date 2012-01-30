@@ -11,11 +11,14 @@
      	<meta name="language" content="de" />
 		<meta name="robots" content="index, follow" />
     	
-		<link rel="stylesheet" href="/static/main.css" type="text/css" />
+		<!-- CSS -->
 		<link rel="stylesheet" href="/static/css/fullcalendar.css" type="text/css" />
+		<link rel="stylesheet" href="/static/css/jquery-ui-1.8.17.custom.css" type="text/css">
 		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-		<script src="/static/scripts/fullcalendar.js" ></script>
+		<!-- Javascript -->
+		<script src="/static/scripts/jquery-1.5.2.min.js"></script>
+		<script src="/static/scripts/fullcalendar.js"></script>
+		<script src="/static/scripts/jquery-ui-1.8.17.custom.min.js"></script>
 		
 		<script type="text/javascript">
 			function showHideCommentsNews(div) {
@@ -37,6 +40,17 @@
 		        	// put your options and callbacks here
 		    	})
 
+			});
+		</script>
+	
+		<script type ="text/javascript">
+			$(function() {
+				var availableTags = [
+					<% response.names %>
+				];
+				$( ".names" ).autocomplete({
+					source: availableTags
+				});
 			});
 		</script>
     
@@ -78,7 +92,9 @@
 		<!-- +++++++++++++++++++++++ -->
 		<!-- Calendar -->
 		<!-- +++++++++++++++++++++++ -->
+		<!-- Kalender anzeigen -->
 		<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div>
+		
 		
 		<!-- +++++++++++++++++++++++ -->
 		<!-- Messages -->
@@ -88,6 +104,18 @@
 		
 		<!-- Alle Nachrichten auflisten -->
 		<% response.listMessages %>
+		
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Mitglieder -->
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Alle Mitglieder auflisten -->
+		<% response.listUsers %>
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Gruppeninformationen -->
+		<!-- +++++++++++++++++++++++ -->
+		<% response.groupInfo %>
 					
 	</div>
 </body>

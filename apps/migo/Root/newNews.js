@@ -24,7 +24,7 @@ function newNews_action() {
 			res.data.errorNewNews = "Fehler!";
 			res.data.newNewsTitle = title;
 			res.data.newNewsText = text;
-			root.renderGruppe();
+			root.renderGruppe("newsError");
 		}
 		
 	} else {

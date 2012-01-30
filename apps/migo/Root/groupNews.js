@@ -67,7 +67,7 @@ function getAllNews (gId) {
 			
 			/*-- News Header --*/
 			//res.data.nAvatar = this.getAvatarFromUser(root.news.get(i).personID);
-			res.data.nAuthor = this.getAuthorFromNewsOrComments(root.news.get(i).personID);
+			res.data.nAuthor = this.getPerson(root.news.get(i).personID);
 			res.data.nDate = date.getDate() + "." + this.getMonthName(date.getMonth().toString()) + "." + date.getFullYear();
 			res.data.nTime = time.getHours() + ":" + time.getMinutes();
 			res.data.nTitle = root.news.get(i).titel;
@@ -105,10 +105,10 @@ function getCommentsFromNews (nId) {
 			commentId = root.comments.get(i)._id;
 			
 			//Kommentare Löschen
-			res.data.cAction = this.isUserOwnerOfCommentorAdmin(commentId, session.data.grpId);
+			res.data.cAction = this.isUserOwnerOfCommentorAdmin(commentId, session.data.grpId, nId);
 			
 			/*-- Kommentare --*/
-			res.data.cAuthor = this.getAuthorFromNewsOrComments(root.comments.get(i).personID);
+			res.data.cAuthor = this.getPerson(root.comments.get(i).personID);
 			res.data.cDate = date.getDate() + "." + this.getMonthName(date.getMonth().toString()) + "." + date.getFullYear();
 			res.data.cTime = time.getHours() + ":" + time.getMinutes();
 			res.data.cText = root.comments.get(i).text;
@@ -120,11 +120,11 @@ function getCommentsFromNews (nId) {
 	return comments;
 }
 
-function isUserOwnerOfCommentorAdmin (cId, gId) {
+function isUserOwnerOfCommentorAdmin (cId, gId, nId) {
 	var c = root.comments.getById(cId);
  	
-	if (root.isUserInGroupAndAdmin (session.user._id, gId)) return "<a href=" + root.href("deleteComment") + "><img src=\"../static/images/delete.png\" /></a>";
-	else if (c.personID == session.user._id) return "<a href=" + root.href("deleteComment") + "><img src=\"../static/images/delete.png\" /></a>";
+	if (root.isUserInGroupAndAdmin (session.user._id, gId)) return "<a href=" + root.href("deleteComment") + "?groupId=" + gId + "&cId=" + cId + "&newsId=" + nId + "><img src=\"../static/images/delete.png\" /></a>";
+	else if (c.personID == session.user._id) return "<a href=" + root.href("deleteComment") + "?groupId=" + gId + "&cId=" + cId + "&newsId=" + nId + "><img src=\"../static/images/delete.png\" /></a>";
 	else return "";
 }
 
@@ -173,7 +173,7 @@ function getMonthName (id) {
 	return month;
 }
 
-function getAuthorFromNewsOrComments (persId) {
+function getPerson (persId) {
 	var vname = "";
 	var nname = "";
 	var name = "";
@@ -198,7 +198,7 @@ function getUsersIdByGroupId (id) {
 	var x = 0;
 	
 	for (var i = 0; i < root.personGruppe.count(); i++) { 
-		if (id == root.personGruppe.get(i).gruppeID) {
+		if ((id == root.personGruppe.get(i).gruppeID) && (root.personGruppe.get(i).status == "aktiv")) {
 			uId[x] = root.personGruppe.get(i).personID;
 			x += 1;
 		}
