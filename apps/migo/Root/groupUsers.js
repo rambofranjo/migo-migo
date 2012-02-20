@@ -70,11 +70,14 @@ function getAllUsers (gId) {
 				
 					//Gründer der Gruppe bleibt immer Admin
 					if (root.isUserInGroupAndAdmin(session.user._id, gId)) {
-						users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:100px;' ><input name=\"gruender\" type=\"checkbox\"";
+						users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:100px;' >" + 
+							"<form action=\"" + root.href("editAdmin") + "\" method=\"POST\">" + 
+							"<input type=\"hidden\" name=\"userId\" value=\"" + root.person.get(a)._id + "\">" + 
+							"<input name=\"admin\" value=\"1\" onclick=\"this.form.submit();\" type=\"checkbox\"";
 						if (this.isUserFounder(root.person.get(a)._id, gId)) { users += "disabled=\"disabled\" checked=\"checked\""; }
 						else if (root.isUserInGroupAndAdmin(root.person.get(a)._id, gId)) { users += "checked=\"checked\" "; }
 						if ((root.person.get(a)._id == session.user._id) ) { users += "disabled=\"disabled\""; }
-						users += "/></td>";
+						users += "/></form></td>";
 					}
 					
 					//Benutzer löschen

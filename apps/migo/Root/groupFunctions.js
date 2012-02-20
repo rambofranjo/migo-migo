@@ -88,15 +88,17 @@ function renderGruppe (mode) {
 			res.data.listUsers = renderSkinAsString("users");
 			break;
 		case "group":
-			res.data.grpName = root.getGroupName(session.data.grpId);
-			res.data.grpSports = root.getGroupSports(session.data.grpId);
-			res.data.grpColor = root.getGroupColor(session.data.grpId);
-			res.data.grpLogo = root.getGroupLogo(session.data.grpId);
-			res.data.grpsichtbar
+			var group = root.getGroupInfo(session.data.grpId);
+			res.data.grpName = group.name;
+			res.data.grpSports = group.sportart;
+			res.data.grpColor = group.farbe;
+			res.data.grpLogo = group.logo;
+			if (!group.sichtbar) res.data.grpVisible = "";
+			if (group.sichtbar) res.data.grpVisible = "checked = \"checked\"";
+			//Render Informations
 			res.data.groupInfo = renderSkinAsString("groupInfo");
 			break;
 	}
-	
 	
 	/* ------------------ */
 	//Statusausgeben
@@ -124,6 +126,14 @@ function renderGruppe (mode) {
 		res.data.menuPointGroup = "<li style=\"display:inline; margin-right: 10px;\" ><a href=\"groupGroup?groupId=" + session.data.grpId + "\">Gruppe</a></li>";
 	} else res.data.menuPointGroup = "";
 	res.data.menu = renderSkinAsString("menu");
+	
+	
+	/* ------------------ */
+	//Dropbox
+	res.data.dropBoxEntries = root.getDropBoxEntries(mode);
+	res.data.listDropBox = renderSkinAsString("listDropBox");
+	res.data.mode = mode;
+	res.data.dropbox = renderSkinAsString("dropBox");
 	
 	
 	/* ------------------ */

@@ -56,8 +56,10 @@
     
 </head>
 
-<body>
-	<div id="main" style="margin:0 auto; width:700px;">
+<body>	
+	<div id="left" style="float:left; width=22%; min-width:22%;">
+	</div>
+	<div id="main" style="float:left; width:56%;">
 		
 		<h1>MIGO</h1>
 		
@@ -117,6 +119,10 @@
 		<!-- +++++++++++++++++++++++ -->
 		<% response.groupInfo %>
 					
+	</div>
+	
+	<div id="dropbox" style="float:left; width=22%; margin:80px 0px 0px 20px; padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5;">
+		<% response.dropbox %>
 	</div>
 </body>
 </html>

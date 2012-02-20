@@ -39,25 +39,10 @@ function groupGroup_action () {
 }
 
 /*
-Gibt Gruppennamen zurück
+Gibt die Gruppe zurück
 */
-function getGroupName (gId) {
-	for (var i = 0; i < root.gruppe.count(); i++) {
-		if (gId == root.gruppe.get(i)._id) {
-			return root.gruppe.get(i).name;
-			break;
-		}
-	}
-}
-
-/*
-Gibt Sportart der Gruppe zurück
-*/
-function getGroupSports (gId) {
-	for (var i = 0; i < root.gruppe.count(); i++) {
-		if (gId == root.gruppe.get(i)._id) {
-			return root.gruppe.get(i).sportart;
-			break;
-		}
-	}
+function getGroupInfo (gId) {
+	
+	var group = root.gruppe.getById(gId);
+	return group;
 }
