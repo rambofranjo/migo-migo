@@ -1,3 +1,0 @@
-<div id="listDropBox" style="margin-top:15px; font-size:12px;">
-	<% response.dropBoxEntries %>
-</div>

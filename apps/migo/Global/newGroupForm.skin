@@ -1,9 +1,0 @@
-<% response.errorNewGroup %>
-<form action="<% root.href action="newGroup" %>" method="POST"> 
-	Name: <input type="text" name="name" value="<% response.newGroupName %>"><br />
-	Sportart: <input type="text" name="sportart" value="<% response.newGroupSportart %>"><br />
-	Farbe: <input type="text" name="farbe" value="<% response.newGroupFarbe %>"><br />
-	<!-- Logo brauch file upload -->
-	Logo: <input type="text" name="logo" value="<% response.newGroupLogo %>"><br />
-	<input type="submit" name="newGroup" value="Gruppe erstellen"> 
-</form>

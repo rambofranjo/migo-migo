@@ -1,7 +1,0 @@
-<% response.errorLogin %>
-<form action="<% root.href action="login" %>" method="POST"> 
-	E-Mail: <input type="text" name="email"><br /> 
-	Passwort: <input type="password" name="password"><br /> 
-	remember me? <input type="checkbox" name="remember" value="1"><br /> 
-	<input type="submit" name="login" value="Login!"> 
-</form>

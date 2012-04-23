@@ -1,4 +1,0 @@
-<!-- Start Messages --> 
-<div id="messages" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px; width:650px;">
-	<% response.tableMessages %>
-</div>
