@@ -1,0 +1,25 @@
+/* Zur¸cksetzen der Innen- und Auﬂenabst‰nde */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Font size
+ */
+body, td, th { font: normal 75.01%/167% Verdana, Helvetica, Arial, sans-serif; }
+td, th { f\ont-size: 100.01%; }
+
+/* Color Background */
+html, body {
+  color: #3b2b20;
+  background-color: #FFFFFF; 
+}
+
+#login_register {
+	color: #FF8C00;
+	position: absolute;
+	right: 0em;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
