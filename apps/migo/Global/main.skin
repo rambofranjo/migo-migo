@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<title><% response.title %></title>
+    
+		<meta name="author-personal" content="David Davorin Barudzija" />
+		<meta name="author-mail" content="davorindavid.barudzija@gmail.at" />
+		<meta name="description" content="Management Interface of Game Organization" />
+     	<meta name="language" content="de" />
+		<meta name="robots" content="index, follow" />
+    	
+		<link rel="stylesheet" href="/static/css/style/main.css" type="text/css"  />
+		<link type="text/css" href="/static/css/style/tabcss/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="/../static/scripts/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="/../static/scripts/js/jquery-ui-1.8.18.custom.min.js"></script>
+    	
+    	
+    	
+    	
+
+    
+    	<script>
+			$(function() {
+				$( "#tabs" ).tabs();
+			});
+		</script>
+</head>
+
+<body>
+	<div id="main">
+		<h1>MIGO</h1>
+
+		<!--<% response.users %>-->
+	</div>
+	
+
+
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Anmelden</a></li>
+			<li><a href="#tabs-2">Registeren</a></li>
+		</ul>
+
+		<div id="tabs-1">
+			<p><% response.login %></p>
+		</div>
+		<div id="tabs-2">
+			<p><% response.register %></p>
+		</div>
+	
+	</div>
+
+
+
+
+<div class="demo-description" style="display: none; ">
+<p>Click tabs to swap between content that is broken into logical sections.</p>
+</div><!-- End demo-description -->
+</body>
+</html>

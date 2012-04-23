@@ -1,0 +1,40 @@
+<!-- Start GroupInfo --> 
+<div id="info" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px; width:650px;">
+	
+	<% response.errorEditGroup %>
+	<% response.infoEditGroup %>
+	
+	<form action="<% root.href action="editGroup" %>" method="POST"> 
+		
+		<div>
+			<label for="grpName">Gruppenname</label>
+			<input type="text" name="grpName" value="<% response.grpName %>" />
+		</div>
+		
+		<div>
+			<label for="grpSports">Sportart</label>
+			<input type="text" name="grpSports" value="<% response.grpSports %>" />
+		</div>
+		
+		<div>
+			<label for="grpColor">Farbe</label>
+			<input type="text" name="grpColor" value="<% response.grpColor %>" />
+		</div>
+		
+		<div>
+			<label for="grpLogo">Logo</label>
+			<input type="text" name="grpLogo" value="<% response.grpLogo %>" />
+		</div>
+		
+		<div>
+			<label for="grpVisible">Sichtbar?</label>
+			<input type="checkbox" name="grpVisible" <% response.grpVisible %> />
+		</div>
+		
+		<div>
+			<input type="submit" name="save" value="Speichern" /> 
+		</div>
+		
+	</form>
+	
+</div>

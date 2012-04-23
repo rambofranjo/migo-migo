@@ -1,0 +1,4 @@
+<div id="nAdmin">
+	<% response.nDelete %>
+	<% response.nEdit %>
+</div>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<title><% response.title %></title>
+    
+		<meta name="author-personal" content="David Davorin Barudzija" />
+		<meta name="description" content="Management Interface of Game Organization" />
+     	<meta name="language" content="de" />
+		<meta name="robots" content="index, follow" />
+    	
+		<!-- CSS -->
+		<link rel="stylesheet" href="/static/css/fullcalendar.css" type="text/css" />
+		<link rel="stylesheet" href="/static/css/jquery-ui-1.8.17.custom.css" type="text/css">
+		
+		<!-- Javascript -->
+		<script src="/static/scripts/jquery-1.5.2.min.js"></script>
+		<script src="/static/scripts/fullcalendar.js"></script>
+		<script src="/static/scripts/jquery-ui-1.8.17.custom.min.js"></script>
+		
+		<script type="text/javascript">
+			function showHideCommentsNews(div) {
+				var d = '#' + div;
+
+				if (document.getElementById(div).style.display == "none") {
+					$(d).show("normal");
+				} else {
+					$(d).hide("normal");
+				}
+			}
+		</script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+		    	// page is now ready, initialize the calendar...
+
+		    	$('#calendar').fullCalendar({
+		        	// put your options and callbacks here
+		    	})
+
+			});
+		</script>
+	
+		<script type ="text/javascript">
+			$(function() {
+				var availableTags = [
+					<% response.names %>
+				];
+				$( ".names" ).autocomplete({
+					source: availableTags
+				});
+			});
+		</script>
+    
+</head>
+
+<body>	
+	<div id="left" style="float:left; width=22%; min-width:22%;">
+	</div>
+	<div id="main" style="float:left; width:56%;">
+		
+		<h1>MIGO</h1>
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Statusleiste -->
+		<!-- +++++++++++++++++++++++ -->
+		<div style="padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5; width:650px; margin-bottom:10px;">
+			<% response.loginMsg %>
+			<p>Gruppe: <% response.groupName %></p>
+			<p><% response.allGroups %></p>
+		</div>
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Menu -->
+		<!-- +++++++++++++++++++++++ -->
+		<% response.menu %>
+			
+			
+		<!-- +++++++++++++++++++++++ -->
+		<!-- News -->
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Neue News schreiben -->
+		<% response.newNews %>
+		
+		<!-- Neue News bearbeiten -->
+		<% response.editNews %>
+		
+		<!-- Alle News auflisten -->
+		<% response.listNews %>
+				
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Calendar -->
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Kalender anzeigen -->
+		<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div>
+		
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Messages -->
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Neue News schreiben -->
+		<% response.newMessage %>
+		
+		<!-- Alle Nachrichten auflisten -->
+		<% response.listMessages %>
+		
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Mitglieder -->
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Alle Mitglieder auflisten -->
+		<% response.listUsers %>
+		
+		<!-- +++++++++++++++++++++++ -->
+		<!-- Gruppeninformationen -->
+		<!-- +++++++++++++++++++++++ -->
+		<% response.groupInfo %>
+					
+	</div>
+	
+	<div id="dropbox" style="float:left; width=22%; margin:80px 0px 0px 20px; padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5;">
+		<% response.dropbox %>
+	</div>
+</body>
+</html>
