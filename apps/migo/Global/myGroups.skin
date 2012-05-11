@@ -1,4 +1,2 @@
-<div style="padding:10px; border:1px solid #E5E5E5; background-color:#F5F5F5; width:650px; margin-bottom:10px;">
-	<p>Meine Gruppe(n)</p>
-	<% response.myGroups %>
-</div>
+<p>Meine Gruppe(n)</p>
+<% response.myGroups %>

@@ -42,7 +42,7 @@ function chooseGroup_action() {
 		res.data.myGroupsDiv = renderSkinAsString("myGroups");
 		
 		//Neue Gruppe erstellen
-		res.data.newGroup = "<a href=" + root.href("newGroup") +">" + "Neue Gruppe erstellen" + "</a>";
+		res.data.newGroup = "<a class='btn-exp' href=" + root.href("newGroup") +">" + "Neue Gruppe erstellen" + "</a>";
 
 		//Skin rendern
 		renderSkin("chooseGroup");

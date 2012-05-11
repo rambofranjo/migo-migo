@@ -17,48 +17,79 @@
 		<script type="text/javascript" src="/../static/scripts/js/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="/../static/scripts/js/jquery-ui-1.8.18.custom.min.js"></script>
     	
-    	
-    	
-    	
-
-    
-    	<script>
-			$(function() {
-				$( "#tabs" ).tabs();
+		<script>	
+			$(document).ready(function() {
+			    $("#tabs").tabs({ selected: 0 });
 			});
 		</script>
 </head>
 
 <body>
-	<div id="main">
-		<h1>MIGO</h1>
-
-		<!--<% response.users %>-->
-	</div>
 	
-
-
-
-	<div id="tabs">
-		<ul>
-			<li><a href="#tabs-1">Anmelden</a></li>
-			<li><a href="#tabs-2">Registeren</a></li>
-		</ul>
-
-		<div id="tabs-1">
-			<p><% response.login %></p>
+	<!-- Wrapper start -->
+	<div id="wrapper">
+		
+		<div id="header">
+			
+			<div id="header_top">
+				<div id="header_top_content">
+					<p class="right">
+						<a href="#">Kundenbereich</a>
+						<span style="color:#FFF">|</span>
+						<a href="#">Service &amp; Support</a>
+					</p>
+					
+						<p class="left">
+							<strong style="font-size:16px">Migo + Logo</strong>
+						</p>
+				</div>
+			</div>
+			
 		</div>
-		<div id="tabs-2">
-			<p><% response.register %></p>
+
+			
+		<div id="front-container">
+			<div id="front-card">
+				
+				<div class="front-welcome">
+					<div class="front-welcome-text">
+						<h1>Willkommen bei Migo!</h1>
+						<p>Melde dich an und verwalte deine gasamte Mannschaft.</p>
+					</div>
+				</div>
+				
+				<div id="tabs">
+					<ul>
+						<li><a  class="tabs-link" href="#tabs-1">Anmelden</a></li>
+						<li><a class ="tabs-link" href="#tabs-2">Registrieren</a></li>
+					</ul>
+
+					<div id="tabs-1">
+						<p><% response.login %></p>
+					</div>
+					<div id="tabs-2">
+						<p><% response.register %></p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div id="footer">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Hilfe</a></li>
+					<li><a href="#">Impressum</a></li>
+					<li><a href="#">AGB</a></li>
+					<li><a href="#">Kontakt</a></li>
+					<li><a href="#">Datenschutz</a></li>
+					<li>&copy; 2012 Migo</li>
+				</ul>
+			</div>
+			
 		</div>
 	
+	<!-- Wrapper ende -->	
 	</div>
 
-
-
-
-<div class="demo-description" style="display: none; ">
-<p>Click tabs to swap between content that is broken into logical sections.</p>
-</div><!-- End demo-description -->
 </body>
 </html>

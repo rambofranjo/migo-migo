@@ -1,7 +1,23 @@
-<% response.errorLogin %>
-<form action="<% root.href action="login" %>" method="POST"> 
-	E-Mail: <input type="text" name="email"><br /> 
-	Passwort: <input type="password" name="password"><br /> 
-	remember me? <input type="checkbox" name="remember" value="1"><br /> 
-	<input type="submit" name="login" value="Login!"> 
+<div class="txt"> <% response.errorLogin %> </div>
+<form action="<% root.href action="login" %>" method="POST" style="margin-top:15px"> 
+	
+	<div class="left" style="width:250px">
+		<strong>E-Mail:</strong><input type="text" name="email" class="right input"> 
+	</div>
+	
+	<div class="cleft left" style="width:250px; margin-top:10px">
+		<strong>Passwort:</strong><input type="password" name="password" class="right input">
+	</div>
+	
+	<div class="left" style="margin:10px 0px 0px 80px">
+		<input type="checkbox" name="remember" value="1"> <span class="txt">Remember me?</span>
+	</div>
+	
+	<div class="cleft left" style="margin-top:15px">
+		<input type="submit" name="login" value="Login!" class="left btn">
+	</div> 
+	
+	<p class="left cleft txt" style="margin-top:20px; font-size:11px">
+		Noch keine Account? Jetzt alle Felder im Registrieren Tab ausf&uuml;llen, und schon kannst du loslegen!
+	</p>
 </form>

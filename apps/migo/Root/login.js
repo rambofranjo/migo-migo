@@ -25,7 +25,6 @@ function login_action() {
 	res.data.title = "MIGO - Management Game Organisation - Login";
 	res.data.users = root.allUsers();
 	res.data.errorLogin = error;
-	res.data.errorRegister = error; 
 	res.data.login = renderSkinAsString("login");
 	res.data.register = renderSkinAsString("register");
 	renderSkin("main");

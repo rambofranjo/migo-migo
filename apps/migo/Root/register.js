@@ -32,7 +32,7 @@ function register_action() {
 	res.data.title = "MIGO - Management Game Organisation - Register";
 	res.data.users = root.allUsers();
 	res.data.errorRegister = error;
-	res.data.errorLogin = error;
+	res.data.tab = "<script>$(document).ready(function() {$('#tabs').tabs({ selected: 1 });});</script>";
 	res.data.login = renderSkinAsString("login");
 	res.data.register = renderSkinAsString("register");	
 	renderSkin("main");

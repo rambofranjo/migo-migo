@@ -12,38 +12,84 @@
      	<meta name="language" content="de" />
 		<meta name="robots" content="index, follow" />
     	
-		<link rel="stylesheet" href="/static/main.css" type="text/css"  />
+		<link rel="stylesheet" href="/static/css/style/main.css" type="text/css"  />
     	<script src="/static/jQuery/jquery.js" type="text/javascript"></script>
     
 </head>
 
-<body>
-	<div id="main" style="margin:0 auto; width:700px;">
+<body class="bg">
+
+	<!-- Wrapper start -->
+	<div id="wrapper">
 		
-		<h1>MIGO</h1>
-		
-		<div style="padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5; width:650px; margin-bottom:10px;">
-			<% response.loginMsg %>
+		<div id="header">
+			<div id="header_top">
+				<div id="header_top_content">
+					<p class="right">
+						<a href="#">Kundenbereich</a>
+						<span style="color:#FFF">|</span>
+						<a href="#">Service &amp; Support</a>
+					</p>
+					
+						<p class="left">
+							<strong style="font-size:16px">Migo + Logo</strong>
+						</p>
+				</div>
+			</div>	
 		</div>
 		
-		<% response.myGroupsDiv %>
+		<div id="content">
+			<div id="content_box" style="margin-top:20px">
+				<div id="content_box_txt">
+					<% response.loginMsg %>
+				</div>
+			</div>
 		
-		<div style="padding:10px; border:1px solid #CCC; width:650px; margin-bottom:10px;">
-			<form action="<% root.href action="inquireGroup" %>" method="POST"> 
-				<p>Zu einer Gruppe beitreten</p>
-		    	<select name="groupName">
-					<% response.optionGroups %>
-		    	</select>
-				<input type="submit" name="chooseGroup" value="Anfragen"> 
-			</form>
-			<br />
-			<% response.groupInquiry %>
+			<div id="content_box" style="margin-top:20px">
+				<div id="content_box_txt" class="left" style="width:280px">
+					<% response.myGroupsDiv %>
+				</div>
+				
+				<div id="content_box_txt" class="left" style="width:313px; margin-left:40px">
+					<form action="<% root.href action="inquireGroup" %>" method="POST"> 
+						<p>Zu einer Gruppe beitreten</p>
+			    		<select name="groupName">
+							<% response.optionGroups %>
+			    		</select>
+						<input type="submit" name="chooseGroup" value="Anfragen"> 
+					</form>
+					<% response.groupInquiry %>
+				</div>
+				
+				<p class="txt left" style="font-size:small; margin:30px 0px 0px 45px; width:373px; line-height:20px">
+					Sie k&ouml;nne hier Ihre Gruppen verwalten.Sollten Sie noch in keiner Gruppe sein, k&ouml;nnen Sie hier
+					einer vorhandenen Gruppe beitreten, oder Sie erstellen eine neue Gruppe!
+				</p>
+				
+				<div class="left" style="margin:40px 0px 0px 50px">
+					<% response.newGroup %>
+				</div>
+				
+				<div style="clear:both"></div>
+				
+			</div>
 		</div>
 		
-		<div style="padding:10px; border:1px solid #CCC; width:650px; margin-bottom:10px;">
-			<% response.newGroup %>
+		
+		<div id="footer_back">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Hilfe</a></li>
+				<li><a href="#">Impressum</a></li>
+				<li><a href="#">AGB</a></li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">Datenschutz</a></li>
+				<li>&copy; 2012 Migo</li>
+			</ul>
 		</div>
 					
 	</div>
+	<!-- Wrapper ende -->
+		
 </body>
 </html>
