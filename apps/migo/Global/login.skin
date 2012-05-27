@@ -2,11 +2,11 @@
 <form action="<% root.href action="login" %>" method="POST" style="margin-top:15px"> 
 	
 	<div class="left" style="width:250px">
-		<strong>E-Mail:</strong><input type="text" name="email" class="right input"> 
+		<strong>E-Mail:</strong><input type="text" name="email" class="right input" style="font-size:13px"> 
 	</div>
 	
 	<div class="cleft left" style="width:250px; margin-top:10px">
-		<strong>Passwort:</strong><input type="password" name="password" class="right input">
+		<strong>Passwort:</strong><input type="password" name="password" class="right input" style="font-size:13px">
 	</div>
 	
 	<div class="left" style="margin:10px 0px 0px 80px">

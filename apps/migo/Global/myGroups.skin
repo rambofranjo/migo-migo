@@ -1,2 +1,1 @@
-<p>Meine Gruppe(n)</p>
 <% response.myGroups %>

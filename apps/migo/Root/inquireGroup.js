@@ -10,6 +10,7 @@ function inquireGroup_action() {
 			pg.gruppeID = this.getGroupIdByName(gName);
 			pg.personID = session.user._id;
 			pg.isAdmin = 0;
+			pg.gruender = 0;
 			pg.status = "angefragt";  
 			
 			root.personGruppe.add(pg);

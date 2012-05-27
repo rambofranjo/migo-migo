@@ -8,13 +8,18 @@ function chooseGroup_action() {
 	
 		//Login Msg
 		var login = "";
-		login += "Hi " + session.user.vorname + ' ' + session.user.nachname + "!<br />"; 
-		login += "<a href=" + root.href("logout") + ">Logout</a>";
+		login += "<div class='logged-in-box'><p>Hallo <strong>" + session.user.vorname + ' ' + session.user.nachname + "</strong>!</p>"; 
+		login += "<a href=" + root.href("logout") + ">Abmelden</a></div>";
 		res.data.loginMsg = login;
 
 		//Gruppenanfrage
 		res.data.optionGroups = this.allGroups("2");
-		if (req.data.inquire != null) res.data.groupInquiry = "Gruppenanfrage zur Gruppe \"" + req.data.inquire + "\" wurde an den Administrator dieser Gruppe weitergeleitet.";
+		if (req.data.inquire != null) {
+			var inquiry = "<p style='margin:10px 0'>Ihre <strong>Gruppenanfrage</strong> zur Gruppe \"" + req.data.inquire + "\" wurde an den Administrator dieser Gruppe weitergeleitet.<p>";
+			inquiry += "<p>Sobald dieser Sie freischaltet, k&ouml;nnen Sie die Gruppe betreten.<p>";
+			inquiry += "<script>$(function() {$('#dialog-message').dialog({modal: true});});</script>";
+			res.data.groupInquiry = inquiry;
+		}
 	
 		//Eigene Gruppen
 		gNames = new Array();
@@ -26,17 +31,23 @@ function chooseGroup_action() {
 		
 		var myGroupsTable = "";
 		
-		myGroupsTable += "<table style='padding:10px; margin:5px; border:1px dashed #CCC; background-color:#FFF;'>";	
+		myGroupsTable += "<table class='my-groups'>";	
 		for (var i = 0; i < gNames.length; i++) {
 			myGroupsTable += "<tr>";
-			if (gStatus[i] != "aktiv") myGroupsTable += "<td style=\"padding:5px;\">" + gNames[i] + "</td>";
-			else myGroupsTable += "<td style=\"padding:5px;\"><a href=" + root.href("groupNews") + "?groupId=" + gIDs[i] + ">" + gNames[i] + "</a></td>";
-			myGroupsTable += "<td style=\"padding:5px\">" + gStatus[i] + "</td>";
-			myGroupsTable += "<td style=\"padding:5px\"><a href=" + root.href("deleteMembership") + "?groupId=" + gIDs[i] + "><img src=\"../static/images/delete.png\" /></a></td>";
+			if (gStatus[i] != "aktiv") myGroupsTable += "<td><a class='btn-groups-dis'>" + gNames[i] + "</a></td>";
+			else myGroupsTable += "<td class='name'><a class='btn-groups' href=" + root.href("groupNews") + "?groupId=" + gIDs[i] + ">" + gNames[i] + "</a></td>";
+			myGroupsTable += "<td class='status'>" + gStatus[i] + "</td>";
+			myGroupsTable += "<td class='del'><a href=" + root.href("deleteMembership") + "?groupId=" + gIDs[i] + "><img src=\"../static/images/delete.png\" /></a></td>";
 			myGroupsTable += "</tr>";
 			
 		}
 		myGroupsTable += "</table>";
+		
+		//Noch bei keiner Gruppe?
+		if (gNames.length == 0) {
+			myGroupsTable = "<p class='no-group'>Sie befinden Sich noch in keiner Gruppe. Sie k&ouml;nnen entweder eine <strong>Neue Gruppe</strong> erstellen, oder einer bereits bestehenen Gruppe <strong>beitreten</strong>.</p>";
+			myGroupsTable += "<p class='no-group'>Falls Sie einer bestehen Gruppe beitreten wollen, muss diese Gruppe Ihren Beitritt akzeptieren.</p>";
+		}
 		
 		res.data.myGroups = myGroupsTable;
 		res.data.myGroupsDiv = renderSkinAsString("myGroups");

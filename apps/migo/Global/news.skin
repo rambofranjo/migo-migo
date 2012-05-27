@@ -1,11 +1,11 @@
 <!-- Start News --> 
-<div id="news" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px; width:650px;">
+<div id="news" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px;">
 	
 	<!-- News Admin -->
 	<% response.nAction %>
 
 	<!-- News Header -->
-	<div id="newsHeader" style="padding:10px; border:1px solid #DDD; background-color:#F5F5F5; width:630px; margin-bottom:10px;" >
+	<div id="newsHeader" style="padding:10px; border:1px solid #DDD; background-color:#F5F5F5;margin-bottom:10px;" >
 		
 		<!-- Avatar -->
 		<div id="Avatar" style="float:left;">

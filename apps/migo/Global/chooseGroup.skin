@@ -13,7 +13,10 @@
 		<meta name="robots" content="index, follow" />
     	
 		<link rel="stylesheet" href="/static/css/style/main.css" type="text/css"  />
-    	<script src="/static/jQuery/jquery.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="/static/css/jquery-ui-1.8.17.custom.css" type="text/css"  />
+		
+    	<script type="text/javascript" src="/static/scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/static/scripts/jquery-ui-1.8.20.custom.min.js"></script>
     
 </head>
 
@@ -42,27 +45,33 @@
 			<div id="content_box" style="margin-top:20px">
 				<div id="content_box_txt">
 					<% response.loginMsg %>
+					<div class="clear"></div>
 				</div>
 			</div>
 		
 			<div id="content_box" style="margin-top:20px">
-				<div id="content_box_txt" class="left" style="width:280px">
-					<% response.myGroupsDiv %>
+				<div id="content_box_txt" class="left" style="width:280px; min-height:250px">
+					<h4 style="margin-bottom:20px;">Meine Gruppe(n)</h4>
+					<div class="content-box-overflow">
+						<% response.myGroupsDiv %>
+					</div>
 				</div>
 				
-				<div id="content_box_txt" class="left" style="width:313px; margin-left:40px">
+				<div id="content_box_txt" class="left" style="width:394px; margin-left:40px">
 					<form action="<% root.href action="inquireGroup" %>" method="POST"> 
-						<p>Zu einer Gruppe beitreten</p>
-			    		<select name="groupName">
+						<h4 style="margin-bottom:20px">Einer Gruppe beitreten</h4>
+			    		<select name="groupName" class="select-box">
 							<% response.optionGroups %>
 			    		</select>
-						<input type="submit" name="chooseGroup" value="Anfragen"> 
+						<input type="submit" name="chooseGroup" class="btn" value="Anfragen" style="margin-left:30px"> 
 					</form>
-					<% response.groupInquiry %>
+					<div id="dialog-message" title="Gruppen Anfrage" style="display:none">
+						<% response.groupInquiry %>
+					</div>
 				</div>
 				
 				<p class="txt left" style="font-size:small; margin:30px 0px 0px 45px; width:373px; line-height:20px">
-					Sie k&ouml;nne hier Ihre Gruppen verwalten.Sollten Sie noch in keiner Gruppe sein, k&ouml;nnen Sie hier
+					Sie k&ouml;nne hier Ihre Gruppen <strong>verwalten</strong>. Sollten Sie noch in keiner Gruppe sein, k&ouml;nnen Sie hier
 					einer vorhandenen Gruppe beitreten, oder Sie erstellen eine neue Gruppe!
 				</p>
 				
@@ -76,7 +85,7 @@
 		</div>
 		
 		
-		<div id="footer_back">
+		<div id="footer">
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Hilfe</a></li>

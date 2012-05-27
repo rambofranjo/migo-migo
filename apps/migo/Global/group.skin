@@ -14,6 +14,7 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="/static/css/fullcalendar.css" type="text/css" />
 		<link rel="stylesheet" href="/static/css/jquery-ui-1.8.17.custom.css" type="text/css">
+		<link rel="stylesheet" href="/static/css/style/main.css" type="text/css"  />
 		
 		<!-- Javascript -->
 		<script src="/static/scripts/jquery-1.5.2.min.js"></script>
@@ -56,73 +57,97 @@
     
 </head>
 
-<body>	
-	<div id="left" style="float:left; width=22%; min-width:22%;">
-	</div>
-	<div id="main" style="float:left; width:56%;">
-		
-		<h1>MIGO</h1>
-		
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Statusleiste -->
-		<!-- +++++++++++++++++++++++ -->
-		<div style="padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5; width:650px; margin-bottom:10px;">
-			<% response.loginMsg %>
-			<p>Gruppe: <% response.groupName %></p>
-			<p><% response.allGroups %></p>
+<body class="bg">
+
+	<!-- Wrapper start -->
+	<div id="wrapper">
+
+		<div id="header">
+			<div id="header_top">
+				<div id="header_top_content">
+					<p class="right">
+						<a href="#">Kundenbereich</a>
+						<span style="color:#FFF">|</span>
+						<a href="#">Service &amp; Support</a>
+					</p>
+
+						<p class="left">
+							<strong style="font-size:16px">Migo + Logo</strong>
+						</p>
+				</div>
+			</div>	
 		</div>
 		
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Menu -->
-		<!-- +++++++++++++++++++++++ -->
-		<% response.menu %>
-			
-			
-		<!-- +++++++++++++++++++++++ -->
-		<!-- News -->
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Neue News schreiben -->
-		<% response.newNews %>
+		<div id="content">
+			<div id="content_box" style="margin-top:20px">
+				
+				<!-- +++++++++++++++++++++++ -->
+				<!-- Statusleiste -->
+				<!-- +++++++++++++++++++++++ -->
+				<div id="content_box_txt">
+					<% response.loginMsg %>
+					<p>Gruppe: <% response.groupName %></p>
+					<p><% response.allGroups %></p>
+					<div class="clear"></div>
+				</div>
+			</div>
 		
-		<!-- Neue News bearbeiten -->
-		<% response.editNews %>
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Menu -->
+			<!-- +++++++++++++++++++++++ -->
+			<div id="content_box" style="margin-top:20px">
+				<% response.menu %>
+			</div>
+			
+			<div id="content_box" style="margin-top:20px; width:500px; float:left">
+				<!-- +++++++++++++++++++++++ -->
+				<!-- News -->
+				<!-- +++++++++++++++++++++++ -->
+				<!-- Neue News schreiben -->
+				<% response.newNews %>
 		
-		<!-- Alle News auflisten -->
-		<% response.listNews %>
+				<!-- Neue News bearbeiten -->
+				<% response.editNews %>
+		
+				<!-- Alle News auflisten -->
+				<% response.listNews %>
+			</div>
 				
 		
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Calendar -->
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Kalender anzeigen -->
-		<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div>
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Calendar -->
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Kalender anzeigen -->
+			<!--<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div> -->
 		
 		
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Messages -->
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Neue News schreiben -->
-		<% response.newMessage %>
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Messages -->
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Neue News schreiben -->
+			<% response.newMessage %>
 		
-		<!-- Alle Nachrichten auflisten -->
-		<% response.listMessages %>
+			<!-- Alle Nachrichten auflisten -->
+			<% response.listMessages %>
 		
 		
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Mitglieder -->
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Alle Mitglieder auflisten -->
-		<% response.listUsers %>
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Mitglieder -->
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Alle Mitglieder auflisten -->
+			<% response.listUsers %>
 		
-		<!-- +++++++++++++++++++++++ -->
-		<!-- Gruppeninformationen -->
-		<!-- +++++++++++++++++++++++ -->
-		<% response.groupInfo %>
-					
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Gruppeninformationen -->
+			<!-- +++++++++++++++++++++++ -->
+			<% response.groupInfo %>
+			
+			<div id="dropbox" style="float:left; width=22%; margin:20px 0px 0px 20px; padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5;">
+				<% response.dropbox %>
+			</div>
+			
+		</div>
 	</div>
 	
-	<div id="dropbox" style="float:left; width=22%; margin:80px 0px 0px 20px; padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5;">
-		<% response.dropbox %>
-	</div>
 </body>
 </html>

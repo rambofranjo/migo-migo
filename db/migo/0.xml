@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="helma.xsl"?>
 <xmlroot xmlns:hop="http://www.helma.org/docs/guide/features/database">
-  <hopobject id="0" name="root" prototype="Root" created="1320317607030" lastModified="1336742780628">
+  <hopobject id="0" name="root" prototype="Root" created="1320317607030" lastModified="1337955846635">
   </hopobject>
 </xmlroot>

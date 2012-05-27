@@ -1,9 +1,32 @@
-<% response.errorNewGroup %>
-<form action="<% root.href action="newGroup" %>" method="POST"> 
-	Name: <input type="text" name="name" value="<% response.newGroupName %>"><br />
-	Sportart: <input type="text" name="sportart" value="<% response.newGroupSportart %>"><br />
-	Farbe: <input type="text" name="farbe" value="<% response.newGroupFarbe %>"><br />
-	<!-- Logo brauch file upload -->
-	Logo: <input type="text" name="logo" value="<% response.newGroupLogo %>"><br />
-	<input type="submit" name="newGroup" value="Gruppe erstellen"> 
-</form>
+<div class="error">
+	<p><% response.errorNewGroup %></p>
+</div>
+
+<div class="ok">
+	<p><% response.okNewGroup %></p>
+</div>
+
+<div class="new-group-form">	
+	<form action="<% root.href action="newGroup" %>" method="POST"> 
+
+		<label class="left">
+			<strong class="left">Name</strong>
+			<input type="text" class="left cleft" name="name" value="<% response.newGroupName %>">
+		</label>
+		
+		<label class="left">
+			<strong class="left">Sportart</strong>
+			<input type="text" name="sportart" class="left cleft" value="<% response.newGroupSportart %>">
+		</label>
+		
+		<label class="left cleft">
+			<strong class="left" style="margin-top:50px">Farbe</strong>
+			<input id="color" name="farbe" class="left cleft" type="text" value="<% response.newGroupFarbe %>" style="width:100px">
+			<div id="colorpicker" style="width:195px; hight:195px; margin:20px 0px 0px 170px"></div>
+		</label>
+		
+		<input type="submit" name="newGroup" class="left cleft btn-exp" style="height:45px; margin-top:20px" value="Gruppe erstellen">
+		
+		<div class="clear"></div>
+	</form>
+</div>
