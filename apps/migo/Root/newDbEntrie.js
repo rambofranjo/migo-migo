@@ -33,6 +33,9 @@ function newDbEntrie_action() {
 
 function getPath (mode) {
 	switch (mode) {
+		case "appointment":
+			return "newAppointment";
+			break;
 		case "news": 
 			return "groupNews";
 			break;

@@ -1,6 +1,7 @@
 <!-- <p><a onclick="showHideCommentsNews('newNews')">Neuen Newseintrag schreiben</a></p> -->
 <p><input id="hideButton" onclick="showHideCommentsNews('newNews')" type="button" value="Neuen Newseintrag schreiben" /></p>
 
+
 <div id ="newNews" style="display:<% response.dispNews %>; padding:10px; border:1px dashed #CCC; width:650px; margin-bottom:10px;" >
 	<% response.errorNewNews %>
 	<form name="form" method="post" action="<% root.href action="newNews" %>">
@@ -19,3 +20,5 @@
 	  	</p>
 	</form>
 </div>
+
+

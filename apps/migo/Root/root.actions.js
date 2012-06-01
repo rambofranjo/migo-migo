@@ -19,7 +19,8 @@ function main_action () {
 	}
 	
 	return;
-}
+} // main_action() end 
+
 
 // logout
 function logout_action() { 
@@ -43,6 +44,7 @@ function allUsers() {
 	}
 	return users;
 }
+
 
 function renderMain() {
 		res.data.title = "MIGO - Management Game Organisation";

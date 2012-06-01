@@ -26,11 +26,32 @@ function renderGruppe (mode) {
 	//Modus wählen
 	
 	switch (mode) {
+		case "appointment": 
+		 if (root.isUserInGroupAndAdmin(session.user._id, session.data.grpId)) {
+			res.data.dispAppointment = "none";
+			res.data.newAppointment = renderSkinAsString("newAppointment");
+		 }
+		 
+			//alle Appointments auflisten
+			//res.data.listAppointments = root.getAllAppointments(session.data.grpId);
+			
+			break;
+			
+		case "appointmentError": 
+		  if (root.isUserInGroupAndAdmin(session.user._id, session.data.grpId)) {
+			res.data.dispAppointment = "block";
+			res.data.newAppointment = renderSkinAsString("newAppointment");
+		  }
+			//alle Appointments auflisten
+			//res.data.listAppointments = root.getAllAppointments(session.data.grpId);
+			
+			break;
+		
 		case "news":
 			//Neue News anlegen
 			if (root.isUserInGroupAndAdmin(session.user._id, session.data.grpId)) {
 				res.data.newNewsGroup = session.data.grpId;
-				res.data.dispNews = res.data.dispNews = "none";
+				res.data.dispNews = "none";
 				res.data.newNews = renderSkinAsString("newNews");
 			}
 			//News auflisten

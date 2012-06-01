@@ -1,13 +1,6 @@
-[2012/02/14 08:02:09] [INFO] [migo-3] Function onLogout not defined for [object Person]
-[2012/02/14 08:02:16] [INFO] [migo-3] Function onStop not defined in global scope
-[2012/02/14 08:02:16] [INFO] [migo-worker] Scheduler for migo exiting
-[2012/05/11 09:13:36] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
-[2012/05/11 09:13:36] [INFO] [Thread-3] Starting engine 1 for migo
-[2012/05/11 09:13:36] [INFO] [migo-1] Function onStart not defined in global scope
-[2012/05/11 10:37:36] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@785606f3
-[2012/05/11 14:09:38] [INFO] [migo-3] Closing DB connection: com.mysql.jdbc.Connection@5952e9a8
-[2012/05/11 14:09:38] [ERROR] [migo-3] POST:inquireGroup com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
-com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
+[2012/06/02 00:00:35] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@6f84a0b7
+[2012/06/02 00:00:35] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
@@ -23,9 +16,9 @@ com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gr
 	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
 	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
 	at java.lang.Thread.run(Thread.java:680)
-[2012/05/11 14:09:46] [INFO] [migo-3] Closing DB connection: com.mysql.jdbc.Connection@22a7fdef
-[2012/05/11 14:09:46] [ERROR] [migo-3] POST:inquireGroup com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
-com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
+[2012/06/02 00:11:21] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@161abc23
+[2012/06/02 00:11:21] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
@@ -41,10 +34,9 @@ com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gr
 	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
 	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
 	at java.lang.Thread.run(Thread.java:680)
-[2012/05/11 14:34:37] [INFO] [migo-3] Closing DB connection: com.mysql.jdbc.Connection@79f1d448
-[2012/05/11 15:23:19] [INFO] [migo-4] Closing DB connection: com.mysql.jdbc.Connection@1a055ff4
-[2012/05/11 15:23:19] [ERROR] [migo-4] POST:newGroup com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
-com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
+[2012/06/02 00:13:50] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@5edc49c3
+[2012/06/02 00:13:50] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
@@ -60,9 +52,9 @@ com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gr
 	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
 	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
 	at java.lang.Thread.run(Thread.java:680)
-[2012/05/11 15:23:29] [INFO] [migo-4] Closing DB connection: com.mysql.jdbc.Connection@211c7f8d
-[2012/05/11 15:23:29] [ERROR] [migo-4] POST:inquireGroup com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
-com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gruender' cannot be null
+[2012/06/02 00:14:15] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@1f391a2c
+[2012/06/02 00:14:15] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
@@ -78,29 +70,118 @@ com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Gr
 	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
 	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
 	at java.lang.Thread.run(Thread.java:680)
-[2012/05/11 15:23:36] [INFO] [migo-4] Closing DB connection: com.mysql.jdbc.Connection@3240a47f
-[2012/05/11 15:23:36] [ERROR] [migo-4] POST:newGroup helma.scripting.ScriptingException: TypeError: Cannot read property "_id" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js#63)
-helma.scripting.ScriptingException: TypeError: Cannot read property "_id" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js#63)
-	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js:63
-	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js:30
-Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "_id" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js#63)
+[2012/06/02 00:16:04] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@d8db7ce
+[2012/06/02 00:16:04] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/06/02 00:17:21] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@896fd7c
+[2012/06/02 00:17:21] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/06/02 00:19:22] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@3083a95d
+[2012/06/02 00:19:22] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/06/02 00:23:58] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@1b8d77fe
+[2012/06/02 00:23:58] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/06/02 00:24:09] [ERROR] [migo-7] POST:newAppointment helma.scripting.ScriptingException: TypeError: Cannot find function time in object Invalid Date. (/Users/markovicb/Documents/development/migo/apps/migo/Root/newAppointment.js#24)
+helma.scripting.ScriptingException: TypeError: Cannot find function time in object Invalid Date. (/Users/markovicb/Documents/development/migo/apps/migo/Root/newAppointment.js#24)
+	at /Users/markovicb/Documents/development/migo/apps/migo/Root/newAppointment.js:24
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot find function time in object Invalid Date. (/Users/markovicb/Documents/development/migo/apps/migo/Root/newAppointment.js#24)
 	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
 	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
 	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
 	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
-	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
-	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
-	at org.mozilla.javascript.gen.c168._c2(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js:63)
-	at org.mozilla.javascript.gen.c168.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js)
-	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
-	at org.mozilla.javascript.gen.c168._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js:30)
-	at org.mozilla.javascript.gen.c168.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.ScriptRuntime.notFunctionError(ScriptRuntime.java:3743)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThisHelper(ScriptRuntime.java:2247)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThis(ScriptRuntime.java:2214)
+	at org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:117)
+	at org.mozilla.javascript.gen.c1675._c1(/Users/markovicb/Documents/development/migo/apps/migo/Root/newAppointment.js:24)
+	at org.mozilla.javascript.gen.c1675.call(/Users/markovicb/Documents/development/migo/apps/migo/Root/newAppointment.js)
 	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
 	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
-	at org.mozilla.javascript.gen.c168.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/newGroup.js)
+	at org.mozilla.javascript.gen.c1675.call(/Users/markovicb/Documents/development/migo/apps/migo/Root/newAppointment.js)
 	at org.mozilla.javascript.Context$1.run(Context.java:504)
 	at org.mozilla.javascript.Context.call(Context.java:515)
 	at org.mozilla.javascript.Context.call(Context.java:502)
 	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
 	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
 	at java.lang.Thread.run(Thread.java:680)
+[2012/06/02 00:26:08] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@4d2c74b9
+[2012/06/02 00:26:08] [ERROR] [migo-7] POST:newAppointment com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Column 'Startzeit' cannot be null
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at helma.objectmodel.db.NodeManager.insertRelationalNode(NodeManager.java:516)
+	at helma.objectmodel.db.NodeManager.insertNode(NodeManager.java:428)
+	at helma.objectmodel.db.Transactor.commit(Transactor.java:339)
+	at helma.framework.core.RequestEvaluator.commitTransaction(RequestEvaluator.java:661)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:439)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/06/02 00:45:42] [INFO] [migo-7] Closing DB connection: com.mysql.jdbc.Connection@45727d04
+[2012/06/02 01:07:01] [INFO] [migo-8] Function onLogout not defined for [object Person]
