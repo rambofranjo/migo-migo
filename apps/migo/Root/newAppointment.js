@@ -2,7 +2,7 @@ function newAppointment_action() {
 	
 	if ((session.user != null) && (req.data.save)) {
 		
-		res.writeln(session.user._id);
+		//res.writeln(session.user._id);
 		
 		var error = "";
 		
@@ -12,17 +12,34 @@ function newAppointment_action() {
 		var endzeit = req.data.endzeit;
 		var ort = req.data.ort;
 		var beschreibung = req.data.beschreibung;
+		
+		var time1 = new Array(); 
+		var time2 = new Array();
+		time1 = "";
+		time2 = "";
+		
+		/** split time info */
+		time1 = startzeit.toString().split(":");
+		time2 = endzeit.toString().split(":");
 
 		
-		if ((startzeit != "") && (endzeit != "") && (ort != "")) {
+		if ((time1 != "") && (time2 != "") && (ort != "")) {
+			
+			
+			
+			
+			//res.write(time1);
+			//res.write(time2);
+		
+		
 			var newAppointment = new Termine();
-			res.writeln(startzeit);
+			//res.writeln(startzeit);
 			newAppointment.titel = titel;
 			newAppointment.beschreibung = beschreibung;
 			newAppointment.tag = "findet statt";
 			newAppointment.datum = new Date(datum);
-			newAppointment.startzeit = new Date(startzeit);
-			newAppointment.endzeit = new Date(endzeit);
+			newAppointment.startzeit = new Date(2012, 2, 2, time1[0], time1[1],0, 0);
+			newAppointment.endzeit = new Date(2012, 02, 02, time2[0], time2[1], 00, 00);
 			//res.writeln("1");
 			newAppointment.ort = ort;
 			newAppointment.gruppeID = session.data.grpId;
