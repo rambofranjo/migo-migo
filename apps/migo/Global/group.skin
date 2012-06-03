@@ -131,7 +131,7 @@
 				<!-- Neue Appointment bearbeiten -->
 				<% response.editAppointment %>
 				
-				<!-- Alle News auflisten -->
+				<!-- Alle Appointments auflisten -->
 				<% response.listAppointments %>
 		
 				

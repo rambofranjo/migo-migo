@@ -46,15 +46,17 @@ function editAppointment_action() {
 				} else if (req.data.cancel) {
 					res.redirect(root.href("groupAppointment") + "?groupId=" + session.data.grpId);
 				} else {
-				
+					
+					
 					//Daten im Formular setzen
-					res.data.aText = a.beschreibung;
 					res.data.aOrt = a.ort;
+					res.data.aText = a.beschreibung;
+					
 					
 					res.data.aId = aId;
 					res.data.grpId = grpId;
 					
-					//Gruppeninfos mit edit News rendern
+					//Gruppeninfos mit edit Appointment rendern
 					root.renderGruppe("editAppointment");
 					
 				}
