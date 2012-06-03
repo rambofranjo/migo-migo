@@ -22,18 +22,22 @@ function newAppointment_action() {
 		time1 = startzeit.toString().split(":");
 		time2 = endzeit.toString().split(":");
 		
-		//res.write(time1);
+		//res.writeln("datum: " + datum);
 		//res.write(time2);
 		
 		re = /^\d{1,2}:\d{2}([ap]m)?$/;
 		
 		if(!startzeit.match(re) || !endzeit.match(re)) {
 			error = "Zeitangabe muss die Form HH:MM haben!";
-		} else if (ort == "") {
+		} 
+		if (ort == "") {
 			error = "Terminort muss angegeben werden!";
+		} 
+		if (datum == "") {
+			error = "Bitte Datum eingeben!"; 
 		}
 		
-		if (startzeit.match(re) && endzeit.match(re) && (ort != "")) {
+		if (startzeit.match(re) && endzeit.match(re) && (ort != "") && datum != "") {
 			
 			
 			

@@ -33,7 +33,7 @@ function renderGruppe (mode) {
 		 }
 		 
 			//alle Appointments auflisten
-			//res.data.listAppointments = root.getAllAppointments(session.data.grpId);
+			res.data.listAppointments = root.getAllAppointments(session.data.grpId);
 			
 			break;
 			
@@ -43,8 +43,13 @@ function renderGruppe (mode) {
 			res.data.newAppointment = renderSkinAsString("newAppointment");
 		  }
 			//alle Appointments auflisten
-			//res.data.listAppointments = root.getAllAppointments(session.data.grpId);
+			res.data.listAppointments = root.getAllAppointments(session.data.grpId);
 			
+			break;
+			
+		case "editAppointment":
+			//Appointment bearbeiten
+			res.data.editAppointment = renderSkinAsString("editAppointment");
 			break;
 		
 		case "news":

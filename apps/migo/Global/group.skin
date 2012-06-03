@@ -127,9 +127,13 @@
 				<!-- +++++++++++++++++++++++ -->
 				<!-- Neue Appointment schreiben -->
 				<% response.newAppointment %>
-		
 				
-				<% response.outputAppointment %>
+				<!-- Neue Appointment bearbeiten -->
+				<% response.editAppointment %>
+				
+				<!-- Alle News auflisten -->
+				<% response.listAppointments %>
+		
 				
 				
 			</div>
