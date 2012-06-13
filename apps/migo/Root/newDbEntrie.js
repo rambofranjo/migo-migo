@@ -22,7 +22,7 @@ function newDbEntrie_action() {
 
 			res.redirect(root.href(path) + "?groupId=" + session.data.grpId);
 		} else {	
-			res.data.errorDropBox = "Fehler!";
+			res.data.errorDropBox = "";
 			root.renderGruppe(mode);
 		}
 		

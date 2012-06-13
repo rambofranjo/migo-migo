@@ -1,11 +1,11 @@
 <!-- Start News --> 
-<div id="news" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px;">
+<div id="news">
 	
 	<!-- News Admin -->
 	<% response.nAction %>
 
 	<!-- News Header -->
-	<div id="newsHeader" style="padding:10px; border:1px solid #DDD; background-color:#F5F5F5;margin-bottom:10px;" >
+	<div id="newsHeader">
 		
 		<!-- Avatar -->
 		<div id="Avatar" style="float:left;">
@@ -13,32 +13,32 @@
 		</div>
 		
 		<!-- Author -->
-		<div id="author" style="float:left; margin-right:5px;">
+		<div id="author">
 			<% response.nAuthor %>
 		</div>
 		
 		<!-- Date -->
-		<div id="date" style="float:left; margin-right:5px;">
+		<div id="date">
 			<% response.nDate %>
 		</div>
 		
 		<!-- Time -->
-		<div id="time" style="float:left; margin-right:5px;">
+		<div id="time">
 			<% response.nTime %>
 		</div>
 		
 		<!-- Tag -->
-		<div id="tag" style="float:left; margin-right:5px;">
+		<div id="tag">
 			<% response.nTag %>
 		</div>
 		
 		<!-- Title -->
-		<div id="title" style="float:left; clear:left; margin-right:5px;">
+		<div id="title">
 			<strong><% response.nTitle %></strong>
 		</div>
 		
 		<!-- Text -->
-		<div id="newsText" style="float:left; clear:left; margin-right:5px;">
+		<div id="newsText">
 			<% response.nText %>
 		</div>
 		
@@ -47,10 +47,10 @@
 	</div>
 
 	<!-- Button Comments -->
-	<p><input id="hideButton" onclick="showHideCommentsNews('comments<% response.commentId %>')" type="button" value="Kommentare" /></p>
+	<div class='newCommentLink'><input id="hideButton" class="btn" onclick="showHideCommentsNews('comments<% response.commentId %>')" type="button" value="Kommentare" /></div>
 
 	<!-- Comments -->
-	<div id="comments<% response.commentId %>" style="display:<% response.dispComments %>; padding:10px; border:1px dashed #CCC; width:630px; margin-bottom:10px;">
+	<div id="comments<% response.commentId %>" class="commentsAll" style="display:<% response.dispComments %>">
 		
 		<!-- New Comment -->
 		<% response.newComment %>

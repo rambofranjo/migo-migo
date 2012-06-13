@@ -21,7 +21,7 @@ function newNews_action() {
 			root.news.add(newNews); 
 			res.redirect(root.href("groupNews") + "?groupId=" + session.data.grpId);
 		} else {	
-			res.data.errorNewNews = "Fehler!";
+			res.data.errorNewNews = "Fehler: Bitte alle Felder ausf&uuml;llen!";
 			res.data.newNewsTitle = title;
 			res.data.newNewsText = text;
 			root.renderGruppe("newsError");

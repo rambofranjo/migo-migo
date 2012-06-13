@@ -1,13 +1,26 @@
-<div id="editNews" style="padding:10px; border:1px solid #000; width:650px; margin-bottom:10px;">
+<div class="editNews">
 	
-	<% response.errorEditNews %>
+	<h5 style='margin-bottom:10px'>News bearbeiten</h5>
 	
+	<div class='error'>
+		<% response.errorEditNews %>
+	</div>
+		
 	<form action="<% root.href action="editNews" %>" method="POST"> 
-		Titel: <input type="text" name="title" value="<% response.nTitle %>"><br />
-		Text: <input type="text" name="text" value="<% response.nText %>"><br />
+		<p>
+	    	<label for="title">Titel</label>
+	    	<input type="text" name="title" id="textfield" value="<% response.nTitle %>" class="input" />
+	  	</p>
+	
+		<p>
+	    	<label for="text">Text</label>
+	    	<textarea name="text" id="textarea" class="input" style='width:450px; height:80px; margin-top:10px'><% response.nText  %></textarea>
+	  	</p>
 		<input type="hidden" name="groupId" value="<% response.grpId %>">
 		<input type="hidden" name="newsId" value="<% response.nId %>">
-		<input type="submit" name="edit" value="Speichern"> 
-		<input type="submit" name="cancel" value="Abbrechen"> 
+		<div style="margin-top:25px">
+			<input type="submit" name="edit" class="btn" value="Speichern"> 
+			<input type="submit" name="cancel" class="btn" value="Abbrechen"> 
+		</div>
 	</form>
 </div>

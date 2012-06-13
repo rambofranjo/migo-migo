@@ -1,13 +1,13 @@
-<div id ="newComment">
+<div class ="newComment">
 	
 	<form name="form" method="post" action="<% root.href action="newComment" %>">
 		<p>
-	    	<textarea style="width:500px; height:40px;" name="text" id="textarea"><% response.newCommentText %></textarea>
+	    	<textarea style="width:500px; height:40px;" name="text" id="textarea" class="input"><% response.newCommentText %></textarea>
 	  	</p>
 	  	
-		<p>
+		<p style="margin-top:10px">
 			<input type="hidden" name="newsId" value="<% response.newsId %>">
-	    	<input type="submit" name="save" id="button" value="Speichern" />
+	    	<input type="submit" name="save" id="button" class="btn-exp" style="height:25px; line-heigth:auto; padding:2px; font-weight:normal" value="Speichern" />
 	  	</p>
 	</form>
 	

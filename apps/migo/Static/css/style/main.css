@@ -271,7 +271,7 @@ body {
 #content_box {
 	background-color: #FFFFFF;
     border-radius: 6px 6px 6px 6px;
-   	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0px 70px 100px rgba(255, 255, 255, 0.5);
+   	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(255, 255, 255, 0.5);
     padding: 20px;
     position: relative;
 }
@@ -284,6 +284,11 @@ body {
     display: block;
     padding: 15px 20px 15px 20px;
 	border:1px solid #c5e4f0;
+	color:#222222;
+}
+
+#content_box_txt h4 {
+	color:#777777;
 }
 
 
@@ -464,4 +469,254 @@ a:hover {color:#666;}
 #color {
 	border:0 none;
 	box-shadow:none;
+}
+
+
+#menu {
+	margin-top:20px;
+	padding:20px 10px;
+	color:#FFFFFF;
+	background-color: #474747;
+    background-image: url("/static/images/header_bg.jpg");
+    background-repeat: repeat-x;
+	border-radius:4px 4px 0 0;
+	
+}
+
+#menu  ul {
+	list-style:none;
+}
+
+#menu ul li {
+	float:left;
+	padding-left:35px;
+}
+
+#menu  ul li a {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+
+#allNews,
+#allMessages {
+	float:left;
+	width:629px;
+	background-color:#FFFFFF;
+	color:#222222;
+	background-color:#F5F5F5;
+	padding-bottom:20px;
+	border-radius:0 0 0 4px;
+}
+
+#dropbox {
+	float:right;
+	padding:20px 15px;
+	background-color:#C5E4F0;
+	border-radius:0 0 4px 0;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.newNewsLink,
+.newMessageLink {
+	width:589px;
+	padding:20px 20px 0 20px;
+	border-top:3px solid #C5E4F0;
+}
+
+#newNews,
+#newMessage {
+	margin:-1px 20px 0px 20px;
+	padding:20px;
+	border:1px dashed #C5E4F0;
+	background-color:#FFFFFF;
+}
+
+#textarea {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+}
+
+#news {
+	margin:20px 20px 0 20px;
+	border-top:2px solid #C5E4F0;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	border-bottom:1px solid #E5E5E5;
+	background-color:#FFF;
+	padding:15px 15px 10px 15px;
+}
+
+.error {
+	color:#FF0000;
+	font-size:12px;
+}
+
+#newsHeader {
+	padding:10px;
+	border:1px solid #DDD;
+	background-color:#F5F5F5;
+	margin-bottom:10px;
+}
+
+#newsHeader #author,
+#commentsHeader #author {
+	float:left;
+	margin-right:5px;
+	font-size:12px;
+}
+
+#newsHeader #date,
+#commentsHeader #date {
+	float:left;
+	margin-right:5px;
+	font-size:12px;
+	color:#CCCCCC;
+}
+
+#newsHeader #time,
+#commentsHeader #time {
+	float:left;
+	margin-right:5px;
+	font-size:12px;
+	color:#CCCCCC;
+}
+
+#newsHeader #tag {
+	float:left;
+	margin-right:5px;
+	font-size:12px;
+	color:#1E54A2;
+	font-weight:bold;
+}
+
+#newsHeader #title {
+	float:left;
+	margin-right:5px;
+	clear:left;
+	margin-top:10px;
+}
+
+#newsHeader #newsText,
+.commentsText {
+	float:left;
+	clear:left;
+	margin-top:10px;
+	font-size:12px;
+	color:#666;
+}
+
+.newCommentLink{
+	width:589px;
+	padding:5px 0;
+}
+
+.newComment {
+	margin-bottom:15px;
+}
+
+.commentsAll {
+	 padding:10px 10px 0 10px;
+	 margin-bottom:10px;
+}
+
+.comments {
+	padding:10px;
+	border:1px dashed #DDD;
+	background-color:#F5F5F5;
+	margin-bottom:-1px;
+	width:490px;
+}
+
+#commentsHeader #cAction {
+	float:left;
+	margin-right:5px;
+}
+
+#textareaDb {
+	width:155px;
+	height:100px;
+	resize:none;
+	font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+	padding:10px;
+}
+
+
+.dropBoxEntries {
+	margin-top:15px;
+	font-size:12px;
+}
+
+.dropBoxEntrie {
+	margin-bottom:5px;
+	background-color:#FFF;
+	padding:10px;
+	border:1px solid #CCC;
+}
+
+.dropboxAuthor {
+	float:left;
+	color:#222222;
+	font-size:12px;
+	margin-bottom:5px;
+}
+
+.dropboxDate {
+	float:left;
+	clear:left;
+}
+
+.dropboxTime {
+	float:left;
+	margin-left:3px;
+}
+
+.dropboxText {
+	float:left;
+	clear:left;
+	margin-top:10px;
+}
+
+.editNews{
+	padding:20px 20px 0 20px;
+	width:100%;
+	margin-bottom:10px;
+}
+
+#messages {
+	background-color: #FFFFFF;
+    border-color: #C5E4F0 #E5E5E5 #E5E5E5;
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    margin: 20px 20px 0;
+    padding: 15px 15px 10px;
+	font-size:12px;
+	border-collapse: collapse;
+}
+
+.messagesTable td {
+	float:left;
+	border-bottom:1px solid #E5E5E5;
+	margin-bottom:5px;
+	padding:5px;
+}
+
+.msgText {
+	color:#666;
+	float:left;
+	padding:10px !important;
+	margin-bottom:20px !important;
+	width:90% !important;
+	border-bottom:1px dashed #C5E4F0 !important;
+	border-left:1px dashed #C5E4F0 !important;
+	border-right:1px dashed #C5E4F0 !important;
+}
+
+.delMsg {
+	border:0 none !important;
+}
+
+.messagesTable tr td a:hover {
+	text-decoration:underline;
 }

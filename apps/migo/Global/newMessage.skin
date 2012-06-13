@@ -1,26 +1,28 @@
-<p><input id="hideButton" onclick="showHideCommentsNews('newMessage')" type="button" value="Neuen Nachricht schreiben" /></p>
+<div class="newMessageLink">
+	<input id="hideButton" onclick="showHideCommentsNews('newMessage')" type="button" class="btn-exp" value="Neuen Nachricht schreiben" />
+</div>
 
-<div id ="newMessage" style="display:<% response.dispMessages %>; padding:10px; border:1px dashed #CCC; width:650px; margin-bottom:10px;" >
+<div id ="newMessage" style="display:<% response.dispMessages %>" >
 	
 	<% response.errorNewMessage %>
 	
 	<form name="form" method="post" action="<% root.href action="newMessage" %>">
 		<p>
 	    	<label for="empfaenger">Senden an</label>
-	    	<input type="text" name="sendTo" id="textfield" class="names" value="<% response.newMessageSendTo %>" />
+	    	<input type="text" name="sendTo" id="textfield" class="names input" value="<% response.newMessageSendTo %>" />
 	  	</p>
-		<p>
+		<p style="margin-top:10px">
 	    	<label for="betreff">Betreff</label>
-	    	<input type="text" name="betreff" id="textfield" value="<% response.newMessageBetreff %>" />
+	    	<input type="text" name="betreff" id="textfield" class="input" style ="margin-left:25px"value="<% response.newMessageBetreff %>" />
 	  	</p>
 	  	
-		<p>
+		<p style="margin-top:10px">
 	    	<label for="text">Text</label>
-	    	<textarea name="text" id="textarea" cols="45" rows="5"><% response.newMessageText %></textarea>
+	    	<textarea name="text" id="textarea" class="input" style="width:450px; height:80px; margin-left:40px"><% response.newMessageText %></textarea>
 	  	</p>
 	  	
-		<p>
-	    	<input type="submit" name="send" id="button" value="Senden" />
+		<p style="margin-top:20px">
+	    	<input type="submit" name="send" id="button" class="btn" value="Senden" />
 	  	</p>
 	</form>
 </div>

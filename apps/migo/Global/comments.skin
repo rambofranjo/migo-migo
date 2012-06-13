@@ -1,26 +1,26 @@
-<div id="comments" style="padding:10px; border:1px solid #DDD; background-color:#F5F5F5; margin-bottom:-1px;" >
+<div class="comments">
 	
 
 	<!-- Comments Header -->
 	<div id="commentsHeader" >
 	
 		<!-- Comments Admin -->
-		<div id="cAction" style="float:left; margin-right:5px;">
+		<div id="cAction">
 			<% response.cAction %>
 		</div>
 		
 		<!-- Author -->
-		<div id="author" style="float:left; margin-right:5px;">
+		<div id="author">
 			<% response.cAuthor %>
 		</div>
 	
 		<!-- Date -->
-		<div id="date" style="float:left; margin-right:5px;">
+		<div id="date">
 			<% response.nDate %>
 		</div>
 	
 		<!-- Time -->
-		<div id="time" style="float:left; margin-right:5px;">
+		<div id="time">
 			<% response.nTime %>
 		</div>
 	
@@ -29,8 +29,10 @@
 	</div>
 
 	<!-- Comments Text -->
-	<div id="commentsText">
+	<div class="commentsText" style='margin-left:15px'>
 		<% response.cText %>
 	</div>
+	
+	<div style="clear:left;"></div>
 	
 </div>

@@ -89,54 +89,51 @@
 		</div>
 		
 		<div id="content">
+			
+			
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Statusleiste -->
+			<!-- +++++++++++++++++++++++ -->
 			<div id="content_box" style="margin-top:20px">
-				
-				<!-- +++++++++++++++++++++++ -->
-				<!-- Statusleiste -->
-				<!-- +++++++++++++++++++++++ -->
 				<div id="content_box_txt">
 					<% response.loginMsg %>
-					<p>Gruppe: <% response.groupName %></p>
-					<p><% response.allGroups %></p>
 					<div class="clear"></div>
 				</div>
+				
+				<div id="content_box_txt" style='margin-top:10px'>
+					<div class="left cleft" style='width:100%'>
+						<% response.groupName %>
+						<p style='float:right; margin:2px 5px 0 0'><% response.allGroups %></p>
+					</div>
+					<div class="clear"></div>
+				</div>	
 			</div>
+			<div class="clear"></div>
+			
 		
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Menu -->
 			<!-- +++++++++++++++++++++++ -->
-			<div id="content_box" style="margin-top:20px">
-				<% response.menu %>
-			</div>
+			<% response.menu %>
 			
-			<div id="content_box" style="margin-top:20px; width:500px; float:left">
-				<!-- +++++++++++++++++++++++ -->
-				<!-- News -->
-				<!-- +++++++++++++++++++++++ -->
-				<!-- Neue News schreiben -->
-				<% response.newNews %>
-		
-				<!-- Neue News bearbeiten -->
-				<% response.editNews %>
-		
-				<!-- Alle News auflisten -->
-				<% response.listNews %>
-				
-				<!-- +++++++++++++++++++++++ -->
-				<!-- Appointments -->
-				<!-- +++++++++++++++++++++++ -->
-				<!-- Neue Appointment schreiben -->
-				<% response.newAppointment %>
-				
-				<!-- Neue Appointment bearbeiten -->
-				<% response.editAppointment %>
-				
-				<!-- Alle Appointments auflisten -->
-				<% response.listAppointments %>
-		
-				
-				
-			</div>
+			
+			<!-- +++++++++++++++++++++++ -->
+			<!-- News -->
+			<!-- +++++++++++++++++++++++ -->
+			<% response.allNews %>
+			
+			
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Appointments -->
+			<!-- +++++++++++++++++++++++ -->
+			<!-- Neue Appointment schreiben -->
+			<% response.newAppointment %>
+			
+			<!-- Neue Appointment bearbeiten -->
+			<% response.editAppointment %>
+			
+			<!-- Alle Appointments auflisten -->
+			<% response.listAppointments %>
 				
 		
 			<!-- +++++++++++++++++++++++ -->
@@ -149,12 +146,8 @@
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Messages -->
 			<!-- +++++++++++++++++++++++ -->
-			<!-- Neue News schreiben -->
-			<% response.newMessage %>
-		
-			<!-- Alle Nachrichten auflisten -->
-			<% response.listMessages %>
-		
+			<% response.allMessages %>
+			
 		
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Mitglieder -->
@@ -167,11 +160,24 @@
 			<!-- +++++++++++++++++++++++ -->
 			<% response.groupInfo %>
 			
-			<div id="dropbox" style="float:left; width=22%; margin:20px 0px 0px 20px; padding:10px; border:1px dashed #DDDDDD; background-color:#F5F5F5;">
+			<div id="dropbox">
 				<% response.dropbox %>
 			</div>
 			
 		</div>
+		
+		<div id="footer" style="position:relative; float:left; margin-top:40px">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Hilfe</a></li>
+				<li><a href="#">Impressum</a></li>
+				<li><a href="#">AGB</a></li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">Datenschutz</a></li>
+				<li>&copy; 2012 Migo</li>
+			</ul>
+		</div>
+		
 	</div>
 	
 </body>

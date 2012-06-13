@@ -61,6 +61,9 @@ function renderGruppe (mode) {
 			}
 			//News auflisten
 			res.data.listNews = root.getAllNews(session.data.grpId);
+			
+			//News rendern
+			res.data.allNews = renderSkinAsString("allNews");
 			break;
 		case "newsError":
 			//Neue News anlegen
@@ -71,10 +74,15 @@ function renderGruppe (mode) {
 			}
 			//News auflisten
 			res.data.listNews = root.getAllNews(session.data.grpId);
+			
+			//News rendern
+			res.data.allNews = renderSkinAsString("allNews");
 		break;
 		case "editNews":
 			//News bearbeiten
 			res.data.editNews = renderSkinAsString("editNews");
+			//Rendern
+			res.data.allNews = renderSkinAsString("allNews");
 			break;
 		case "calendar":
 			res.data.calendar = "calendar";
@@ -89,6 +97,8 @@ function renderGruppe (mode) {
 			//Neue Nachricht schreiben
 			res.data.dispMessages = res.data.dispMessages = "none";
 			res.data.newMessage = renderSkinAsString("newMessage");
+			
+			res.data.allMessages = renderSkinAsString("allMessages");
 			break;
 		case "messagesError":
 			//Alle Mitglieder der Gruppe auflisten
@@ -100,6 +110,8 @@ function renderGruppe (mode) {
 			//Neue Nachricht schreiben
 			res.data.dispMessages = res.data.dispMessages = "block";
 			res.data.newMessage = renderSkinAsString("newMessage");
+			
+			res.data.allMessages = renderSkinAsString("allMessages");
 			break;
 		case "users":
 			//Alle User auflisten
@@ -133,24 +145,28 @@ function renderGruppe (mode) {
 	res.data.title = "MIGO - Management Game Organisation - Gruppe " + root.getGroupNameById(session.data.grpId);
 
 	//Login Msg
-	var login = "";
-	login += "Hi " + session.user.vorname + ' ' + session.user.nachname + "!<br />"; 
-	login += "<a href=" + root.href("logout") + ">Logout</a>";
+	var login = "<div class='logged-in-box left' style='width:100%'>";
+	login += "<p>Hallo <strong>" + session.user.vorname + ' ' + session.user.nachname + "</strong>!</p>"; 
+	login += "<a href=" + root.href("logout") + ">Abmelden</a>";
+	login += "</div>";
 	res.data.loginMsg = login;
 	
+	var groupInfo = root.getGroupInfo(session.data.grpId);
+	
 	//Gruppenname
-	res.data.groupName = root.getGroupNameById(session.data.grpId);
+	res.data.groupName = "<h4 class='left' style='color:"+groupInfo.farbe+"'>" + root.getGroupNameById(session.data.grpId) + "</h4>";
 	
 	//Link zu Gruppenübersicht
-	res.data.allGroups = "<a href=" + root.href("chooseGroup") + ">Zur&uumlck zur Gruppen&uumlbersicht</a>";
+	res.data.allGroups = "<a style='text-decoration:none' href=" + root.href("chooseGroup") + ">Zur&uumlck zur Gruppen&uumlbersicht</a>";
 	
 	
 	/* ------------------ */
 	//Menu
 	res.data.groupId = session.data.grpId;
 	if (this.isUserInGroupAndAdmin(session.user._id, session.data.grpId)) {
-		res.data.menuPointGroup = "<li style=\"display:inline; margin-right: 10px;\" ><a href=\"groupGroup?groupId=" + session.data.grpId + "\">Gruppe</a></li>";
+		res.data.menuPointGroup = "<li><a href=\"groupGroup?groupId=" + session.data.grpId + "\">Gruppe</a></li>";
 	} else res.data.menuPointGroup = "";
+	res.data.grpColor = groupInfo.farbe;
 	res.data.menu = renderSkinAsString("menu");
 	
 	

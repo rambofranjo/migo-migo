@@ -1,11 +1,12 @@
 <% response.errorDropBox %>
+<h5 style="margin-bottom:10px">Nachricht hinterlassen</h5>
 
 <form action="<% root.href action="newDbEntrie" %>" method="POST"> 
 	<label for="text"></label>
-	<textarea name="text" id="textarea" cols="20" rows="5"></textarea> 
+	<textarea name="text" id="textareaDb"></textarea> 
 	<div style="clear:left;"></div>
 	<input type="hidden" name="mode" value="<% response.mode %>">
-	<input type="submit" name="save" value="Senden">
+	<input type="submit" name="save" value="Senden" class='btn-exp' style='margin-top:10px' >
 </form>
 
 <% response.listDropBox %>
