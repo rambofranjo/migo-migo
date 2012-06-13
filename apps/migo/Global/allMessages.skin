@@ -1,0 +1,9 @@
+<div id="allMessages">
+
+	<!-- Neue News schreiben -->
+	<% response.newMessage %>
+
+	<!-- Alle Nachrichten auflisten -->
+	<% response.listMessages %>
+	
+</div>

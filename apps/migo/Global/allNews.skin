@@ -1,0 +1,12 @@
+<div id="allNews">
+
+	<!-- Neue News schreiben -->
+	<% response.newNews %>
+
+	<!-- Neue News bearbeiten -->
+	<% response.editNews %>
+
+	<!-- Alle News auflisten -->
+	<% response.listNews %>
+
+</div>
