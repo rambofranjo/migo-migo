@@ -791,3 +791,74 @@ Full trace: org.mozilla.javascript.EcmaError: ReferenceError: "StringBuilder" is
 	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
 	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
 	at java.lang.Thread.run(Thread.java:680)
+[2012/07/13 19:35:08] [INFO] [migo-4] Closing DB connection: com.mysql.jdbc.Connection@3b517b79
+[2012/07/13 21:00:08] [ERROR] [migo-5] GET:groupAppointment helma.scripting.ScriptingException: ReferenceError: "allAppointments" is not defined. (/Users/markovicb/Documents/development/migo/apps/migo/Root/groupFunctions.js#38)
+helma.scripting.ScriptingException: ReferenceError: "allAppointments" is not defined. (/Users/markovicb/Documents/development/migo/apps/migo/Root/groupFunctions.js#38)
+	at /Users/markovicb/Documents/development/migo/apps/migo/Root/groupFunctions.js:38
+	at /Users/markovicb/Documents/development/migo/apps/migo/Root/groupAppointment.js:34
+Full trace: org.mozilla.javascript.EcmaError: ReferenceError: "allAppointments" is not defined. (/Users/markovicb/Documents/development/migo/apps/migo/Root/groupFunctions.js#38)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3717)
+	at org.mozilla.javascript.ScriptRuntime.name(ScriptRuntime.java:1692)
+	at org.mozilla.javascript.gen.c1741._c3(/Users/markovicb/Documents/development/migo/apps/migo/Root/groupFunctions.js:38)
+	at org.mozilla.javascript.gen.c1741.call(/Users/markovicb/Documents/development/migo/apps/migo/Root/groupFunctions.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:66)
+	at org.mozilla.javascript.gen.c1739._c1(/Users/markovicb/Documents/development/migo/apps/migo/Root/groupAppointment.js:34)
+	at org.mozilla.javascript.gen.c1739.call(/Users/markovicb/Documents/development/migo/apps/migo/Root/groupAppointment.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c1739.call(/Users/markovicb/Documents/development/migo/apps/migo/Root/groupAppointment.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/07/13 21:01:01] [INFO] [migo-5] Function onLogout not defined for [object Person]
+[2012/07/13 21:17:50] [INFO] [migo-5] Function onStop not defined in global scope
+[2012/07/13 21:17:50] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:18:15] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:18:15] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 21:18:15] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/07/13 21:19:54] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/07/13 21:19:54] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:19:54] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@1594df96
+[2012/07/13 21:27:18] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:27:18] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 21:27:18] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/07/13 21:27:50] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/07/13 21:27:50] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:32:31] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:32:31] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 21:32:31] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/07/13 21:34:14] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/07/13 21:34:14] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:34:36] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:34:36] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 21:34:36] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/07/13 21:35:17] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/07/13 21:35:17] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:35:17] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@391da0
+[2012/07/13 21:36:37] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:36:37] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 21:36:37] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/07/13 21:37:38] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/07/13 21:37:38] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:37:38] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@11afd9cc
+[2012/07/13 21:39:14] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:39:14] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 21:39:14] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/07/13 21:39:30] [INFO] [1277810267@qtp-1384763166-2] Starting engine 2 for migo
+[2012/07/13 21:48:10] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/07/13 21:48:10] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:48:10] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@24fe2558
+[2012/07/13 21:53:42] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:53:42] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 21:53:42] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/07/13 21:59:54] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/07/13 21:59:54] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/07/13 21:59:54] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@6a8ef455
+[2012/07/13 22:16:43] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 22:16:43] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/07/13 22:16:43] [INFO] [migo-1] Function onStart not defined in global scope

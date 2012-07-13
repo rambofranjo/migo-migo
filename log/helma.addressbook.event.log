@@ -3,3 +3,43 @@
 [2012/07/13 15:29:16] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
 [2012/07/13 15:29:16] [INFO] [Thread-3] Starting engine 1 for addressbook
 [2012/07/13 15:29:16] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:17:50] [INFO] [addressbook-2] Function onStop not defined in global scope
+[2012/07/13 21:17:50] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 21:18:15] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:18:15] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 21:18:15] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:19:54] [INFO] [addressbook-1] Function onStop not defined in global scope
+[2012/07/13 21:19:54] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 21:27:18] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:27:18] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 21:27:18] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:27:50] [INFO] [addressbook-1] Function onStop not defined in global scope
+[2012/07/13 21:27:50] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 21:32:31] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:32:31] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 21:32:31] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:34:14] [INFO] [addressbook-1] Function onStop not defined in global scope
+[2012/07/13 21:34:14] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 21:34:36] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:34:36] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 21:34:37] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:35:17] [INFO] [addressbook-1] Function onStop not defined in global scope
+[2012/07/13 21:35:17] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 21:36:37] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:36:37] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 21:36:37] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:37:38] [INFO] [addressbook-1] Function onStop not defined in global scope
+[2012/07/13 21:37:38] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 21:39:14] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:39:14] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 21:39:14] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:48:10] [INFO] [addressbook-1] Function onStop not defined in global scope
+[2012/07/13 21:48:10] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 21:53:42] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 21:53:42] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 21:53:42] [INFO] [addressbook-1] Function onStart not defined in global scope
+[2012/07/13 21:59:54] [INFO] [addressbook-1] Function onStop not defined in global scope
+[2012/07/13 21:59:54] [INFO] [addressbook-worker] Scheduler for addressbook exiting
+[2012/07/13 22:16:43] [INFO] [addressbook-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 22:16:43] [INFO] [Thread-3] Starting engine 1 for addressbook
+[2012/07/13 22:16:43] [INFO] [addressbook-1] Function onStart not defined in global scope
