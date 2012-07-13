@@ -49,6 +49,42 @@
 
 		    	$('#calendar').fullCalendar({
 		        	// put your options and callbacks here
+		    	
+		    	header: {
+                 left: 'today',
+                 center: 'prev,title,next',
+                 right: 'month,agendaWeek,agendaDay'
+             	},
+             	
+             	dayClick: function(date, allDay, jsEvent, view) {
+
+        			if (allDay) {
+            			alert('Clicked on the entire day: ' + date);
+        			}else{
+          				alert('Clicked on the slot: ' + date);
+        			}
+        		
+        		}, 
+        		
+        			events: [
+        			
+        			<% response.calevents %>
+        			//{ title: 'Training', start: 'Jul 14 2012 12:30:00', end: 'Jul 14 2012 16:30:00', allDay: false, editable: false },
+        			//{ title: 'Spiel', start: 'Jul 18 2012 12:30:00', end: 'Jul 18 2012 16:30:00', allDay: false, editable: false }
+        			
+        			// other events here
+        			
+    				],
+    			
+    				eventClick: function(calEvent, jsEvent, view) {
+        				alert('Event: ' + calEvent.title);
+        				alert('start: ' + calEvent.start);
+        				alert('end: ' + calEvent.end);
+   					}
+		    	
+ 
+    			
+		        	
 		    	})
 
 			});
@@ -140,7 +176,7 @@
 			<!-- Calendar -->
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Kalender anzeigen -->
-			<!--<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div> -->
+			<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div>
 		
 		
 			<!-- +++++++++++++++++++++++ -->

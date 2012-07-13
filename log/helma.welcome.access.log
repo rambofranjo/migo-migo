@@ -1,3 +1,9 @@
-[2012/06/02 16:27:15] [INFO] [welcome-2] GET:xamp done in 172 millis
-[2012/06/02 16:27:15] [INFO] [welcome-2] GET:scripts.js done in 194 millis
-[2012/06/02 16:27:15] [INFO] [welcome-1] GET:styles.css done in 26 millis
+[2012/07/13 15:06:17] [INFO] [welcome-3] GET:/ done in 115 millis
+[2012/07/13 15:06:17] [INFO] [welcome-3] GET:scripts.js done in 139 millis
+[2012/07/13 15:06:17] [INFO] [welcome-1] GET:styles.css done in 138 millis
+[2012/07/13 15:06:21] [INFO] [welcome-1] GET:xampp done in 9 millis
+[2012/07/13 15:06:21] [INFO] [welcome-1] GET:scripts.js done in 1 millis
+[2012/07/13 15:06:21] [INFO] [welcome-1] GET:styles.css done in 1 millis
+[2012/07/13 15:27:50] [INFO] [welcome-2] GET:favicon.ico done in 64 millis
+[2012/07/13 15:27:52] [INFO] [welcome-2] GET:favicon.ico done in 1 millis
+[2012/07/13 15:29:16] [INFO] [welcome-1] INTERNAL:onStart done in 97 millis

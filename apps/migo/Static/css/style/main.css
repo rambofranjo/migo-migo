@@ -291,6 +291,9 @@ body {
 	color:#777777;
 }
 
+#calendar {
+	background-color: #FFFFFF; 
+}
 
 /* ----------------------------------------- */
 .logged-in-box p {

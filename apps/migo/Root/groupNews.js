@@ -151,7 +151,7 @@ function getMonthName (id) {
 			month = "Juni";
 		    break;
 		case "6":
-			month = "Juli";
+			month = "Jul";
 			break;
 		case "7":
 			month = "August";

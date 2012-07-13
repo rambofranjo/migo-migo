@@ -85,7 +85,11 @@ function renderGruppe (mode) {
 			res.data.allNews = renderSkinAsString("allNews");
 			break;
 		case "calendar":
+			// take all group-events and show it in calendar 
 			res.data.calendar = "calendar";
+			res.data.calevents = root.getAllEvents(session.data.grpId);
+			
+			
 			break;
 		case "messages":
 			//Alle Mitglieder der Gruppe auflisten
