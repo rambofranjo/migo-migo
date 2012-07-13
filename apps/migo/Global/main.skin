@@ -67,8 +67,9 @@
 					<div id="tabs-1"> 
 						<p><% response.login %></p>
 					</div>
-					
+					<div id="tabs-2">
 						<p><% response.register %></p>
+					</div>	
 					</div>
 				</div>
 				
