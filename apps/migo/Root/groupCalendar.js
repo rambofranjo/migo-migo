@@ -61,9 +61,9 @@ function getAllEvents(gId) {
 			start = root.termine.get(i).startzeit;
 			end = root.termine.get(i).endzeit;
 			
-			res.write(root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds()); 
-			res.write(root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + end.getHours() + ":" + end.getMinutes() + ":" + end.getSeconds());
-			res.write(root.termine.get(i).titel);
+			//res.write(root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds()); 
+			//res.write(root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + end.getHours() + ":" + end.getMinutes() + ":" + end.getSeconds());
+			//res.write(root.termine.get(i).titel);
 			
 			
 			

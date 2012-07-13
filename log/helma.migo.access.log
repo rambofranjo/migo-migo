@@ -320,3 +320,5 @@
 [2012/07/13 18:12:02] [INFO] [migo-4] GET:chooseGroup done in 13 millis
 [2012/07/13 18:12:03] [INFO] [migo-4] GET:groupNews done in 10 millis
 [2012/07/13 18:12:04] [INFO] [migo-4] GET:groupCalendar done in 7 millis
+[2012/07/13 18:14:35] [INFO] [migo-4] GET:groupCalendar done in 20 millis
+[2012/07/13 18:14:59] [INFO] [migo-4] GET:groupCalendar done in 6 millis
