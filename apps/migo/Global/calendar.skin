@@ -1,0 +1,5 @@
+title: <% response.title %>, 
+start: <% response.timeStart %>,
+end: <% response.timeEnd %>,
+allDay: false,
+editable: false

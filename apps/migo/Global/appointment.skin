@@ -1,0 +1,61 @@
+<!-- Start Appointment --> 
+<div id="appointment">
+	
+	<!-- Appointment Admin -->
+	<% response.aAction %>
+
+	<!-- Appointment Header -->
+	<div id="newsHeader" style="padding:10px; border:1px solid #DDD; background-color:#F5F5F5;margin-bottom:10px;" >
+		
+		<!-- Avatar -->
+		<div id="Avatar" style="float:left;">
+			<% response.aAvatar %>
+		</div>
+		
+		<!-- Author -->
+		<div id="author" style="float:left; margin-right:5px;">
+			<% response.aAuthor %>
+		</div>
+		
+		<!-- Date -->
+		<div id="date" style="float:left; margin-right:5px;">
+			<% response.aDate %>
+		</div>
+		
+		<!-- TimeStart -->
+		<div id="time" style="float:left; margin-right:5px;">
+			<% response.aTimeStart %>
+		</div>
+		
+		<!-- TimeEnd -->
+		<div id="time" style="float:left; margin-right:5px;">
+			<% response.aTimeEnd %>
+		</div>
+		
+		<!-- Tag -->
+		<div id="tag" style="float:left; margin-right:5px;">
+			<% response.aTag %>
+		</div>
+		
+		<!-- Title -->
+		<div id="title" style="float:left; clear:left; margin-right:5px;">
+			<strong><% response.aTitle %></strong>
+		</div>
+		
+		<!-- Ort -->
+		<div id="newsText" style="float:left; clear:left; margin-right:5px;">
+			<% response.aPlace %>
+		</div>
+		
+		<!-- Text -->
+		<div id="newsText" style="float:left; clear:left; margin-right:5px;">
+			<% response.aText %>
+		</div>
+		
+		<div style="clear:left;"></div>
+	
+	</div>
+
+	
+
+</div>

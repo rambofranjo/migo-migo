@@ -621,3 +621,13 @@
 [2012/07/13 21:59:01] [INFO] [manage-1] INTERNAL:scheduler done in 1 millis
 [2012/07/13 22:16:43] [INFO] [manage-1] INTERNAL:onStart done in 45 millis
 [2012/07/13 22:17:01] [INFO] [manage-1] INTERNAL:scheduler done in 26 millis
+[2012/07/13 23:11:02] [INFO] [manage-1] INTERNAL:onStart done in 55 millis
+[2012/07/13 23:12:01] [INFO] [manage-1] INTERNAL:scheduler done in 24 millis
+[2012/07/13 23:13:00] [INFO] [manage-1] INTERNAL:scheduler done in 0 millis
+[2012/07/13 23:37:38] [INFO] [manage-1] INTERNAL:onStart done in 53 millis
+[2012/07/13 23:38:01] [INFO] [manage-1] INTERNAL:scheduler done in 145 millis
+[2012/07/13 23:39:01] [INFO] [manage-1] INTERNAL:scheduler done in 1 millis
+[2012/07/13 23:40:01] [INFO] [manage-1] INTERNAL:scheduler done in 0 millis
+[2012/07/13 23:41:01] [INFO] [manage-1] INTERNAL:scheduler done in 1 millis
+[2012/07/13 23:42:01] [INFO] [manage-1] INTERNAL:scheduler done in 0 millis
+[2012/07/13 23:43:01] [INFO] [manage-1] INTERNAL:scheduler done in 0 millis

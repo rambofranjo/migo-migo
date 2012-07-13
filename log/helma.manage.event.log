@@ -34,3 +34,9 @@
 [2012/07/13 21:59:54] [INFO] [manage-worker] Scheduler for manage exiting
 [2012/07/13 22:16:43] [INFO] [manage-init] Using session manager class helma.framework.core.SessionManager
 [2012/07/13 22:16:43] [INFO] [Thread-3] Starting engine 1 for manage
+[2012/07/13 23:11:02] [INFO] [manage-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 23:11:02] [INFO] [Thread-3] Starting engine 1 for manage
+[2012/07/13 23:13:26] [INFO] [manage-1] Function onStop not defined in global scope
+[2012/07/13 23:13:26] [INFO] [manage-worker] Scheduler for manage exiting
+[2012/07/13 23:37:38] [INFO] [manage-init] Using session manager class helma.framework.core.SessionManager
+[2012/07/13 23:37:38] [INFO] [Thread-3] Starting engine 1 for manage

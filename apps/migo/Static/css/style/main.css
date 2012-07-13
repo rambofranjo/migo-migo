@@ -502,10 +502,10 @@ a:hover {color:#666;}
 
 
 #allNews,
-#allMessages {
+#allMessages,
+#allAppointments {
 	float:left;
 	width:629px;
-	background-color:#FFFFFF;
 	color:#222222;
 	background-color:#F5F5F5;
 	padding-bottom:20px;
@@ -521,14 +521,16 @@ a:hover {color:#666;}
 }
 
 .newNewsLink,
-.newMessageLink {
+.newMessageLink, 
+.newAppointmentLink {
 	width:589px;
 	padding:20px 20px 0 20px;
 	border-top:3px solid #C5E4F0;
 }
 
 #newNews,
-#newMessage {
+#newMessage,
+#newAppointment{
 	margin:-1px 20px 0px 20px;
 	padding:20px;
 	border:1px dashed #C5E4F0;
@@ -540,7 +542,8 @@ a:hover {color:#666;}
 	font-size:100%;
 }
 
-#news {
+#news,
+#appointment {
 	margin:20px 20px 0 20px;
 	border-top:2px solid #C5E4F0;
 	border-left:1px solid #E5E5E5;

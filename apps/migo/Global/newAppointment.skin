@@ -1,0 +1,52 @@
+<!-- <p><a onclick="showHideCommentsNews('newNews')">Neuen Newseintrag schreiben</a></p> -->
+<p><div class="newAppointmentLink"><input id="hideButton" class="btn-exp" onclick="showHideCommentsNews('newAppointment')" type="button" value="Neuen Termin anlegen" /></div></p>
+
+
+<div id ="newAppointment" style="display:<% response.dispAppointment %>">
+	
+	<div class='error'>
+		<% response.errorNewAppointment %>
+	</div>
+	
+	<form name="form" method="post" action="<% root.href action="newAppointment" %>">
+		<p>
+	    	<select name="titel" class="input" >
+  				<option value="Training" <% response.selectTraining %>  	 >  Training  </option>
+  				<option value="Spiel" <% response.selectSpiel %>      		 >  Spiel     </option>
+  				<option value="Sonstiges" <% response.selectSonstiges %> 	 >  Sonstiges </option>
+			</select>
+	    	
+	  	</p>
+	  	
+	  	<div class="demo">
+			<p>Date: <input type="text" name="datum" id="datepicker" "></p>
+		</div><!-- End demo -->
+		
+		<p>
+	  			<label for="time">Von</label>
+				<input type="Time" name="startzeit" id="time" class="input" value="<% response.startzeit %>">
+			
+			
+	  			<label for="time">Bis</label>
+				<input type="Time" name="endzeit" id="time" class="input" value="<% response.endzeit %>">
+			
+		</p>
+	  	
+	  	
+	  	<p>
+	    	<label for="ort">Ort</label>
+	    	<input type="text" name="ort" id="textfield" class="input" value="<% response.ort %>" />
+	  	</p>
+	  	
+	  	<p>
+	    	<label for="text">Text</label>
+	    	<textarea name="beschreibung" id="textarea" class="input" cols="45" rows="5"><% response.beschreibung %></textarea>
+	  	</p>
+	  	
+	  	
+	  	
+		<p>
+	    	<input type="submit" name="save" id="button" class="btn" value="Speichern" />
+	  	</p>
+	</form>
+</div>
