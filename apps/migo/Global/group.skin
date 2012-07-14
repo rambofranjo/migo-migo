@@ -172,14 +172,8 @@
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Appointments -->
 			<!-- +++++++++++++++++++++++ -->
-			<!-- Neue Appointment schreiben -->
-			<% response.newAppointment %>
+			<% response.allAppointments %>
 			
-			<!-- Neue Appointment bearbeiten -->
-			<% response.editAppointment %>
-			
-			<!-- Alle Appointments auflisten -->
-			<% response.listAppointments %>
 				
 		
 			<!-- +++++++++++++++++++++++ -->

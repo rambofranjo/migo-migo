@@ -35,8 +35,8 @@ function renderGruppe (mode) {
 			//alle Appointments auflisten
 			res.data.listAppointments = root.getAllAppointments(session.data.grpId);
 			
+			// appointments rendern
 			res.data.allAppointments = renderSkinAsString("allAppointments");
-			
 			break;
 			
 		case "appointmentError": 

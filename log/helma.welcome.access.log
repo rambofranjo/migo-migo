@@ -3,3 +3,5 @@
 [2012/07/14 00:01:54] [INFO] [welcome-1] GET:styles.css done in 1 millis
 [2012/07/14 00:06:34] [INFO] [welcome-1] INTERNAL:onStart done in 48 millis
 [2012/07/14 00:10:52] [INFO] [welcome-1] INTERNAL:onStart done in 104 millis
+[2012/07/14 12:45:43] [INFO] [welcome-2] GET:favicon.ico done in 89 millis
+[2012/07/14 12:45:43] [INFO] [welcome-2] GET:favicon.ico done in 1 millis

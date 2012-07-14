@@ -58,9 +58,9 @@ function newAppointment_action() {
 			newAppointment.ort = ort;
 			newAppointment.gruppeID = session.data.grpId;
 			newAppointment.personID = session.user._id;
-			root.termine.add(newAppointment);
+			root.termine.add(newAppointment); // in db schreiben
 			
-			res.redirect(root.href("newAppointment") + "?groupId=" + session.data.grpId);
+			res.redirect(root.href("groupAppointment") + "?groupId=" + session.data.grpId);
 		} else {	
 			res.data.errorNewAppointment = "Fehler: " + error;
 			

@@ -501,9 +501,9 @@ a:hover {color:#666;}
 }
 
 
+#allAppointments,
 #allNews,
-#allMessages,
-#allAppointments {
+#allMessages {
 	float:left;
 	width:629px;
 	color:#222222;
