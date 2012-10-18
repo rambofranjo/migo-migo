@@ -1,54 +1,14 @@
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopping application addressbook
-[2012/07/14 00:03:42] [INFO] [Thread-4] Unbinding application addressbook
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopped application addressbook
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopping application manage
-[2012/07/14 00:03:42] [INFO] [Thread-4] Unbinding application manage
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopped application manage
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopping application migo
-[2012/07/14 00:03:42] [INFO] [Thread-4] Unbinding application migo
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopped application migo
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopping application welcome
-[2012/07/14 00:03:42] [INFO] [Thread-4] Unbinding application welcome
-[2012/07/14 00:03:42] [INFO] [Thread-4] Stopped application welcome
-[2012/07/14 00:03:42] [INFO] [Thread-4] Shutting down Helma
-[2012/07/14 00:06:34] [INFO] [main] Starting Helma 1.7.0 (February 5 2010) on Java 1.6.0_31
-[2012/07/14 00:06:34] [INFO] [main] Setting Helma Home to /Users/markovicb/Documents/development/migo
-[2012/07/14 00:06:34] [INFO] [Thread-3] Building application welcome
-[2012/07/14 00:06:34] [INFO] [Thread-3] Building application manage
-[2012/07/14 00:06:34] [INFO] [Thread-3] Building application migo
-[2012/07/14 00:06:35] [INFO] [Thread-3] Building application addressbook
-[2012/07/14 00:06:35] [INFO] [Thread-3] Binding application addressbook :: 1010485566 :: 1421876889
-[2012/07/14 00:06:35] [INFO] [Thread-3] Binding application manage :: 2102860018 :: 1277304478
-[2012/07/14 00:06:35] [INFO] [Thread-3] Binding application migo :: 1537767228 :: 1159656515
-[2012/07/14 00:06:35] [INFO] [Thread-3] Serving static from /Users/markovicb/Documents/development/migo/apps/migo/static
-[2012/07/14 00:06:35] [INFO] [Thread-3] Mounting static at /static
-[2012/07/14 00:06:35] [INFO] [Thread-3] Binding application welcome :: 1640499969 :: 462947888
-[2012/07/14 00:06:35] [INFO] [Thread-3] Serving static from /Users/markovicb/Documents/development/migo/apps/welcome/static
-[2012/07/14 00:06:35] [INFO] [Thread-3] Mounting static at /static
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopping application addressbook
-[2012/07/14 00:10:36] [INFO] [Thread-4] Unbinding application addressbook
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopped application addressbook
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopping application manage
-[2012/07/14 00:10:36] [INFO] [Thread-4] Unbinding application manage
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopped application manage
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopping application migo
-[2012/07/14 00:10:36] [INFO] [Thread-4] Unbinding application migo
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopped application migo
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopping application welcome
-[2012/07/14 00:10:36] [INFO] [Thread-4] Unbinding application welcome
-[2012/07/14 00:10:36] [INFO] [Thread-4] Stopped application welcome
-[2012/07/14 00:10:36] [INFO] [Thread-4] Shutting down Helma
-[2012/07/14 00:10:52] [INFO] [main] Starting Helma 1.7.0 (February 5 2010) on Java 1.6.0_31
-[2012/07/14 00:10:52] [INFO] [main] Setting Helma Home to /Users/markovicb/Documents/development/migo
-[2012/07/14 00:10:52] [INFO] [Thread-3] Building application welcome
-[2012/07/14 00:10:52] [INFO] [Thread-3] Building application manage
-[2012/07/14 00:10:52] [INFO] [Thread-3] Building application migo
-[2012/07/14 00:10:52] [INFO] [Thread-3] Building application addressbook
-[2012/07/14 00:10:52] [INFO] [Thread-3] Binding application addressbook :: 2096109425 :: 703601193
-[2012/07/14 00:10:53] [INFO] [Thread-3] Binding application manage :: 1411507540 :: 875010279
-[2012/07/14 00:10:53] [INFO] [Thread-3] Binding application migo :: 678984726 :: 1409826334
-[2012/07/14 00:10:53] [INFO] [Thread-3] Serving static from /Users/markovicb/Documents/development/migo/apps/migo/static
-[2012/07/14 00:10:53] [INFO] [Thread-3] Mounting static at /static
-[2012/07/14 00:10:53] [INFO] [Thread-3] Binding application welcome :: 1368348708 :: 1454169346
-[2012/07/14 00:10:53] [INFO] [Thread-3] Serving static from /Users/markovicb/Documents/development/migo/apps/welcome/static
-[2012/07/14 00:10:53] [INFO] [Thread-3] Mounting static at /static
+[2012/10/18 12:32:49] [INFO] [main] Starting Helma 1.7.0 (February 5 2010) on Java 1.6.0_35
+[2012/10/18 12:32:49] [INFO] [main] Setting Helma Home to /Users/markovicb/Documents/development/migo
+[2012/10/18 12:32:49] [INFO] [Thread-3] Building application welcome
+[2012/10/18 12:32:51] [INFO] [Thread-3] Building application manage
+[2012/10/18 12:32:51] [INFO] [Thread-3] Building application migo
+[2012/10/18 12:32:51] [INFO] [Thread-3] Building application addressbook
+[2012/10/18 12:32:51] [INFO] [Thread-3] Binding application addressbook :: 454514340 :: 1505888432
+[2012/10/18 12:32:51] [INFO] [Thread-3] Binding application manage :: 975740206 :: 1860295362
+[2012/10/18 12:32:51] [INFO] [Thread-3] Binding application migo :: 1228197450 :: 457564885
+[2012/10/18 12:32:51] [INFO] [Thread-3] Serving static from /Users/markovicb/Documents/development/migo/apps/migo/static
+[2012/10/18 12:32:51] [INFO] [Thread-3] Mounting static at /static
+[2012/10/18 12:32:51] [INFO] [Thread-3] Binding application welcome :: 434359633 :: 1553324600
+[2012/10/18 12:32:51] [INFO] [Thread-3] Serving static from /Users/markovicb/Documents/development/migo/apps/welcome/static
+[2012/10/18 12:32:51] [INFO] [Thread-3] Mounting static at /static

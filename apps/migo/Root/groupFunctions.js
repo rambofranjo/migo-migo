@@ -90,7 +90,14 @@ function renderGruppe (mode) {
 			// take all group-events and show it in calendar 
 			res.data.calendar = "calendar";
 			res.data.calevents = root.getAllEvents(session.data.grpId);
+			res.data.hidebutton = "'hidden'";
 			
+			// get date and time of selected area
+			res.data.caldatetime = root.getDateTime(session.data.grpId);
+			
+			
+			// render dialog box
+			res.data.calinfo = renderSkinAsString("newAppointmentCal");
 			
 			break;
 		case "messages":

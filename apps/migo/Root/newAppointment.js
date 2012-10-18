@@ -1,13 +1,32 @@
 function newAppointment_action() {
 	
 	if ((session.user != null) && (req.data.save)) {
+	
+		var newAppointmentArray = new Array();
 		
 		//res.writeln(session.user._id);
+		
+		
+		var datumstart = new Date(req.data.datumstart);
+		var datumend = new Date(req.data.datumend);
+
+		/************* zeitraum ***************/
+		var startmonth = datumstart.getMonth() + 1;
+		var startday = datumstart.getDate();
+		var startyear = datumstart.getFullYear();
+		
+		var endmonth = datumend.getMonth() + 1;
+		var endday = datumend.getDate();
+		var endyear = datumend.getFullYear();
+		/***************************************/
+		
+		var repeat = req.data.repeat;  // selected repeating value 
+		
 		
 		var error = "";
 		
 		var titel = req.data.titel;
-		var datum = req.data.datum;
+		//var datum = req.data.datum;
 		var startzeit = req.data.startzeit;
 		var endzeit = req.data.endzeit;
 		var ort = req.data.ort;
@@ -22,7 +41,14 @@ function newAppointment_action() {
 		time1 = startzeit.toString().split(":");
 		time2 = endzeit.toString().split(":");
 		
-		//res.writeln("datum: " + datum);
+		res.writeln("month: " + startmonth);
+		res.writeln("day: " + startday);    // returns day of the month
+		res.writeln("year: " + startyear);
+		
+		res.writeln("datumend: " + datumend);
+		
+		res.writeln("days in month: " + this.daysInMonth(7, 2012));
+		
 		//res.write(time2);
 		
 		re = /^\d{1,2}:\d{2}([ap]m)?$/;
@@ -33,11 +59,30 @@ function newAppointment_action() {
 		if (ort == "") {
 			error = "Terminort muss angegeben werden!";
 		} 
-		if (datum == "") {
+		if (datumstart == "" || datumend == "") {
 			error = "Bitte Datum eingeben!"; 
 		}
 		
-		if (startzeit.match(re) && endzeit.match(re) && (ort != "") && datum != "") {
+		if(datumstart != datumend) {
+			// newAppointmentArray
+			if(repeat == "w" && startyear <= endyear) {  // repeat every week
+				// date format: month/day/year
+				if(startyear == endyear) {
+				
+				}
+				
+				
+				
+				
+				
+			} error = "Fehler Termineingabe!";
+			
+		}
+		
+		
+		/*
+		
+		if (startzeit.match(re) && endzeit.match(re) && (ort != "") && datumstart != "") {
 			
 			
 			
@@ -79,7 +124,15 @@ function newAppointment_action() {
 			root.renderGruppe("appointmentError");
 		}
 		
+		*/
+		
 	} else {
 		res.redirect(root.href(""));
 	}
+	
 }
+
+function daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+}
+                  

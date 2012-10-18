@@ -205,6 +205,19 @@ body {
     outline: medium none;
     padding: 4px;
 	width:165px;
+} 
+
+.input_t {
+	height:13px;
+	box-shadow: 0 1px 0 #EEEEEE inset, 0 1px 0 #FFFFFF;
+	background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    margin: 0;
+    outline: medium none;
+    padding: 4px;
+	width:165px;
 }
 
 .btn {
@@ -268,6 +281,8 @@ body {
 	font-size:small;
 }
 
+
+
 #content_box {
 	background-color: #FFFFFF;
     border-radius: 6px 6px 6px 6px;
@@ -293,6 +308,10 @@ body {
 
 #calendar {
 	background-color: #FFFFFF; 
+}
+
+.calendar-dialog {
+	font-size:small;
 }
 
 /* ----------------------------------------- */
@@ -452,6 +471,7 @@ p {font-size:small}
 	font-size:14px;
 }
 
+
 a {color:#222222;}
 a:hover {color:#666;}
 
@@ -500,7 +520,6 @@ a:hover {color:#666;}
 	text-decoration:none;
 }
 
-
 #allAppointments,
 #allNews,
 #allMessages {
@@ -530,7 +549,7 @@ a:hover {color:#666;}
 
 #newNews,
 #newMessage,
-#newAppointment{
+#newAppointment {
 	margin:-1px 20px 0px 20px;
 	padding:20px;
 	border:1px dashed #C5E4F0;
@@ -541,6 +560,8 @@ a:hover {color:#666;}
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:100%;
 }
+
+
 
 #news,
 #appointment {
@@ -637,6 +658,15 @@ a:hover {color:#666;}
 #commentsHeader #cAction {
 	float:left;
 	margin-right:5px;
+}
+
+#textareaCal {
+	width:155px; 
+	height:100px;
+	resize:none;
+	font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+	padding:10px;
 }
 
 #textareaDb {

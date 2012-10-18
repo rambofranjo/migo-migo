@@ -40,6 +40,16 @@ function groupCalendar_action () {
 	}
 }
 
+
+function getDateTime(gId) {
+	
+	//var datetimeinfo = 
+
+
+}
+
+
+
 function getAllEvents(gId) {
 	var calevents = "";
 	var date = new Date();

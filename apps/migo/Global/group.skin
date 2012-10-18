@@ -10,6 +10,7 @@
 		<meta name="description" content="Management Interface of Game Organization" />
      	<meta name="language" content="de" />
 		<meta name="robots" content="index, follow" />
+		<meta charset="utf-8">
     	
 		<!-- CSS -->
 		<link rel="stylesheet" href="/static/css/fullcalendar.css" type="text/css" />
@@ -28,13 +29,42 @@
 		</script>
 		
 		<script>
-		
-		
 			$(function() {
-				$( "#datepicker" ).datepicker({
+			 	document.getElementById('hideButton').style.visibility= <% response.hidebutton %>; // hide 
+			});
+		</script>
+		
+		
+		<script>
+			$(function() {
+				$( "#appointmentdate" ).datepicker({
                     altField: "#datePicked",
 					altFormat: "DD, d MM, yy"	
 				});
+			});
+		</script>
+	
+	
+	
+	
+		<script>
+			$(function() {
+				$( "#from" ).datepicker({
+                    altField: "#datePicked",
+					altFormat: "DD, d MM, yy"	
+				});
+				$( "#to" ).datepicker({
+                    altField: "#datePicked",
+					altFormat: "DD, d MM, yy"	
+				});
+			});
+		</script>
+		
+		<script>
+			$(function() {
+				$( "#radio" ).buttonset();
+				$( "#check" ).button();
+				$( "#format" ).buttonset();
 			});
 		</script>
 		
@@ -58,20 +88,46 @@
 		    	$('#calendar').fullCalendar({
 		        	// put your options and callbacks here
 		    	
+		    	
 		    	header: {
                  left: 'today',
                  center: 'prev,title,next',
                  right: 'month,agendaWeek,agendaDay'
              	},
              	
-             	dayClick: function(date, allDay, jsEvent, view) {
-
-        			if (allDay) {
-            			alert('Clicked on the entire day: ' + date);
-        			}else{
-          				alert('Clicked on the slot: ' + date);
-        			}
-        		
+             	selectable: true,
+				selectHelper: true,
+				
+             	select: function selectedarea(startDate, endDate, allDay, jsEvent, view) {
+             				
+             				
+             				//res.data.dstart = startDate;
+             				
+             				// get startdate and enddate 
+             				//alert("Event Start date" + startDate);
+				            //alert("Event End date" + endDate);
+             	
+             	
+							// var calendars = getAjaxData('calendar/calendarsJson');
+             				
+             				
+             				//var dd = $('#calendar').fullCalendar('getDate');
+             				
+      			 			$("#start_time").text(startDate);
+      			 	
+      						$('#myDialog').load(event.startDate).dialog(
+      							
+      						
+      							{ 
+      							title: 'Neuen Termin anlegen',
+      							width: 300,
+          						height:500
+        						}
+        					);
+        					
+        					
+        					return startDate;
+      
         		}, 
         		
         			events: [
@@ -83,19 +139,28 @@
         			// other events here
         			
     				],
+    				
     			
     				eventClick: function(calEvent, jsEvent, view) {
-    					window.scrollTo(0,0);  
-         				var sd = Date.parse(calEvent.start);  
-         				var ed = Date.parse(calEvent.end);  
-        				 $("#dialog-message").html("CALLS IFRAME");  
-        				 $("#dialog-message").dialog('open');
+    				
+    				
+    					$('#myDialog').load().dialog(
+      							{
+      							width: 300,
+          						height:500
+        						}
+        					);
+        					
+        					return false;
+        					
+    				
    					}
-		    	
  
     			
 		        	
 		    	})
+             	
+             	
 
 			});
 		</script>
@@ -174,7 +239,8 @@
 			<!-- +++++++++++++++++++++++ -->
 			<% response.allAppointments %>
 			
-				
+			
+			<input type="text" name="selectedarea" hidden="true" value = '123'>
 		
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Calendar -->
@@ -219,6 +285,9 @@
 		</div>
 		
 	</div>
+	
+	<div id="myDialog" hidden="true"><% response.calinfo %></div>
+	
 	
 </body>
 </html>

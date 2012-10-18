@@ -1,7 +1,4 @@
-[2012/07/14 00:01:54] [INFO] [welcome-1] GET:apache done in 3 millis
-[2012/07/14 00:01:54] [INFO] [welcome-1] GET:scripts.js done in 3 millis
-[2012/07/14 00:01:54] [INFO] [welcome-1] GET:styles.css done in 1 millis
-[2012/07/14 00:06:34] [INFO] [welcome-1] INTERNAL:onStart done in 48 millis
-[2012/07/14 00:10:52] [INFO] [welcome-1] INTERNAL:onStart done in 104 millis
-[2012/07/14 12:45:43] [INFO] [welcome-2] GET:favicon.ico done in 89 millis
-[2012/07/14 12:45:43] [INFO] [welcome-2] GET:favicon.ico done in 1 millis
+[2012/10/18 12:32:51] [INFO] [welcome-1] INTERNAL:onStart done in 184 millis
+[2012/10/18 12:36:20] [INFO] [welcome-1] GET:favicon.ico done in 1637 millis
+[2012/10/18 12:44:41] [INFO] [welcome-1] GET:favicon.ico done in 59 millis
+[2012/10/18 12:44:41] [INFO] [welcome-1] GET:favicon.ico done in 3 millis
