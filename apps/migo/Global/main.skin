@@ -21,6 +21,7 @@
 			$(document).ready(function() {
 			    $("#tabs").tabs({ selected: 0 });
 			});
+			
 		</script>
 </head>
 
@@ -33,14 +34,14 @@
 			
 			<div id="header_top">
 				<div id="header_top_content">
-					<p class="right">
+					<p class="right" style="margin-top:10px">
 						<a href="#">Kundenbereich</a>
 						<span style="color:#FFF">|</span>
 						<a href="#">Service &amp; Support</a>
 					</p>
 					
 						<p class="left">
-							<strong style="font-size:16px">Migo + Logo</strong>
+							<img src="/static/images/migo.png" width="60">
 						</p>
 				</div>
 			</div>

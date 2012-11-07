@@ -7,6 +7,8 @@ function editGroup_action() {
 		//Save button gedrückt
 		if (req.data.save) {
 			
+			this.uploadDirectory = "/images";
+			
 			//Formulardaten holen
 			var grpName = req.data.grpName;
 			var grpSports = req.data.grpSports;
@@ -14,17 +16,38 @@ function editGroup_action() {
 			var grpLogo = req.data.grpLogo;
 			if (req.data.grpVisible) var grpVisible = true;
 			else var grpVisible = false;
+			var status = session.getUploadStatus(req.data.upload_id);
 					
 			//Überprüfungen
-			if (grpName != "") {
+			if ((grpName != "") && (grpColor != "")) {
+				
+				if (grpLogo.getName() != "") {
+					if (status && status.getCurrent() == status.getTotal()) {
+						var staticDir = new File(app.dir, "static");
+						var img = new Image(req.data.grpLogo.inputStream || req.data.logo.content);
+						
+						var w = img.getWidth(); 
+						var h = img.getHeight(); 
+						
+						if (w > 100) {
+							var factor = w/100;
+							img.resize(parseInt(100), parseInt(h / factor)); 
+						}
+						
+						img.saveAs(staticDir + "/uploads/" + grpLogo.getName());
+						image = "/static/uploads/" + grpLogo.getName();
+						group.logo = image;
+						img.dispose();
+					}
+				}
+				
 				group.name = grpName;
 				group.sportart = grpSports;
 				group.farbe = grpColor;
-				group.logo = grpLogo;
 				group.sichtbar = grpVisible;
 				
 				//Erfolgreich bearbeitet
-				res.data.infoEditGroup = "Gruppeninformationen erfolgreich aktualisiert!"
+				res.data.infoEditGroup = "<p class='success'>Gruppeninformationen erfolgreich aktualisiert!</p>"
 						
 				//Gruppeinformationen rendern
 				root.renderGruppe("group");
@@ -32,7 +55,7 @@ function editGroup_action() {
 				//Zurück zu Gruppe leiten
 				//res.redirect(root.href("groupGroup") + "?groupId=" + session.data.grpId);	
 			} else {
-				res.data.errorEditGroup = "Fehler aufgetreten!"
+				res.data.errorEditGroup = "<p class='error'>Fehler aufgetreten!</p>"
 				res.data.grpName = grpName;
 				res.data.grpSports = grpSports;
 				res.data.grpColor = grpColor;
@@ -40,7 +63,7 @@ function editGroup_action() {
 				res.data.grpVisible = grpVisible;
 						
 				//Gruppeninfos mit edit News rendern
-				root.renderGruppe("editNews");
+				root.renderGruppe("group");
 			}	
 		} else {
 			

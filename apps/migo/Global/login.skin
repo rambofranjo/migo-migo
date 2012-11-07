@@ -15,7 +15,11 @@
 	
 	<div class="cleft left" style="margin-top:15px">
 		<input type="submit" name="login" value="Login!" class="left btn">
-	</div> 
+	</div>
+	
+	<div style="float:left; margin:20px 0 0 80px">
+		<a id="inline" href="<% root.href action="f_register" %>"><img src="/static/images/fb.png" /></a>
+	</div>
 	
 	<p class="left cleft txt" style="margin-top:20px; font-size:11px">
 		Noch keine Account? Jetzt alle Felder im Registrieren Tab ausf&uuml;llen, und schon kannst du loslegen!

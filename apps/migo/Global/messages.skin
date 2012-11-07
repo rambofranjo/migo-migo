@@ -1,4 +1,16 @@
 <!-- Start Messages --> 
+
+<script type ="text/javascript">
+	$(function() {
+		var availableTags = [
+			<% response.names %>
+		];
+		$( ".names" ).autocomplete({
+			source: availableTags
+		});
+	});
+</script>
+
 <div id="messages">
 	<% response.tableMessages %>
 </div>

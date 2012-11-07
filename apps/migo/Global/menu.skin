@@ -6,7 +6,6 @@
 	
 	<ul>
 		<li><a href="groupNews?groupId=<% response.groupId %>">News</a></li>
-		<li><a href="groupAppointment?groupId=<% response.groupId %>">Termine</a></li>
 		<li><a href="groupCalendar?groupId=<% response.groupId %>">Kalender</a></li>
 		<li><a href="groupMessages?groupId=<% response.groupId %>">Nachrichten</a></li>
 		<li><a href="groupUsers?groupId=<% response.groupId %>">Mitglieder</a></li>

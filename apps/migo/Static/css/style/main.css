@@ -48,7 +48,7 @@ body {
 #header_top_content p {
 	font-size: 0.688em;
     margin: 0;
-    padding-top:11px;
+    padding-top:2px;
 }
 
 #content {
@@ -61,10 +61,9 @@ body {
 	bottom: 0;
     left: 0;
     max-height: 750px;
-	min-height:545px;
-    position: absolute;
+	min-height:515px;
+    position: relative;
     right: 0;
-    top: 35px;
 }
 
 #front-card {
@@ -75,7 +74,6 @@ body {
     width: 838px;
 	left: 50%;
 	vertical-align:baseline;
-   
 }
 
 .front-welcome {
@@ -126,10 +124,10 @@ body {
 }
 
 #footer {
-    bottom: 20px;
+	margin-top:20px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 11px;
-    position: absolute;
+    position: relative;
     text-align: center;
     width: 100%;
 }
@@ -258,15 +256,14 @@ body {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     color: #333333;
     cursor: pointer;
-    display: inline-block;
     font-size: 13px;
     font-weight: bold;
-	line-height:30px;
     overflow: visible;
     padding: 5px 10px;
     position: relative;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	text-decoration:none;
+	vertical-align:text-bottom;
 }
 
 .txt {
@@ -307,7 +304,15 @@ body {
 }
 
 #calendar {
-	background-color: #FFFFFF; 
+	background-color: #FFFFFF;
+	border-top: 3px solid #C5E4F0;
+	font-size:12px; 
+	width:589px;
+}
+
+.fc-header-title h2 {
+	padding:5px;
+	font-size:14px;
 }
 
 .calendar-dialog {
@@ -532,6 +537,7 @@ a:hover {color:#666;}
 }
 
 #dropbox {
+	width:177px;
 	float:right;
 	padding:20px 15px;
 	background-color:#C5E4F0;
@@ -755,4 +761,41 @@ a:hover {color:#666;}
 
 .messagesTable tr td a:hover {
 	text-decoration:underline;
+}
+
+#users {
+	float:left;
+	padding:20px;
+	font-size:12px;
+	min-height:300px;
+	width:589px;
+	border-top: 3px solid #C5E4F0;
+}
+
+
+#users table th {
+	padding:5px;
+	background-color:#CCCCCC;
+}
+
+#users table td {
+	background-color:#F5F5F5;
+	text-align:center;
+}
+
+#info {
+	border-top: 3px solid #C5E4F0;
+	width:589px;
+	padding:20px;
+	float:left;
+}
+
+p.success {
+	margin:20px 0;
+	color:#61A510;
+}
+
+p.error {
+	margin:20px 0;
+	color:#F00;
 }

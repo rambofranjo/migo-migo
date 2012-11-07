@@ -49,71 +49,34 @@ function getDateTime(gId) {
 }
 
 
-
 function getAllEvents(gId) {
+
 	var calevents = "";
-	var date = new Date();
-	var start = new Date();
-	var end = new Date();
-	
-	
-	var timeStart = "";
-	var timeEnd = "";
-	var title = "";
-	
-	
 	
 	for (var i = 0; i < root.termine.count(); i++) {
 		if (gId == root.termine.get(i).gruppeID) {
 		
-			date = root.termine.get(i).datum;
- 			
-			start = root.termine.get(i).startzeit;
-			end = root.termine.get(i).endzeit;
+			var id = root.termine.get(i)._id;
+			var title = root.termine.get(i).titel;
+			var beschreibung = root.termine.get(i).beschreibung;
+			var start = root.termine.get(i).datum_anfang.format("MMM dd yyyy", java.util.Locale.ENGLISH) + " " + root.termine.get(i).uhrzeit_anfang.format("H:mm:ss");
+			var end = root.termine.get(i).datum_ende.format("MMM dd yyyy", java.util.Locale.ENGLISH) + " " + root.termine.get(i).uhrzeit_ende.format("H:mm:ss");
+			var ort = root.termine.get(i).ort;
+			var notice = root.termine.get(i).beschreibung;
 			
-			//res.write(root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds()); 
-			//res.write(root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + end.getHours() + ":" + end.getMinutes() + ":" + end.getSeconds());
-			//res.write(root.termine.get(i).titel);
-			
-			
-			
-			timeStart = root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
-			timeEnd   = root.getMonthName(date.getMonth().toString()) + " " + date.getDate() + " " + date.getFullYear() + " " + end.getHours() + ":" + end.getMinutes() + ":" + end.getSeconds();
-			title = root.termine.get(i).titel;
-			
-			//calevents = "{ title: 'Training', start: 'Jul 14 2012 12:30:00', end: 'Jul 14 2012 16:30:00', allDay: false, editable: false }, { title: 'Spiel', start: 'Jul 18 2012 12:30:00', end: 'Jul 18 2012 16:30:00', allDay: false, editable: false }";
-			
-			//sb.append("{ title: '"+ title +"', start: '"+timeStart+"', end: '"+timeEnd+"', allDay: false, editable: false }");
-			//sb.append(",");
-			
-			calevents = calevents + "{ title: '"+ title +"', start: '"+timeStart+"', end: '"+timeEnd+"', allDay: false, editable: false } , ";
-			
-		
-			
-			/*
-			res.write("startzeit: " + date + " " + root.termine.get(i).startzeit + "\n");
-			res.write("endzeit: " + date + " " + root.termine.get(i).endzeit +"\n");
-			res.write("titel: " + root.termine.get(i).titel + "\n");
-			res.write("-------------------------------------------" + "\n");
-			*/
-			
-			
-			/*-- Appointment Header --*/
-			/*
-			res.data.aDate = date.getDate() + "." + root.getMonthName(date.getMonth().toString()) + "." + date.getFullYear();
-			res.data.aTimeStart = timeStart.getHours() + ":" + timeStart.getMinutes();
-			res.data.aTimeEnd = timeEnd.getHours() + ":" + timeEnd.getMinutes();
-			*/
-			
-			
-			//calevents += renderSkinAsString("calendar");
+			calevents += "{title: '"+title+"', start: '"+start+"', end: '"+end+"', allDay: false, editable: true, ort: '"+ort+"', notice: '"+notice+"', id: "+id+"}, ";
 		}
 	}
 	
 	return calevents;
-
 }
 
+
+function IsCalEditable (gId, uId) {
+
+	if (root.isUserInGroupAndAdmin(uId, gId)) return true;
+	else return false;
+}
 
 
 

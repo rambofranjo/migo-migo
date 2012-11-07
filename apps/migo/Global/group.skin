@@ -23,52 +23,9 @@
 		<script src="/static/scripts/jquery-ui-1.8.17.custom.min.js"></script>
 		
 		<script>
-			$(function() {
 				$('#dialog-message').dialog({modal: true});
-			}
 		</script>
-		
-		<script>
-			$(function() {
-			 	document.getElementById('hideButton').style.visibility= <% response.hidebutton %>; // hide 
-			});
-		</script>
-		
-		
-		<script>
-			$(function() {
-				$( "#appointmentdate" ).datepicker({
-                    altField: "#datePicked",
-					altFormat: "DD, d MM, yy"	
-				});
-			});
-		</script>
-	
-	
-	
-	
-		<script>
-			$(function() {
-				$( "#from" ).datepicker({
-                    altField: "#datePicked",
-					altFormat: "DD, d MM, yy"	
-				});
-				$( "#to" ).datepicker({
-                    altField: "#datePicked",
-					altFormat: "DD, d MM, yy"	
-				});
-			});
-		</script>
-		
-		<script>
-			$(function() {
-				$( "#radio" ).buttonset();
-				$( "#check" ).button();
-				$( "#format" ).buttonset();
-			});
-		</script>
-		
-		
+				
 		<script type="text/javascript">
 			function showHideCommentsNews(div) {
 				var d = '#' + div;
@@ -79,101 +36,6 @@
 					$(d).hide("normal");
 				}
 			}
-		</script>
-		
-		<script type="text/javascript">
-			$(document).ready(function() {
-		    	// page is now ready, initialize the calendar...
-
-		    	$('#calendar').fullCalendar({
-		        	// put your options and callbacks here
-		    	
-		    	
-		    	header: {
-                 left: 'today',
-                 center: 'prev,title,next',
-                 right: 'month,agendaWeek,agendaDay'
-             	},
-             	
-             	selectable: true,
-				selectHelper: true,
-				
-             	select: function selectedarea(startDate, endDate, allDay, jsEvent, view) {
-             				
-             				
-             				//res.data.dstart = startDate;
-             				
-             				// get startdate and enddate 
-             				//alert("Event Start date" + startDate);
-				            //alert("Event End date" + endDate);
-             	
-             	
-							// var calendars = getAjaxData('calendar/calendarsJson');
-             				
-             				
-             				//var dd = $('#calendar').fullCalendar('getDate');
-             				
-      			 			$("#start_time").text(startDate);
-      			 	
-      						$('#myDialog').load(event.startDate).dialog(
-      							
-      						
-      							{ 
-      							title: 'Neuen Termin anlegen',
-      							width: 300,
-          						height:500
-        						}
-        					);
-        					
-        					
-        					return startDate;
-      
-        		}, 
-        		
-        			events: [
-        			
-        			<% response.calevents %>
-        			//{ title: 'Training', start: 'Jul 14 2012 12:30:00', end: 'Jul 14 2012 16:30:00', allDay: false, editable: false },
-        			//{ title: 'Spiel', start: 'Jul 18 2012 12:30:00', end: 'Jul 18 2012 16:30:00', allDay: false, editable: false }
-        			
-        			// other events here
-        			
-    				],
-    				
-    			
-    				eventClick: function(calEvent, jsEvent, view) {
-    				
-    				
-    					$('#myDialog').load().dialog(
-      							{
-      							width: 300,
-          						height:500
-        						}
-        					);
-        					
-        					return false;
-        					
-    				
-   					}
- 
-    			
-		        	
-		    	})
-             	
-             	
-
-			});
-		</script>
-	
-		<script type ="text/javascript">
-			$(function() {
-				var availableTags = [
-					<% response.names %>
-				];
-				$( ".names" ).autocomplete({
-					source: availableTags
-				});
-			});
 		</script>
     
 </head>
@@ -186,14 +48,14 @@
 		<div id="header">
 			<div id="header_top">
 				<div id="header_top_content">
-					<p class="right">
+					<p class="right" style="margin-top:10px">
 						<a href="#">Kundenbereich</a>
 						<span style="color:#FFF">|</span>
 						<a href="#">Service &amp; Support</a>
 					</p>
-
+					
 						<p class="left">
-							<strong style="font-size:16px">Migo + Logo</strong>
+							<img src="/static/images/migo.png" width="60">
 						</p>
 				</div>
 			</div>	
@@ -212,8 +74,14 @@
 				</div>
 				
 				<div id="content_box_txt" style='margin-top:10px'>
-					<div class="left cleft" style='width:100%'>
-						<% response.groupName %>
+					<div class="left">
+						<% response.groupLogo %>
+					</div>
+					<div class="left" style="margin-left:10px">
+						<% response.groupName %><br />
+						<% response.groupArt %>
+					</div>
+					<div class="right">
 						<p style='float:right; margin:2px 5px 0 0'><% response.allGroups %></p>
 					</div>
 					<div class="clear"></div>
@@ -239,14 +107,12 @@
 			<!-- +++++++++++++++++++++++ -->
 			<% response.allAppointments %>
 			
-			
-			<input type="text" name="selectedarea" hidden="true" value = '123'>
 		
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Calendar -->
 			<!-- +++++++++++++++++++++++ -->
 			<!-- Kalender anzeigen -->
-			<div id="<% response.calendar %>" style="width:670px; margin-bottom:10px;"></div>
+			<% response.calendar %>
 		
 		
 			<!-- +++++++++++++++++++++++ -->
@@ -286,8 +152,9 @@
 		
 	</div>
 	
-	<div id="myDialog" hidden="true"><% response.calinfo %></div>
-	
-	
+	<div style="display:none">
+		<div id="myDialog"><% response.calinfo %></div>
+	</div>
+		
 </body>
 </html>

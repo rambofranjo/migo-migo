@@ -7,7 +7,7 @@
 </div>
 
 <div class="new-group-form">	
-	<form action="<% root.href action="newGroup" %>" method="POST"> 
+	<form action="<% root.href action="newGroup" %>?upload_id=12345" method="POST" enctype="multipart/form-data"> 
 
 		<label class="left">
 			<strong class="left">Name</strong>
@@ -23,6 +23,11 @@
 			<strong class="left" style="margin-top:50px">Farbe</strong>
 			<input id="color" name="farbe" class="left cleft" type="text" value="<% response.newGroupFarbe %>" style="width:100px">
 			<div id="colorpicker" style="width:195px; hight:195px; margin:20px 0px 0px 170px"></div>
+		</label>
+		
+		<label class="left cleft">
+			<strong class="left">Logo ausw&auml;hlen</strong>
+			<input class="left cleft" name="logo" type="file" size="30" maxlength="400000" accept="image/*">
 		</label>
 		
 		<input type="submit" name="newGroup" class="left cleft btn-exp" style="height:45px; margin-top:20px" value="Gruppe erstellen">

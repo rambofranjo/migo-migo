@@ -8,22 +8,42 @@ function newGroup_action() {
 		var farbe = "#123456"
 	
 		if (req.data.newGroup) {
+			
+			this.uploadDirectory = "/images";
 		
 			//Werte aus dem Formular holen
 			var name = req.data.name;
 			var sportart = req.data.sportart;
 			farbe = req.data.farbe;
-			var logo = req.data.logo; 
+			var logo = req.data.logo;
+			var status = session.getUploadStatus(req.data.upload_id);
 		
 			//Überprüfen
-			if ((root.gruppe.get(name) == null) && (name != "") && (sportart != "") && (farbe != "")) { 
+			if ((root.gruppe.get(name) == null) && (name != "") && (sportart != "") && (farbe != "") && (logo.getName() != "")) {
+				
+				if (status && status.getCurrent() == status.getTotal()) {
+					var staticDir = new File(app.dir, "static");
+					var img = new Image(req.data.logo.inputStream || req.data.logo.content);
+					
+					var w = img.getWidth(); 
+   					var h = img.getHeight(); 
+					
+					if (w > 100) {
+						var factor = w/100;
+						img.resize(parseInt(100), parseInt(h / factor)); 
+					}
+					
+					img.saveAs(staticDir + "/uploads/" + logo.getName());
+					image = "/static/uploads/" + logo.getName();
+					img.dispose();
+				}
 			
 				//Neue Gruppe erstellen
 				var grp = new Gruppe(); 
 				grp.name = name;
 				grp.sportart = sportart;
 				grp.farbe = farbe;
-				grp.logo = logo;
+				grp.logo = image;
 				grp.sichtbar = "1";	
 				root.gruppe.add(grp);
 				
@@ -39,7 +59,7 @@ function newGroup_action() {
 				//Zur Gruppenauswahl weiterleiten
 				//res.redirect(root.href("chooseGroup"));
 				
-				okmsg = "Ihre Gruppe wurde erfolgreich erstellt"
+				okmsg = "Ihre Gruppe wurde erfolgreich erstellt";
 				
 				
 			} else {

@@ -1,8 +1,133 @@
-/*
-title: <% response.title %>, 
-start: <% response.timeStart %>,
-end: <% response.timeEnd %>,
-allDay: false,
-editable: false 
+<!-- Kalendar -->
+<script type="text/javascript">
+	$(document).ready(function() {
+    	// page is now ready, initialize the calendar...
 
-*/
+    	$('#calendar').fullCalendar({
+        	
+			// put your options and callbacks here
+    		header: {
+             left: 'today',
+             center: 'prev,title,next',
+             right: 'month,agendaWeek,agendaDay'
+         	},
+     	
+         	selectable: <% response.calEditable %>,
+			selectHelper: true,
+			editable: <% response.calEditable %>,
+			disableDragging: true,
+			disableResizing: true,
+			<% response.calMonth %>
+			<% response.calYear %>
+		
+     		select: function selectedarea(startDate, endDate, allDay, jsEvent, view) {
+
+					var startdate = $.fullCalendar.formatDate(startDate, "dd-MM-yyyy");
+					var enddate = $.fullCalendar.formatDate(endDate, "dd-MM-yyyy");
+					var startzeit = $.fullCalendar.formatDate(startDate, "HH:mm");
+					var endzeit = $.fullCalendar.formatDate(endDate, "HH:mm");
+					var starttag = $.fullCalendar.formatDate(startDate, "dddd");
+					
+					starttag = getDay (starttag);
+					
+					$("#startDate").val(startdate);
+					$("#endDate").val(enddate);
+					$("#start_time").val(startzeit);
+					$("#end_time").val(endzeit);
+					$("#startTag").html(starttag);
+					$("#ort").val("");
+					$("#notiz").html("");
+					$("#termin_id").val("");
+					
+					$("#termin_wh").show();
+					$("#del").hide();
+					
+	
+					$("#myDialog").dialog({
+						title: 'Neuen Termin anlegen',
+						width: 310,
+						height: 475,
+						modal: true,
+						resizable: false
+					});
+				}, 
+		
+			events: [
+				<% response.calevents %>
+				// other events here
+			],
+		
+			eventClick: function(calEvent, jsEvent, view) {
+				
+				var titel = calEvent.title + " <% response.termin_title %>";
+				var startdate = $.fullCalendar.formatDate(calEvent.start, "dd-MM-yyyy");
+				var enddate = $.fullCalendar.formatDate(calEvent.end, "dd-MM-yyyy");
+				var startzeit = $.fullCalendar.formatDate(calEvent.start, "HH:mm");
+				var endzeit = $.fullCalendar.formatDate(calEvent.end, "HH:mm");
+				var starttag = $.fullCalendar.formatDate(calEvent.start, "dddd");
+				
+				starttag = getDay (starttag);
+
+				$("#startDate").val(startdate);
+				$("#endDate").val(enddate);
+				$("#start_time").val(startzeit);
+				$("#end_time").val(endzeit);
+				$("#startTag").html(starttag);
+				$("#ort").val(calEvent.ort);
+				$("#notiz").html(calEvent.notice);
+				$("#termin_id").val(calEvent.id);
+				
+				if (calEvent.title == "Training") $("#art").attr('selectedIndex', 0);
+				if (calEvent.title == "Spiel") $("#art").attr('selectedIndex', 1);
+				if (calEvent.title == "Sonstiges") $("#art").attr('selectedIndex', 2);
+				
+				$("#termin_wh").hide();
+				<% response.showDelBtn %>
+				
+				$('#myDialog').load().dialog({
+					title: titel,
+					width: 310,
+					height:445,
+					modal: true,
+					resizable: false
+				});
+				return false;
+			}
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	function getDay (tag) {
+		
+		var starttag = "";
+		
+		switch (tag) {
+			case 'Sunday':
+				starttag = "Sonntag";
+				break;
+			case 'Monday':
+				starttag = "Montag";
+				break;
+			case 'Tuesday':
+				starttag = "Dienstag";
+				break;
+			case 'Wednesday':
+				starttag = "Mittwoch";
+				break;
+			case 'Thursday':
+				starttag = "Donnerstag";
+				break;
+			case 'Friday':
+				starttag = "Freitag";
+				break;
+			case 'Saturday':
+				starttag = "Samstag";
+				break;
+		}
+		
+		return starttag;
+	}
+</script>
+
+<div id="calendar" style="margin-bottom:10px; float:left; padding:20px"></div>

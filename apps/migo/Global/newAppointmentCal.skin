@@ -1,62 +1,62 @@
-<div class="newAppointmentLink"><input id="hideButton" class="btn-exp" onclick="showHideCommentsNews('newAppointment')" type="button" value="Neuen Termin anlegen" /></div>
+<div class='error'>
+	<% response.errorNewAppointment %>
+</div>
 
-
+<form name="form" method="post" action="<% root.href action="newAppointmentCal" %>" style="margin-top:15px" class="calendar-dialog">
 	
-	<div class='error'>
-		<% response.errorNewAppointment %>
+	<div class="cleft left" style="width:100%; margin-top:10px">
+		<label>Treffen</label>
+		<select name="groupAppointmentType" class="right input_s" id="art" style="height:30px; width:180px">
+			<option value="Training">Training</option>
+			<option value="Spiel">Spiel</option>
+			<option value="Sonstiges">Sonstiges</option>
+		</select>
 	</div>
 	
-	<form name="form" method="post" action="<% root.href action="newAppointmentCal" %>" style="margin-top:15px" class="calendar-dialog">
-		
-		caldatetime: <% response.selectedarea %>
-		
-		
-		<div class="cleft left" style="width:255px; margin-top:10px">
-			Trainingsart
-			<select name="groupAppointmentType" class="right input_s" style="height:20px">
-				<option value="Training">Training</option>
-				<option value="Spiel">Spiel</option>
-				<option value="Sonstiges">Sonstiges</option>
-			</select>
-		</div>
-		
-		
-		<div class="cleft left" style="width:255px; margin-top:10px">
-			Datum
-			<input type="text" name="datumstart" id="appointmentdate" class="right input_s" style="height:20px" value="" ">
-		</div>
-		
-		<div class="cleft left" style="width:255px; margin-top:10px">
-			Startzeit
-			<input type="Time" name="startzeit" id="start_time" class="input right input_s" value="<% response.startzeit %>">
-		</div>
-		
-		<div class="cleft left" style="width:255px; margin-top:10px">
-			Endzeit
-			<input type="Time" name="endzeit" id="end_time" class="input right input_s" value="<% response.endzeit %>">
-		</div>
-		
-		<div class="cleft left" style="width:255px; margin-top:10px">
-			Ort
-			<input type="text" name="ort" id="textfield" class="input right input_s" value="<% response.ort %>" />
-		</div>
-		
-		<div class="cleft left" style="width:255px; margin-top:10px">
-			Notiz
-			<textarea name="beschreibung" id="textareaDb" class="input right input_s"><% response.beschreibung %></textarea>
-		</div>
-		
-		<div class="cleft left" style="width:255px; margin-top:10px">
-			<input type="Checkbox" name="repeatappointment" value="date"> Jeden Dienstag wiederholen<br />
-		</div>
-		
-		<p style='margin-top:10px'>
-	    	<input type="submit" name="save" id="button" class="btn" value="Speichern" />
-	  	</p>
 	
-		
-		
-		
-	</form>
+	<div class="cleft left" style="width:100%; margin-top:10px">
+		Startdatum
+		<input type="text" name="datumstart" id="startDate" class="right input_s" style="width:170px">
+	</div>
+	
+	<div class="cleft left" style="width:100%; margin-top:10px">
+		Enddatum
+		<input type="text" name="datumende" id="endDate" class="right input_s" style="width:170px">
+	</div>
+	
+	<div class="cleft left" style="width:100%; margin-top:10px">
+		Startzeit
+		<input type="Time" name="startzeit" id="start_time" class="input right input_s" value="" style="width:170px">
+	</div>
+	
+	<div class="cleft left" style="width:100%; margin-top:10px">
+		Endzeit
+		<input type="Time" name="endzeit" id="end_time" class="input right input_s" value="" style = "width:170px">
+	</div>
+	
+	<div class="cleft left" style="width:100%; margin-top:10px">
+		Ort
+		<input type="text" name="ort" id="ort" class="input right input_s" value="" style="width:170px" />
+	</div>
+	
+	<div class="cleft left" style="width:100%; margin-top:10px">
+		Notiz
+		<textarea name="beschreibung" id="notiz" class="input right input_s" style="width:170px; height:100px"><% response.beschreibung %></textarea>
+	</div>
+	
+	<div class="cleft left" style="width:100%; margin-top:15px" id="termin_wh">
+		<input type="Checkbox" id="wh" name="repeatappointment" value="true"> Jeden <span id="startTag"></span> wiederholen<br />
+	</div>
+	
+	<input type="hidden" name="terminid" id="termin_id" value="" />
+	
+	<p style='margin-top:10px; float:left; clear:left'>
+    	<input type="submit" name="save" id="save" class="btn" value="Speichern" style="<% response.buttons %>" />
+  	</p>
+	<p style='margin-top:10px; float:left; margin-left:20px'>
+		<input type="submit" name="del" id="del" class="btn" value="L&ouml;schen" style="<% response.buttons %>" />
+	</p>
+	
+</form>
 	
 

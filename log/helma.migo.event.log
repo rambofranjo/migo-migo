@@ -1,3 +1,631 @@
-[2012/10/18 12:32:51] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
-[2012/10/18 12:32:51] [INFO] [Thread-3] Starting engine 1 for migo
-[2012/10/18 12:32:51] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/11/07 13:55:00] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/11/07 13:55:00] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/11/07 13:55:00] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/11/07 14:51:43] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/11/07 14:51:43] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/11/07 14:51:43] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@4e8a88a9
+[2012/11/07 14:51:46] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/11/07 14:51:46] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/11/07 14:51:46] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/11/07 15:00:16] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@13f4cf6f
+[2012/11/07 15:00:16] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:00:16] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:00:16] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:00:23] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@356602cb
+[2012/11/07 15:00:23] [ERROR] [migo-1] POST:editGroup helma.scripting.ScriptingException: ReferenceError: "logogetName" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#38)
+helma.scripting.ScriptingException: ReferenceError: "logogetName" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#38)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:38
+Full trace: org.mozilla.javascript.EcmaError: ReferenceError: "logogetName" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#38)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3717)
+	at org.mozilla.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2123)
+	at org.mozilla.javascript.optimizer.OptRuntime.callName0(OptRuntime.java:106)
+	at org.mozilla.javascript.gen.c177._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:38)
+	at org.mozilla.javascript.gen.c177.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c177.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:00:41] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:00:41] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:02] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:02] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:02] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:05] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:05] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:05] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:18] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:18] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:01:18] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:07:33] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@1330b13c
+[2012/11/07 15:07:33] [ERROR] [migo-1] POST:editGroup helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
+	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
+	at org.mozilla.javascript.gen.c309._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27)
+	at org.mozilla.javascript.gen.c309.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c309.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:08:10] [ERROR] [migo-1] POST:editGroup helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
+	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
+	at org.mozilla.javascript.gen.c342._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27)
+	at org.mozilla.javascript.gen.c342.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c342.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:09:14] [ERROR] [migo-1] POST:editGroup helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
+	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
+	at org.mozilla.javascript.gen.c408._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27)
+	at org.mozilla.javascript.gen.c408.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c408.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:06] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@714fdb76
+[2012/11/07 15:10:06] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:06] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:06] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:13] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@76bcfa38
+[2012/11/07 15:10:13] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:13] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:13] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:56] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:56] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:10:56] [ERROR] [migo-1] GET:helma.util.MimePart@3da1a93 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:20] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@231bf785
+[2012/11/07 15:11:20] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:20] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:20] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:24] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@72b81eaa
+[2012/11/07 15:11:24] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:24] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:24] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:36] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:36] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:11:36] [ERROR] [migo-1] GET:helma.util.MimePart@6ff80c0e helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:12:22] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/11/07 15:12:22] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/11/07 15:12:25] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/11/07 15:12:25] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/11/07 15:12:25] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/11/07 15:12:37] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@d694eca
+[2012/11/07 15:12:37] [ERROR] [migo-1] GET:helma.util.MimePart@46f20434 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:12:37] [ERROR] [migo-1] GET:helma.util.MimePart@46f20434 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:12:37] [ERROR] [migo-1] GET:helma.util.MimePart@46f20434 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:12:52] [INFO] [migo-1] Function onStop not defined in global scope
+[2012/11/07 15:12:52] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/11/07 15:12:55] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/11/07 15:12:55] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/11/07 15:12:55] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/11/07 15:13:10] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@12746ad0
+[2012/11/07 15:13:10] [ERROR] [migo-1] GET:helma.util.MimePart@129dd6e2 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:13:10] [ERROR] [migo-1] GET:helma.util.MimePart@129dd6e2 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:13:10] [ERROR] [migo-1] GET:helma.util.MimePart@129dd6e2 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:14:31] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@7e543cb1
+[2012/11/07 15:14:31] [ERROR] [migo-1] GET:helma.util.MimePart@14426a6 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:14:31] [ERROR] [migo-1] GET:helma.util.MimePart@14426a6 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:14:31] [ERROR] [migo-1] GET:helma.util.MimePart@14426a6 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:47] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@233dcd27
+[2012/11/07 15:15:47] [ERROR] [migo-1] GET:helma.util.MimePart@14426a6 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:47] [ERROR] [migo-1] GET:helma.util.MimePart@14426a6 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:47] [ERROR] [migo-1] GET:helma.util.MimePart@14426a6 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:51] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@67cec874
+[2012/11/07 15:15:51] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:51] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:51] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:56] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@6a8ef455
+[2012/11/07 15:15:56] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:56] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:15:56] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:16:17] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:16:17] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:16:17] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:16:21] [ERROR] [migo-1] POST:editGroup helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+helma.scripting.ScriptingException: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot read property "inputStream" from null (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.undefReadError(ScriptRuntime.java:3692)
+	at org.mozilla.javascript.ScriptRuntime.getObjectProp(ScriptRuntime.java:1421)
+	at org.mozilla.javascript.gen.c111._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27)
+	at org.mozilla.javascript.gen.c111.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c111.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:04] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:04] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:04] [ERROR] [migo-1] GET:helma.util.MimePart@6e7616ad helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:08] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@3d4e49a
+[2012/11/07 15:17:08] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:08] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:08] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:14] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@6f184a4f
+[2012/11/07 15:17:14] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:14] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:17:14] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:26] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:26] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:26] [ERROR] [migo-1] GET:helma.util.MimePart@95d0a50 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:36] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@23087d61
+[2012/11/07 15:18:36] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:36] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:36] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:40] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@af4627
+[2012/11/07 15:18:40] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:40] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:40] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:58] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:58] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:18:58] [ERROR] [migo-1] GET:helma.util.MimePart@2d5e8aa5 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:19:09] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@53371566
+[2012/11/07 15:19:09] [ERROR] [migo-1] POST:editGroup helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error creating Image from org.mozilla.javascript.NativeJavaObject@21495bb8 (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+helma.scripting.ScriptingException: Wrapped java.lang.RuntimeException: Error creating Image from org.mozilla.javascript.NativeJavaObject@21495bb8 (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27
+Full trace: org.mozilla.javascript.WrappedException: Wrapped java.lang.RuntimeException: Error creating Image from org.mozilla.javascript.NativeJavaObject@21495bb8 (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js#27)
+	at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1773)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:183)
+	at org.mozilla.javascript.FunctionObject.call(FunctionObject.java:419)
+	at org.mozilla.javascript.BaseFunction.construct(BaseFunction.java:338)
+	at org.mozilla.javascript.ScriptRuntime.newObject(ScriptRuntime.java:2327)
+	at org.mozilla.javascript.gen.c210._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js:27)
+	at org.mozilla.javascript.gen.c210.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c210.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/editGroup.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.RuntimeException: Error creating Image from org.mozilla.javascript.NativeJavaObject@21495bb8
+	at helma.scripting.rhino.extensions.ImageObject.imageCtor(ImageObject.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:161)
+	... 14 more
+[2012/11/07 15:24:38] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@71dd95c
+[2012/11/07 15:24:38] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:24:38] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:24:40] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:24:40] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:24:40] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:25:16] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@5a7b5cb8
+[2012/11/07 15:25:16] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:25:16] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:25:18] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:25:18] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:25:18] [ERROR] [migo-1] GET:helma.util.MimePart@148e7f54 helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 15:53:26] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@55172fb9
+[2012/11/07 16:13:01] [INFO] [migo-2] Function onLogout not defined for [object Person]
+[2012/11/07 16:46:01] [INFO] [migo-3] Function onLogout not defined for [object Person]
+[2012/11/07 17:07:22] [ERROR] [migo-4] GET:f_register helma.framework.NotFoundException: Object not found.
+helma.framework.NotFoundException: Object not found.
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:342)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 17:34:37] [INFO] [migo-4] Closing DB connection: com.mysql.jdbc.Connection@308c3eb8
+[2012/11/07 17:34:37] [ERROR] [migo-4] POST:f_register helma.scripting.ScriptingException: ReferenceError: "helma" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+helma.scripting.ScriptingException: ReferenceError: "helma" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5
+Full trace: org.mozilla.javascript.EcmaError: ReferenceError: "helma" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3717)
+	at org.mozilla.javascript.ScriptRuntime.name(ScriptRuntime.java:1692)
+	at org.mozilla.javascript.gen.c614._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5)
+	at org.mozilla.javascript.gen.c614.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c614.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 17:36:01] [ERROR] [migo-4] POST:f_register helma.scripting.ScriptingException: TypeError: Cannot call property encode in object [JavaPackage java.util.Base64]. It is not a function, it is "object". (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+helma.scripting.ScriptingException: TypeError: Cannot call property encode in object [JavaPackage java.util.Base64]. It is not a function, it is "object". (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot call property encode in object [JavaPackage java.util.Base64]. It is not a function, it is "object". (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError3(ScriptRuntime.java:3686)
+	at org.mozilla.javascript.ScriptRuntime.notFunctionError(ScriptRuntime.java:3746)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThisHelper(ScriptRuntime.java:2247)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThis(ScriptRuntime.java:2214)
+	at org.mozilla.javascript.gen.c648._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5)
+	at org.mozilla.javascript.gen.c648.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c648.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 17:39:30] [INFO] [migo-4] Function onStop not defined in global scope
+[2012/11/07 17:39:30] [INFO] [migo-worker] Scheduler for migo exiting
+[2012/11/07 17:39:34] [INFO] [migo-init] Using session manager class helma.framework.core.SessionManager
+[2012/11/07 17:39:34] [INFO] [Thread-3] Starting engine 1 for migo
+[2012/11/07 17:39:34] [INFO] [migo-1] Function onStart not defined in global scope
+[2012/11/07 17:41:33] [ERROR] [migo-1] POST:f_register helma.scripting.ScriptingException: ReferenceError: "JSON" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#30)
+helma.scripting.ScriptingException: ReferenceError: "JSON" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#30)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:30
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:4
+Full trace: org.mozilla.javascript.EcmaError: ReferenceError: "JSON" is not defined. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#30)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3717)
+	at org.mozilla.javascript.ScriptRuntime.name(ScriptRuntime.java:1692)
+	at org.mozilla.javascript.gen.c149._c2(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:30)
+	at org.mozilla.javascript.gen.c149.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.call2(OptRuntime.java:76)
+	at org.mozilla.javascript.gen.c149._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:4)
+	at org.mozilla.javascript.gen.c149.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c149.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 17:46:41] [ERROR] [migo-1] POST:f_register helma.scripting.ScriptingException: TypeError: Cannot find function parseJson in object {"algorithm":"HMAC-SHA256","expires":1352311200,"issued_at":1352306799,"oauth_token":"AAAEo4Nm7mHQBAOPyjFB82d1dBCE23UnMm2REYG8uEv842ZAXDELn8y1d1NSRQixLO8RQIXWe1AJwjlrTPteKX0rZAyxnX8iIAXwkJpinU0VZB6ZCII4y","registration":{"name":"Daniel Brandstetter","first_name":"Daniel","last_name":"Brandstetter","location":{"name":"Ybbs an der Donau","id":112466692103831},"email":"da.brandstetter\u0040gmail.com","password":"12345678"},"registration_metadata":{"fields":"name,first_name,last_name,location,email,password"},"user":{"country":"at","locale":"de_DE"},"user_id":"100003739838149"}. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+helma.scripting.ScriptingException: TypeError: Cannot find function parseJson in object {"algorithm":"HMAC-SHA256","expires":1352311200,"issued_at":1352306799,"oauth_token":"AAAEo4Nm7mHQBAOPyjFB82d1dBCE23UnMm2REYG8uEv842ZAXDELn8y1d1NSRQixLO8RQIXWe1AJwjlrTPteKX0rZAyxnX8iIAXwkJpinU0VZB6ZCII4y","registration":{"name":"Daniel Brandstetter","first_name":"Daniel","last_name":"Brandstetter","location":{"name":"Ybbs an der Donau","id":112466692103831},"email":"da.brandstetter\u0040gmail.com","password":"12345678"},"registration_metadata":{"fields":"name,first_name,last_name,location,email,password"},"user":{"country":"at","locale":"de_DE"},"user_id":"100003739838149"}. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot find function parseJson in object {"algorithm":"HMAC-SHA256","expires":1352311200,"issued_at":1352306799,"oauth_token":"AAAEo4Nm7mHQBAOPyjFB82d1dBCE23UnMm2REYG8uEv842ZAXDELn8y1d1NSRQixLO8RQIXWe1AJwjlrTPteKX0rZAyxnX8iIAXwkJpinU0VZB6ZCII4y","registration":{"name":"Daniel Brandstetter","first_name":"Daniel","last_name":"Brandstetter","location":{"name":"Ybbs an der Donau","id":112466692103831},"email":"da.brandstetter\u0040gmail.com","password":"12345678"},"registration_metadata":{"fields":"name,first_name,last_name,location,email,password"},"user":{"country":"at","locale":"de_DE"},"user_id":"100003739838149"}. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.notFunctionError(ScriptRuntime.java:3743)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThisHelper(ScriptRuntime.java:2247)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThis(ScriptRuntime.java:2214)
+	at org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:117)
+	at org.mozilla.javascript.gen.c217._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5)
+	at org.mozilla.javascript.gen.c217.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c217.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 17:47:27] [ERROR] [migo-1] POST:f_register helma.scripting.ScriptingException: TypeError: Cannot find function parseJSON in object {"algorithm":"HMAC-SHA256","expires":1352311200,"issued_at":1352306845,"oauth_token":"AAAEo4Nm7mHQBAOPyjFB82d1dBCE23UnMm2REYG8uEv842ZAXDELn8y1d1NSRQixLO8RQIXWe1AJwjlrTPteKX0rZAyxnX8iIAXwkJpinU0VZB6ZCII4y","registration":{"name":"Daniel Brandstetter","first_name":"Daniel","last_name":"Brandstetter","location":{"name":"Ybbs an der Donau","id":112466692103831},"email":"da.brandstetter\u0040gmail.com","password":"12345678"},"registration_metadata":{"fields":"name,first_name,last_name,location,email,password"},"user":{"country":"at","locale":"de_DE"},"user_id":"100003739838149"}. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+helma.scripting.ScriptingException: TypeError: Cannot find function parseJSON in object {"algorithm":"HMAC-SHA256","expires":1352311200,"issued_at":1352306845,"oauth_token":"AAAEo4Nm7mHQBAOPyjFB82d1dBCE23UnMm2REYG8uEv842ZAXDELn8y1d1NSRQixLO8RQIXWe1AJwjlrTPteKX0rZAyxnX8iIAXwkJpinU0VZB6ZCII4y","registration":{"name":"Daniel Brandstetter","first_name":"Daniel","last_name":"Brandstetter","location":{"name":"Ybbs an der Donau","id":112466692103831},"email":"da.brandstetter\u0040gmail.com","password":"12345678"},"registration_metadata":{"fields":"name,first_name,last_name,location,email,password"},"user":{"country":"at","locale":"de_DE"},"user_id":"100003739838149"}. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at /Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5
+Full trace: org.mozilla.javascript.EcmaError: TypeError: Cannot find function parseJSON in object {"algorithm":"HMAC-SHA256","expires":1352311200,"issued_at":1352306845,"oauth_token":"AAAEo4Nm7mHQBAOPyjFB82d1dBCE23UnMm2REYG8uEv842ZAXDELn8y1d1NSRQixLO8RQIXWe1AJwjlrTPteKX0rZAyxnX8iIAXwkJpinU0VZB6ZCII4y","registration":{"name":"Daniel Brandstetter","first_name":"Daniel","last_name":"Brandstetter","location":{"name":"Ybbs an der Donau","id":112466692103831},"email":"da.brandstetter\u0040gmail.com","password":"12345678"},"registration_metadata":{"fields":"name,first_name,last_name,location,email,password"},"user":{"country":"at","locale":"de_DE"},"user_id":"100003739838149"}. (/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js#5)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3654)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3632)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3660)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3679)
+	at org.mozilla.javascript.ScriptRuntime.notFunctionError(ScriptRuntime.java:3743)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThisHelper(ScriptRuntime.java:2247)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThis(ScriptRuntime.java:2214)
+	at org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:117)
+	at org.mozilla.javascript.gen.c251._c1(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js:5)
+	at org.mozilla.javascript.gen.c251.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:398)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3065)
+	at org.mozilla.javascript.gen.c251.call(/Users/danielbrandstetter/Desktop/Migo/apps/migo/Root/f_register.js)
+	at org.mozilla.javascript.Context$1.run(Context.java:504)
+	at org.mozilla.javascript.Context.call(Context.java:515)
+	at org.mozilla.javascript.Context.call(Context.java:502)
+	at helma.scripting.rhino.RhinoEngine.invoke(RhinoEngine.java:316)
+	at helma.framework.core.RequestEvaluator.run(RequestEvaluator.java:414)
+	at java.lang.Thread.run(Thread.java:680)
+[2012/11/07 18:14:25] [INFO] [migo-1] Closing DB connection: com.mysql.jdbc.Connection@f58046e

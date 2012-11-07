@@ -1,5 +1,5 @@
 <!-- Start Mitglieder --> 
-<div id="users" style="padding:10px; border:1px solid #CCC; background-color:#FFFFFF; margin-bottom:-1px; width:650px;">
+<div id="users" style="background-color:#FFFFFF; margin-bottom:-1px;">
 	
 	<!-- Mitglieder auflisten -->
 	<% response.showUsers %>

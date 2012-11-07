@@ -88,16 +88,36 @@ function renderGruppe (mode) {
 			break;
 		case "calendar":
 			// take all group-events and show it in calendar 
-			res.data.calendar = "calendar";
+			
+			res.data.calEditable = root.IsCalEditable(session.data.grpId, session.user._id);
 			res.data.calevents = root.getAllEvents(session.data.grpId);
-			res.data.hidebutton = "'hidden'";
+			if (root.IsCalEditable(session.data.grpId, session.user._id)) {
+				res.data.buttons = "display:block";
+				res.data.termin_title = "bearbeiten";
+				res.data.showDelBtn = '$("#del").show();';
+			} else {
+				res.data.buttons = "display:none";
+				res.data.termin_title = "Details";
+			}
+			
+			if (req.data.month != null) {
+				var month = req.data.month;
+				month = month -1;
+				res.data.calMonth = "month: " + month + ",";
+			}
+			if (req.data.year != null) {
+				var year = req.data.year;
+				year = year;
+				res.data.calYear = "year: " + year + ",";
+			} 
 			
 			// get date and time of selected area
-			res.data.caldatetime = root.getDateTime(session.data.grpId);
-			
+			//res.data.caldatetime = root.getDateTime(session.data.grpId);
 			
 			// render dialog box
 			res.data.calinfo = renderSkinAsString("newAppointmentCal");
+			
+			res.data.calendar = renderSkinAsString("calendar");
 			
 			break;
 		case "messages":
@@ -143,7 +163,8 @@ function renderGruppe (mode) {
 			res.data.grpName = group.name;
 			res.data.grpSports = group.sportart;
 			res.data.grpColor = group.farbe;
-			res.data.grpLogo = group.logo;
+			if (group.logo != "") res.data.grpLogo = "<img src='"+group.logo+"' />";
+			else res.data.grpLogo = "";
 			if (!group.sichtbar) res.data.grpVisible = "";
 			if (group.sichtbar) res.data.grpVisible = "checked = \"checked\"";
 			//Render Informations
@@ -166,8 +187,14 @@ function renderGruppe (mode) {
 	
 	var groupInfo = root.getGroupInfo(session.data.grpId);
 	
+	//Gruppenlogo
+	if (groupInfo.logo != "") {
+		res.data.groupLogo = "<img src="+groupInfo.logo+" />";
+	}
+	
 	//Gruppenname
 	res.data.groupName = "<h4 class='left' style='color:"+groupInfo.farbe+"'>" + root.getGroupNameById(session.data.grpId) + "</h4>";
+	res.data.groupArt = "<h4 class='left' style='margin-top:5px'>" + groupInfo.sportart + "</h4>";
 	
 	//Link zu Gruppenübersicht
 	res.data.allGroups = "<a style='text-decoration:none' href=" + root.href("chooseGroup") + ">Zur&uumlck zur Gruppen&uumlbersicht</a>";

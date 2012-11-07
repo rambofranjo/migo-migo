@@ -46,7 +46,7 @@ function getAllUsers (gId) {
 	
 	var date = new Date();
 	var users = "<table style='width:100%;'>";
-	users += "<thead style='text-align:left;'><th>Vorname</th><th>Nachname</th><th>Geb. Datum</th><th>Wohnort</th><th>E-Mail</th>";
+	users += "<thead style='text-align:left;'><th>Vorname</th><th>Nachname</th><th>Geb. Datum</th><th>Wohnort</th><th>E-Mail-Adresse</th>";
 	if (root.isUserInGroupAndAdmin(session.user._id, gId)) { users +=  "<th>Admin?</th><th>L&ouml;schen?</th></thead><tbody>"; }
 	else users += "</thead><tbody>";
 	
@@ -61,16 +61,16 @@ function getAllUsers (gId) {
 					date = root.person.get(a).gebDatum;
 					
 					users += "<tr>";
-					users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:100px;' >" + root.person.get(a).vorname + "</td>";
-					users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:130px;' >" + root.person.get(a).nachname + "</td>";
-					if (root.person.get(a).gebDatum != null) users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:130px;' >" + date.getDate() + "." + root.getMonthName(date.getMonth().toString()) + "." + date.getFullYear() + "</td>";
-					else users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:130px;' >keine Angabe</td>";
-					users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:100px;' >" + root.person.get(a).ort + "</td>";
-					users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:140px;' >" + root.person.get(a).email + "</td>";
+					users += "<td style ='padding:3px; width:80px;' >" + root.person.get(a).vorname + "</td>";
+					users += "<td style ='padding:3px; width:110px;' >" + root.person.get(a).nachname + "</td>";
+					if (root.person.get(a).gebDatum != null) users += "<td style ='padding:3px; width:130px;' >" + date.getDate() + "." + root.getMonthName(date.getMonth().toString()) + "." + date.getFullYear() + "</td>";
+					else users += "<td style ='padding:3px; width:110px;' >keine Angabe</td>";
+					users += "<td style ='padding:3px; width:100px;' >" + root.person.get(a).ort + "</td>";
+					users += "<td style ='padding:3px; width:140px;' >" + root.person.get(a).email + "</td>";
 				
 					//Gründer der Gruppe bleibt immer Admin
 					if (root.isUserInGroupAndAdmin(session.user._id, gId)) {
-						users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:100px;' >" + 
+						users += "<td style ='padding:3px; width:100px;' >" + 
 							"<form action=\"" + root.href("editAdmin") + "\" method=\"POST\">" + 
 							"<input type=\"hidden\" name=\"userId\" value=\"" + root.person.get(a)._id + "\">" + 
 							"<input name=\"admin\" value=\"1\" onclick=\"this.form.submit();\" type=\"checkbox\"";
@@ -81,7 +81,7 @@ function getAllUsers (gId) {
 					}
 					
 					//Benutzer löschen
-					if ((root.isUserInGroupAndAdmin(session.user._id, gId)) && (root.person.get(a)._id != session.user._id)) { users += "<td style ='border-bottom:1px solid #CCC; padding:3px; width:20px;' >" 
+					if ((root.isUserInGroupAndAdmin(session.user._id, gId)) && (root.person.get(a)._id != session.user._id)) { users += "<td style ='padding:3px; width:20px;' >" 
 						+ "<a href=" + root.href("deleteUser") + "?groupId=" + gId + "&userId=" + root.person.get(a)._id + "><img src=\"../static/images/delete.png\" /></a>" + "</td>"; 
 					} else { users+= "<td></td>" }
 					
